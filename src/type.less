@@ -1,0 +1,281 @@
+@esf-body-text-color: @default-text-color;
+@esf-body-color: @primary-bg-color;
+@esf-body-line-height: 1.3;
+@esf-link-color: @primary-color;
+@esf-link-hover-color: darken(@primary-color, 15%);
+
+@esf-body-font-family: @default-base-font-family;
+@esf-headings-font-family: @default-heading-font-family; 
+@esf-headings-font-weight: bold;
+@esf-headings-color: @default-text-color;
+@esf-headings-small-color: @black-50;
+
+@esf-code-font-family: @default-code-font-family;
+@esf-code-text-color: @default-text-color;
+@esf-code-border-color: @black-20;
+@esf-code-background-color: @black-10;
+@esf-code-padding: 0 0.3em;
+
+@esf-hr-color: @black-10;
+
+@esf-quote-margin: 0 1.5em 1.5em;
+@esf-quote-foot-text-color: @black-50;
+
+@esf-table-border-color: @black-40;
+@esf-table-caption-text-color: @black;
+@esf-table-caption-font-size: @esf-mini-font-size;
+@esf-table-caption-padding: 1em 0;
+@esf-table-cell-padding: 0.5em 1em;
+@esf-table-cell-font-size: @esf-mini-font-size;
+@esf-table-head-background-color: @black-20;
+@esf-table-head-text-color: @black;
+@esf-table-hover-line-background-color: @black-10;
+@esf-table-hover-line-text-color: @black;
+@esf-table-striped-background-color: @black-10;
+@esf-table-striped-text-color: @black;
+
+
+html {
+    font-family: @esf-body-font-family;
+    background: @esf-body-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @esf-headings-font-family;
+    font-weight: @esf-headings-font-weight;
+    color: @esf-headings-color;
+
+    small,
+    .small {
+        font-weight: normal;
+        color: @esf-headings-small-color;
+    }
+}
+h1, h2, h3 {
+    small,
+    .small {
+        font-size: 65%;
+    }
+}
+
+h4, h5, h6 {
+    small,
+    .small {
+        font-size: 75%;
+    }
+}
+
+body {
+    font-size: @esf-base-font-size;
+    line-height: 1.3;
+}
+
+a {
+    color: @esf-link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: @esf-link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+::selection {
+  background: lighten(@primary-color, 15%);
+  color: @white;
+}
+::-moz-selection {
+  background: lighten(@primary-color, 15%);
+    color: @white;
+}
+
+code,kbd {
+    color: @esf-code-text-color;
+    white-space: nowrap;
+    border: 1px solid @esf-code-border-color;
+    .border-radius(@default-border-radius);
+    background: @esf-code-background-color;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: @esf-base-font-size * 0.75;
+    padding: @esf-code-padding;
+}
+
+// resest background color and other style when wrapped in pre
+pre code {
+    color: inherit;
+    white-space: inherit;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+blockquote {
+    font-style: italic;
+    margin: @esf-quote-margin;
+    footer {
+        color: @esf-quote-foot-text-color;
+    }
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    ul, ol {
+        margin-bottom: 0;
+    }
+}
+
+.@{esf-class-prefix}-indent {
+    text-indent: 2em;
+}
+
+.@{esf-class-prefix}-divider, hr {
+    border: 0;
+    border-top: 1px solid @esf-hr-color;
+    height: 0;
+    overflow:hidden;
+    color: @esf-hr-color;
+}
+
+.@{esf-class-prefix}-list-unstyled {
+    &:extend(.esf-list-unstyled);
+}
+
+// Inline turns list items into inline-block
+.@{esf-class-prefix}-list-inline {
+    &:extend(.esf-list-unstyled);
+    margin-left: -5px;
+
+    > li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.@{esf-class-prefix}-truncate {
+    .ellipsis();
+}
+
+.@{esf-class-prefix}-truncate2 {
+    .ellipsis(3);
+}
+
+// img
+@{esf-class-prefix}-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.@{esf-class-prefix}-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    caption {
+        text-align: center;
+        font-weight: bold;
+    }
+    td, th {
+        border-width: 0 0 0 1px;
+        margin: 0;
+        // to make ths where the title is really long work
+        overflow: visible; 
+    }
+    thead {
+        text-align: left;
+    }
+
+    .esf-table-variant(
+        @esf-table-caption-text-color,
+        @esf-table-border-color,
+        @esf-table-head-background-color,
+        @esf-table-head-text-color,
+        @esf-table-striped-background-color,
+        @esf-table-striped-text-color,
+        @esf-table-hover-line-background-color,
+        @esf-table-hover-line-text-color
+    );
+    .esf-table-size(
+        @esf-table-caption-padding,
+        @esf-table-caption-font-size,
+        @esf-table-cell-padding,
+        @esf-table-cell-font-size
+    );
+}
+
+
+// ***********
+// Table
+// ***********
+.esf-table-variant(
+    @caption-text-color,
+    @border-color,
+    @head-background-color,
+    @head-text-color,
+    @striped-background-color,
+    @striped-text-color,
+    @hover-line-background-color,
+    @hover-line-text-color
+) {
+    border: 1px solid @border-color;
+    caption {
+        color: @caption-text-color;
+    }
+    td, th {
+        border-left: 1px solid @border-color;
+    }
+    thead {
+        background: @head-background-color;
+        color: @head-text-color;
+    }
+    &.@{esf-class-prefix}-striped {
+        tr:nth-child(2n-1) td {
+            background-color: @striped-background-color;
+            color: @striped-text-color;
+        }
+    }
+    &.@{esf-class-prefix}-bordered {
+        td {
+            border-bottom: 1px solid @border-color;
+        } 
+    }
+    &.@{esf-class-prefix}-horizontal {
+        th, td {
+            border-width: 0 0 1px 0;
+            border-bottom: 1px solid @border-color;
+        } 
+    }
+    &.@{esf-class-prefix}-hover-line {
+        > tbody > tr:hover {
+            > td,
+            > th {
+                background-color: @hover-line-background-color;
+                color: @hover-line-text-color; 
+            }
+        }
+    }
+}
+
+.esf-table-size(
+    @esf-table-caption-padding,
+    @esf-table-caption-font-size,
+    @esf-table-cell-padding,
+    @esf-table-cell-font-size
+) {
+    caption {
+        padding: @esf-table-caption-padding;
+        font-size: @esf-table-caption-font-size;
+    }
+    td, th {
+        padding: @esf-table-cell-padding;
+        font-size: @esf-table-cell-font-size
+    }
+}

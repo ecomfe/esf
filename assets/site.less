@@ -1,0 +1,161 @@
+@import "../dep/est/1.3.0-dev/src/all.less";
+.global-normalize();
+@import "../src/main.less";
+
+
+body {
+   .est-layout-fixed-header(4em);
+}
+
+.est-header {
+    background: @primary-color;
+}
+
+.primary-bg-link {
+    color: @primary-bg-color;
+    &:hover {
+        color: @primary-bg-color;
+        text-decoration: none;
+    }
+}
+
+.brand-title {
+    a {
+        color: @white;
+        &:hover {
+            color: @white;
+            text-decoration: none;
+        }
+    }
+}
+
+#container-frame { 
+    width: 100%;
+    border: 0;
+}
+
+#main-menu {
+    margin-right: 40px;
+}
+ 
+// child page
+#navigator-features {
+    a {
+        padding: 0.5em 1em;
+        display: block; 
+        &:hover {
+            background: @primary-color;
+            text-decoration: none;
+            color: @white;
+        }
+    }
+    border-right: 1px solid @black-10;
+}
+
+.example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin-bottom: 15px;
+    border: 1px #e5e5e5 solid;
+}
+
+/* Echo out a label for the example */
+.example:after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px; 
+  font-weight: bold;
+  color: #959595;
+  content: "示例";
+}
+
+/* Tweak display of the code snippets when following an example */
+.example + .highlight {
+  margin-bottom: 15px;
+  margin-top: -15px;
+  border-width: 0 0 1px;
+  border-radius: 0;
+  position: relative;
+}
+
+.highlight {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.ui-g {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+}
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus {
+  word-spacing: -0.43em;
+}
+.esf-grid-u,
+.ui-u,
+.ui-u-1,
+.ui-u-golden-ratio,
+.ui-u-golden-ratio-1,
+.ui-u-2-2,
+.ui-u-1-2,
+.ui-u-3-3,
+.ui-u-2-3,
+.ui-u-1-3,
+.ui-u-4-4,
+.ui-u-3-4,
+.ui-u-2-4,
+.ui-u-1-4,
+.ui-u-5-5,
+.ui-u-4-5,
+.ui-u-3-5,
+.ui-u-2-5,
+.ui-u-1-5 {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  font-family: @default-base-font-family;
+}
+.ui-u-1-5 {
+  width: 20%;
+}
+.ui-u-4-5 {
+  width: 80%;
+}
+
+.ui-menu {
+    .font-family(heading);
+}
+
+.ui-button.primary {
+    .button-variant(@white, @primary-color, @primary-color);
+}
+
+.ui-button.success {
+    .button-variant(@white, rgb(28, 184, 65), rgb(28, 184, 65));
+}
+
+.ui-button.info {
+    .button-variant(@white, rgb(66, 184, 221), rgb(66, 184, 221));
+}
+.ui-button.warning {
+    .button-variant(@white, rgb(223, 117, 20), rgb(223, 117, 20));
+}
+.ui-button.danger {
+    .button-variant(@white, rgb(202, 60, 60), rgb(202, 60, 60));
+}

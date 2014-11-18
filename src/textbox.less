@@ -1,0 +1,216 @@
+
+// =========
+// Input
+// =========
+
+// keep the same height as button
+@esf-input-height: 2.4em;
+@esf-input-font-family: @default-base-font-family;
+@esf-input-text-size: @esf-small-font-size;
+
+// padding
+@esf-input-padding: 0.65em;
+
+// normal
+@esf-input-border-color: #666;
+@esf-input-background-color: #FFF;
+@esf-input-text-color: #333;
+
+// active state
+@esf-input-active-border-color: @primary-color;
+@esf-input-active-background-color: @black-10;
+@esf-input-active-text-color: #333;
+
+// focus state
+@esf-input-focus-border-color: @primary-color;
+@esf-input-focus-background-color: #FFF;
+@esf-input-focus-text-color: #333;
+
+// error state
+@esf-input-error-border-color: @danger-color;
+@esf-input-error-background-color: lighten(@danger-color, 30%);
+@esf-input-error-text-color: #333;
+
+// disabled state
+@esf-input-disabled-border-color: #797979;
+@esf-input-disabled-background-color: #F2F2F2;
+@esf-input-disabled-text-color: #999;
+
+// readonly state
+@esf-input-readonly-border-color: #CCC;
+@esf-input-readonly-background-color: #FFF;
+@esf-input-readonly-text-color: #CCC;
+
+// success state
+@esf-input-success-border-color: @success-color;
+@esf-input-success-background-color: #FFF;
+@esf-input-success-text-color: #333;
+
+// warning state
+@esf-input-warning-border-color: @warning-color;
+@esf-input-warning-background-color: #FFF;
+@esf-input-warning-text-color: #333;
+
+
+// placeholder color
+@esf-input-placeholder-color: #ccc;
+
+.@{esf-class-prefix}-textbox {
+    position: relative;
+    display: inline-block;
+    font-family: @esf-input-font-family;
+    input, textarea {
+        padding: @esf-input-padding;
+        width: 100%;
+        margin: 0;
+        outline: 0;
+        border-radius: @default-border-radius;
+        .transition(
+            background-color 0.3s ease-out,
+            box-shadow 0.2s ease,
+            border-color 0.2s ease
+        );
+        box-sizing: border-box;
+        font-size: 100%;
+        resize: none;
+        vertical-align: middle;
+    }
+    input {
+        height: @esf-input-height;
+    }
+    .@{esf-class-prefix}-textbox-icon {
+        width: @esf-input-height + 0.5em;
+        height: @esf-input-height;
+        line-height: @esf-input-height;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        &.@{esf-class-prefix}-textbox-left,
+        &.left {
+            .border-left-radius(@default-border-radius);
+            left: 0;
+        }
+        &.@{esf-class-prefix}-textbox-right,
+        &.right {
+            .border-right-radius(@default-border-radius);
+            right: 0;
+        }
+    }
+    .@{esf-class-prefix}-textbox-left ~ input,
+    .left ~ input
+    {
+        padding-left: @esf-input-height + 0.2em;
+    }
+    .@{esf-class-prefix}-textbox-right ~ input,
+    .right ~ input {
+        padding-right: @esf-input-height + 0.2em;
+    }
+}
+
+.@{esf-class-prefix}-textbox {
+    color: @esf-input-text-color;
+    > input,
+    > textarea {
+        .esf-input-color-def(
+            @esf-input-border-color,
+            @esf-input-background-color,
+            @esf-input-text-color
+        );
+        .placeholder(@esf-input-placeholder-color);
+    }
+    &.@{esf-class-prefix}-textbox-focus > input,
+    > input:focus,
+    > textarea:focus {
+        .esf-input-color-def(
+            @esf-input-focus-border-color,
+            @esf-input-focus-background-color,
+            @esf-input-focus-text-color
+        );
+    }
+    &.@{esf-class-prefix}-textbox-active > input,
+    > input:active,
+    > textarea:active {
+        .esf-input-color-def(
+            @esf-input-active-border-color,
+            @esf-input-active-background-color,
+            @esf-input-active-text-color
+        );
+    }
+    &.@{esf-class-prefix}-textbox-disabled > input,
+    > input[disabled],
+    > textarea[disabled] {
+        .esf-input-color-def(
+            @esf-input-disabled-border-color,
+            @esf-input-disabled-background-color,
+            @esf-input-disabled-text-color
+        );
+    }
+    &.@{esf-class-prefix}-textbox-error > input {
+        .esf-input-color-def(
+            @esf-input-error-border-color,
+            @esf-input-error-background-color,
+            @esf-input-error-text-color
+        );
+    }
+    &.@{esf-class-prefix}-textbox-readonly > input,
+    > input[readonly],
+    > textarea[readonly] {
+        .esf-input-color-def(
+            @esf-input-readonly-border-color,
+            @esf-input-readonly-background-color,
+            @esf-input-readonly-text-color
+        );
+    }
+    &.@{esf-class-prefix}-textbox-success > input,
+    &.@{esf-class-prefix}-textbox-success > textarea {
+        .esf-input-color-def(
+            @esf-input-success-border-color,
+            @esf-input-success-background-color,
+            @esf-input-success-text-color
+        );
+    }
+    &.@{esf-class-prefix}-textbox-warning > input,
+    &.@{esf-class-prefix}-textbox-warning > textarea {
+        .esf-input-color-def(
+            @esf-input-warning-border-color,
+            @esf-input-warning-background-color,
+            @esf-input-warning-text-color
+        );
+    }
+    .@{esf-class-prefix}-textbox-placeholder {
+        color: @esf-input-placeholder-color;
+    }
+}
+
+.@{esf-class-prefix}-textbox-wrapper {
+    &:extend(.esf-clearfix all);
+    :first-child.@{esf-class-prefix}-button-group .@{esf-class-prefix}-button:last-child,
+    :first-child.@{esf-class-prefix}-button,
+    :first-child input {
+        .border-right-radius(0);
+        border-right: 0;
+    }
+    :last-child.@{esf-class-prefix}-button-group .@{esf-class-prefix}-button:first-child,
+    :last-child.@{esf-class-prefix}-button,
+    :last-child input {
+        .border-left-radius(0);
+        border-left: 0;
+    }
+    >.@{esf-class-prefix}-button,
+    >.@{esf-class-prefix}-button-group,
+    >.@{esf-class-prefix}-textbox {
+        float: left;
+    }
+}
+
+
+// mixins
+.esf-input-color-def(
+    @border,
+    @background,
+    @text,
+) {
+    border: 1px solid @border;
+    background-color: @background;
+    color: @text;
+}

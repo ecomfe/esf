@@ -1,0 +1,159 @@
+// Name:            Utils
+// Description:     Defines utility selectors.
+//
+// ========================================================================
+
+.esf-clearfix {
+    .clearfix();
+}
+
+.@{esf-class-prefix}-clearfix {
+    &:extend(esf-clearfix all);
+}
+
+// padding utilities
+.@{esf-class-prefix}-pl0 {
+    padding-left: 0 !important;
+}
+.@{esf-class-prefix}-pb0 {
+    padding-bottom: 0 !important;
+}
+.@{esf-class-prefix}-pr0 {
+    padding-right: 0 !important;
+}
+.@{esf-class-prefix}-pt0 {
+    padding-top: 0 !important;
+}
+
+.esf-make-pad(1);
+.esf-make-pad(2);
+.esf-make-pad(3);
+.esf-make-pad(4);
+
+// margin utilities
+.@{esf-class-prefix}-ml0 {
+    margin-left: 0 !important;
+}
+.@{esf-class-prefix}-mb0 {
+    margin-bottom: 0 !important;
+}
+.@{esf-class-prefix}-mr0 {
+    margin-right: 0 !important;
+}
+.@{esf-class-prefix}-mt0 {
+    margin-top: 0 !important;
+}
+
+.esf-make-margin(1);
+.esf-make-margin(2);
+.esf-make-margin(3);
+.esf-make-margin(4);
+
+// text-alignments
+.@{esf-class-prefix}-align-left {
+    text-align: left;
+}
+.@{esf-class-prefix}-align-center {
+    text-align: center;
+}
+.@{esf-class-prefix}-align-right {
+    text-align: right;
+}
+
+// no space break
+.@{esf-class-prefix}-nowrap {
+    white-space: nowrap;
+}
+
+// block center
+.@{esf-class-prefix}-center-block {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// float
+.@{esf-class-prefix}-fl {
+    float: left;
+}
+.@{esf-class-prefix}-fr {
+    float: right;
+}
+
+.@{esf-class-prefix}-block {
+    display: block !important;
+}
+
+.@{esf-class-prefix}-base {
+    font-size: @esf-base-font-size !important;
+}
+.@{esf-class-prefix}-mini {
+    font-size: @esf-mini-font-size !important;
+}
+.@{esf-class-prefix}-small {
+    font-size: @esf-small-font-size !important;
+}
+.@{esf-class-prefix}-large {
+    font-size: @esf-large-font-size !important;
+}
+.@{esf-class-prefix}-big {
+    font-size: @esf-big-font-size !important;
+}
+.@{esf-class-prefix}-huge {
+    font-size: @esf-huge-font-size !important;
+}
+.@{esf-class-prefix}-massive {
+    font-size: @esf-massive-font-size !important;
+}
+
+.esf-make-pad(@factor)  {
+    .@{esf-class-prefix}-p@{factor} {
+        padding: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-pl@{factor} {
+        padding-left: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-pb@{factor} {
+        padding-bottom: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-pr@{factor} {
+        padding-right: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-pt@{factor} {
+        padding-top: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-pv@{factor} {
+        padding-top: @gutter * @factor;
+        padding-bottom: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-ph@{factor} {
+        padding-left: @gutter * @factor;
+        padding-right: @gutter * @factor;
+    }
+}
+
+.esf-make-margin(@factor)  {
+    .@{esf-class-prefix}-m@{factor} {
+        margin: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-ml@{factor} {
+        margin-left: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-mb@{factor} {
+        margin-bottom: @gutter * @factor;
+    }
+    .@{esf-class-prefix}mr@{factor} {
+        margin-right: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-mt@{factor} {
+        margin-top: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-mv@{factor} {
+        margin-top: @gutter * @factor;
+        margin-bottom: @gutter * @factor;
+    }
+    .@{esf-class-prefix}-mh@{factor} {
+        margin-left: @gutter * @factor;
+        margin-right: @gutter * @factor;
+    }
+}

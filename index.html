@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>ESF</title>
+        <link rel="stylesheet" href="assets/site.css" />
+        <link rel="stylesheet" href="assets/icons/main.css" />
+    </head>
+    <body class="">
+        <header class="est-header" id="header">
+            <div class="esf-clearfix">
+                <div class="ui-fl">
+                    <h1 class="brand-title ui-mt1 ui-ml3">
+                        <a class="navbar-brand" href="index.html">ESF</a>
+                    </h1>
+                </div>
+                <div class="ui-fr">
+                    <div id="main-menu" class="ui-menu ui-horizontal ui-hoverable ui-huge ui-fr ui-mr3">
+                        <ul>
+                            <li class="ui-menu-item">
+                                <a href="home.html" target="container-frame"><i class="fa fa-home"></i> 介绍</a>
+                            </li>
+
+                            <li class="ui-menu-item"><a href="type.html" target="container-frame"><i class="fa fa-text-height"></i> 基础元素</a></li>
+                            <li class="ui-menu-item">
+                                <a href="#">
+                                    <i class="fa fa-check-square"></i> 表单元素
+                                </a>
+                                <ul class="ui-dropdown">
+                                    <li><a href="button.html" target="container-frame">按钮</a></li>
+                                    <li><a href="checkbox.html" target="container-frame">Checkbox</a></li>
+                                    <li><a href="input.html" target="container-frame">输入框</a></li>
+                                    <!--
+                                    <li><a href="form.html" target="container-frame">表单</a></li>
+                                    -->
+                                </ul>
+                            </li>
+                            <li class="ui-menu-item">
+                                <a href="#"><i class="fa fa-anchor"></i> 导航</a>
+                                <ul class="ui-dropdown">
+                                    <li><a href="menu.html" target="container-frame">Menu</a></li>
+                                    <li><a href="dropdown.html" target="container-frame">Dropdown</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="est-body">
+            <div id="content-container">
+                <div id="content" style="overflow:hidden;">
+                    <iframe id="container-frame" name="container-frame" src="home.html" seamless="seamless">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var onResize = function () {
+            var headerHeight = document.getElementById('header').offsetHeight;
+            
+            var h = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - headerHeight) + 'px';
+            document.getElementById('container-frame').style.height = h;
+            document.getElementById('content').style.height = h;
+        };
+        onResize();
+        window.onresize = onResize;
+    </script>
+</html>
