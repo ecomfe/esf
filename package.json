@@ -1,0 +1,11 @@
+{
+    "name": "esf",
+    "version": "1.0.0-alpha",
+    "maintainers": [
+        {
+            "name": "yankun01",
+            "email": "vcfg.code@hotmail.com"
+        }
+    ],
+    "description": "esf为app提供样式支持."
+}
