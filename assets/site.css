@@ -26,6 +26,7 @@ input,
 select,
 textarea {
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  *font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 /**
      * Address margins handled incorrectly in IE 6/7.
@@ -128,6 +129,7 @@ kbd,
 pre,
 samp {
   font-family: Monaco, Consolas, monospace;
+  *font-family: Monaco, Consolas, monospace;
   font-size: 1em;
 }
 /**
@@ -964,6 +966,21 @@ ui-img {
 .ui-table th {
   padding: 0.5em 1em;
   font-size: 12px;
+}
+.ui-form fieldset {
+  margin: 0;
+  padding: .35em 0 .75em;
+  border: 0;
+}
+.ui-form .ui-form-row {
+  margin-bottom: .5em;
+}
+.ui-form .ui-form-stack {
+  display: block;
+  margin-bottom: .5em;
+}
+.ui-form .ui-form-stack input {
+  width: auto;
 }
 .ui-button {
   display: inline-block;
