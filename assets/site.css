@@ -812,19 +812,19 @@ body {
   line-height: 1.3;
 }
 a {
-  color: #ff0000;
+  color: #6ccdc0;
   text-decoration: none;
 }
 a:hover {
-  color: #b30000;
+  color: #3cb0a1;
   text-decoration: underline;
 }
 ::selection {
-  background: #ff4d4d;
+  background: #a5e0d8;
   color: #ffffff;
 }
 ::-moz-selection {
-  background: #ff4d4d;
+  background: #a5e0d8;
   color: #ffffff;
 }
 code,
@@ -962,6 +962,21 @@ ui-img {
   padding: 0.5em 1em;
   font-size: 12px;
 }
+.ui-form fieldset {
+  margin: 0;
+  padding: .35em 0 .75em;
+  border: 0;
+}
+.ui-form .ui-form-row {
+  margin-bottom: .5em;
+}
+.ui-form .ui-form-stack {
+  display: block;
+  margin-bottom: .5em;
+}
+.ui-form .ui-form-stack input {
+  width: auto;
+}
 .ui-button {
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -1009,11 +1024,11 @@ ui-img {
   display: block;
 }
 .ui-button.ui-button-link {
-  color: #ff0000;
+  color: #6ccdc0;
   background: none;
 }
 .ui-button.ui-button-link:hover {
-  color: #b30000;
+  color: #3cb0a1;
   text-decoration: underline;
   background: none;
 }
@@ -1150,14 +1165,14 @@ ui-img {
 .ui-textbox.ui-textbox-focus > input,
 .ui-textbox > input:focus,
 .ui-textbox > textarea:focus {
-  border: 1px solid #ff0000;
+  border: 1px solid #6ccdc0;
   background-color: #ffffff;
   color: #333333;
 }
 .ui-textbox.ui-textbox-active > input,
 .ui-textbox > input:active,
 .ui-textbox > textarea:active {
-  border: 1px solid #ff0000;
+  border: 1px solid #6ccdc0;
   background-color: #e6e6e6;
   color: #333333;
 }
@@ -1277,7 +1292,7 @@ ui-img {
 .ui-radio-custom label:before:hover,
 .ui-checkbox-switch .ui-checkbox-box:before:hover,
 .ui-checkbox-switch label:before:hover {
-  border-color: #ff0000;
+  border-color: #6ccdc0;
 }
 .esf-checkbox-style-base .ui-checkbox-box:before:active,
 .esf-checkbox-style-base label:before:active,
@@ -1287,7 +1302,7 @@ ui-img {
 .ui-radio-custom label:before:active,
 .ui-checkbox-switch .ui-checkbox-box:before:active,
 .ui-checkbox-switch label:before:active {
-  background-color: #ff0000;
+  background-color: #6ccdc0;
 }
 .esf-checkbox-style-base .ui-checkbox-box:after,
 .esf-checkbox-style-base label:after,
@@ -1316,7 +1331,7 @@ ui-img {
 .ui-radio-custom label:active:before,
 .ui-checkbox-switch .ui-checkbox-box:active:before,
 .ui-checkbox-switch label:active:before {
-  background-color: #ff0000;
+  background-color: #6ccdc0;
 }
 .esf-checkbox-style-base input,
 .ui-checkbox-custom input,
@@ -1347,9 +1362,9 @@ ui-img {
 .ui-radio-custom input:focus ~ .ui-checkbox-box:before,
 .ui-checkbox-switch input:focus ~ label:before,
 .ui-checkbox-switch input:focus ~ .ui-checkbox-box:before {
-  -webkit-box-shadow: 0 0 1px #ff0000;
-  -moz-box-shadow: 0 0 1px #ff0000;
-  box-shadow: 0 0 1px #ff0000;
+  -webkit-box-shadow: 0 0 1px #6ccdc0;
+  -moz-box-shadow: 0 0 1px #6ccdc0;
+  box-shadow: 0 0 1px #6ccdc0;
 }
 .esf-checkbox-style-base input:checked ~ label:before,
 .esf-checkbox-style-base input:checked ~ .ui-checkbox-box:before,
@@ -1359,8 +1374,8 @@ ui-img {
 .ui-radio-custom input:checked ~ .ui-checkbox-box:before,
 .ui-checkbox-switch input:checked ~ label:before,
 .ui-checkbox-switch input:checked ~ .ui-checkbox-box:before {
-  background: #ff0000;
-  border-color: #ff0000;
+  background: #6ccdc0;
+  border-color: #6ccdc0;
 }
 .esf-checkbox-style-base input:checked ~ label:after,
 .esf-checkbox-style-base input:checked ~ .ui-checkbox-box:after,
@@ -1392,10 +1407,10 @@ ui-img {
 .ui-radio-custom input:indeterminate ~ .ui-checkbox-box:after,
 .ui-checkbox-switch input:indeterminate ~ label:after,
 .ui-checkbox-switch input:indeterminate ~ .ui-checkbox-box:after {
-  border: 1px solid #ff0000;
+  border: 1px solid #6ccdc0;
   width: 1em;
   height: 1em;
-  background: #ff0000;
+  background: #6ccdc0;
   -webkit-box-shadow: inset 0px 0px 0px 0.2em #f1f1f1;
   -moz-box-shadow: inset 0px 0px 0px 0.2em #f1f1f1;
   box-shadow: inset 0px 0px 0px 0.2em #f1f1f1;
@@ -1454,9 +1469,9 @@ ui-img {
   width: 1em;
   height: 1em;
   background-color: #ffffff;
-  -webkit-box-shadow: inset 0px 0px 0px 0.3em #ff0000;
-  -moz-box-shadow: inset 0px 0px 0px 0.3em #ff0000;
-  box-shadow: inset 0px 0px 0px 0.3em #ff0000;
+  -webkit-box-shadow: inset 0px 0px 0px 0.3em #6ccdc0;
+  -moz-box-shadow: inset 0px 0px 0px 0.3em #6ccdc0;
+  box-shadow: inset 0px 0px 0px 0.3em #6ccdc0;
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
@@ -1491,16 +1506,16 @@ ui-img {
 }
 .ui-checkbox-switch input:checked ~ .ui-checkbox-box:before,
 .ui-checkbox-switch input:checked ~ label:before {
-  background-color: #ff0000;
+  background-color: #6ccdc0;
   width: 3em;
   height: 1.2em;
-  border: #ff0000 1px solid;
+  border: #6ccdc0 1px solid;
   top: -0.1em;
   left: 0;
 }
 .ui-checkbox-switch input:checked ~ .ui-checkbox-box:after,
 .ui-checkbox-switch input:checked ~ label:after {
-  border: #ff0000 1px solid;
+  border: #6ccdc0 1px solid;
   top: -0.1em;
   left: 1.5em;
   width: 1.5em;
@@ -1635,7 +1650,7 @@ ui-img {
   display: block;
 }
 .ui-menu {
-  background: #ff0000;
+  background: #6ccdc0;
 }
 .ui-menu .ui-menu-item {
   margin: 0;
@@ -1645,10 +1660,10 @@ ui-img {
   padding: 0.5em 1em;
 }
 .ui-menu .ui-menu-item > a:hover {
-  background-color: #cc0000;
+  background-color: #46c0b0;
 }
 .ui-menu .ui-menu-item.ui-active {
-  background: #cc0000;
+  background: #46c0b0;
 }
 .ui-menu .ui-menu-item {
   border-color: rgba(0, 0, 0, 0.1);
@@ -1695,7 +1710,7 @@ body > .est-body:after {
   clear: both;
 }
 .est-header {
-  background: #ff0000;
+  background: #6ccdc0;
 }
 .primary-bg-link {
   color: #fefdfa;
@@ -1726,7 +1741,7 @@ body > .est-body:after {
   display: block;
 }
 #navigator-features a:hover {
-  background: #ff0000;
+  background: #6ccdc0;
   text-decoration: none;
   color: #ffffff;
 }
@@ -1817,16 +1832,16 @@ body > .est-body:after {
 }
 .ui-button.primary {
   color: #ffffff;
-  background-color: #ff0000;
+  background-color: #6ccdc0;
 }
 .ui-button.primary:hover,
 .ui-button.primary.ui-hover {
-  background-color: #cc0000;
+  background-color: #46c0b0;
   color: #ffffff;
 }
 .ui-button.primary:active,
 .ui-button.primary.ui-active {
-  background-color: #b30000;
+  background-color: #3cb0a1;
   color: #ffffff;
 }
 .ui-button.success {

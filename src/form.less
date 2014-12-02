@@ -1,96 +1,22 @@
-.@{esf-class-prefix}form {
+//h3{color:red;}
+@form-label-font-size: 1em;
+@form-row-bottom-margin: 1em;
+
+.@{esf-class-prefix}-form {
     fieldset {
         margin: 0;
         padding: .35em 0 .75em;
         border: 0;
     }
-    legend {
+    .@{esf-class-prefix}-form-row {
+        margin-bottom: .5em;
+    }
+    .@{esf-class-prefix}-form-stack {
         display: block;
-        width: 100%;
-        padding: @form-legend-padding;
-        margin: @form-legend-margin;
-        color: @form-legend-text-color;
-        border-bottom: @form-legend-bottom-border;
-        font-size: @form-legend-font-size;
-        font-family: @esf-hei-font;
+        margin-bottom: .5em;
+        
+        input {
+          width: auto;
+        }
     }
-    .@{esf-class-prefix}g [class *= "@{esf-class-prefix}u"] .field {
-        padding-left: 1%;
-        padding-right: 1%;
-    }
-    .@{esf-class-prefix}g [class *= "@{esf-class-prefix}u"]:first-child .field {
-        padding-left: 0;
-    }
-    .@{esf-class-prefix}g [class *= "@{esf-class-prefix}u"]:last-child .field {
-        padding-right: 0;
-    }
-    .field label{
-        font-size: @form-label-font-size;
-    }
-    .form-row {
-        margin-bottom: @form-row-bottom-margin;
-    }
-    .block-label {
-        display: block;
-        font-weight: bold;
-    }
-
-    .inline-label {
-        display: inline-block;
-        font-weight: bold;
-        .field-wrapper();
-        &:extend(.truncate);
-        width: 100%;
-    }
-    
-    .field-wrapper {
-        .field-wrapper();
-    }
-}
-
-.field.required .ui-input .asterisk {
-    color: red;
-}
-
-.field.error {
-    .ui-input input {
-        color: red;
-        border-color: red;
-    }
-}
-
-.field .field-hint {
-    color: #ccc;
-    margin-top: 0.2em;
-}
-
-.field .field-error {
-    color: red;
-    margin-top: 0.2em;
-}
-
-select {
-    padding: 0.65em 1em;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 0.3125em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    &.fluid {
-        width: 100%;
-    }
-}
-
-select:focus,
-textarea:focus {
-    outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
-    border-color: #129FEA;
-}
-
-.@{esf-class-prefix}xbox-group.vertical>div{
-    display: block;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
 }
