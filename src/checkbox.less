@@ -2,7 +2,6 @@
 // Checkbox & Radio
 // =========
 
-// FIXME: 需要整理一下变量
 @esf-checkbox-border-color: #9a9a9a;
 @esf-checkbox-background-color: #f1f1f1;
 
@@ -23,39 +22,37 @@
 
 @esf-checkbox-border-active-color: @primary-color;
 @esf-checkbox-radio-label-padding: 1.5em;
-@esf-checkbox-slider-off-color: #9B9B9B;
-@esf-checkbox-slider-on-color: #FFF;
-@esf-checkbox-slider-off-background-color: @primary-color;
-@esf-checkbox-slider-on-background-color: #FFFFFF;
-@esf-checkbox-slider-off-border-color: #666;
+
+@esf-checkbox-slider-on-background-color: @primary-color;
 @esf-checkbox-slider-on-border-color: @primary-color;
+
+@esf-checkbox-slider-handle-on-background-color: #FFFFFF;
+@esf-checkbox-slider-handle-on-border-color: @primary-color;
+
+@esf-checkbox-slider-off-background-color: #9B9B9B;
+@esf-checkbox-slider-off-border-color: #666;
+
+@esf-checkbox-slider-handle-off-background-color: #FFFFFF;
+@esf-checkbox-slider-handle-off-border-color: #9B9B9B;
+
 @esf-checkbox-slider-disable-background-color: #9B9B9B;
 @esf-checkbox-slider-disable-pre-background-color: #BEBEBE;
 
-.esf-checkbox-custom {
+.esf-checkbox-style-base {
     position: relative;
     display: inline-block;
     min-width: 1em;
-    min-height: 1.25em;
     line-height: 1em;
-    outline: none;
+    height: 1em;
     vertical-align: middle;
 
-    input {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        opacity: 0;
-        outline: none;
-    }
-
-    /*--- Box ---*/
+    // virtual checkbox
     .@{esf-class-prefix}-checkbox-box,
     label {
-        cursor: pointer;
+        display: block;
         padding-left: @esf-checkbox-radio-label-padding;
-        outline: none;
-        // checkbox框
+
+        // checkbox
         &:before {
             position: absolute;
             top: 0;
@@ -63,237 +60,126 @@
             width: 1em;
             height: 1em;
             content: '';
-            background: @esf-checkbox-background-color;
-            .transition(background-color 0.3s ease, border-color 0.3s ease;);
-            border: 1px solid @esf-checkbox-border-color;
-            box-sizing: border-box;
+            .box-sizing(border-box);
+            .transition(background-color 0.3s ease, border-color 0.3s ease);
+
+            .esf-checkbox-virtual-box-theme-hook;
         }
-        // checkbox的对钩
         &:after {
-            .opacity(0);
-            content: '';
+            .box-sizing(border-box);
             position: absolute;
-            top: 0.2em;
-            left: 0.16em;
-            width: 0.5em;
-            height: 0.25em;
-            border: 0.2em solid @esf-checkbox-radio-checked-color;
-            border-top: none;
-            border-right: none;
-            .transform(rotate(-45deg));
+            content: '';
+            .transition(background 0.3s ease 0s, left 0.3s ease 0s);
         }
-
-        /*--- Hover ---*/
-        &:hover::before {
-            border-color: @esf-checkbox-border-hover-color;
-        }
-
-        /*--- Down ---*/
-        &:active::before {
+        &:active:before {
             background-color: @esf-checkbox-background-active-color;
         }
     }
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .opacity(0);
+        outline: none;
+        &:focus {
+            & ~ label,
+            & ~ .@{esf-class-prefix}-checkbox-box {
+                .esf-checkbox-virtual-box-focus-theme-hook;
+            }
+        }
+        &:checked {
+            & ~ label,
+            & ~ .@{esf-class-prefix}-checkbox-box {
+                .esf-checkbox-virtual-box-checked-theme-hook;
+            }
+        }
+        &:indeterminate {
+            & ~ label,
+            & ~ .@{esf-class-prefix}-checkbox-box {
+                .esf-checkbox-virtual-box-indeterminate-theme-hook;
+            }
+        }
+    }
+    input[disabled] {
+        & ~ label,
+        & ~ .@{esf-class-prefix}-checkbox-box {
+            .esf-checkbox-virtual-box-disabled-theme-hook;
+            .esf-disabled;
+        }
+    }
 
-    /*--- Inside Label ---*/
-    label {
-        display: block;
-        color: @esf-checkbox-label-text-color;
+    // if we put label after checkbox container
+    label, ~ label {
         .transition(color 0.2s ease);
+        cursor: pointer;
+        vertical-align: middle;
+
+        // label text color
+        color: @esf-checkbox-label-text-color;
         &:hover {
             color: @esf-checkbox-label-text-hover-color;
-        }
-    }
-
-    /*--- Focus ---*/
-    input:focus {
-        & ~ label {
-            color: @esf-checkbox-label-text-active-color;
-        }
-
-        & ~ label, & ~ .box {
-            &:before {
-                border-color: @esf-checkbox-border-active-color;
-            }
-        }
-    }
-
-    /*--- Active ---*/
-    input:checked ~ .@{esf-class-prefix}-checkbox-box,
-    input:checked ~ label {
-        &:after {
-            .opacity(100);
-        }
-    }
-    
-    /*--- Hover ---*/
-    input:checked ~ .@{esf-class-prefix}-checkbox-box,
-    input:checked ~ label {
-        &:before {
-            background: @esf-checkbox-radio-checked-background-color;
-            border-color: @esf-checkbox-radio-checked-border-color;
-        }
-    }
-
-    /*--- Outside Label  ---*/
-    ~ label {
-        cursor: pointer;
-        .opacity(85);
-        vertical-align: middle;
-    }
-    ~ label:hover {
-        .opacity(100);
-    }
-
-    input:indeterminate ~ .@{esf-class-prefix}-checkbox-box,
-    input:indeterminate ~ label {
-        &:after {
-            .opacity(100);
-            .transform(none);
-            border: 1px solid @esf-checkbox-border-active-color;
-            width: 1em;
-            height: 1em;
-            background: @esf-checkbox-radio-checked-background-color;
-            .box-shadow(inset 0px 0px 0px 0.2em @esf-checkbox-background-color);
-            left: 0;
-            top: 0;
-            box-sizing: border-box;
-        }
-    }
-
-    &.@{esf-class-prefix}-disabled,
-    input[disabled] {
-        .opacity(0);
-        ~ .@{esf-class-prefix}-checkbox-box:after,
-        ~ label, label {
-            color: @esf-checkbox-label-text-disabled-color;
-            &:before {
-                background: @esf-checkbox-disabled-background-color !important;
-                border-color: @esf-checkbox-disabled-border-color !important;
-            }
-        }
-    }
-}
-
-.esf-radio-custom {
-    .box, label {
-        &:before {
-            min-width: 1em;
-            height: 1em;
-            .border-radius(500px);
-            .transform(none);
-        }
-        &:after {
-            border: none;
-            top: 0;
-            left: 0;
-            width: 1em;
-            height: 1em;
-            background-color: @esf-checkbox-radio-checked-color;
-            .box-shadow(inset 0px 0px 0px 0.3em @esf-checkbox-border-active-color);
-            .border-radius(500px);
-            .transform(none);
         }
     }
 }
 
 .@{esf-class-prefix}-checkbox-custom,
-.@{esf-class-prefix}-radio-custom {
-    &:extend(.esf-checkbox-custom all);
+.@{esf-class-prefix}-radio-custom,
+.@{esf-class-prefix}-checkbox-switch {
+    &:extend(.esf-checkbox-style-base all);
 }
 
 .@{esf-class-prefix}-radio-custom {
-    &:extend(.esf-radio-custom all);
+    .@{esf-class-prefix}-checkbox-box,
+    label {
+        &:before {
+            .border-radius(500px);
+        }
+    }
+    input:checked {
+        & ~ label, & ~ .@{esf-class-prefix}-checkbox-box {
+            .esf-checkbox-virtual-box-radio-checked-theme-hook;
+        }
+    }
 }
 
 .@{esf-class-prefix}-checkbox-switch {
-    position: relative;
-    cursor: pointer;
-    color: @esf-checkbox-label-text-color;
     input {
-      display: none;
-    }
-    // witch
-    .box, label {
-        padding-left: 4em;
-        cursor: pointer;
-        &:after {
-            cursor: pointer;
-            display: block;
-            position: absolute;
-            content: '';
-            top: 0.1em;
-            z-index: 1;
-            background-color: @esf-checkbox-slider-off-background-color;
-            width: 3em;
-            height: 1.1em;
-            border:@esf-checkbox-slider-on-border-color 0.1em solid;
-
+        ~ .@{esf-class-prefix}-checkbox-box,
+        ~ label {
+            padding-left: 4em;
+            .esf-checkbox-virtual-box-switch-theme-hook;
         }
-        // Button Activation Light
-        &:before {
-            border:@esf-checkbox-slider-on-border-color 0.1em solid;
-            content: '';
-            position: absolute;
-            top: 0.1em;
-            left: 0em;
-            z-index: 2;
-            width: 1.4em;
-            height: 1.1em;
-            background-color: @esf-checkbox-slider-on-color;
-            .opacity(100);
-            .box-shadow(none);
-            .transition(background 0.3s ease 0s, left 0.3s ease 0s;);
-            .transform(none);
-        }
-    }
-
-    // Active
-    input:checked {
-        color: @esf-checkbox-label-text-active-color;
-        ~ .box, ~ label {
-            &:after {
-                background-color: @esf-checkbox-slider-off-color;
-                border-color: @esf-checkbox-slider-off-color;
-            }
-            &:before {
-                left: 1.65em;
-                border-color: @esf-checkbox-slider-off-color;
+        &:checked {
+            ~ .@{esf-class-prefix}-checkbox-box,
+            ~ label {
+                .esf-checkbox-virtual-box-switch-checked-theme-hook;
             }
         }
     }
 }
 
-.@{esf-class-prefix}-checkbox-disabled {
-    color: @esf-checkbox-label-text-disabled-color;
-    .box, label {
-        &:after {
-            background-color: @esf-checkbox-slider-disable-background-color;
-            border-color: @esf-checkbox-slider-disable-background-color;
+.@{esf-class-prefix}-checkbox-switch-round {
+    input {
+        ~ .@{esf-class-prefix}-checkbox-box,
+        ~ label {
+            .esf-checkbox-virtual-box-switch-round-theme-hook;
         }
-        &:before {
-            border-color: @esf-checkbox-slider-disable-background-color;
-            background-color: @esf-checkbox-slider-disable-pre-background-color;
-        }
-    }
-}
-
-.@{esf-class-prefix}-checkbox-round {
-    .box, label {
-        &:after {
-            border-radius: 1em;
-        }
-        &:before {
-            width: 1.16em;
-            border-radius: 1em;
-        }
-    }
-    // Active
-    input:checked {
-        color: @esf-checkbox-label-text-active-color;
-        ~ .box, ~ label {
-            &:before {
-                left: 1.85em;
+        &:checked {
+            ~ .@{esf-class-prefix}-checkbox-box,
+            ~ label {
+                .esf-checkbox-virtual-box-switch-round-checked-theme-hook;
             }
         }
     }
 }
+
+.esf-checkbox-virtual-box-focus-theme-hook() {}
+.esf-checkbox-virtual-box-checked-theme-hook() {}
+.esf-checkbox-virtual-box-indeterminate-theme-hook() {}
+.esf-checkbox-virtual-box-disabled-theme-hook() {}
+.esf-checkbox-virtual-box-theme-hook() {}
+.esf-checkbox-virtual-box-radio-checked-theme-hook() {}
+.esf-checkbox-virtual-box-switch-theme-hook() {}
+.esf-checkbox-virtual-box-switch-checked-theme-hook() {}
+.esf-checkbox-virtual-box-switch-round-theme-hook() {}
+.esf-checkbox-virtual-box-switch-round-checked-theme-hook() {}
