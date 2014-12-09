@@ -1,0 +1,126 @@
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-rounded {
+  border-radius: 6px;
+}
+.img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.img-circle {
+  border-radius: 50%;
+}
+
+
+
+figure {
+  margin: 1em 0;
+}
+
+
+
+.img-frame {
+  margin-bottom: 1em;
+  padding: 4px;
+  border: 1px solid #d5d5d2;
+}
+
+
+.img-frame img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+
+.img-frame figcaption {
+  height: auto;
+  padding: .5em;
+  background-color: #fefdfa;
+  color: #655114;
+  font-size: 10px;
+  font-size: .7692308rem;
+}
+
+
+
+@media (min-width: 768px){
+  .img-frame figcaption {
+    font-size: 12px;
+    font-size: .75rem;
+  }
+}
+
+
+.img-caption figcaption {
+  position: absolute;
+  min-height: 50px;
+  width: 100%;
+  bottom: 0;
+  opacity: .5;
+  -webkit-transform: translateY(90%);
+  -moz-transform: translateY(90%);
+  -o-transform: translateY(90%);
+  -ms-transform: translateY(90%);
+  transform: translateY(90%);
+  -webkit-transition: -webkit-transform .4s,opacity .3s .1s;
+  -moz-transition: -moz-transform .4s,opacity .3s .1s;
+  transition: transform .4s,opacity .3s .1s;
+}
+
+
+
+
+.img-caption {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-caption img {
+  -webkit-transition: -webkit-transform .4s;
+  -moz-transition: -moz-transform .4s;
+  -o-transition: -o-transform .4s;
+  -ms-transition: -ms-transform .4s;
+  transition: transform .4s;
+}
+
+.img-caption-animate:hover img{
+  -webkit-transform:translateY(-50px);
+  -moz-transform:translateY(-50px);
+  -o-transform:translateY(-50px);
+  -ms-transform:translateY(-50px);
+  transform:translateY(-50px);
+}
+
+.img-caption-animate:hover figcaption{
+  opacity:1;
+  -webkit-transform:translateY(0px);
+  -moz-transform:translateY(0px);
+  -o-transform:translateY(0px);
+  -ms-transform:translateY(0px);
+  transform:translateY(0px);
+}
+
+.caption-animate:hover figcaption{
+  opacity:0.9;
+  -webkit-transform:translateY(0px);
+  -moz-transform:translateY(0px);
+  -o-transform:translateY(0px);
+  -ms-transform:translateY(0px);
+  transform:translateY(0px);
+}
