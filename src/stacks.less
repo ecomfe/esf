@@ -4,10 +4,10 @@
 </div>
 */
 
-.stack { position: relative; z-index: 10; }
+.@{esf-class-prefix}-stack { position: relative; z-index: 10; }
  
 /* Image styles */
-.stack img { 
+.@{esf-class-prefix}-stack img { 
     width: 100%; 
     height: 100%; 
     vertical-align: bottom; 
@@ -22,7 +22,7 @@
 }
  
 /* Stacks creted by the use of generated content */
-.stack:before, .stack:after { content: ""; border-radius: 3px; width: 100%; height: 100%; position: absolute; border: 10px solid #fff; left: 0;
+.@{esf-class-prefix}-stack:before, .@{esf-class-prefix}-stack:after { content: ""; border-radius: 3px; width: 100%; height: 100%; position: absolute; border: 10px solid #fff; left: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     width: 100%; 
@@ -35,11 +35,11 @@
     -moz-transition: 0.3s all ease-out;
     transition: 0.3s all ease-out;
 }
-.stack:before { top: 4px; z-index: -10; } /* 1st element in stack (behind image) */
-.stack:after { top: 8px; z-index: -20; } /* 2nd element in stack (behind image) */
+.@{esf-class-prefix}-stack:before { top: 4px; z-index: -10; } /* 1st element in stack (behind image) */
+.@{esf-class-prefix}-stack:after { top: 8px; z-index: -20; } /* 2nd element in stack (behind image) */
 
 /* Second stack example (rotated to the right from the bottom left) */
-.stack.rotated:before { 
+.@{esf-class-prefix}-stack.rotated:before { 
     -webkit-transform-origin: bottom left;
     -moz-transform-origin: bottom left;
     transform-origin: bottom left;
@@ -47,7 +47,7 @@
     -moz-transform: rotate(2deg);
     transform: rotate(2deg);
 }
-.stack.rotated:after { 
+.@{esf-class-prefix}-stack.rotated:after { 
     -webkit-transform-origin: bottom left;
     -moz-transform-origin: bottom left;
     transform-origin: bottom left;
@@ -57,19 +57,19 @@
 }
 
 /* Third stack example (One stack element rotated in the opposite direction) */
-.stack.twisted:before {
+.@{esf-class-prefix}-stack.twisted:before {
     -webkit-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
     transform: rotate(4deg);
 }   
-.stack.twisted:after {
+.@{esf-class-prefix}-stack.twisted:after {
     -webkit-transform: rotate(-4deg);
     -moz-transform: rotate(-4deg);
     transform: rotate(-4deg);
 }
 
 /* Fourth stack example (Similar to the second but rotated left) */
-.stack.rotated-left:before {
+.@{esf-class-prefix}-stack.rotated-left:before {
     -webkit-transform-origin: bottom left;
     -moz-transform-origin: bottom left;
     transform-origin: bottom left;
@@ -77,7 +77,7 @@
     -moz-transform: rotate(-3deg);
     transform: rotate(-3deg);
 }
-.stack.rotated-left:after {
+.@{esf-class-prefix}-stack.rotated-left:after {
     -webkit-transform-origin: bottom left;
     -moz-transform-origin: bottom left;
     transform-origin: bottom left;
@@ -87,7 +87,7 @@
 }
 
 /* Reset all rotations on hover */
-.stack:hover:before, .stack:hover:after {
+.@{esf-class-prefix}-stack:hover:before, .@{esf-class-prefix}-stack:hover:after {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);

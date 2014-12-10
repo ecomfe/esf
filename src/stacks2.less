@@ -1,4 +1,4 @@
-div[class*='stack2'] {
+div[class*='@{esf-class-prefix}-stack2'] {
   position: relative;
   border: 6px solid #fff;
   width: 100%;
@@ -9,12 +9,12 @@ div[class*='stack2'] {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
-div[class*='stack2'] img { 
+div[class*='@{esf-class-prefix}-stack2'] img { 
     width: 100%; 
     height: 100%; 
 }
 
-div[class*='stack2']:before, div[class*='stack2']:after {
+div[class*='@{esf-class-prefix}-stack2']:before, div[class*='@{esf-class-prefix}-stack2']:after {
   border: 6px solid #fff;
   width: 100%;
   height: 100%;
@@ -26,7 +26,7 @@ div[class*='stack2']:before, div[class*='stack2']:after {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
  
-div[class*='stack2']:before, div[class*='stack2']:after {
+div[class*='@{esf-class-prefix}-stack2']:before, div[class*='@{esf-class-prefix}-stack2']:after {
   background: #768590;
   content: "";
   position: absolute;
@@ -37,23 +37,23 @@ div[class*='stack2']:before, div[class*='stack2']:after {
   border: none\9;
 }
  
-div[class*='stack2']:before {
+div[class*='@{esf-class-prefix}-stack2']:before {
   background: #eff4de;
 }
 
 /*stack2 ONE*/
-.stack2one:before {
+.@{esf-class-prefix}-stack2one:before {
   top: 4px;
   left: -6px;
 }
  
-.stack2one:after {
+.@{esf-class-prefix}-stack2one:after {
   top: -2px;
   left: -6px;
 }
  
 /*stack2 TWO*/
-.stack2two:before {
+.@{esf-class-prefix}-stack2two:before {
   top: 0px;
   left: -10px;
   -webkit-transform: rotate(-5deg);
@@ -63,7 +63,7 @@ div[class*='stack2']:before {
   transform: rotate(-5deg);
 }
  
-.stack2two:after {
+.@{esf-class-prefix}-stack2two:after {
   top: 5px; left: 0px;
   -webkit-transform: rotate(4deg);
   -moz-transform: rotate(4deg);
@@ -73,7 +73,7 @@ div[class*='stack2']:before {
 }
  
 /*stack2 THREE*/
-.stack2three:before {
+.@{esf-class-prefix}-stack2three:before {
   top: 5px;
   left: -15px;
   z-index: -1;
@@ -84,7 +84,7 @@ div[class*='stack2']:before {
   transform: rotate(-10deg);
 }
  
-.stack2three:after {
+.@{esf-class-prefix}-stack2three:after {
   top: -2px;
   left: -10px;
   -webkit-transform: rotate(-5deg);
