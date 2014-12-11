@@ -1,42 +1,12 @@
 // =========
 // Checkbox & Radio
 // =========
-
-@esf-checkbox-border-color: #9a9a9a;
-@esf-checkbox-background-color: #f1f1f1;
-
-@esf-checkbox-disabled-border-color: #e8e8e8;
-@esf-checkbox-disabled-background-color: #d3d3d3;
-
-@esf-checkbox-border-hover-color: @primary-color;
-
-@esf-checkbox-background-active-color: @primary-color;
-@esf-checkbox-radio-checked-color: #FFF;
-@esf-checkbox-radio-checked-background-color: @primary-color;
-@esf-checkbox-radio-checked-border-color: @primary-color;
 @esf-checkbox-label-text-color: rgba(0, 0, 0, 0.6);
 @esf-checkbox-label-text-hover-color: rgba(0, 0, 0, 0.8);
-@esf-checkbox-label-text-active-color: rgba(0, 0, 0, 0.8);
-@esf-checkbox-label-text-disabled-color: rgba(0, 0, 0, 0.3);
+@esf-checkbox-label-text-focus-color: rgba(0, 0, 0, 0.8);
 
-
-@esf-checkbox-border-active-color: @primary-color;
 @esf-checkbox-radio-label-padding: 1.5em;
-
-@esf-checkbox-slider-on-background-color: @primary-color;
-@esf-checkbox-slider-on-border-color: @primary-color;
-
-@esf-checkbox-slider-handle-on-background-color: #FFFFFF;
-@esf-checkbox-slider-handle-on-border-color: @primary-color;
-
-@esf-checkbox-slider-off-background-color: #9B9B9B;
-@esf-checkbox-slider-off-border-color: #666;
-
-@esf-checkbox-slider-handle-off-background-color: #FFFFFF;
-@esf-checkbox-slider-handle-off-border-color: #9B9B9B;
-
-@esf-checkbox-slider-disable-background-color: #9B9B9B;
-@esf-checkbox-slider-disable-pre-background-color: #BEBEBE;
+@esf-checkbox-active-background-color: @black-10;
 
 .esf-checkbox-style-base {
     position: relative;
@@ -72,7 +42,7 @@
             .transition(background 0.3s ease 0s, left 0.3s ease 0s);
         }
         &:active:before {
-            background-color: @esf-checkbox-background-active-color;
+            background: @esf-checkbox-active-background-color;
         }
     }
     input {
@@ -84,6 +54,7 @@
         &:focus {
             & ~ label,
             & ~ .@{esf-class-prefix}-checkbox-box {
+                color: @esf-checkbox-label-text-focus-color;
                 .esf-checkbox-virtual-box-focus-theme-hook;
             }
         }
@@ -109,7 +80,8 @@
     }
 
     // if we put label after checkbox container
-    label, ~ label {
+    label,
+    ~ label {
         .transition(color 0.2s ease);
         cursor: pointer;
         vertical-align: middle;
@@ -128,7 +100,7 @@
     &:extend(.esf-checkbox-style-base all);
 }
 
-.@{esf-class-prefix}-radio-custom {
+.esf-radio-style-base {
     .@{esf-class-prefix}-checkbox-box,
     label {
         &:before {
@@ -140,6 +112,10 @@
             .esf-checkbox-virtual-box-radio-checked-theme-hook;
         }
     }
+}
+
+.@{esf-class-prefix}-radio-custom {
+    &:extend(.esf-radio-style-base all);
 }
 
 .@{esf-class-prefix}-checkbox-switch {

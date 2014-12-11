@@ -1283,26 +1283,6 @@ ui-img {
   background: #f1f1f1;
   border: 1px solid #9a9a9a;
 }
-.esf-checkbox-style-base .ui-checkbox-box:before:hover,
-.esf-checkbox-style-base label:before:hover,
-.ui-checkbox-custom .ui-checkbox-box:before:hover,
-.ui-checkbox-custom label:before:hover,
-.ui-radio-custom .ui-checkbox-box:before:hover,
-.ui-radio-custom label:before:hover,
-.ui-checkbox-switch .ui-checkbox-box:before:hover,
-.ui-checkbox-switch label:before:hover {
-  border-color: #6ccdc0;
-}
-.esf-checkbox-style-base .ui-checkbox-box:before:active,
-.esf-checkbox-style-base label:before:active,
-.ui-checkbox-custom .ui-checkbox-box:before:active,
-.ui-checkbox-custom label:before:active,
-.ui-radio-custom .ui-checkbox-box:before:active,
-.ui-radio-custom label:before:active,
-.ui-checkbox-switch .ui-checkbox-box:before:active,
-.ui-checkbox-switch label:before:active {
-  background-color: #6ccdc0;
-}
 .esf-checkbox-style-base .ui-checkbox-box:after,
 .esf-checkbox-style-base label:after,
 .ui-checkbox-custom .ui-checkbox-box:after,
@@ -1330,7 +1310,7 @@ ui-img {
 .ui-radio-custom label:active:before,
 .ui-checkbox-switch .ui-checkbox-box:active:before,
 .ui-checkbox-switch label:active:before {
-  background-color: #6ccdc0;
+  background: #e6e6e6;
 }
 .esf-checkbox-style-base input,
 .ui-checkbox-custom input,
@@ -1455,12 +1435,16 @@ ui-img {
 .ui-checkbox-switch ~ label:hover {
   color: rgba(0, 0, 0, 0.8);
 }
+.esf-radio-style-base .ui-checkbox-box:before,
+.esf-radio-style-base label:before,
 .ui-radio-custom .ui-checkbox-box:before,
 .ui-radio-custom label:before {
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;
 }
+.esf-radio-style-base input:checked ~ label:after,
+.esf-radio-style-base input:checked ~ .ui-checkbox-box:after,
 .ui-radio-custom input:checked ~ label:after,
 .ui-radio-custom input:checked ~ .ui-checkbox-box:after {
   top: 0;
