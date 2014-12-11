@@ -995,6 +995,7 @@ ui-img {
   text-decoration: none;
   color: #ffffff;
   background-color: #667686;
+  cursor: pointer;
 }
 .ui-button:hover,
 .ui-button:focus {
@@ -1003,13 +1004,16 @@ ui-img {
 }
 .ui-button:hover,
 .ui-button.ui-hover {
-  background-color: #505d69;
+  background-color: #728394;
   color: #ffffff;
+}
+.ui-button:focus,
+.ui-button.ui-focus {
+  background-color: #728394;
 }
 .ui-button:active,
 .ui-button.ui-active {
-  background-color: #45505b;
-  color: #ffffff;
+  background-color: #505d69;
 }
 .ui-button.ui-button-icon {
   padding: 0 0.7em;
@@ -1843,13 +1847,16 @@ body > .est-body:after {
 }
 .ui-button.primary:hover,
 .ui-button.primary.ui-hover {
-  background-color: #46c0b0;
+  background-color: #7fd3c8;
   color: #ffffff;
+}
+.ui-button.primary:focus,
+.ui-button.primary.ui-focus {
+  background-color: #7fd3c8;
 }
 .ui-button.primary:active,
 .ui-button.primary.ui-active {
-  background-color: #3cb0a1;
-  color: #ffffff;
+  background-color: #46c0b0;
 }
 .ui-button.success {
   color: #ffffff;
@@ -1857,13 +1864,16 @@ body > .est-body:after {
 }
 .ui-button.success:hover,
 .ui-button.success.ui-hover {
-  background-color: #158c31;
+  background-color: #1fce49;
   color: #ffffff;
+}
+.ui-button.success:focus,
+.ui-button.success.ui-focus {
+  background-color: #1fce49;
 }
 .ui-button.success:active,
 .ui-button.success.ui-active {
-  background-color: #12762a;
-  color: #ffffff;
+  background-color: #158c31;
 }
 .ui-button.info {
   color: #ffffff;
@@ -1871,13 +1881,16 @@ body > .est-body:after {
 }
 .ui-button.info:hover,
 .ui-button.info.ui-hover {
-  background-color: #24a1c8;
+  background-color: #58c0e1;
   color: #ffffff;
+}
+.ui-button.info:focus,
+.ui-button.info.ui-focus {
+  background-color: #58c0e1;
 }
 .ui-button.info:active,
 .ui-button.info.ui-active {
-  background-color: #208fb2;
-  color: #ffffff;
+  background-color: #24a1c8;
 }
 .ui-button.warning {
   color: #ffffff;
@@ -1885,13 +1898,16 @@ body > .est-body:after {
 }
 .ui-button.warning:hover,
 .ui-button.warning.ui-hover {
-  background-color: #b05c10;
+  background-color: #eb8221;
   color: #ffffff;
+}
+.ui-button.warning:focus,
+.ui-button.warning.ui-focus {
+  background-color: #eb8221;
 }
 .ui-button.warning:active,
 .ui-button.warning.ui-active {
-  background-color: #99500e;
-  color: #ffffff;
+  background-color: #b05c10;
 }
 .ui-button.danger {
   color: #ffffff;
@@ -1899,11 +1915,14 @@ body > .est-body:after {
 }
 .ui-button.danger:hover,
 .ui-button.danger.ui-hover {
-  background-color: #a62d2d;
+  background-color: #cf5050;
   color: #ffffff;
+}
+.ui-button.danger:focus,
+.ui-button.danger.ui-focus {
+  background-color: #cf5050;
 }
 .ui-button.danger:active,
 .ui-button.danger.ui-active {
-  background-color: #922828;
-  color: #ffffff;
+  background-color: #a62d2d;
 }
