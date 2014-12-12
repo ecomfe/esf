@@ -1606,6 +1606,9 @@ ui-img {
 .ui-dropdown-light li.ui-dropdown-separator-after {
   border-bottom: 1px solid #d9d9d9;
 }
+.ui-hoverable .ui-dropdown {
+  margin: 0;
+}
 .ui-menu {
   overflow: visible;
   position: relative;
