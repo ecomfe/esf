@@ -29,10 +29,9 @@
     li {
         font-size: @esf-dropdown-item-text-size;
         position: relative;
-        > a {
+        > * {
             padding: @esf-dropdown-item-padding;
             display: block;
-            float: none;
             text-decoration: none;
             .transition(background-color 0.3s ease);
         }
@@ -83,7 +82,7 @@
 // mixins
 .esf-dropdown-variant(
     @background-color,
-    @border-color, 
+    @border-color,
     @text-color,
     @text-hover-color,
     @hightlight-color
@@ -91,7 +90,7 @@
     background: @background-color;
     border: @border-color;
     li {
-        > a {
+        > * {
             color: @text-color;
             &:hover {
                 color: @text-hover-color;
@@ -118,7 +117,7 @@
     margin: @dropdown-margin;
     padding: @dropdown-padding;
     li {
-        > a {
+        > * {
             padding: @dropdown-item-padding;
         }
         &.@{esf-class-prefix}-separator-before {
