@@ -1,114 +1,135 @@
-@esf-dropdown-border-color: 1px solid rgba(0, 0, 0, 0.1);
+@esf-dropdown-margin: 0.2em 0;
+@esf-dropdown-padding: 0.2em 0;
+@esf-dropdown-radius: @default-border-radius;
+
+@esf-dropdown-border: 1px solid rgba(0, 0, 0, 0.1);
 @esf-dropdown-background-color: @primary-bg-color;
-@esf-dropdown-text-color: #666;
-@esf-dropdown-text-hover-color: #666;
-@esf-dropdown-text-size: @esf-small-font-size;
-@esf-dropdown-hightlight-color: lighten(@black-10, 5%);
+
+@esf-dropdown-item-text-color: #666;
+@esf-dropdown-item-text-hover-color: #666;
+@esf-dropdown-item-text-size: @esf-small-font-size;
+@esf-dropdown-item-hightlight-background-color: lighten(@black-10, 5%);
 @esf-dropdown-item-padding: 0.5em 1em;
-@esf-dropdown-separator-space: 0.35em;
-@esf-dropdown-heading-padding: 0.5em 1em;
-@esf-dropdown-heading-text-size: @esf-base-font-size;
+@esf-dropdown-item-separator-space: 0.35em;
 @esf-dropdown-item-separator-color: #d9d9d9;
 
+@esf-dropdown-heading-text-size: @esf-small-font-size;
+@esf-dropdown-heading-padding: 0.5em 1em;
+
 .@{esf-class-prefix}-dropdown {
+    .esf-list-unstyled;
+    .border-radius(@esf-dropdown-radius);
+    margin: @esf-dropdown-margin;
+    padding: @esf-dropdown-padding;
     position: relative;
     top: auto;
     left: auto;
     z-index: 1000;
-    &:extend(.esf-list-unstyled);
 
     li {
+        font-size: @esf-dropdown-item-text-size;
         position: relative;
-
-        a {
+        > * {
+            padding: @esf-dropdown-item-padding;
             display: block;
-            float: none;
             text-decoration: none;
+            .transition(background-color 0.3s ease);
         }
         &.@{esf-class-prefix}-separator-before {
-            border-top: 1px solid @esf-dropdown-item-separator-color;
+            padding-top: @esf-dropdown-item-separator-space;
+            margin-top: @esf-dropdown-item-separator-space;
         }
         &.@{esf-class-prefix}-separator-after {
-            border-bottom: 1px solid @esf-dropdown-item-separator-color;
+            padding-bottom: @esf-dropdown-item-separator-space;
+            margin-bottom: @esf-dropdown-item-separator-space;
         }
         &.@{esf-class-prefix}-heading {
+            padding: @esf-dropdown-heading-padding;
             font-weight: bold;
+            font-size: @esf-dropdown-heading-text-size;
         }
     }
-    &.@{esf-class-prefix}-flyout {
+    &.@{esf-class-prefix}-dropdown-flyout {
         position: absolute;
         min-width: 8em;
         top: 0;
-        &.@{esf-class-prefix}-left {
+        &.@{esf-class-prefix}-dropdown-left {
             right: 100%;
         }
-        &.@{esf-class-prefix}-right {
+        &.@{esf-class-prefix}-dropdown-right {
             left: 100%;
         }
     } 
 }
 
-.@{esf-class-prefix}-dropdown {
+.@{esf-class-prefix}-dropdown-light {
     .esf-dropdown-variant(
         @esf-dropdown-background-color,
-        @esf-dropdown-border-color,
-        @esf-dropdown-text-color,
-        @esf-dropdown-text-hover-color,
-        @esf-dropdown-text-size,
-        @esf-dropdown-hightlight-color
-    ); 
-    .esf-dropdown-size(
-        @esf-dropdown-item-padding,
-        @esf-dropdown-separator-space,
-        @esf-dropdown-heading-padding,
-        @esf-dropdown-heading-text-size
+        @esf-dropdown-border,
+        @esf-dropdown-item-text-color,
+        @esf-dropdown-item-text-hover-color,
+        @esf-dropdown-item-hightlight-background-color
     );
 }
 
+// to avoid hover issue
+.@{esf-class-prefix}-hoverable {
+    .@{esf-class-prefix}-dropdown {
+        margin: 0;
+    }
+}
 
 // mixins
 .esf-dropdown-variant(
-    @background-color, 
-    @border-color, 
+    @background-color,
+    @border-color,
     @text-color,
-    @text-hover-color
-    @text-size,
+    @text-hover-color,
     @hightlight-color
 ) {
+    background: @background-color;
     border: @border-color;
-    > li {
-        background: @background-color;
-        > a {
+    li {
+        > * {
             color: @text-color;
             &:hover {
-                background: @hightlight-color;
                 color: @text-hover-color;
+                background: @hightlight-color;
             }
+        }
+        &.@{esf-class-prefix}-dropdown-separator-before {
+            border-top: 1px solid @esf-dropdown-item-separator-color;
+        }
+        &.@{esf-class-prefix}-dropdown-separator-after {
+            border-bottom: 1px solid @esf-dropdown-item-separator-color;
         }
     }
 }
 
+// a size mixin to override sizes.
 .esf-dropdown-size(
-    @item-padding,
-    @separator-space,
-    @heading-padding,
-    @heading-text-size
+    @dropdown-margin,
+    @dropdown-padding,
+    @dropdown-item-padding,
+    @dropdown-separator-space,
+    @dropdown-heading-padding
 ) {
-    > li {
-        > a {
-            padding: @item-padding;
+    margin: @dropdown-margin;
+    padding: @dropdown-padding;
+    li {
+        > * {
+            padding: @dropdown-item-padding;
         }
         &.@{esf-class-prefix}-separator-before {
-            padding-top: @separator-space;
-            margin-top: @separator-space;
+            padding-top: @dropdown-separator-space;
+            margin-top: @dropdown-separator-space;
         }
         &.@{esf-class-prefix}-separator-after {
-            padding-bottom: @separator-space;
-            margin-bottom: @separator-space;
+            padding-bottom: @dropdown-separator-space;
+            margin-bottom: @dropdown-separator-space;
         }
         &.@{esf-class-prefix}-heading {
-            padding: @heading-padding;
-            font-size: @heading-text-size;
+            padding: @dropdown-heading-padding;
         }
     }
 }

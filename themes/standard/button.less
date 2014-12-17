@@ -1,0 +1,74 @@
+@esf-button-text-color: @white;
+@esf-button-background-color: #667686;
+@esf-button-hover-background-color: lighten(@esf-button-background-color, 5%);
+@esf-button-active-background-color: darken(@esf-button-background-color, 10%);
+@esf-button-focus-background-color: @esf-button-hover-background-color;
+@esf-button-group-separator-color: @white;
+
+
+.esf-button-variant(
+    @text-color,
+    @background-color,
+    @hover-background-color,
+    @active-background-color,
+    @focus-background-color
+) {
+    color: @text-color;
+    background-color: @background-color;
+    &:hover,
+    &.@{esf-class-prefix}-hover {
+        background-color: @hover-background-color;
+        color: @text-color;
+    }
+    &:focus,
+    &.@{esf-class-prefix}-focus {
+        background-color: @focus-background-color;
+    }
+    &:active,
+    &.@{esf-class-prefix}-active {
+        background-color: @active-background-color;
+    }
+}
+
+.esf-button-variant(
+    @text-color,
+    @background-color
+) {
+    color: @text-color;
+    background-color: @background-color;
+    &:hover,
+    &.@{esf-class-prefix}-hover {
+        background-color: lighten(@background-color, 5%);
+        color: @text-color;
+    }
+    &:focus,
+    &.@{esf-class-prefix}-focus {
+        background-color: lighten(@background-color, 5%);
+    }
+    &:active,
+    &.@{esf-class-prefix}-active {
+        background-color: darken(@background-color, 10%);
+    }
+}
+
+.esf-button-theme-hook() {
+    .esf-button-variant(
+        @esf-button-text-color,
+        @esf-button-background-color,
+        @esf-button-hover-background-color,
+        @esf-button-active-background-color,
+        @esf-button-focus-background-color
+    );
+}
+
+.esf-button-group-theme-hook() {
+    &.@{esf-class-prefix}-button-separated {
+        .@{esf-class-prefix}-button {
+            margin-left: 0;
+            &:not(:last-child) {
+                border-right: 1px solid @esf-button-group-separator-color;
+            }
+        }
+    }
+}
+

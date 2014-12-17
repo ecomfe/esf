@@ -30,21 +30,17 @@
     font-size: @esf-massive-font-size !important;
 }
 
-.esf-list-unstyled {
-    padding-left: 0;
-    list-style: none;
+[disabled],
+.@{esf-class-prefix}-disabled {
+    .esf-disabled;
 }
 
-.esf-disabled {
+.esf-list-unstyled() {
+    padding-left: 0;
+    .reset-list-style;
+}
+
+.esf-disabled() {
     .opacity(40);
     cursor: not-allowed !important;
-}
-
-*[disabled],
-.@{esf-class-prefix}-disabled {
-    &:extend(.esf-disabled);
-}
-
-.@{esf-class-prefix}-fluid {
-    display: block !important;
 }

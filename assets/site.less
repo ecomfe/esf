@@ -1,7 +1,9 @@
 @import "../dep/est/1.3.0-dev/src/all.less";
 .global-normalize();
-@import "../src/main.less";
+@import "../themes/standard/main.less";
+@import "../dep/eicons/1.0.0-alpha/src/main.less";
 
+@fa-font-path: "../dep/eicons/1.0.0-alpha/fonts/font-awesome";
 
 body {
    .est-layout-fixed-header(4em);
@@ -143,19 +145,19 @@ body {
 }
 
 .ui-button.primary {
-    .button-variant(@white, @primary-color, @primary-color);
+    .esf-button-variant(@white, @primary-color);
 }
 
 .ui-button.success {
-    .button-variant(@white, rgb(28, 184, 65), rgb(28, 184, 65));
+    .esf-button-variant(@white, rgb(28, 184, 65));
 }
 
 .ui-button.info {
-    .button-variant(@white, rgb(66, 184, 221), rgb(66, 184, 221));
+    .esf-button-variant(@white, rgb(66, 184, 221));
 }
 .ui-button.warning {
-    .button-variant(@white, rgb(223, 117, 20), rgb(223, 117, 20));
+    .esf-button-variant(@white, rgb(223, 117, 20));
 }
 .ui-button.danger {
-    .button-variant(@white, rgb(202, 60, 60), rgb(202, 60, 60));
+    .esf-button-variant(@white, rgb(202, 60, 60));
 }
