@@ -1,0 +1,118 @@
+@esf-staticstack-border: 6px solid #fff;
+@esf-staticstack-bgcolor: #fff;
+@esf-staticstack-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+@esf-staticstack-beforeafter-border: 6px solid #fff;
+@esf-staticstack-beforeafter-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+@esf-staticstack-before-bgcolor: #eff4de;
+@esf-staticstack-after-bgcolor: #768590;
+
+@esf-staticstackone-before-top: 4px;
+@esf-staticstackone-before-left: -6px;
+
+@esf-staticstackone-after-top: -2px;
+@esf-staticstackone-after-left: -6px;
+
+@esf-staticstacktwo-before-top: 0px;
+@esf-staticstacktwo-before-left: -10px;
+@esf-staticstacktwo-before-rotatedeg: -5deg;
+
+@esf-staticstacktwo-after-top: 5px;
+@esf-staticstacktwo-after-left: 0px;
+@esf-staticstacktwo-after-rotatedeg: 4deg;
+
+@esf-staticstackthree-before-top: 5px;
+@esf-staticstackthree-before-left: -15px;
+@esf-staticstackthree-before-rotatedeg: -10deg;
+
+@esf-staticstackthree-after-top: -2px;
+@esf-staticstackthree-after-left: -10px;
+@esf-staticstackthree-after-rotatedeg: -5deg;
+
+div[class*='@{esf-class-prefix}-staticstack'] {
+  position: relative;
+  border: @esf-staticstack-border;
+  width: 100%;
+  height: 100%;
+  background: @esf-staticstack-bgcolor;
+  .box-shadow(@esf-staticstack-box-shadow);
+
+  img { 
+    width: 100%; 
+    height: 100%; 
+  }
+
+  &:before, &:after {
+    border: @esf-staticstack-beforeafter-border;
+    width: 100%;
+    height: 100%;
+    .box-sizing(border-box);
+    .box-shadow(@esf-staticstack-beforeafter-box-shadow);
+    
+    content: "";
+    position: absolute;
+    z-index: -1;
+    
+    /*Dirty IE8 hack*/  
+    height: 0px\9; 
+    width: 0px\9; 
+    border: none\9;
+  }
+
+  &:before {
+    background: @esf-staticstack-before-bgcolor
+  }
+
+  &:after {
+    background: @esf-staticstack-after-bgcolor
+  }
+}
+
+
+/*staticstack ONE*/
+.@{esf-class-prefix}-staticstackone {
+  &:before {
+    top: @esf-staticstackone-before-top;
+    left: @esf-staticstackone-before-left;
+  }
+
+  &:after {
+    top:  @esf-staticstackone-after-top;
+    left: @esf-staticstackone-after-left;
+  }
+}
+ 
+ 
+/*staticstack TWO*/
+.@{esf-class-prefix}-staticstacktwo {
+  &:before {
+    top: @esf-staticstacktwo-before-top;
+    left: @esf-staticstacktwo-before-left;
+    .rotate(@esf-staticstacktwo-before-rotatedeg);
+  }
+
+  &:after {
+    top: @esf-staticstacktwo-after-top;
+    left: @esf-staticstacktwo-after-left;
+    .rotate(@esf-staticstacktwo-after-rotatedeg);
+  }
+}
+ 
+
+ 
+/*staticstack THREE*/
+.@{esf-class-prefix}-staticstackthree {
+  &:before {
+    z-index: -1;
+    top: @esf-staticstackthree-before-top;
+    left: @esf-staticstackthree-before-left;
+    .rotate(@esf-staticstackthree-before-rotatedeg);
+  }
+
+  &:after {
+    top: @esf-staticstackthree-after-top;
+    left: @esf-staticstackthree-after-left;
+    .rotate(@esf-staticstackthree-after-rotatedeg);
+  }
+}
