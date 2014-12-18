@@ -3,26 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <title>UI - ESUI Demo</title>
-        <link rel="stylesheet" href="assets/site.less" />
-        <link rel="stylesheet" href="assets/icons/main.css" />
-        
+        <link rel="stylesheet" href="assets/site.css" />
         <link rel="stylesheet" href="assets/prism.css" />
         <script src="assets/prism.js"></script>
         <script src="assets/jquery-1.11.1.min.js"></script>
         <script src="assets/demo.js"></script>
-        <script>
-            $(function () {
-                $('#unique-id-4').prop('indeterminate', true);
-            });
-        </script>
     </head>
     <body class="ui-m3">
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
                 <ul id="navigator-features" class="ui-list-unstyled">
-                    <li><a href="#responseimg">Responsive images</a></li>
-                    <li><a href="#imgshape">Image shapes</a></li>
-                    <li><a href="#captionanimation">Image Caption Animation</a></li>
+                    <li><a href="#responseive-img">Responsive Images</a></li>
+                    <li><a href="#img-shape">Image Shapes</a></li>
+                    <li><a href="#image-frame">Image Frame</a></li>
+                    <li><a href="#image-caption">Image Caption</a></li>
+                    <li><a href="#image-stack">Image Stack</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
@@ -30,37 +25,113 @@
                     <h2 id="icons" class="ui-mt0">Image</h2>
                     <div class="ui-divider"></div>
                     <p>
-                        
+                        Image styles.
                     </p>
                     <div>
-                        <h1 id="responseimg">Responsive images</h1>
-    
-                        <div class="example">                
-                            <img src="assets/imgs/image1.jpg" class="ui-img-responsive" style="margin:10%;"/>
-                            <img src="assets/imgs/image2.jpg" class="ui-img-responsive" style="margin:10%;"/>
-                            <img src="assets/imgs/image3.jpg" class="ui-img-responsive" style="margin:10%;"/>
+                        <h3 id="responseive-img">Responsive Images</h3>
+                        <div class="example">
+                            <div style="width: 300px">
+                                <img src="assets/imgs/image1.jpg" class="ui-img-responsive" />
+                            </div>
+                            <div style="width: 200px;margin-top: 10px;">
+                                <img src="assets/imgs/image2.jpg" class="ui-img-responsive" />
+                            </div>
+                            <div style="width: 100px;margin-top: 10px;">
+                                <img src="assets/imgs/image3.jpg" class="ui-img-responsive" />
+                            </div>
                         </div>
 
-                        <h1 id="imgshape">Image shapes</h1>
-    
+                        <h3 id="img-shape">Image Shapes</h3>
                         <div class="example">
-                            <img src="assets/imgs/image1.jpg" class="ui-img-rounded" style="width:300px;height:300px;margin:10%;"/>
-                            <img src="assets/imgs/image2.jpg" class="ui-img-circle" style="width:300px;height:300px;margin:10%;"/>
-                            <img src="assets/imgs/image3.jpg" class="ui-img-thumbnail" style="width:300px;height:300px;margin:10%;"/>
+                            <img src="assets/imgs/image1.jpg" class="ui-img-rounded" style="width:300px;height:300px;"/>
+                            <img src="assets/imgs/image2.jpg" class="ui-img-circle" style="width:300px;height:300px;"/>
                         </div>
 
-                        <h1 id="captionanimation">Image Caption Animation</h1>
-    
+                        <h3 id="image-frame">Image Frame</h3>
                         <div class="example">
-                            <figure class="ui-img-frame ui-img-caption ui-img-caption-animate" style="width:300px;height:300px;margin:10%;">
+                            <h4>Hoverable</h4>
+                            <div>
+                                <figure class="ui-img-frame ui-img-frame-hover" style="width: 300px">
+                                    <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                </figure>
+                                <figure class="ui-img-frame ui-img-rounded ui-img-frame-hover" style="width: 300px">
+                                    <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                </figure>
+                            </div>
+                            <h4>Round Corner</h4>
+                            <div>
+                                <figure class="ui-img-frame ui-img-rounded" style="width: 300px">
+                                    <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                </figure>
+                                <figure class="ui-img-frame ui-img-rounded" style="width: 300px">
+                                    <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                </figure>
+                            </div>
+                            <h4>Drop Shadow</h4>
+                            <div>
+                                <img style="width: 300px" class="ui-img-frame ui-img-shadow" src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                            </div>
+                            <h4>Image Only</h4>
+                            <div>
+                                <img style="width: 300px" class="ui-img-frame" src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                <img style="width: 300px" class="ui-img-frame ui-img-rounded" src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                            </div>
+                        </div>
+                        <h3 id="image-caption">Image Caption</h3>
+                        <div class="example">
+                            <h4>Caption</h4>
+                            <figure class="ui-img-frame" style="width:300px;">
                                 <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
                                 <figcaption>The Union Plaza and greenspace at the University of Nebraska–Lincoln are beautiful in the spring.</figcaption>
                             </figure>
-
-                            <figure class="ui-img-frame ui-img-caption ui-caption-animate" style="width:300px;height:300px;margin:10%;">
+                            <h4>Caption Slide In</h4>
+                            <figure class="ui-img-frame ui-caption-slide-in" style="width:300px;">
                                 <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
                                 <figcaption>The Union Plaza and greenspace at the University of Nebraska–Lincoln are beautiful in the spring.</figcaption>
                             </figure>
+                        </div>
+                        <h3 id="image-stack">Image Stack</h3>
+                        <div class="example">
+                            <h4>Stack</h4>
+                            <div style="margin-bottom: 30px;">
+                                <div class="ui-img-stack">
+                                    <figure class="ui-img-frame" style="width:300px;height:300px;">
+                                        <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <h4>Stack Rotated</h4>
+                            <div style="margin-bottom: 30px;">
+                                <div class="ui-img-stack ui-img-stack-rotated">
+                                    <figure class="ui-img-frame" style="width:300px;height:300px;">
+                                        <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <h4>Stack Twisted</h4>
+                            <div style="margin-bottom: 30px; margin-left: 30px;">
+                                <div class="ui-img-stack ui-img-stack-twisted">
+                                    <figure class="ui-img-frame" style="width:300px;height:300px;">
+                                        <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <h4>Stack Left-Rotated</h4>
+                            <div style="margin-bottom: 30px; margin-left: 30px;">
+                                <div class="ui-img-stack ui-img-stack-left-rotated">
+                                    <figure class="ui-img-frame" style="width:300px;height:300px;">
+                                        <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                    </figure>
+                                </div>
+                            </div>
+                            <h4>Stack Hover</h4>
+                            <div style="margin-bottom: 30px; margin-left: 30px;">
+                                <div class="ui-img-stack ui-img-stack-left-rotated ui-img-stack-hover">
+                                    <figure class="ui-img-frame" style="width:300px;height:300px;">
+                                        <img src="assets/imgs/image4.jpg" alt="Photo of the UNL Campus" />
+                                    </figure>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
