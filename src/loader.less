@@ -1,0 +1,120 @@
+@esf-loader-color-for-light-bg: @primary-color;
+@esf-loader-color2-for-light-bg: lighten(@primary-color, 25%);
+
+.@{esf-class-prefix}-loader {
+    display: inline-block;
+}
+
+// bouncers effect
+// http://tobiasahlin.com/spinkit
+.@{esf-class-prefix}-loader-bouncers {
+    width: 5em;
+    text-align: center;
+    > div {
+        width: 1.25em;
+        height: 1.25em;
+        background-color: @esf-loader-color-for-light-bg;
+
+        border-radius: 100%;
+        display: inline-block;
+        .animation(esf-loader-bounce 1.4s infinite ease-in-out);
+    }
+    .@{esf-class-prefix}-spinner-bouncer1 {
+        .animation-delay(-.32s);
+    }
+    .@{esf-class-prefix}-spinner-bouncer2 {
+        .animation-delay(-.16s);
+    }
+}
+
+@-webkit-keyframes esf-loader-bounce {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes esf-loader-bounce {
+    0%, 80%, 100% { 
+        transform: scale(0.0);
+    } 40% {
+        transform: scale(1.0);
+    }
+}
+
+// web icon spin effect
+.@{esf-class-prefix}-loader-icon {
+    text-align: center;
+    color: @esf-loader-color-for-light-bg;
+    font-size: 2em;
+}
+
+// border spin effect
+.@{esf-class-prefix}-loader-border {
+    border-bottom: 6px solid @esf-loader-color2-for-light-bg;
+    border-left: 6px solid @esf-loader-color2-for-light-bg;
+    border-right: 6px solid @esf-loader-color2-for-light-bg;
+    border-top: 6px solid @esf-loader-color-for-light-bg;
+    display: inline-block;
+    border-radius: 100%;
+    .size(2em, 2em);
+    .animation(esf-loader-border-spin .6s infinite linear);
+}
+
+@-webkit-keyframes esf-loader-border-spin {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+
+@keyframes esf-loader-border-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+// 2 borders spin
+// http://codepen.io/varemenos/pen/IAzbo
+.@{esf-class-prefix}-loader-borders:before {
+    content: '';
+}
+
+.@{esf-class-prefix}-loader-borders:before,
+.@{esf-class-prefix}-loader-borders {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.5em;
+    vertical-align: middle;
+    text-align: center;
+    border: 5px solid transparent;
+    border-top-color: @esf-loader-color-for-light-bg;
+    border-bottom-color: @esf-loader-color-for-light-bg;
+    border-radius: 50%;
+    .animation(esf-loader-borders-spin 1s infinite);
+}
+
+@-webkit-keyframes esf-loader-borders-spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes esf-loader-borders-spin {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
