@@ -2,78 +2,109 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>UI - ESUI Demo</title>
+        <title>Label</title>
         <link rel="stylesheet" href="assets/site.css" />
+
+        <link rel="stylesheet" href="assets/prism.css" />
+        <script src="assets/prism.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
+        <style>
+            .black-label {
+                color: white;
+                background: black;
+            }
+            .yellow-label {
+                color: white;
+                background: #f2c61f;
+            }
+            .green-label {
+                color: white;
+                background: #5bbd72;
+            }
+            .teal-label {
+                color: white;
+                background: #00b5ad;
+            }
+            .red-label {
+                color: white;
+                background: #d95c5c;
+            }
+            .red-label:before {
+                border-top-color: #d95c5c;
+            }
+        </style>
     </head>
     <body class="ui-m3">
-        <h1 class="align-center">标签</h1>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
-                <ul id="navigator" class="ui-list-unstyled">
-                    <li><a href="index.html">Get Started</a></li>
-                    <li><a href="button.html">按钮</a></li>
-                    <li><a href="#">布局网格</a></li>
-                    <li><a href="checkbox.html">Checkbox</a></li>
-                    <li><a href="form.html">表单</a></li>
-                    <li><a href="icons.html">图标</a></li>
-                    <li><a href="input.html">输入框</a></li>
-                    <li><a href="label.html">标签</a></li>
-                    <li><a href="menu.html">导航菜单</a></li>
-                    <li><a href="type.html">文字样式</a></li>
+                <ul id="navigator-features" class="ui-list-unstyled">
+                    <li><a href="#label-basic">Label</a></li>
+                    <li><a href="#label-hover">Label Hover</a></li>
+                    <li><a href="#label-pointer">Label Pointer</a></li>
+                    <li><a href="#label-circular">Label Circular</a></li>
+                    <li><a href="#label-colors">Label Colors</a></li>
+                    <li><a href="#label-sizes">label-sizes</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
                 <div id="main" class="content ui-p2 ui-pt0">
                     <h2 id="icons" class="content-subhead">标签-Label</h2>
                     <div>
-                        <h3>类型</h3>
-                        <div>
-                            <h4>基础标签</h4>
-                            <div class="ui label">鸿媒体DSP广告管家</div>
+                        <h3 id="label-basic">Label</h3>
+                        <div class="example ui-small">
+                            <label class="ui-label">鸿媒体DSP广告管家</label>
+                            <label class="ui-label">鸿媒体DSP广告管家 <span class="ui-icon-remove ui-label-hover"></span></label>
+                            <label class="ui-label"><i class="ui-icon-paw"></i> lisijin@baidu.com</label>
                         </div>
-                        <div>
-                            <h4>有icon的标签</h4>
-                            <div class="ui label"><i class="icon ui-icon-paw">lisijin@baidu.com</i></div>
+                        <h3 id="label-hover">Hoverable</h3>
+                        <div class="example ui-small">
+                            <label class="ui-label ui-label-hover">鸿媒体DSP广告管家</label>
                         </div>
-                        <div>
-                            <h4>有图片的标签</h4>
-                            <a class="ui image label">
-                                <img src="http://pic7.nipic.com/20100528/1295091_092659726515_2.jpg">
-                                dog@doggington.com
-                            </a>
-                        </div>
-                        <div>
-                            <h4>边角标签</h4>
-                            <div class="ui left floated medium image">
-                                <a class="ui right red corner label">
-                                    <i class="icon ui-icon-weixin"></i>
-                                </a>
-                                <img src="http://img4.duitang.com/uploads/item/201203/02/20120302214755_Hiz58.jpeg">
+                        <h3 id="label-pointer">Pointer</h3>
+                        <div class="example ui-small">
+                            <div>
+                                <label class="ui-label-pointer ui-label-hover">鸿媒体DSP广告管家</label>
+                            </div>
+                            <div class="ui-mt2">
+                                <label class="ui-label-pointer-bottom red-label">鸿媒体DSP广告管家</label>
+                            </div>
+                            <div class="ui-mt2">
+                                <label class="ui-label-pointer-left">鸿媒体DSP广告管家</label>
+                            </div>
+                            <div class="ui-mt2">
+                                <label class="ui-label-pointer-right">鸿媒体DSP广告管家</label>
                             </div>
                         </div>
-                        <div>
-                            <h4>不同颜色的标签</h4>
-                            <a class="ui black label">
-                                第一
-                            </a>
-                            <a class="ui green label">
-                                玩笑
-                            </a>
-                            <a class="ui red label">
-                                高兴
-                            </a>
-                            <a class="ui blue label">
-                                聪明
-                            </a>
-                            <a class="ui orange label">
-                                激进
-                            </a>
-                            <a class="ui purple label">
-                                疯子
-                            </a>
-                            <a class="ui teal label">
-                                扣人心弦
-                            </a>
+                        <h3 id="label-circular">Circular</h3>
+                        <div class="example ui-small">
+                            <div>
+                                <label class="ui-label-circular teal-label ui-label-hover">1</label>
+                                <label class="ui-label-circular teal-label ui-label-hover">2</label>
+                                <label class="ui-label-circular teal-label ui-label-hover">200</label>
+                                <label class="ui-label-circular teal-label ui-label-hover"><span class="ui-icon-close"></span></label>
+                            </div>
+                        </div>
+                        <h3 id="label-colors">Colors</h3>
+                        <div class="example ui-small">
+                            <div>
+                                <label class="ui-label black-label ui-label-hover">Black Label</label>
+                                <label class="ui-label yellow-label ui-label-hover">Yellow Label</label>
+                                <label class="ui-label green-label ui-label-hover">Green Label</label>
+                                <label class="ui-label red-label ui-label-hover">Red Label</label>
+                                <label class="ui-label teal-label ui-label-hover"><span class="ui-icon-close"></span></label>
+                            </div>
+                        </div>
+                        <h3 id="label-sizes">Sizes</h3>
+                        <div class="example ui-small">
+                            <div>
+                                <label class="ui-label green-label ui-mini">mini </label>
+                                <label class="ui-label green-label ui-small">small </label>
+                                <label class="ui-label green-label ui-large">large </label>
+                                <label class="ui-label green-label ui-big">big </label>
+                                <label class="ui-label green-label ui-huge">huge </label>
+                                <label class="ui-label green-label ui-massive"> massive </label>
+                            </div>
                         </div>
                     </div>
                 </div>
