@@ -33,19 +33,21 @@
 }
 
 .@{esf-class-prefix}-img-frame {
-
     padding: @esf-img-frame-padding;
     border: @esf-img-frame-border;
     display: inline-block;
     .transition(all .2s ease-in-out);
     background: @esf-img-frame-background;
+    vertical-align: middle;
 
+    &figure {
+        margin: 0;
+    }
     img {
         width: 100%;
         height: auto;
         vertical-align: bottom;
     }
-
     figcaption {
         padding: @esf-img-frame-figcaption-padding;
         background-color: @esf-img-frame-figcaption-bgcolor;
@@ -162,8 +164,4 @@
     &:before, &:after{
         .rotate(0);
     }
-}
-
-figure {
-    margin: 0;
 }

@@ -1,0 +1,84 @@
+@esf-text-bold-weight: bold;
+@esf-text-muted-color: #999;
+@esf-text-primary-color: @primary-color;
+@esf-text-success-color: @success-color;
+@esf-text-warning-color: @warning-color;
+@esf-text-danger-color: @danger-color;
+
+// text-alignments
+.@{esf-class-prefix}-text-left {
+    text-align: left;
+}
+
+.@{esf-class-prefix}-text-center {
+    text-align: center;
+}
+
+.@{esf-class-prefix}-text-right {
+    text-align: right;
+}
+
+.@{esf-class-prefix}-text-justify {
+    text-align: justify;
+}
+
+// vertical alignments
+// not using text-top, because we could align other inline elements.
+.@{esf-class-prefix}-align-top {
+    vertical-align: top !important;
+}
+
+.@{esf-class-prefix}-align-middle {
+    vertical-align: middle !important;
+}
+
+.@{esf-class-prefix}-align-bottom {
+    vertical-align: bottom !important;
+}
+
+// text wrap options
+.@{esf-class-prefix}-text-nowrap {
+    white-space: nowrap;
+}
+
+.@{esf-class-prefix}-text-break {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.@{esf-class-prefix}-text-truncate {
+    .ellipsis();
+}
+
+// text styles
+.@{esf-class-prefix}-text-bold {
+    font-weight: @esf-text-bold-weight;
+}
+
+.@{esf-class-prefix}-text-italic {
+    font-style: italic;
+}
+
+.@{esf-class-prefix}-text-caps {
+    text-transform: uppercase;
+}
+
+// text colors
+.@{esf-class-prefix}-text-muted {
+    color: @esf-text-muted-color;
+}
+
+.@{esf-class-prefix}-text-success {
+    color: @esf-text-success-color;
+}
+
+.@{esf-class-prefix}-text-warning {
+    color: @esf-text-warning-color;
+}
+
+.@{esf-class-prefix}-text-danger {
+    color: @esf-text-danger-color;
+}

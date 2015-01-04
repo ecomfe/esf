@@ -33,7 +33,7 @@
             .box-sizing(border-box);
             .transition(background-color 0.3s ease, border-color 0.3s ease);
 
-            .esf-checkbox-virtual-box-theme-hook;
+            .esf-checkbox-virtual-box-theme();
         }
         &:after {
             .box-sizing(border-box);
@@ -55,27 +55,27 @@
             & ~ label,
             & ~ .@{esf-class-prefix}-checkbox-box {
                 color: @esf-checkbox-label-text-focus-color;
-                .esf-checkbox-virtual-box-focus-theme-hook;
+                .esf-checkbox-virtual-box-focus-theme();
             }
         }
         &:checked {
             & ~ label,
             & ~ .@{esf-class-prefix}-checkbox-box {
-                .esf-checkbox-virtual-box-checked-theme-hook;
+                .esf-checkbox-virtual-box-checked-theme();
             }
         }
         &:indeterminate {
             & ~ label,
             & ~ .@{esf-class-prefix}-checkbox-box {
-                .esf-checkbox-virtual-box-indeterminate-theme-hook;
+                .esf-checkbox-virtual-box-indeterminate-theme();
             }
         }
     }
     input[disabled] {
         & ~ label,
         & ~ .@{esf-class-prefix}-checkbox-box {
-            .esf-checkbox-virtual-box-disabled-theme-hook;
-            .esf-disabled;
+            .esf-checkbox-virtual-box-disabled-theme();
+            .esf-disabled();
         }
     }
 
@@ -109,7 +109,7 @@
     }
     input:checked {
         & ~ label, & ~ .@{esf-class-prefix}-checkbox-box {
-            .esf-checkbox-virtual-box-radio-checked-theme-hook;
+            .esf-checkbox-virtual-box-radio-checked-theme();
         }
     }
 }
@@ -123,12 +123,12 @@
         ~ .@{esf-class-prefix}-checkbox-box,
         ~ label {
             padding-left: 4em;
-            .esf-checkbox-virtual-box-switch-theme-hook;
+            .esf-checkbox-virtual-box-switch-theme();
         }
         &:checked {
             ~ .@{esf-class-prefix}-checkbox-box,
             ~ label {
-                .esf-checkbox-virtual-box-switch-checked-theme-hook;
+                .esf-checkbox-virtual-box-switch-checked-theme();
             }
         }
     }
@@ -138,24 +138,24 @@
     input {
         ~ .@{esf-class-prefix}-checkbox-box,
         ~ label {
-            .esf-checkbox-virtual-box-switch-round-theme-hook;
+            .esf-checkbox-virtual-box-switch-round-theme();
         }
         &:checked {
             ~ .@{esf-class-prefix}-checkbox-box,
             ~ label {
-                .esf-checkbox-virtual-box-switch-round-checked-theme-hook;
+                .esf-checkbox-virtual-box-switch-round-checked-theme();
             }
         }
     }
 }
 
-.esf-checkbox-virtual-box-focus-theme-hook() {}
-.esf-checkbox-virtual-box-checked-theme-hook() {}
-.esf-checkbox-virtual-box-indeterminate-theme-hook() {}
-.esf-checkbox-virtual-box-disabled-theme-hook() {}
-.esf-checkbox-virtual-box-theme-hook() {}
-.esf-checkbox-virtual-box-radio-checked-theme-hook() {}
-.esf-checkbox-virtual-box-switch-theme-hook() {}
-.esf-checkbox-virtual-box-switch-checked-theme-hook() {}
-.esf-checkbox-virtual-box-switch-round-theme-hook() {}
-.esf-checkbox-virtual-box-switch-round-checked-theme-hook() {}
+.esf-checkbox-virtual-box-focus-theme() {}
+.esf-checkbox-virtual-box-checked-theme() {}
+.esf-checkbox-virtual-box-indeterminate-theme() {}
+.esf-checkbox-virtual-box-disabled-theme() {}
+.esf-checkbox-virtual-box-theme() {}
+.esf-checkbox-virtual-box-radio-checked-theme() {}
+.esf-checkbox-virtual-box-switch-theme() {}
+.esf-checkbox-virtual-box-switch-checked-theme() {}
+.esf-checkbox-virtual-box-switch-round-theme() {}
+.esf-checkbox-virtual-box-switch-round-checked-theme() {}
