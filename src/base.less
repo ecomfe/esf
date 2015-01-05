@@ -1,46 +1,23 @@
-[hidden] {
-    display: none !important;
+.esf-clearfix {
+    .clearfix();
 }
 
-.@{esf-class-prefix}-base {
-    font-size: @esf-base-font-size !important;
+// less mixin doesn't support variable.
+.esf-disabled {
+    .opacity(40);
+    cursor: not-allowed !important;
 }
 
-.@{esf-class-prefix}-mini {
-    font-size: @esf-mini-font-size !important;
-}
-
-.@{esf-class-prefix}-small {
-    font-size: @esf-small-font-size !important;
-}
-
-.@{esf-class-prefix}-large {
-    font-size: @esf-large-font-size !important;
-}
-
-.@{esf-class-prefix}-big {
-    font-size: @esf-big-font-size !important;
-}
-
-.@{esf-class-prefix}-huge {
-    font-size: @esf-huge-font-size !important;
-}
-
-.@{esf-class-prefix}-massive {
-    font-size: @esf-massive-font-size !important;
-}
-
-[disabled],
-.@{esf-class-prefix}-disabled {
-    .esf-disabled;
-}
-
+// mixins
 .esf-list-unstyled() {
     padding-left: 0;
     .reset-list-style;
 }
 
-.esf-disabled() {
-    .opacity(40);
-    cursor: not-allowed !important;
+.esf-transition(@transition) {
+    
+}
+
+.esf-transition(@transition) when (@esf-enable-transition-effect) {
+    .transition(@transition);
 }

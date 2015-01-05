@@ -1,4 +1,5 @@
 @esf-checkbox-border-color: #9a9a9a;
+@esf-checkbox-border-radius: @default-border-radius;
 @esf-checkbox-background-color: #f1f1f1;
 
 @esf-checkbox-focus-border-color: @primary-color;
@@ -27,13 +28,13 @@
 
 @esf-checkbox-label-text-disabled-color: rgba(0, 0, 0, 0.3);
 
-.esf-checkbox-virtual-box-focus-theme-hook() {
+.esf-checkbox-virtual-box-focus-theme() {
     &:before {
         .box-shadow(0 0 1px @esf-checkbox-focus-border-color);
     }
 }
 
-.esf-checkbox-virtual-box-checked-theme-hook() {
+.esf-checkbox-virtual-box-checked-theme() {
     &:before {
         background: @esf-checkbox-radio-checked-background-color;
         border-color: @esf-checkbox-radio-checked-border-color;
@@ -51,9 +52,10 @@
     }
 }
 
-.esf-checkbox-virtual-box-indeterminate-theme-hook() {
+.esf-checkbox-virtual-box-indeterminate-theme() {
     &:after {
         border: 1px solid @esf-checkbox-border-active-color;
+        .border-radius(@esf-checkbox-border-radius);
         width: 1em;
         height: 1em;
         background: @esf-checkbox-radio-checked-background-color;
@@ -63,12 +65,13 @@
     }
 }
 
-.esf-checkbox-virtual-box-theme-hook() {
+.esf-checkbox-virtual-box-theme() {
     background: @esf-checkbox-background-color;
     border: 1px solid @esf-checkbox-border-color;
+    .border-radius(@esf-checkbox-border-radius);
 }
 
-.esf-checkbox-virtual-box-radio-checked-theme-hook() {
+.esf-checkbox-virtual-box-radio-checked-theme() {
     &:after {
         top: 0;
         left: 0;
@@ -81,7 +84,7 @@
     }
 }
 
-.esf-checkbox-virtual-box-switch-theme-hook() {
+.esf-checkbox-virtual-box-switch-theme() {
     &:before {
         background-color: @esf-checkbox-slider-off-background-color;
         width: 3em;
@@ -89,6 +92,7 @@
         border: @esf-checkbox-slider-off-background-color 1px solid;
         top: -0.1em;
         left: 0;
+        .border-radius(0);
     }
     &:after {
         border: @esf-checkbox-slider-handle-off-border-color 1px solid;
@@ -101,7 +105,7 @@
     }
 }
 
-.esf-checkbox-virtual-box-switch-checked-theme-hook() {
+.esf-checkbox-virtual-box-switch-checked-theme() {
     &:before {
         background-color: @esf-checkbox-slider-on-background-color;
         width: 3em;
@@ -121,7 +125,7 @@
     }
 }
 
-.esf-checkbox-virtual-box-switch-round-theme-hook() {
+.esf-checkbox-virtual-box-switch-round-theme() {
     &:before {
         .border-radius(500px);
     }
@@ -130,7 +134,7 @@
          .border-radius(500px);
     }
 }
-.esf-checkbox-virtual-box-switch-round-checked-theme-hook() {
+.esf-checkbox-virtual-box-switch-round-checked-theme() {
     &:before {
         .border-radius(500px);
     }
