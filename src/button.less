@@ -7,11 +7,14 @@
 @esf-button-padding: 0 1em;
 
 @esf-button-link-color: @primary-color;
-@esf-button-link-hover-color: darken(@primary-color, 15%);
+@esf-button-link-decoration: none;
+@esf-button-link-hover-color: lighten(@primary-color, 15%);
+@esf-button-link-hover-decoration: underline;
+
 @esf-button-radius: @default-border-radius;
 
 .@{esf-class-prefix}-button {
-    .esf-button;
+    .esf-button();
     .esf-button-theme();
 
     cursor: pointer;
@@ -24,10 +27,11 @@
     }
     &.@{esf-class-prefix}-button-link {
         color: @esf-button-link-color;
+        text-decoration: @esf-button-link-decoration;
 
         &:hover {
             color: @esf-button-link-hover-color;
-            text-decoration: underline;
+            text-decoration: @esf-button-link-hover-decoration;
             background: none;
         }
         background: none;

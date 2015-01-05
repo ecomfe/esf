@@ -1,4 +1,5 @@
 @esf-checkbox-border-color: #9a9a9a;
+@esf-checkbox-border-radius: @default-border-radius;
 @esf-checkbox-background-color: #f1f1f1;
 
 @esf-checkbox-focus-border-color: @primary-color;
@@ -54,6 +55,7 @@
 .esf-checkbox-virtual-box-indeterminate-theme() {
     &:after {
         border: 1px solid @esf-checkbox-border-active-color;
+        .border-radius(@esf-checkbox-border-radius);
         width: 1em;
         height: 1em;
         background: @esf-checkbox-radio-checked-background-color;
@@ -66,6 +68,7 @@
 .esf-checkbox-virtual-box-theme() {
     background: @esf-checkbox-background-color;
     border: 1px solid @esf-checkbox-border-color;
+    .border-radius(@esf-checkbox-border-radius);
 }
 
 .esf-checkbox-virtual-box-radio-checked-theme() {
@@ -89,6 +92,7 @@
         border: @esf-checkbox-slider-off-background-color 1px solid;
         top: -0.1em;
         left: 0;
+        .border-radius(0);
     }
     &:after {
         border: @esf-checkbox-slider-handle-off-border-color 1px solid;

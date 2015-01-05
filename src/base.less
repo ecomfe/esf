@@ -13,3 +13,11 @@
     padding-left: 0;
     .reset-list-style;
 }
+
+.esf-transition(@transition) {
+    
+}
+
+.esf-transition(@transition) when (@esf-enable-transition-effect) {
+    .transition(@transition);
+}

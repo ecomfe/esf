@@ -763,69 +763,52 @@ input[type="search"]::-webkit-search-decoration {
   font-size: 24px !important;
 }
 html {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #fefdfa;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
-  font-weight: bold;
-  color: #666666;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small {
-  font-weight: normal;
-  color: #808080;
-}
-h1 small,
-h2 small,
-h3 small,
-h1 .small,
-h2 .small,
-h3 .small {
-  font-size: 65%;
-}
-h4 small,
-h5 small,
-h6 small,
-h4 .small,
-h5 .small,
-h6 .small {
-  font-size: 75%;
+  font-size: 16px;
 }
 body {
-  font-size: 16px;
+  background: #fefdfa;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
   line-height: 1.3;
+  color: #666666;
+}
+::selection {
+  background: #a5e0d8;
+  color: #ffffff;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #a5e0d8;
+  color: #ffffff;
+  text-shadow: none;
 }
 a {
   color: #6ccdc0;
   text-decoration: none;
 }
 a:hover {
-  color: #3cb0a1;
+  color: #a5e0d8;
   text-decoration: underline;
 }
-::selection {
-  background: #a5e0d8;
-  color: #ffffff;
+a.ui-link-static {
+  color: #666666;
+  text-decoration: none;
 }
-::-moz-selection {
-  background: #a5e0d8;
-  color: #ffffff;
+a.ui-link-static:hover {
+  color: #666666;
+  text-decoration: none;
+}
+a.ui-link-static:hover {
+  color: #666666;
+  text-decoration: none;
+}
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+dfn[title] {
+  border-bottom: 1px dotted;
+  font-style: normal;
 }
 code,
 kbd {
@@ -836,8 +819,7 @@ kbd {
   -moz-border-radius: 5px;
   border-radius: 5px;
   background: #e6e6e6;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  font-size: 12px;
+  font-family: Monaco, Consolas, monospace;
   padding: 0 0.3em;
 }
 pre code {
@@ -846,6 +828,78 @@ pre code {
   border: none;
   background: none;
   padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
+  font-weight: bold;
+  color: #666666;
+  margin: 0.67em 0;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+h1 .ui-small,
+h2 .ui-small,
+h3 .ui-small,
+h4 .ui-small,
+h5 .ui-small,
+h6 .ui-small {
+  font-weight: normal;
+  color: #808080;
+}
+h1 small,
+h2 small,
+h3 small,
+h1 .ui-small,
+h2 .ui-small,
+h3 .ui-small {
+  font-size: 65%;
+}
+h4 small,
+h5 small,
+h6 small,
+h4 .ui-small,
+h5 .ui-small,
+h6 .ui-small {
+  font-size: 75%;
+}
+h1,
+.ui-h1 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+h2,
+.ui-h2 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+h3,
+.ui-h3 {
+  font-size: 18px;
+  line-height: 1.2;
+}
+h4,
+.ui-h4 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+h5,
+.ui-h5 {
+  font-size: 14px;
+  line-height: 1.2;
+}
+h6,
+.ui-h6 {
+  font-size: 12px;
+  line-height: 1.2;
 }
 blockquote {
   font-style: italic;
@@ -860,16 +914,6 @@ dt {
 dd {
   margin-left: 0;
 }
-ul,
-ol {
-  margin-top: 0;
-}
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-  margin-bottom: 0;
-}
 .ui-indent {
   text-indent: 2em;
 }
@@ -881,22 +925,18 @@ hr {
   overflow: hidden;
   color: #e6e6e6;
 }
-.ui-list-unstyled {
+.ui-list-unstyled,
+.ui-list-inline {
   padding-left: 0;
   list-style: none;
 }
 .ui-list-inline {
-  margin-left: -5px;
+  margin-left: -0.5em;
 }
 .ui-list-inline > li {
   display: inline-block;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-ui-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 .ui-table {
   border-collapse: collapse;
@@ -925,34 +965,35 @@ ui-img {
   border-left: 1px solid #999999;
 }
 .ui-table thead {
-  background: #cccccc;
+  background: #fefdfa;
   color: #000000;
 }
-.ui-table.ui-striped tr:nth-child(2n-1) td {
-  background-color: #e6e6e6;
+.ui-table.ui-table-striped tr:nth-child(2n-1) td {
+  background-color: #cccccc;
   color: #000000;
 }
-.ui-table.ui-bordered td {
+.ui-table.ui-table-bordered td,
+.ui-table.ui-table-bordered th {
   border-bottom: 1px solid #999999;
 }
-.ui-table.ui-horizontal th,
-.ui-table.ui-horizontal td {
+.ui-table.ui-table-horizontal th,
+.ui-table.ui-table-horizontal td {
   border-width: 0 0 1px 0;
   border-bottom: 1px solid #999999;
 }
-.ui-table.ui-hover-line > tbody > tr:hover > td,
-.ui-table.ui-hover-line > tbody > tr:hover > th {
-  background-color: #e6e6e6;
+.ui-table.ui-table-hover-line > tbody > tr:hover > td,
+.ui-table.ui-table-hover-line > tbody > tr:hover > th {
+  background-color: #e6e6e6 !important;
   color: #000000;
 }
 .ui-table caption {
   padding: 1em 0;
-  font-size: 12px;
+  font-size: 16px;
 }
 .ui-table td,
 .ui-table th {
   padding: 0.5em 1em;
-  font-size: 12px;
+  font-size: 16px;
 }
 .ui-text-left {
   text-align: left;
@@ -1003,14 +1044,26 @@ ui-img {
 .ui-text-muted {
   color: #999999;
 }
+.ui-text-muteda:hover {
+  color: #b3b3b3;
+}
 .ui-text-success {
   color: #5cb85c;
+}
+.ui-text-successa:hover {
+  color: #80c780;
 }
 .ui-text-warning {
   color: #f0ad4e;
 }
+.ui-text-warninga:hover {
+  color: #f4c37d;
+}
 .ui-text-danger {
   color: #d9534f;
+}
+.ui-text-dangera:hover {
+  color: #e27c79;
 }
 .ui-form fieldset {
   margin: 0;
@@ -1079,10 +1132,11 @@ ui-img {
 }
 .ui-button.ui-button-link {
   color: #6ccdc0;
+  text-decoration: none;
   background: none;
 }
 .ui-button.ui-button-link:hover {
-  color: #3cb0a1;
+  color: #a5e0d8;
   text-decoration: underline;
   background: none;
 }
@@ -1337,6 +1391,9 @@ ui-img {
   transition: background-color 0.3s ease, border-color 0.3s ease;
   background: #f1f1f1;
   border: 1px solid #9a9a9a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .esf-checkbox-style-base .ui-checkbox-box:after,
 .esf-checkbox-style-base label:after,
@@ -1442,6 +1499,9 @@ ui-img {
 .ui-checkbox-switch input:indeterminate ~ label:after,
 .ui-checkbox-switch input:indeterminate ~ .ui-checkbox-box:after {
   border: 1px solid #6ccdc0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   width: 1em;
   height: 1em;
   background: #6ccdc0;
@@ -1527,6 +1587,9 @@ ui-img {
   border: #9b9b9b 1px solid;
   top: -0.1em;
   left: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .ui-checkbox-switch input ~ .ui-checkbox-box:after,
 .ui-checkbox-switch input ~ label:after {
