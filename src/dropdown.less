@@ -17,7 +17,7 @@
 @esf-dropdown-heading-padding: 0.5em 1em;
 
 .@{esf-class-prefix}-dropdown {
-    .esf-list-unstyled;
+    .esf-list-unstyled();
     .border-radius(@esf-dropdown-radius);
     margin: @esf-dropdown-margin;
     padding: @esf-dropdown-padding;
@@ -33,7 +33,7 @@
             padding: @esf-dropdown-item-padding;
             display: block;
             text-decoration: none;
-            .transition(background-color 0.3s ease);
+            .esf-transition(background-color 0.3s ease);
         }
         &.@{esf-class-prefix}-separator-before {
             padding-top: @esf-dropdown-item-separator-space;
@@ -70,13 +70,6 @@
         @esf-dropdown-item-text-hover-color,
         @esf-dropdown-item-hightlight-background-color
     );
-}
-
-// to avoid hover issue
-.@{esf-class-prefix}-hoverable {
-    .@{esf-class-prefix}-dropdown {
-        margin: 0;
-    }
 }
 
 // mixins

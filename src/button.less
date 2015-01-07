@@ -55,6 +55,24 @@
     .esf-button-group-theme();
 }
 
+.@{esf-class-prefix}-button-primary {
+    .esf-button-variant(@white, @primary-color);
+}
+
+.@{esf-class-prefix}-button-success {
+    .esf-button-variant(@white, @success-color);
+}
+
+.@{esf-class-prefix}-button-info {
+    .esf-button-variant(@white, @info-color);
+}
+.@{esf-class-prefix}-button-warning {
+    .esf-button-variant(@white, @warning-color);
+}
+.@{esf-class-prefix}-button-danger {
+    .esf-button-variant(@white, @danger-color);
+}
+
 .esf-button-group-border() when (@esf-button-radius > 0) {
     .@{esf-class-prefix}-button:not(:first-child):not(:last-child) {
         .border-radius(0);
@@ -73,6 +91,7 @@
 .esf-button() {
     // for `a` elements
     display: inline-block;
+    font-size: 100%;
     .box-sizing(border-box);
     text-align: center;
     vertical-align: middle;
