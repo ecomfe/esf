@@ -91,6 +91,13 @@
     }
 }
 
+// set margin-top to 0 to avoid hiding the dropdown when mouse moves out.
+.@{esf-class-prefix}-hoverable {
+    .@{esf-class-prefix}-dropdown {
+        margin: 0;
+    }
+}
+
 .@{esf-class-prefix}-menu.@{esf-class-prefix}-vertical.@{esf-class-prefix}-bordered {
     .@{esf-class-prefix}-menu-item {
         border-bottom-width: 1px;
@@ -115,8 +122,6 @@
         &.@{esf-class-prefix}-active {
             background: darken(@menu-background-color, 10%);
         }
-    }
-    .@{esf-class-prefix}-menu-item {
         border-color: @esf-menu-item-border-color;
     }
 }

@@ -5,6 +5,9 @@
         <title>UI - ESUI Demo</title>
         <link rel="stylesheet" href="assets/site.css" />
         <link rel="stylesheet" href="assets/prism.css" />
+        <!--[if lt IE 9]>
+        <script src="http://xy3.baidu.com/js/html5.js"></script>
+        <![endif]-->
         <script src="assets/prism.js"></script>
         <script src="assets/jquery-1.11.1.min.js"></script>
         <script src="assets/demo.js"></script>
@@ -70,26 +73,26 @@
                         <h3 id="input-with-icon">输入框和图标</h3>
                         <div class="example">
                             <h4>Left</h4>
-                            <div class="ui-textbox ">
-                                <i class="ui-textbox-icon left ui-icon-user"></i>
+                            <div class="ui-textbox">
+                                <i class="ui-textbox-icon ui-textbox-left ui-icon-user"></i>
                                 <input type="text" placeholder="Search users...">
                             </div>
                             <h4>Right</h4>
                             <div class="ui-textbox">
-                                <i class="ui-textbox-icon left ui-icon-search"></i>
+                                <i class="ui-textbox-icon ui-textbox-left ui-icon-search"></i>
                                 <input type="text" placeholder="Search users...">
                             </div> 
                             <h4>Link Icon</h4>
                             <div class="ui-textbox">
-                                <a href="#" class="ui-textbox-icon right ui-icon-search"></a>
+                                <a href="#" class="ui-textbox-icon ui-textbox-right ui-icon-search ui-link-static"></a>
                                 <input type="text" placeholder="Search users...">
                             </div>
                         </div>
 
                         <h3 id="input-fluid">Block输入框</h3>
                         <div class="example">
-                            <div class="ui-textbox ui-textbox-fluid right with-icon">
-                                <i class="ui-textbox-icon left ui-icon-search"></i>
+                            <div class="ui-textbox ui-textbox-fluid">
+                                <i class="ui-textbox-icon ui-textbox-right ui-icon-search"></i>
                                 <input type="text" placeholder="Search users...">
                             </div>
                         </div>
@@ -98,31 +101,31 @@
                         <div class="example">
                             <div>
                                 <div class="ui-textbox ui-mini">
-                                    <i class="ui-textbox-icon left ui-icon-search"></i>
+                                    <i class="ui-textbox-icon ui-textbox-left ui-icon-search"></i>
                                     <input type="text" placeholder="mini">
                                 </div>
                             </div>
                             <div class="ui-mt1">
                                 <div class="ui-textbox ui-small">
-                                    <i class="ui-textbox-icon left ui-icon-search"></i>
+                                    <i class="ui-textbox-icon ui-textbox-left ui-icon-search"></i>
                                     <input type="text" placeholder="small">
                                 </div>
                             </div>
                             <div class="ui-mt1">
                                 <div class="ui-textbox ui-large">
-                                    <i class="ui-textbox-icon left ui-icon-search"></i>
+                                    <i class="ui-textbox-icon ui-textbox-left ui-icon-search"></i>
                                     <input type="text" placeholder="large">
                                 </div>
                             </div>
                             <div class="ui-mt1">
                                 <div class="ui-textbox ui-big">
-                                    <i class="ui-textbox-icon left ui-icon-search"></i>
+                                    <i class="ui-textbox-icon ui-textbox-left ui-icon-search"></i>
                                     <input type="text" placeholder="big">
                                 </div>
                             </div>
                             <div class="ui-mt1">
                                 <div class="ui-textbox ui-massive">
-                                    <i class="ui-textbox-icon left ui-icon-search"></i>
+                                    <i class="ui-textbox-icon ui-textbox-left ui-icon-search"></i>
                                     <input type="text" placeholder="massive">
                                 </div>
                             </div>
@@ -139,7 +142,7 @@
                         <h3 id="input-buttons">输入框和按钮</h3>
                         <div class="example">
                             <div class="ui-textbox-wrapper">
-                                <button class="ui-button"><i class="ui-textbox-icon ui-icon-users"></i></button>
+                                <button class="ui-button"><i class="ui-icon-users"></i></button>
                                 <div class="ui-textbox">
                                     <input placeholder="massive"  />
                                 </div>
