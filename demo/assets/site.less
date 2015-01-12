@@ -4,6 +4,7 @@
 @import "../../dep/eicons/1.0.0-alpha/src/main.less";
 
 @fa-font-path: "./fonts/font-awesome";
+@support-old-ie: false;
 
 body {
    .est-layout-fixed-header(4em);
@@ -142,22 +143,4 @@ body {
 
 .ui-menu {
     .font-family(heading);
-}
-
-.ui-button.primary {
-    .esf-button-variant(@white, @primary-color);
-}
-
-.ui-button.success {
-    .esf-button-variant(@white, rgb(28, 184, 65));
-}
-
-.ui-button.info {
-    .esf-button-variant(@white, rgb(66, 184, 221));
-}
-.ui-button.warning {
-    .esf-button-variant(@white, rgb(223, 117, 20));
-}
-.ui-button.danger {
-    .esf-button-variant(@white, rgb(202, 60, 60));
 }

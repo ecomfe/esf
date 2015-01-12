@@ -1,10 +1,9 @@
 @esf-button-text-color: @white;
-@esf-button-background-color: #667686;
+@esf-button-background-color: @black-60;
 @esf-button-hover-background-color: lighten(@esf-button-background-color, 5%);
 @esf-button-active-background-color: darken(@esf-button-background-color, 10%);
 @esf-button-focus-background-color: @esf-button-hover-background-color;
 @esf-button-group-separator-color: @white;
-
 
 .esf-button-variant(
     @text-color,
@@ -51,7 +50,7 @@
     }
 }
 
-.esf-button-theme-hook() {
+.esf-button-theme() {
     .esf-button-variant(
         @esf-button-text-color,
         @esf-button-background-color,
@@ -61,7 +60,7 @@
     );
 }
 
-.esf-button-group-theme-hook() {
+.esf-button-group-theme() {
     &.@{esf-class-prefix}-button-separated {
         .@{esf-class-prefix}-button {
             margin-left: 0;
@@ -71,4 +70,3 @@
         }
     }
 }
-

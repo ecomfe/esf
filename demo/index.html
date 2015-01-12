@@ -4,17 +4,20 @@
         <meta charset="UTF-8" />
         <title>ESF</title>
         <link rel="stylesheet" href="assets/site.css" />
+        <!--[if lt IE 9]>
+        <script src="http://xy3.baidu.com/js/html5.js"></script>
+        <![endif]-->
     </head>
     <body class="">
         <header class="est-header" id="header">
             <div class="esf-clearfix">
-                <div class="ui-fl">
+                <div class="ui-float-left">
                     <h1 class="brand-title ui-mt1 ui-ml3">
                         <a class="navbar-brand" href="index.html">ESF</a>
                     </h1>
                 </div>
-                <div class="ui-fr">
-                    <div id="main-menu" class="ui-menu ui-horizontal ui-hoverable ui-huge ui-fr ui-mr3">
+                <div class="ui-float-right">
+                    <div id="main-menu" class="ui-menu ui-horizontal ui-hoverable ui-huge ui-float-right ui-mr3">
                         <ul>
                             <li class="ui-menu-item">
                                 <a href="home.html" target="container-frame"><i class="ui-icon-home"></i> 介绍</a>
@@ -26,8 +29,11 @@
                                     <li><a href="type.html" target="container-frame"><i class="ui-icon-text-height"></i> 基础元素</a></li>
                                     <li><a href="image.html" target="container-frame"><i class="ui-icon-file-image-o"></i> 图片</a></li>
                                     <li><a href="loader.html" target="container-frame"><i class="ui-icon-spinner"></i> 加载指示</a></li>
-                                    <li><a href="mask.html" target="container-frame"><i class="ui-icon-spinner"></i> Mask</a></li>
-                                    <li><a href="progress.html" target="container-frame"><i class="ui-icon-spinner"></i> Process</a></li>
+                                    <li><a href="mask.html" target="container-frame"><i class="ui-icon-ban"></i> 遮罩</a></li>
+                                    <li><a href="progress.html" target="container-frame"><i class="ui-icon-fast-forward"></i> 进度条</a></li>
+                                    <li><a href="label.html" target="container-frame"><i class="ui-icon-adn"></i> 标签</a></li>
+                                    <li><a href="text.html" target="container-frame"><i class="ui-icon-file-text-o"></i> 文本</a></li>
+                                    <li><a href="utils.html" target="container-frame"><i class="ui-icon-cogs"></i> 辅助</a></li>
                                 </ul>
                             </li>
                             <li class="ui-menu-item">
@@ -56,7 +62,7 @@
         <div class="est-body">
             <div id="content-container">
                 <div id="content" style="overflow:hidden;">
-                    <iframe id="container-frame" name="container-frame" src="home.html" seamless="seamless">
+                    <iframe frameBorder="0" id="container-frame" name="container-frame" src="home.html" seamless="seamless">
                     </iframe>
                 </div>
             </div>

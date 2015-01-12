@@ -1,20 +1,42 @@
 @esf-body-text-color: @default-text-color;
-@esf-body-color: @primary-bg-color;
-@esf-body-line-height: 1.3;
-@esf-link-color: @primary-color;
-@esf-link-hover-color: darken(@primary-color, 15%);
-
+@esf-body-background: @primary-bg-color;
 @esf-body-font-family: @default-base-font-family;
-@esf-headings-font-family: @default-heading-font-family; 
-@esf-headings-font-weight: bold;
-@esf-headings-color: @default-text-color;
-@esf-headings-small-color: @black-50;
+@esf-body-line-height: 1.3;
+@esf-body-font-size: @esf-base-font-size;
+@esf-body-font-weight: normal;
+
+@esf-selection-background: lighten(@primary-color, 15%);
+@esf-selection-color: @white;
+
+@esf-link-color: @primary-color;
+@esf-link-text-decoration: none;
+@esf-link-hover-color: lighten(@primary-color, 15%);
+@esf-link-hover-text-decoration: underline;
 
 @esf-code-font-family: @default-code-font-family;
 @esf-code-text-color: @default-text-color;
 @esf-code-border-color: @black-20;
 @esf-code-background-color: @black-10;
 @esf-code-padding: 0 0.3em;
+
+@esf-headings-font-family: @default-heading-font-family; 
+@esf-headings-font-weight: bold;
+@esf-headings-color: @default-text-color;
+@esf-headings-small-color: @black-50;
+@esf-headings-margin: 0.67em 0;
+
+@esf-h1-font-size: @esf-monster-font-size;
+@esf-h1-line-height: 1.2;
+@esf-h2-font-size: @esf-massive-font-size;
+@esf-h2-line-height: 1.2;
+@esf-h3-font-size: @esf-large-font-size;
+@esf-h3-line-height: 1.2;
+@esf-h4-font-size: @esf-base-font-size;
+@esf-h4-line-height: 1.2;
+@esf-h5-font-size: @esf-small-font-size;
+@esf-h5-line-height: 1.2;
+@esf-h6-font-size: @esf-mini-font-size;
+@esf-h6-line-height: 1.2;
 
 @esf-hr-color: @black-10;
 
@@ -23,80 +45,88 @@
 
 @esf-table-border-color: @black-40;
 @esf-table-caption-text-color: @black;
-@esf-table-caption-font-size: @esf-mini-font-size;
+@esf-table-caption-font-size: @esf-base-font-size;
 @esf-table-caption-padding: 1em 0;
 @esf-table-cell-padding: 0.5em 1em;
-@esf-table-cell-font-size: @esf-mini-font-size;
-@esf-table-head-background-color: @black-20;
+@esf-table-cell-font-size: @esf-base-font-size;
+@esf-table-head-background-color: @primary-bg-color;
 @esf-table-head-text-color: @black;
 @esf-table-hover-line-background-color: @black-10;
 @esf-table-hover-line-text-color: @black;
-@esf-table-striped-background-color: @black-10;
+@esf-table-striped-background-color: @black-20;
 @esf-table-striped-text-color: @black;
 
 
+// html, body
+// `font-size` is set in `html` element to support the `rem` unit for font-sizes
 html {
-    font-family: @esf-body-font-family;
-    background: @esf-body-color;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: @esf-headings-font-family;
-    font-weight: @esf-headings-font-weight;
-    color: @esf-headings-color;
-
-    small,
-    .small {
-        font-weight: normal;
-        color: @esf-headings-small-color;
-    }
-}
-h1, h2, h3 {
-    small,
-    .small {
-        font-size: 65%;
-    }
-}
-
-h4, h5, h6 {
-    small,
-    .small {
-        font-size: 75%;
-    }
+    font-size: @esf-body-font-size;
 }
 
 body {
-    font-size: @esf-base-font-size;
-    line-height: 1.3;
+    background: @esf-body-background;
+    font-family:  @esf-body-font-family;
+    font-weight:  @esf-body-font-weight;
+    line-height: @esf-body-line-height;
+    color: @esf-body-text-color;
+    .esf-type-body-theme();
 }
 
-a {
-    color: @esf-link-color;
-    text-decoration: none;
+// selection color
+::selection {
+    background: @esf-selection-background;
+    color: @esf-selection-color;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: @esf-selection-background;
+    color: @esf-selection-color;
+    text-shadow: none;
+}
 
-    &:hover {
-        color: @esf-link-hover-color;
-        text-decoration: underline;
+// links
+a {
+    .esf-make-link(
+        @esf-link-color,
+        @esf-link-hover-color,
+        @esf-link-text-decoration,
+        @esf-link-hover-text-decoration
+    );
+    &.@{esf-class-prefix}-link-static {
+        .esf-make-link(@esf-body-text-color, @esf-body-text-color);
+
+        .esf-make-link(
+            @esf-body-text-color,
+            @esf-body-text-color
+        );
     }
 }
 
-::selection {
-  background: lighten(@primary-color, 15%);
-  color: @white;
-}
-::-moz-selection {
-  background: lighten(@primary-color, 15%);
-    color: @white;
+.esf-make-link(@color, @hoverColor, @decoration: none, @hoverDecoration: none) {
+    color: @color;
+    text-decoration: @decoration;
+
+    &:hover {
+        color: @hoverColor;
+        text-decoration: @hoverDecoration;
+    }
 }
 
-code,kbd {
+abbr[title],
+dfn[title] { cursor: help; }
+
+dfn[title] {
+    border-bottom: 1px dotted;
+    font-style: normal;
+}
+
+code, kbd {
     color: @esf-code-text-color;
     white-space: nowrap;
     border: 1px solid @esf-code-border-color;
     .border-radius(@default-border-radius);
     background: @esf-code-background-color;
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    font-size: @esf-base-font-size * 0.75;
+    font-family: @esf-code-font-family;
     padding: @esf-code-padding;
 }
 
@@ -107,6 +137,63 @@ pre code {
     border: none;
     background: none;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @esf-headings-font-family;
+    font-weight: @esf-headings-font-weight;
+    color: @esf-headings-color;
+    margin: @esf-headings-margin;
+
+    small,
+    .@{esf-class-prefix}-small {
+        font-weight: normal;
+        color: @esf-headings-small-color;
+    }
+}
+
+h1, h2, h3 {
+    small,
+    .@{esf-class-prefix}-small {
+        font-size: 65%;
+    }
+}
+
+h4, h5, h6 {
+    small,
+    .@{esf-class-prefix}-small {
+        font-size: 75%;
+    }
+}
+
+h1, .@{esf-class-prefix}-h1 {
+    font-size: @esf-h1-font-size;
+    line-height: @esf-h1-line-height;
+}
+
+h2, .@{esf-class-prefix}-h2 {
+    font-size: @esf-h2-font-size;
+    line-height: @esf-h2-line-height;
+}
+
+h3, .@{esf-class-prefix}-h3 {
+    font-size: @esf-h3-font-size;
+    line-height: @esf-h3-line-height;
+}
+
+h4, .@{esf-class-prefix}-h4 {
+    font-size: @esf-h4-font-size;
+    line-height: @esf-h4-line-height;
+}
+
+h5, .@{esf-class-prefix}-h5 {
+    font-size: @esf-h5-font-size;
+    line-height: @esf-h5-line-height;
+}
+
+h6, .@{esf-class-prefix}-h6 {
+    font-size: @esf-h6-font-size;
+    line-height: @esf-h6-line-height;
 }
 
 blockquote {
@@ -124,14 +211,6 @@ dd {
   margin-left: 0;
 }
 
-ul,
-ol {
-    margin-top: 0;
-    ul, ol {
-        margin-bottom: 0;
-    }
-}
-
 .@{esf-class-prefix}-indent {
     text-indent: 2em;
 }
@@ -144,35 +223,20 @@ ol {
     color: @esf-hr-color;
 }
 
-.@{esf-class-prefix}-list-unstyled {
+.@{esf-class-prefix}-list-unstyled,
+.@{esf-class-prefix}-list-inline {
     .esf-list-unstyled;
 }
 
 // Inline turns list items into inline-block
 .@{esf-class-prefix}-list-inline {
-    &:extend(.esf-list-unstyled);
-    margin-left: -5px;
+    margin-left: -0.5em;
 
     > li {
         display: inline-block;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
-}
-
-.@{esf-class-prefix}-truncate {
-    .ellipsis();
-}
-
-.@{esf-class-prefix}-truncate2 {
-    .ellipsis(3);
-}
-
-// img
-@{esf-class-prefix}-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 .@{esf-class-prefix}-table {
@@ -211,10 +275,6 @@ ol {
     );
 }
 
-
-// ***********
-// Table
-// ***********
 .esf-table-variant(
     @caption-text-color,
     @border-color,
@@ -235,29 +295,30 @@ ol {
     thead {
         background: @head-background-color;
         color: @head-text-color;
+        .esf-table-thead-theme();
     }
-    &.@{esf-class-prefix}-striped {
+    &.@{esf-class-prefix}-table-striped {
         tr:nth-child(2n-1) td {
             background-color: @striped-background-color;
             color: @striped-text-color;
         }
     }
-    &.@{esf-class-prefix}-bordered {
-        td {
+    &.@{esf-class-prefix}-table-bordered {
+        td, th {
             border-bottom: 1px solid @border-color;
-        } 
+        }
     }
-    &.@{esf-class-prefix}-horizontal {
+    &.@{esf-class-prefix}-table-horizontal {
         th, td {
             border-width: 0 0 1px 0;
             border-bottom: 1px solid @border-color;
-        } 
+        }
     }
-    &.@{esf-class-prefix}-hover-line {
+    &.@{esf-class-prefix}-table-hover-line {
         > tbody > tr:hover {
             > td,
             > th {
-                background-color: @hover-line-background-color;
+                background-color: @hover-line-background-color !important;
                 color: @hover-line-text-color; 
             }
         }
@@ -279,3 +340,6 @@ ol {
         font-size: @esf-table-cell-font-size
     }
 }
+
+.esf-type-body-theme() {};
+.esf-table-thead-theme() {};

@@ -21,6 +21,7 @@
     label {
         display: block;
         padding-left: @esf-checkbox-radio-label-padding;
+        padding-left: 1em\9;
 
         // checkbox
         &:before {
@@ -31,15 +32,17 @@
             height: 1em;
             content: '';
             .box-sizing(border-box);
-            .transition(background-color 0.3s ease, border-color 0.3s ease);
+            .esf-transition(~"background-color 0.3s ease, border-color 0.3s ease");
 
-            .esf-checkbox-virtual-box-theme-hook;
+            .esf-checkbox-virtual-box-theme();
+            display: none\9;
         }
         &:after {
             .box-sizing(border-box);
             position: absolute;
             content: '';
-            .transition(background 0.3s ease 0s, left 0.3s ease 0s);
+            .esf-transition(~"background 0.3s ease 0s, left 0.3s ease 0s");
+            display: none\9;
         }
         &:active:before {
             background: @esf-checkbox-active-background-color;
@@ -50,39 +53,41 @@
         top: 0;
         left: 0;
         .opacity(0);
+        filter: none\9;
+        top: 0.1em\9;
         outline: none;
         &:focus {
             & ~ label,
             & ~ .@{esf-class-prefix}-checkbox-box {
                 color: @esf-checkbox-label-text-focus-color;
-                .esf-checkbox-virtual-box-focus-theme-hook;
+                .esf-checkbox-virtual-box-focus-theme();
             }
         }
         &:checked {
             & ~ label,
             & ~ .@{esf-class-prefix}-checkbox-box {
-                .esf-checkbox-virtual-box-checked-theme-hook;
+                .esf-checkbox-virtual-box-checked-theme();
             }
         }
         &:indeterminate {
             & ~ label,
             & ~ .@{esf-class-prefix}-checkbox-box {
-                .esf-checkbox-virtual-box-indeterminate-theme-hook;
+                .esf-checkbox-virtual-box-indeterminate-theme();
             }
         }
     }
     input[disabled] {
         & ~ label,
         & ~ .@{esf-class-prefix}-checkbox-box {
-            .esf-checkbox-virtual-box-disabled-theme-hook;
-            .esf-disabled;
+            .esf-checkbox-virtual-box-disabled-theme();
+            .esf-disabled();
         }
     }
 
     // if we put label after checkbox container
     label,
     ~ label {
-        .transition(color 0.2s ease);
+        .esf-transition(color 0.2s ease);
         cursor: pointer;
         vertical-align: middle;
 
@@ -100,7 +105,7 @@
     &:extend(.esf-checkbox-style-base all);
 }
 
-.esf-radio-style-base {
+.@{esf-class-prefix}-radio-custom {
     .@{esf-class-prefix}-checkbox-box,
     label {
         &:before {
@@ -108,14 +113,11 @@
         }
     }
     input:checked {
-        & ~ label, & ~ .@{esf-class-prefix}-checkbox-box {
-            .esf-checkbox-virtual-box-radio-checked-theme-hook;
+        & ~ label,
+        & ~ .@{esf-class-prefix}-checkbox-box {
+            .esf-checkbox-virtual-box-radio-checked-theme();
         }
     }
-}
-
-.@{esf-class-prefix}-radio-custom {
-    &:extend(.esf-radio-style-base all);
 }
 
 .@{esf-class-prefix}-checkbox-switch {
@@ -123,12 +125,13 @@
         ~ .@{esf-class-prefix}-checkbox-box,
         ~ label {
             padding-left: 4em;
-            .esf-checkbox-virtual-box-switch-theme-hook;
+            padding-left: 1em\9;
+            .esf-checkbox-virtual-box-switch-theme();
         }
         &:checked {
             ~ .@{esf-class-prefix}-checkbox-box,
             ~ label {
-                .esf-checkbox-virtual-box-switch-checked-theme-hook;
+                .esf-checkbox-virtual-box-switch-checked-theme();
             }
         }
     }
@@ -138,24 +141,24 @@
     input {
         ~ .@{esf-class-prefix}-checkbox-box,
         ~ label {
-            .esf-checkbox-virtual-box-switch-round-theme-hook;
+            .esf-checkbox-virtual-box-switch-round-theme();
         }
         &:checked {
             ~ .@{esf-class-prefix}-checkbox-box,
             ~ label {
-                .esf-checkbox-virtual-box-switch-round-checked-theme-hook;
+                .esf-checkbox-virtual-box-switch-round-checked-theme();
             }
         }
     }
 }
 
-.esf-checkbox-virtual-box-focus-theme-hook() {}
-.esf-checkbox-virtual-box-checked-theme-hook() {}
-.esf-checkbox-virtual-box-indeterminate-theme-hook() {}
-.esf-checkbox-virtual-box-disabled-theme-hook() {}
-.esf-checkbox-virtual-box-theme-hook() {}
-.esf-checkbox-virtual-box-radio-checked-theme-hook() {}
-.esf-checkbox-virtual-box-switch-theme-hook() {}
-.esf-checkbox-virtual-box-switch-checked-theme-hook() {}
-.esf-checkbox-virtual-box-switch-round-theme-hook() {}
-.esf-checkbox-virtual-box-switch-round-checked-theme-hook() {}
+.esf-checkbox-virtual-box-focus-theme() {}
+.esf-checkbox-virtual-box-checked-theme() {}
+.esf-checkbox-virtual-box-indeterminate-theme() {}
+.esf-checkbox-virtual-box-disabled-theme() {}
+.esf-checkbox-virtual-box-theme() {}
+.esf-checkbox-virtual-box-radio-checked-theme() {}
+.esf-checkbox-virtual-box-switch-theme() {}
+.esf-checkbox-virtual-box-switch-checked-theme() {}
+.esf-checkbox-virtual-box-switch-round-theme() {}
+.esf-checkbox-virtual-box-switch-round-checked-theme() {}

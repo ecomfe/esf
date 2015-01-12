@@ -5,6 +5,9 @@
         <title>UI - ESUI Demo</title>
         <link rel="stylesheet" href="assets/site.css" />
         <link rel="stylesheet" href="assets/prism.css" />
+        <!--[if lt IE 9]>
+        <script src="http://xy3.baidu.com/js/html5.js"></script>
+        <![endif]-->
         <script src="assets/prism.js"></script>
         <script src="assets/jquery-1.11.1.min.js"></script>
         <script src="assets/demo.js"></script>
@@ -21,9 +24,7 @@
                     <li><a href="#checkbox">复选框（Checkbox）</a></li>
                     <li><a href="#radiobox">Radiobox（单选框）</a></li>
                     <li><a href="#system-default">系统默认（System Default）</a></li>
-                    <li><a href="#slider">滑块（Slider）</a></li>
-                    <li><a href="#toggle">开关（Switch）</a></li>
-                    <li><a href="#sizes">自定义尺寸（Sizes）</a></li>
+                    <li><a href="#switch">开关（Switch）</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
@@ -42,10 +43,9 @@
                             <h4>1. 你喜欢的旅游胜地？</h4>
                             <div>
                                 <div class="ui-checkbox-custom ui-mr1">
-                                    <input type="checkbox" checked="checked" disabled="disabled" id="unique-id">
-                                    <label for="unique-id"></label>
+                                    <input type="checkbox" checked="checked" disabled="disabled" id="unique-id" />
+                                    <label for="unique-id">后面的标签</label>
                                 </div>
-                                <label>后面的标签</label>
                                 <div class="ui-checkbox-custom ui-mr1">
                                     <input type="checkbox" id="unique-id-2">
                                     <label for="unique-id-2">泰国</label>
@@ -146,7 +146,7 @@
                             </div>
                         </div>
 
-                        <h3 id="slider">滑块（Slider）</h3>
+                        <h3 id="switch">滑块（Slider）</h3>
                         <p>
                             兴许你需要一个滑块效果。
                         </p>
@@ -175,6 +175,20 @@
                             <div class="ui-mt1">
                                 <div class="ui-checkbox-switch ui-checkbox-switch-round">
                                     <input type="checkbox" disabled name="walk" id="toggle3" />
+                                    <label for="toggle3">Allow others to see when your dog is on a walk</label>
+                                </div>
+                            </div>
+
+                            <div class="ui-mt1">
+                                <div class="ui-checkbox-switch ui-checkbox-switch-round">
+                                    <input type="checkbox" disabled name="walk" id="toggle2" checked />
+                                    <label for="toggle2">Allow others to see when your dog is on a walk</label>
+                                </div>
+                            </div>
+
+                            <div class="ui-mt1">
+                                <div class="ui-checkbox-switch ui-checkbox-switch-round">
+                                    <input type="checkbox" disabled name="walk" id="toggle3" checked />
                                     <label for="toggle3">Allow others to see when your dog is on a walk</label>
                                 </div>
                             </div>

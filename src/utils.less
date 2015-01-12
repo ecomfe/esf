@@ -2,111 +2,131 @@
 // Description:     Defines utility selectors.
 //
 // ========================================================================
+@esf-gutter: 0.5em;
 
-.esf-clearfix {
-    .clearfix();
-}
+// spacing utils.
+// http://www.basscss.com/docs/utility/#white-space
 
-.@{esf-class-prefix}-clearfix {
-    &:extend(esf-clearfix all);
-}
+// paddings
+.esf-make-pad(0, @esf-gutter);
 
-// padding utilities
-.@{esf-class-prefix}-pl0 {
-    padding-left: 0 !important;
-}
-.@{esf-class-prefix}-pb0 {
-    padding-bottom: 0 !important;
-}
-.@{esf-class-prefix}-pr0 {
-    padding-right: 0 !important;
-}
-.@{esf-class-prefix}-pt0 {
-    padding-top: 0 !important;
-}
+.esf-make-pad(1, @esf-gutter);
 
-.esf-make-pad(1);
-.esf-make-pad(2);
-.esf-make-pad(3);
-.esf-make-pad(4);
+.esf-make-pad(2, @esf-gutter);
+
+.esf-make-pad(3, @esf-gutter);
+
+.esf-make-pad(4, @esf-gutter);
 
 // margin utilities
-.@{esf-class-prefix}-ml0 {
-    margin-left: 0 !important;
-}
-.@{esf-class-prefix}-mb0 {
-    margin-bottom: 0 !important;
-}
-.@{esf-class-prefix}-mr0 {
-    margin-right: 0 !important;
-}
-.@{esf-class-prefix}-mt0 {
-    margin-top: 0 !important;
-}
 
-.esf-make-margin(1);
-.esf-make-margin(2);
-.esf-make-margin(3);
-.esf-make-margin(4);
+.esf-make-margin(0, @esf-gutter);
 
-// text-alignments
-.@{esf-class-prefix}-align-left {
-    text-align: left;
-}
-.@{esf-class-prefix}-align-center {
-    text-align: center;
-}
-.@{esf-class-prefix}-align-right {
-    text-align: right;
-}
+.esf-make-margin(1, @esf-gutter);
 
-// no space break
-.@{esf-class-prefix}-nowrap {
-    white-space: nowrap;
-}
+.esf-make-margin(2, @esf-gutter);
 
-// block center
-.@{esf-class-prefix}-center-block {
-    display: block !important;
-    margin-left: auto;
+.esf-make-margin(3, @esf-gutter);
+
+.esf-make-margin(4, @esf-gutter);
+
+.@{esf-class-prefix}-mh-auto {
+    margin-left: auto; 
     margin-right: auto;
 }
 
 // float
-.@{esf-class-prefix}-fl {
+.@{esf-class-prefix}-float-left {
     float: left;
 }
-.@{esf-class-prefix}-fr {
+
+.@{esf-class-prefix}-float-right {
     float: right;
 }
 
-.@{esf-class-prefix}-block {
-    display: block !important;
+.@{esf-class-prefix}-float-none {
+    float: none;
 }
 
+// overflow options
+.@{esf-class-prefix}-overflow-hidden {
+    overflow: hidden;
+}
+
+.@{esf-class-prefix}-overflow-auto {
+    overflow: auto;
+}
+
+.@{esf-class-prefix}-overflow-scroll {
+    overflow: scroll;
+}
+
+// widths
+.@{esf-class-prefix}-fit {
+    max-width: 100%;
+}
+
+.@{esf-class-prefix}-half-width {
+    width: 50%;
+}
+.@{esf-class-prefix}-full-width {
+    width: 100%;
+}
+
+// display
+.@{esf-class-prefix}-inline {
+    display: inline;
+}
+
+.@{esf-class-prefix}-block {
+    display: block;
+}
+
+.@{esf-class-prefix}-inline-block {
+    display: inline-block;
+}
+
+// sizes
 .@{esf-class-prefix}-base {
     font-size: @esf-base-font-size !important;
 }
+
 .@{esf-class-prefix}-mini {
     font-size: @esf-mini-font-size !important;
 }
+
 .@{esf-class-prefix}-small {
     font-size: @esf-small-font-size !important;
 }
+
 .@{esf-class-prefix}-large {
     font-size: @esf-large-font-size !important;
 }
+
 .@{esf-class-prefix}-big {
     font-size: @esf-big-font-size !important;
 }
+
 .@{esf-class-prefix}-huge {
     font-size: @esf-huge-font-size !important;
 }
+
 .@{esf-class-prefix}-massive {
     font-size: @esf-massive-font-size !important;
 }
 
-.esf-make-pad(@factor)  {
+// clear fix helper
+.@{esf-class-prefix}-clearfix {
+    &:extend(.esf-clearfix all);
+}
+
+// disabled
+.@{esf-class-prefix}-disabled {
+    &:extend(.esf-disabled all);
+}
+
+// mixins
+.esf-make-pad(@factor, @gutter) {
     .@{esf-class-prefix}-p@{factor} {
         padding: @gutter * @factor;
     }
@@ -132,9 +152,9 @@
     }
 }
 
-.esf-make-margin(@factor)  {
+.esf-make-margin(@factor, @gutter) {
     .@{esf-class-prefix}-m@{factor} {
-        margin: @gutter * @factor;
+        margin: @esf-gutter * @factor;
     }
     .@{esf-class-prefix}-ml@{factor} {
         margin-left: @gutter * @factor;

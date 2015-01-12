@@ -1,6 +1,8 @@
 @esf-mask-background: rgba(255,255,255,.85);
 @esf-mask-dark-background: rgba(0,0,0,.85);
-@esf-mask-dark-conent-color: @white;
+@esf-mask-dark-content-color: @white;
+@esf-loader-color-for-dark-bg: @white;
+@esf-loader-color2-for-dark-bg: rgba(255,255,255,.5);
 
 .@{esf-class-prefix}-mask-section {
     position: relative;
@@ -37,12 +39,9 @@
 .@{esf-class-prefix}-mask-dark {
     background: @esf-mask-dark-background;
     .@{esf-class-prefix}-mask-middle {
-        color: @esf-mask-dark-conent-color;
+        color: @esf-mask-dark-content-color;
     }
 }
-
-@esf-loader-color-for-dark-bg: @white;
-@esf-loader-color2-for-dark-bg: rgba(255,255,255,.5);
 
 .@{esf-class-prefix}-mask-dark {
     .@{esf-class-prefix}-loader-bouncers > div {
@@ -51,7 +50,7 @@
 }
 
 .@{esf-class-prefix}-mask-dark {
-    .@{esf-class-prefix}-loader-icon  {
+    .@{esf-class-prefix}-loader-icon {
         color: @esf-loader-color-for-dark-bg;
     }
 }
