@@ -1071,13 +1071,32 @@ hr {
   border: 0;
 }
 .ui-form .ui-form-row {
-  margin-bottom: .5em;
-}
-.ui-form .ui-form-stack {
   display: block;
   margin-bottom: .5em;
 }
-.ui-form .ui-form-stack input {
+.ui-form .ui-form-key,
+.ui-form .ui-form-value {
+  margin-bottom: .5em;
+}
+.ui-form .ui-form-help {
+  color: #999999;
+  font-size: 14px;
+  clear: both;
+  display: inline-block;
+}
+.ui-form .ui-form-stack-help {
+  display: block;
+}
+.ui-form-inline .ui-form-group {
+  display: inline-block;
+}
+.ui-form-inline .ui-form-group .ui-form-help {
+  display: block;
+}
+.ui-form-stack .ui-form-key {
+  display: block;
+}
+.ui-form-stack input {
   width: auto;
 }
 .ui-button {
@@ -4152,9 +4171,11 @@ body > .est-body:after {
 }
 .ui-u-1-5 {
   width: 20%;
+  position: fixed;
 }
 .ui-u-4-5 {
   width: 80%;
+  margin-left: 20%;
 }
 .ui-menu {
   font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;

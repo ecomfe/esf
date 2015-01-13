@@ -1,6 +1,10 @@
 //h3{color:red;}
 @form-label-font-size: 1em;
 @form-row-bottom-margin: 1em;
+@form-help-font-size: 14px;
+@form-help-font-color: #999;
+@form-error-font-size: 14px;
+@form-error-font-color: red;
 
 .@{esf-class-prefix}-form {
     fieldset {
@@ -9,13 +13,42 @@
         border: 0;
     }
     .@{esf-class-prefix}-form-row {
-        margin-bottom: .5em;
-    }
-    .@{esf-class-prefix}-form-stack {
         display: block;
         margin-bottom: .5em;
-        input {
-            width: auto;
+    }
+    .@{esf-class-prefix}-form-key,
+    .@{esf-class-prefix}-form-value {
+        margin-bottom: .5em;
+    }
+    .@{esf-class-prefix}-form-help + span{
+        color: @form-help-font-color;
+        font-size: @form-help-font-size;
+        clear: both;
+        display: inline-block;
+    }
+    .@{esf-class-prefix}-form-error + span{
+        color: @form-error-font-color;
+        font-size: @form-error-font-size;
+        clear: both;
+        display: inline-block;
+    }
+}
+
+ .@{esf-class-prefix}-form-inline {
+    .@{esf-class-prefix}-form-group {
+        display:inline-block;
+        .@{esf-class-prefix}-form-help + span,
+        .@{esf-class-prefix}-form-error + span {
+            display:block;
         }
+    }
+}
+
+.@{esf-class-prefix}-form-stack {
+    .@{esf-class-prefix}-form-key {
+        display: block;
+    }
+    input {
+        width: auto;
     }
 }
