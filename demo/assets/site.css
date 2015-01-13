@@ -1065,11 +1065,6 @@ hr {
 .ui-text-dangera:hover {
   color: #e27c79;
 }
-.ui-form fieldset {
-  margin: 0;
-  padding: .35em 0 .75em;
-  border: 0;
-}
 .ui-form .ui-form-row {
   display: block;
   margin-bottom: .5em;
@@ -1078,19 +1073,23 @@ hr {
 .ui-form .ui-form-value {
   margin-bottom: .5em;
 }
-.ui-form .ui-form-help {
+.ui-form .ui-form-help + span {
   color: #999999;
   font-size: 14px;
   clear: both;
   display: inline-block;
 }
-.ui-form .ui-form-stack-help {
-  display: block;
+.ui-form .ui-form-error + span {
+  color: red;
+  font-size: 14px;
+  clear: both;
+  display: inline-block;
 }
 .ui-form-inline .ui-form-group {
   display: inline-block;
 }
-.ui-form-inline .ui-form-group .ui-form-help {
+.ui-form-inline .ui-form-group .ui-form-help + span,
+.ui-form-inline .ui-form-group .ui-form-error + span {
   display: block;
 }
 .ui-form-stack .ui-form-key {
@@ -1435,6 +1434,27 @@ hr {
 .ui-textbox-wrapper > .ui-button-group,
 .ui-textbox-wrapper > .ui-textbox {
   float: left;
+}
+.ui-textbox-width-size1 input {
+  width: 2em;
+}
+.ui-textbox-width-size2 input {
+  width: 4em;
+}
+.ui-textbox-width-size3 input {
+  width: 8em;
+}
+.ui-textbox-width-size4 input {
+  width: 12em;
+}
+.ui-textbox-width-size5 input {
+  width: 16em;
+}
+.ui-textbox-width-size6 input {
+  width: 24em;
+}
+.ui-textbox-width-size7 input {
+  width: 32em;
 }
 .esf-checkbox-style-base,
 .ui-checkbox-custom,
