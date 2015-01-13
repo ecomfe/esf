@@ -1,0 +1,44 @@
+
+@panel-margin-top: 20px;
+@panel-margin-bottom: 20px;
+@panel-background-color: #fff;
+@panel-border: 1px solid #ddd;
+@panel-border-radius: 4px;
+@panel-padding-top-bottom: 10px;
+@panel-padding-left-right: 15px;
+@panel-header-background-color: #f5f5f5;
+@panel-hover-background-color: #fafafa;
+@panel-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+.@{esf-class-prefix}-panel {
+    margin-top: @panel-margin-top;
+    margin-bottom: @panel-margin-bottom;
+    background-color: @panel-background-color;
+    border: @panel-border;
+    border-radius: @panel-border-radius;
+    .box-shadow(@panel-box-shadow);
+}
+.@{esf-class-prefix}-panel-header,
+.@{esf-class-prefix}-panel-footer {
+    color: #333;
+    background-color: @panel-header-background-color;
+    padding: @panel-padding-top-bottom @panel-padding-left-right;
+}
+.@{esf-class-prefix}-panel-header{
+    border-top-left-radius: @panel-border-radius;
+    border-top-right-radius: @panel-border-radius;
+    border-bottom: @panel-border;
+}
+.@{esf-class-prefix}-panel-footer {
+    border-bottom-left-radius: @panel-border-radius;
+    border-bottom-right-radius: @panel-border-radius;
+    border-top: @panel-border;
+}
+
+.@{esf-class-prefix}-panel-body {
+    padding: @panel-padding-left-right;
+}
+
+.@{esf-class-prefix}-panel-hover:hover {
+    background: @panel-hover-background-color;
+}
