@@ -1,10 +1,9 @@
-//h3{color:red;}
-@form-label-font-size: 1em;
-@form-row-bottom-margin: 1em;
-@form-help-font-size: 14px;
-@form-help-font-color: #999;
-@form-error-font-size: 14px;
-@form-error-font-color: red;
+@esf-form-label-font-size: 1em;
+@esf-form-row-bottom-margin: 1em;
+@esf-form-message-font-size: 14px;
+@esf-form-message-font-color: #999;
+@esf-form-validity-font-size: 14px;
+@esf-form-validity-font-color: #f00;
 
 .@{esf-class-prefix}-form {
     .@{esf-class-prefix}-form-row {
@@ -13,37 +12,41 @@
     }
     .@{esf-class-prefix}-form-key,
     .@{esf-class-prefix}-form-value {
+        display: inline-block;
         margin-bottom: .5em;
     }
-    .@{esf-class-prefix}-form-help + span{
-        color: @form-help-font-color;
-        font-size: @form-help-font-size;
-        clear: both;
-        display: inline-block;
+    .@{esf-class-prefix}-form-message {
+        span {
+            color: @esf-form-message-font-color;
+            font-size: @esf-form-message-font-size;
+            clear: both;
+            display: inline-block;
+        }
     }
-    .@{esf-class-prefix}-form-error + span{
-        color: @form-error-font-color;
-        font-size: @form-error-font-size;
-        clear: both;
-        display: inline-block;
+    .@{esf-class-prefix}-form-validity {
+        span {
+            color: @esf-form-validity-font-color;
+            font-size: @esf-form-validity-font-size;
+            clear: both;
+            display: inline-block;
+        }
     }
 }
 
- .@{esf-class-prefix}-form-inline {
-    .@{esf-class-prefix}-form-group {
+.@{esf-class-prefix}-form-inline,
+.@{esf-class-prefix}-form-stack {
+    .@{esf-class-prefix}-form-message,
+    .@{esf-class-prefix}-form-validity {
         display:inline-block;
-        .@{esf-class-prefix}-form-help + span,
-        .@{esf-class-prefix}-form-error + span {
+        span {
             display:block;
         }
     }
 }
 
 .@{esf-class-prefix}-form-stack {
-    .@{esf-class-prefix}-form-key {
+    .@{esf-class-prefix}-form-key,
+    .@{esf-class-prefix}-form-value {
         display: block;
-    }
-    input {
-        width: auto;
     }
 }

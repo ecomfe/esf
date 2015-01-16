@@ -19,8 +19,8 @@
                     <li><a href="#form-inline">单行表单（Inline Form）</a></li>
                     <li><a href="#form-horizontal">横向表单（Horizontal Form）</a></li>
                     <li><a href="#form-stacked">堆叠表单（Stacked Form）</a></li>
-                    <li><a href="#form-help">帮助信息（Help messages）</a></li>
-                    <li><a href="#form-error">报错信息（Error messages）</a></li>
+                    <li><a href="#form-message">提示信息（Messages）</a></li>
+                    <li><a href="#form-validity">验证信息（validity）</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
@@ -30,51 +30,62 @@
                     <h3 id="form-inline">单行表单（Inline Form）</h3>
                     <div class="example">
                         <form class="ui-form ui-form-inline">
-                              <div class="ui-form-value ui-textbox ui-mr1">
-                                   <input placeholder="邮箱" type="email" id="email1" />
-                              </div>
-                              <div class="ui-form-value ui-textbox ui-mr1">
-                                   <input placeholder="密码" type="password" id="password1" />
-                              </div>
-                              <div class="ui-form-value ui-checkbox-custom ui-mr1">
-                                   <input id="remember1" type="checkbox" />
-                                   <label for="remember1">记住账户</label>
-                              </div>
-                              <button type="submit" class="ui-button">登录</button>
+                            <div class="ui-form-value">
+                                <div class="ui-textbox ui-mr1">
+                                    <input placeholder="邮箱" type="email" id="email1" />
+                                </div>
+                            </div>
+                            <div class="ui-form-value">
+                                <div class="ui-textbox ui-mr1">
+                                    <input placeholder="密码" type="password" id="password1" />
+                                </div>
+                            </div>
+                            <div class="ui-form-value">
+                                <div class="ui-checkbox-custom ui-mr1">
+                                    <input id="remember1" type="checkbox" />
+                                    <label for="remember1">记住账户</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="ui-button">登录</button>
                         </form>
                     </div>
                     
                     <h3 id="form-horizontal">横向表单（Horizontal Form）</h3>
                     <div class="example">
                         <form class="ui-form ui-form-horizontal">
-                              <div class="ui-form-row">
-                                  <label class="ui-form-key" for="email2">邮箱：</label>
-                                  <div class="ui-form-value ui-textbox">
-                                      <input placeholder="邮箱" type="email" id="email2" />
-                                  </div>
-                              </div>
-                             
-                              <div class="ui-form-row">
-                                  <label class="ui-form-key" for="password2">密码：</label>
-                                  <div class="ui-form-value ui-textbox">
-                                      <input placeholder="密码" type="password" id="password2" />
-                                  </div>
-                              </div>
-                              <div class="ui-form-row">
-                                  <label class="ui-form-key">性别：</label>
-                                  <select class="ui-form-value">
-                                      <option value="male">男</option>
-                                      <option value="female">女</option>
-                                      <option value="none">未知</option>
-                                  </select>
-                              </div>
-                              <div class="ui-form-row">
+                            <div class="ui-form-row">
+                                <label class="ui-form-key" for="email2">邮箱：</label>
+                                <div class="ui-form-value">
+                                    <div class="ui-textbox">
+                                        <input placeholder="邮箱" type="email" id="email2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-form-row">
+                                <label class="ui-form-key" for="password2">密码：</label>
+                                <div class="ui-form-value">
+                                    <div class="ui-textbox">
+                                        <input placeholder="密码" type="password" id="password2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-form-row">
+                                <label class="ui-form-key">性别：</label>
+                                <div class="ui-form-value">
+                                    <select>
+                                        <option value="male">男</option>
+                                        <option value="female">女</option>
+                                        <option value="none">未知</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="ui-form-row">
                                    <input id="remember2" type="checkbox" />
                                    <label for="remember2">记住账户</label>
-                              </div>
-                              <div class="ui-form-row">
+                            </div>
+                            <div class="ui-form-row">
                                    <button type="submit" class="ui-button">登录</button>
-                              </div>
+                            </div>
                         </form>
                     </div>
 
@@ -83,23 +94,29 @@
                         <form class="ui-form ui-form-stack">
                             <div class="ui-form-row">
                                 <label class="ui-form-key" for="email3">邮箱：</label>
-                                <div class="ui-form-value ui-textbox">
-                                    <input placeholder="邮箱" type="email" id="email3" />
+                                <div class="ui-form-value">
+                                    <div class="ui-textbox">
+                                        <input placeholder="邮箱" type="email" id="email3" />
+                                    </div>
                                 </div>
                             </div>
                             <div class="ui-form-row">
                                 <label class="ui-form-key" for="password3">密码：</label>
-                                <div class="ui-form-value ui-textbox">
-                                    <input placeholder="密码" type="password" id="password3" />
+                                <div class="ui-form-value">
+                                    <div class="ui-textbox">
+                                        <input placeholder="密码" type="password" id="password3" />
+                                    </div>
                                 </div>
                             </div>
                             <div class="ui-form-row">
                                 <label class="ui-form-key">性别：</label>
-                                <select class="ui-form-value">
-                                    <option value="male">男</option>
-                                    <option value="female">女</option>
-                                    <option value="none">未知</option>
-                                </select>
+                                <div class="ui-form-value">
+                                    <select>
+                                        <option value="male">男</option>
+                                        <option value="female">女</option>
+                                        <option value="none">未知</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="ui-form-row">
                                 <input id="remember3" type="checkbox" />
@@ -111,77 +128,85 @@
                         </form>
                     </div>
                     
-                    <h3 id="form-help">帮助信息（Help messages）</h3>
+                    <h3 id="form-message">提示信息（Messages）</h3>
                     <div class="example">
-                        <h5>Inline help messages</h5>
+                        <h5>Inline Messages</h5>
                         <form class="ui-form ui-form-inline">
-                            <div class="ui-form-group">
-                                <div class="ui-form-value ui-textbox ui-form-help ui-mr1">
+                            <div class="ui-form-value ui-form-message">
+                                <div class="ui-textbox ui-mr1">
                                     <input placeholder="邮箱" type="email">
                                 </div>
                                 <span class="ui-mr1">请输入一个有效的邮箱地址</span>
                             </div>
-                            <div class="ui-form-group">
-                                <div class="ui-form-value ui-textbox ui-form-help ui-mr1">
+                            <div class="ui-form-value ui-form-message">
+                                <div class="ui-textbox ui-mr1">
                                     <input placeholder="密码" type="password" />
                                 </div>
                                 <span class="ui-mr1">请输入格式正确的密码</span>
                             </div>
                         </form>
                         
-                        <h5 class="ui-mt4">Horizontal help messages</h5>
+                        <h5 class="ui-mt4">Horizontal Messages</h5>
                         <form class="ui-form ui-form-horizontal">
                               <label for="horizontal-help-email">邮箱：</label>
-                              <div class="ui-textbox ui-form-help">
-                                  <input placeholder="邮箱" type="email" id="horizontal-help-email"/>
+                              <div class="ui-form-value ui-form-message">
+                                  <div class="ui-textbox">
+                                      <input placeholder="邮箱" type="email" id="horizontal-help-email"/>
+                                  </div>
+                                  <span>请输入一个有效的邮箱地址</span>
                               </div>
-                              <span>请输入一个有效的邮箱地址</span>
                         </form>
                         
-                        <h5 class="ui-mt4">Stacked help messages</h5>
+                        <h5 class="ui-mt4">Stacked Messages</h5>
                         <form class="ui-form ui-form-stack">
                               <label class="ui-form-key" for="stack-help-email">邮箱：</label>
-                              <div class="ui-form-value ui-textbox ui-form-help">
-                                  <input placeholder="邮箱" type="email" id="stack-help-email"/>
+                              <div class="ui-form-value ui-form-message">
+                                  <div class="ui-textbox">
+                                      <input placeholder="邮箱" type="email" id="stack-help-email"/>
+                                  </div>
+                                  <span>请输入一个有效的邮箱地址</span>
                               </div>
-                              <span>请输入一个有效的邮箱地址</span>
                         </form>
                     </div>
                     
-                    <h3 id="form-error">报错信息（Error messages）</h3>
+                    <h3 id="form-validity">验证信息（validity）</h3>
                     <div class="example">
-                        <h5>Inline error messages</h5>
+                        <h5>Inline validity</h5>
                         <form class="ui-form ui-form-inline">
-                            <div class="ui-form-group">
-                                <div class="ui-form-value ui-textbox ui-form-error ui-mr1">
+                            <div class="ui-form-value ui-form-validity">
+                                <div class="ui-textbox ui-mr1">
                                     <input placeholder="邮箱" type="email">
                                 </div>
                                 <span class="ui-mr1">请输入一个有效的邮箱地址</span>
                             </div>
-                            <div class="ui-form-group">
-                                <div class="ui-form-value ui-textbox ui-form-error ui-mr1">
+                            <div class="ui-form-value ui-form-validity">
+                                <div class="ui-textbox ui-mr1">
                                     <input placeholder="密码" type="password" />
                                 </div>
                                 <span class="ui-mr1">请输入格式正确的密码</span>
                             </div>
                         </form>
                         
-                        <h5 class="ui-mt4">Horizontal error messages</h5>
+                        <h5 class="ui-mt4">Horizontal validity</h5>
                         <form class="ui-form ui-form-horizontal">
-                              <label for="horizontal-error-email">邮箱：</label>
-                              <div class="ui-textbox ui-form-error">
-                                  <input placeholder="邮箱" type="email" id="horizontal-error-email"/>
-                              </div>
-                              <span>请输入一个有效的邮箱地址</span>
+                            <label class="ui-form-key" for="horizontal-error-email">邮箱：</label>
+                            <div class="ui-form-value ui-form-validity">
+                                <div class="ui-textbox">
+                                    <input placeholder="邮箱" type="email" id="horizontal-error-email"/>
+                                </div>
+                                <span>请输入一个有效的邮箱地址</span>
+                            </div>
                         </form>
                         
-                        <h5 class="ui-mt4">Stacked error messages</h5>
+                        <h5 class="ui-mt4">Stacked validity</h5>
                         <form class="ui-form ui-form-stack">
-                              <label class="ui-form-key" for="stack-error-email">邮箱：</label>
-                              <div class="ui-form-value ui-textbox ui-form-error">
-                                  <input placeholder="邮箱" type="email" id="stack-error-email"/>
-                              </div>
-                              <span>请输入一个有效的邮箱地址</span>
+                            <label class="ui-form-key" for="stack-error-email">邮箱：</label>
+                            <div class="ui-form-value ui-form-validity">
+                                <div class="ui-textbox">
+                                    <input placeholder="邮箱" type="email" id="stack-error-email"/>
+                                </div>
+                                <span>请输入一个有效的邮箱地址</span>
+                            </div>
                         </form>
                     </div>
                 </div>
