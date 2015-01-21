@@ -1065,26 +1065,59 @@ hr {
 .ui-text-dangera:hover {
   color: #e27c79;
 }
-.ui-form .ui-form-row {
+.ui-form {
+  margin-bottom: 1em;
+}
+.ui-form fieldset {
+  border: 0;
+  border-top: 1px solid #c0c0c0;
+  margin: 0 0.2em;
+  padding: 0.35em 0.625em 0.75em;
+}
+.ui-form legend {
+  margin-left: -1em;
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+  font-weight: bold;
+}
+.ui-form-row {
+  margin-bottom: 1em;
+}
+.ui-form-key {
+  padding-right: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ui-form-field,
+.ui-form-key,
+.ui-form-value {
+  display: inline-block;
+  vertical-align: top;
+}
+.ui-form-required {
+  position: relative;
+}
+.ui-form-required:after {
+  content: '*';
+  color: #d9534f;
   display: block;
-  margin-bottom: .5em;
+  right: 0;
+  top: .7em;
+  position: absolute;
 }
-.ui-form .ui-form-key,
-.ui-form .ui-form-value {
-  display: inline-block;
-  margin-bottom: .5em;
+.ui-form-key,
+.ui-form-valign {
+  padding-top: .5em;
 }
-.ui-form .ui-form-message span {
-  color: #999999;
-  font-size: 14px;
-  clear: both;
+.ui-form-hint {
   display: inline-block;
 }
-.ui-form .ui-form-validity span {
-  color: #ff0000;
-  font-size: 14px;
-  clear: both;
-  display: inline-block;
+.ui-form-wrap-hint .ui-form-hint {
+  display: block;
+  margin-top: .5em;
 }
 .ui-form-inline .ui-form-message,
 .ui-form-stack .ui-form-message,
@@ -1101,6 +1134,22 @@ hr {
 .ui-form-stack .ui-form-key,
 .ui-form-stack .ui-form-value {
   display: block;
+  margin-left: 0;
+}
+.ui-form-stack .ui-form-key {
+  padding-top: 0;
+  padding-bottom: .3em;
+}
+.ui-form-stack .ui-form-required:after {
+  display: inline-block;
+  position: static;
+  margin-top: .3em;
+  margin-left: .5em;
+}
+.ui-form-buttons {
+  padding: 25px 0;
+  background: none;
+  border-top: 1px solid #eaeaea;
 }
 .ui-button {
   display: inline-block;
@@ -1446,19 +1495,22 @@ hr {
   width: 4em;
 }
 .ui-textbox-width-size3 input {
-  width: 8em;
+  width: 6em;
 }
 .ui-textbox-width-size4 input {
-  width: 12em;
+  width: 8em;
 }
 .ui-textbox-width-size5 input {
-  width: 16em;
+  width: 10em;
 }
 .ui-textbox-width-size6 input {
-  width: 24em;
+  width: 12em;
 }
 .ui-textbox-width-size7 input {
-  width: 32em;
+  width: 14em;
+}
+.ui-textbox-width-size8 input {
+  width: 16em;
 }
 .esf-checkbox-style-base,
 .ui-checkbox-custom,
@@ -2227,6 +2279,93 @@ hr {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+}
+.ui-select-custom {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 2.4em;
+  background: #fafafa;
+  border: 1px solid #666666;
+  color: #333333;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.ui-select-custom option {
+  font-weight: normal;
+}
+.ui-select-custom:hover {
+  border: 1px solid #6ccdc0;
+}
+.ui-select-custom:focus {
+  color: #222222;
+}
+.ui-select-custom select {
+  width: 100%;
+  width: 120%\9;
+  margin: 0;
+  background: none;
+  border: 1px solid transparent;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em 1.9em 0.5em 0.5em;
+  height: 2.4em;
+}
+.ui-select-custom select[disabled] {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  cursor: not-allowed !important;
+}
+.ui-select-custom:before,
+.ui-select-custom:after {
+  top: 35%;
+  width: 0;
+  height: 0;
+  right: 10px;
+  border: 5px solid;
+  pointer-events: none;
+  border-color: #777777 transparent;
+  content: '';
+  position: absolute;
+}
+.ui-select-custom:before {
+  border-bottom-style: solid;
+  border-top: 0;
+}
+.ui-select-custom:after {
+  margin-top: 6px;
+  border-top-style: solid;
+  border-bottom: 0;
+}
+x:-o-prefocus,
+.ui-select-custom:after {
+  display: none;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ui-select-custom select::-ms-expand {
+    display: none;
+  }
+  .ui-select-custom select:focus::-ms-value {
+    background: transparent;
+  }
+}
+@-moz-document url-prefix() {
+  .ui-select-custom {
+    overflow: hidden;
+  }
+  .ui-select-custom select {
+    width: 120%;
+  }
+}
+.ui-select-custom select:-moz-focusring {
+  color: transparent;
 }
 .ui-img-responsive {
   display: block;
