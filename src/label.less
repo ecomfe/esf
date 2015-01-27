@@ -5,7 +5,7 @@
 @esf-label-color: rgba(0, 0, 0, 0.65);
 @esf-label-border-radius: @default-border-radius;
 
-.@{esf-class-prefix}-label,
+.@{esf-class-prefix}-label-custom,
 .@{esf-class-prefix}-label-pointer,
 .@{esf-class-prefix}-label-pointer-left,
 .@{esf-class-prefix}-label-pointer-right,
@@ -65,7 +65,7 @@
 
 .@{esf-class-prefix}-label-pointer-left {
     position: relative;
-    margin-bottom: .8em;
+    margin-left: .8em;
     &:before {
         .triangle(left, 1em, @esf-label-background, side);
         border-width: 0.7em;
@@ -79,7 +79,7 @@
 
 .@{esf-class-prefix}-label-pointer-right {
     position: relative;
-    margin-bottom: .8em;
+    margin-right: .8em;
     &:before {
         .triangle(right, 1em, @esf-label-background, side);
         border-width: 0.7em;
