@@ -1,36 +1,77 @@
 @esf-form-label-font-size: 1em;
 @esf-form-row-bottom-margin: 1em;
+
 @esf-form-message-font-size: 14px;
 @esf-form-message-font-color: #999;
 @esf-form-validity-font-size: 14px;
-@esf-form-validity-font-color: #f00;
+@esf-form-validity-font-color: @danger-color;
+@esf-form-buttons-background: none;
+@esf-form-buttons-padding: 25px 0;
+@esf-form-buttons-border-top: 1px solid #eaeaea;
+
+@esf-form-fieldset-padding: 0.35em 0.625em 0.75em;
+@esf-form-fieldset-margin: 0 .2em;
+@esf-form-border-color: #c0c0c0;
 
 .@{esf-class-prefix}-form {
-    .@{esf-class-prefix}-form-row {
+    margin-bottom: 1em;
+    fieldset {
+        border: 0;
+        border-top: 1px solid @esf-form-border-color;
+        margin: @esf-form-fieldset-margin;
+        padding: @esf-form-fieldset-padding;
+    }
+
+    legend {
+        margin-left: -1em;
+        border: 0;
+        padding: 0;
+        white-space: normal;
+        *margin-left: -7px;
+        font-weight: bold;
+    }
+}
+
+.@{esf-class-prefix}-form-row {
+    margin-bottom: @esf-form-row-bottom-margin;
+}
+
+.@{esf-class-prefix}-form-key {
+    padding-right: 1em;
+    .box-sizing(border-box);
+}
+
+.@{esf-class-prefix}-form-field,
+.@{esf-class-prefix}-form-key,
+.@{esf-class-prefix}-form-value {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.@{esf-class-prefix}-form-required {
+    position: relative;
+    &:after {
+        content: '*';
+        color: @esf-form-validity-font-color;
         display: block;
-        margin-bottom: .5em;
+        right: 0;
+        top: .7em;
+        position: absolute;
     }
-    .@{esf-class-prefix}-form-key,
-    .@{esf-class-prefix}-form-value {
-        display: inline-block;
-        margin-bottom: .5em;
-    }
-    .@{esf-class-prefix}-form-message {
-        span {
-            color: @esf-form-message-font-color;
-            font-size: @esf-form-message-font-size;
-            clear: both;
-            display: inline-block;
-        }
-    }
-    .@{esf-class-prefix}-form-validity {
-        span {
-            color: @esf-form-validity-font-color;
-            font-size: @esf-form-validity-font-size;
-            clear: both;
-            display: inline-block;
-        }
-    }
+}
+
+.@{esf-class-prefix}-form-key,
+.@{esf-class-prefix}-form-valign {
+    padding-top: .5em;
+}
+
+.@{esf-class-prefix}-form-hint {
+    display: inline-block;
+}
+
+.@{esf-class-prefix}-form-wrap-hint .@{esf-class-prefix}-form-hint {
+    display: block;
+    margin-top: .5em;
 }
 
 .@{esf-class-prefix}-form-inline,
@@ -48,5 +89,28 @@
     .@{esf-class-prefix}-form-key,
     .@{esf-class-prefix}-form-value {
         display: block;
+        margin-left: 0;
     }
+    .@{esf-class-prefix}-form-key {
+        padding-top: 0;
+        padding-bottom: .3em;
+    }
+    .@{esf-class-prefix}-form-required {
+        &:after {
+            display: inline-block;
+            position: static;
+            margin-top: .3em;
+            margin-left: .5em;
+        }
+    }
+}
+
+.esf-form-buttons-theme() {
+    padding: @esf-form-buttons-padding;
+    background: @esf-form-buttons-background;
+    border-top: @esf-form-buttons-border-top;
+}
+
+.@{esf-class-prefix}-form-buttons {
+    .esf-form-buttons-theme();
 }
