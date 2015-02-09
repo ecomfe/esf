@@ -471,14 +471,14 @@ input[type="search"]::-webkit-search-decoration {
   filter: alpha(opacity=40);
   cursor: not-allowed !important;
 }
-.ui-medium {
-  font-size: 16px !important;
-}
 .ui-x-small {
   font-size: 12px !important;
 }
 .ui-small {
   font-size: 14px !important;
+}
+.ui-medium {
+  font-size: 16px !important;
 }
 .ui-large {
   font-size: 18px !important;
@@ -1195,25 +1195,34 @@ hr {
 .ui-button.ui-active {
   background-color: #4d4d4d;
 }
-.ui-button.ui-button-icon {
+.ui-button:focus {
+  outline: 1px dotted;
+}
+.ui-button-icon {
   padding: 0 0.7em;
 }
-.ui-button.ui-button-fluid {
+.ui-button-fluid {
   width: 100%;
   display: block;
 }
-.ui-button.ui-button-link {
+.ui-button-link {
   color: #6ccdc0;
   text-decoration: none;
   background: none;
 }
-.ui-button.ui-button-link:hover {
+.ui-button-link:hover {
   color: #a5e0d8;
   text-decoration: underline;
   background: none;
 }
-.ui-button:focus {
-  outline: 1px dotted;
+.ui-button-circular {
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  padding: 0 0.7em;
+}
+.ui-button-fw-icon {
+  width: 1em;
 }
 .ui-button-group {
   display: inline-block;
@@ -2679,42 +2688,6 @@ x:-o-prefocus,
 }
 .ui-panel-custom .ui-panel-body {
   padding: 15px;
-}
-.ui-icon-icon-small:before {
-  font-size: 150%;
-  vertical-align: -10%;
-}
-.ui-icon-icon-medium:before {
-  font-size: 200%;
-  vertical-align: -16%;
-}
-.ui-icon-icon-large:before {
-  font-size: 250%;
-  vertical-align: -22%;
-}
-.ui-icon-icon-spin {
-  -webkit-animation: esui-spin 2s infinite linear;
-  animation: esui-spin 2s infinite linear;
-}
-@-webkit-keyframes esui-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes esui-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 [class*='ui-icon-'] {
   font-family: FontAwesome;
@@ -4238,6 +4211,75 @@ x:-o-prefocus,
   src: url('./fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('./fonts/font-awesome/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('./fonts/font-awesome/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('./fonts/font-awesome/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+.ui-eicons-small:before {
+  font-size: 150%;
+  vertical-align: -10%;
+}
+.ui-eicons-medium:before {
+  font-size: 200%;
+  vertical-align: -16%;
+}
+.ui-eicons-large:before {
+  font-size: 250%;
+  vertical-align: -22%;
+}
+.ui-eicons-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.ui-eicons-spin {
+  -webkit-animation: eicons-spin 2s infinite linear;
+  -moz-animation: eicons-spin 2s infinite linear;
+  -ms-animation: eicons-spin 2s infinite linear;
+  -o-animation: eicons-spin 2s infinite linear;
+  animation: eicons-spin 2s infinite linear;
+}
+.ui-eicons-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ui-eicons-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.ui-eicons-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.ui-eicons-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.ui-eicons-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+@-webkit-keyframes eicons-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes eicons-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
 body > .est-header {
   position: fixed;

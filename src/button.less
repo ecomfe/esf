@@ -18,27 +18,39 @@
     .esf-button-theme();
 
     cursor: pointer;
-    &.@{esf-class-prefix}-button-icon {
-        padding: @esf-button-icon-padding;
-    }
-    &.@{esf-class-prefix}-button-fluid {
-        width: 100%;
-        display: block;
-    }
-    &.@{esf-class-prefix}-button-link {
-        color: @esf-button-link-color;
-        text-decoration: @esf-button-link-decoration;
-
-        &:hover {
-            color: @esf-button-link-hover-color;
-            text-decoration: @esf-button-link-hover-decoration;
-            background: none;
-        }
-        background: none;
-    }
     &:focus {
         outline: 1px dotted;
     }
+}
+
+.@{esf-class-prefix}-button-icon {
+    padding: @esf-button-icon-padding;
+}
+
+.@{esf-class-prefix}-button-fluid {
+    width: 100%;
+    display: block;
+}
+
+.@{esf-class-prefix}-button-link {
+    color: @esf-button-link-color;
+    text-decoration: @esf-button-link-decoration;
+
+    &:hover {
+        color: @esf-button-link-hover-color;
+        text-decoration: @esf-button-link-hover-decoration;
+        background: none;
+    }
+    background: none;
+}
+
+.@{esf-class-prefix}-button-circular {
+    .border-radius(10em);
+    padding: @esf-button-icon-padding;
+}
+
+.@{esf-class-prefix}-button-fw-icon {
+    width: 1em;
 }
 
 .@{esf-class-prefix}-button-group {
