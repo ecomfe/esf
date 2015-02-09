@@ -471,6 +471,27 @@ input[type="search"]::-webkit-search-decoration {
   filter: alpha(opacity=40);
   cursor: not-allowed !important;
 }
+.ui-medium {
+  font-size: 16px !important;
+}
+.ui-x-small {
+  font-size: 12px !important;
+}
+.ui-small {
+  font-size: 14px !important;
+}
+.ui-large {
+  font-size: 18px !important;
+}
+.ui-x-large {
+  font-size: 20px !important;
+}
+.ui-xx-large {
+  font-size: 22px !important;
+}
+.ui-xxx-large {
+  font-size: 24px !important;
+}
 .ui-p0 {
   padding: 0em;
 }
@@ -740,27 +761,6 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-inline-block {
   display: inline-block;
-}
-.ui-base {
-  font-size: 16px !important;
-}
-.ui-mini {
-  font-size: 12px !important;
-}
-.ui-small {
-  font-size: 14px !important;
-}
-.ui-large {
-  font-size: 18px !important;
-}
-.ui-big {
-  font-size: 20px !important;
-}
-.ui-huge {
-  font-size: 22px !important;
-}
-.ui-massive {
-  font-size: 24px !important;
 }
 html {
   font-size: 16px;
