@@ -449,8 +449,6 @@ input[type="search"]::-webkit-search-decoration {
 }
 .esf-clearfix:before,
 .esf-clearfix:after,
-.ui-clearfix:before,
-.ui-clearfix:after,
 .ui-textbox-wrapper:before,
 .ui-textbox-wrapper:after,
 .ui-menu.ui-horizontal:before,
@@ -459,14 +457,11 @@ input[type="search"]::-webkit-search-decoration {
   content: "";
 }
 .esf-clearfix:after,
-.ui-clearfix:after,
 .ui-textbox-wrapper:after,
 .ui-menu.ui-horizontal:after {
   clear: both;
 }
-.esf-disabled,
-.ui-disabled,
-.ui-menu > ul .ui-menu-item.disabled {
+.esf-disabled {
   opacity: 0.4;
   filter: alpha(opacity=40);
   cursor: not-allowed !important;
@@ -491,276 +486,6 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-xxx-large {
   font-size: 24px !important;
-}
-.ui-p0 {
-  padding: 0em;
-}
-.ui-pl0 {
-  padding-left: 0em;
-}
-.ui-pb0 {
-  padding-bottom: 0em;
-}
-.ui-pr0 {
-  padding-right: 0em;
-}
-.ui-pt0 {
-  padding-top: 0em;
-}
-.ui-pv0 {
-  padding-top: 0em;
-  padding-bottom: 0em;
-}
-.ui-ph0 {
-  padding-left: 0em;
-  padding-right: 0em;
-}
-.ui-p1 {
-  padding: 0.5em;
-}
-.ui-pl1 {
-  padding-left: 0.5em;
-}
-.ui-pb1 {
-  padding-bottom: 0.5em;
-}
-.ui-pr1 {
-  padding-right: 0.5em;
-}
-.ui-pt1 {
-  padding-top: 0.5em;
-}
-.ui-pv1 {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-.ui-ph1 {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-.ui-p2 {
-  padding: 1em;
-}
-.ui-pl2 {
-  padding-left: 1em;
-}
-.ui-pb2 {
-  padding-bottom: 1em;
-}
-.ui-pr2 {
-  padding-right: 1em;
-}
-.ui-pt2 {
-  padding-top: 1em;
-}
-.ui-pv2 {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-.ui-ph2 {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.ui-p3 {
-  padding: 1.5em;
-}
-.ui-pl3 {
-  padding-left: 1.5em;
-}
-.ui-pb3 {
-  padding-bottom: 1.5em;
-}
-.ui-pr3 {
-  padding-right: 1.5em;
-}
-.ui-pt3 {
-  padding-top: 1.5em;
-}
-.ui-pv3 {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-}
-.ui-ph3 {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-}
-.ui-p4 {
-  padding: 2em;
-}
-.ui-pl4 {
-  padding-left: 2em;
-}
-.ui-pb4 {
-  padding-bottom: 2em;
-}
-.ui-pr4 {
-  padding-right: 2em;
-}
-.ui-pt4 {
-  padding-top: 2em;
-}
-.ui-pv4 {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-.ui-ph4 {
-  padding-left: 2em;
-  padding-right: 2em;
-}
-.ui-m0 {
-  margin: 0em;
-}
-.ui-ml0 {
-  margin-left: 0em;
-}
-.ui-mb0 {
-  margin-bottom: 0em;
-}
-.uimr0 {
-  margin-right: 0em;
-}
-.ui-mt0 {
-  margin-top: 0em;
-}
-.ui-mv0 {
-  margin-top: 0em;
-  margin-bottom: 0em;
-}
-.ui-mh0 {
-  margin-left: 0em;
-  margin-right: 0em;
-}
-.ui-m1 {
-  margin: 0.5em;
-}
-.ui-ml1 {
-  margin-left: 0.5em;
-}
-.ui-mb1 {
-  margin-bottom: 0.5em;
-}
-.uimr1 {
-  margin-right: 0.5em;
-}
-.ui-mt1 {
-  margin-top: 0.5em;
-}
-.ui-mv1 {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-.ui-mh1 {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-.ui-m2 {
-  margin: 1em;
-}
-.ui-ml2 {
-  margin-left: 1em;
-}
-.ui-mb2 {
-  margin-bottom: 1em;
-}
-.uimr2 {
-  margin-right: 1em;
-}
-.ui-mt2 {
-  margin-top: 1em;
-}
-.ui-mv2 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-.ui-mh2 {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-.ui-m3 {
-  margin: 1.5em;
-}
-.ui-ml3 {
-  margin-left: 1.5em;
-}
-.ui-mb3 {
-  margin-bottom: 1.5em;
-}
-.uimr3 {
-  margin-right: 1.5em;
-}
-.ui-mt3 {
-  margin-top: 1.5em;
-}
-.ui-mv3 {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-.ui-mh3 {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-}
-.ui-m4 {
-  margin: 2em;
-}
-.ui-ml4 {
-  margin-left: 2em;
-}
-.ui-mb4 {
-  margin-bottom: 2em;
-}
-.uimr4 {
-  margin-right: 2em;
-}
-.ui-mt4 {
-  margin-top: 2em;
-}
-.ui-mv4 {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-.ui-mh4 {
-  margin-left: 2em;
-  margin-right: 2em;
-}
-.ui-mh-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-.ui-float-left {
-  float: left;
-}
-.ui-float-right {
-  float: right;
-}
-.ui-float-none {
-  float: none;
-}
-.ui-overflow-hidden {
-  overflow: hidden;
-}
-.ui-overflow-auto {
-  overflow: auto;
-}
-.ui-overflow-scroll {
-  overflow: scroll;
-}
-.ui-fit {
-  max-width: 100%;
-}
-.ui-half-width {
-  width: 50%;
-}
-.ui-full-width {
-  width: 100%;
-}
-.ui-inline {
-  display: inline;
-}
-.ui-block {
-  display: block;
-}
-.ui-inline-block {
-  display: inline-block;
 }
 html {
   font-size: 16px;
@@ -1914,6 +1639,11 @@ hr {
 .ui-menu > ul .ui-menu-item > a {
   text-decoration: none;
   display: block;
+}
+.ui-menu > ul .ui-menu-item.disabled {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  cursor: not-allowed !important;
 }
 .ui-menu > ul .ui-menu-item.disabled a:hover {
   background: none;
