@@ -1,25 +1,62 @@
+@import "variable.less";
+
+// transition control
+.esf-transition(@transition) {}
+
+.esf-transition(@transition) when (@esf-enable-transition-effect) {
+    .transition(@transition);
+}
+
+// avoiding border radius output when we don't need it.
+.esf-border-radius(@radius, @ignore) when (@ignore = 0) {}
+
+.esf-border-radius(@radius, @ignore) {
+    .border-radius(@radius);
+}
+
+.esf-border-top-radius(@radius, @ignore) when (@ignore = 0) {}
+
+.esf-border-top-radius(@radius, @ignore) {
+    .border-top-radius(@radius);
+}
+
+.esf-border-bottom-radius(@radius, @ignore) when (@ignore = 0) {}
+
+.esf-border-bottom-radius(@radius, @ignore) {
+    .border-bottom-radius(@radius);
+}
+
+// make a circle
+.esf-circular() {
+    .border-radius(500em);
+}
+
+// other selector extends this selector
 .esf-clearfix {
     .clearfix();
 }
 
-// less mixin doesn't support variable.
-.esf-disabled {
+.@{esf-class-prefix}-hover-fade-in {
+    cursor: pointer;
+    .opacity(80);
+    &:hover {
+        .opacity(100);
+    }
+    .esf-transition(opacity 0.1s linear);
+}
+
+// states
+.esf-disabled() {
     .opacity(40);
     cursor: not-allowed !important;
 }
 
-// mixins
-.esf-list-unstyled() {
-    padding-left: 0;
-    .reset-list-style;
+.@{esf-state-prefix}-disabled {
+    .esf-disabled();
 }
 
-.esf-transition(@transition) {
-    
-}
-
-.esf-transition(@transition) when (@esf-enable-transition-effect) {
-    .transition(@transition);
+.@{esf-state-prefix}-hidden {
+    display: none !important;
 }
 
 // sizes

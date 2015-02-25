@@ -1,30 +1,31 @@
+@import "base.less";
 
-@esf-button-font-family: @default-heading-font-family;
+@esf-button-font-family: 'Helvetica Neue', Helvetica, Arial, '宋体', SimSun, sans-serif;
+@esf-button-font-weight: bold;
 @esf-button-height: 2.4em;
-@esf-button-line-height: 2.4em;
-
-@esf-button-icon-padding: 0 0.7em;
 @esf-button-padding: 0 1em;
-
-@esf-button-link-color: @primary-color;
+@esf-button-link-color: #6CCDC0;
 @esf-button-link-decoration: none;
-@esf-button-link-hover-color: lighten(@primary-color, 15%);
+@esf-button-link-hover-color: lighten(#6CCDC0, 15%);
 @esf-button-link-hover-decoration: underline;
-
-@esf-button-radius: @default-border-radius;
+@esf-button-radius: 5px;
 
 .@{esf-class-prefix}-button {
     .esf-button();
     .esf-button-theme();
-
-    cursor: pointer;
-    &:focus {
-        outline: 1px dotted;
+    &:disabled {
+        .esf-disabled();
     }
 }
 
+// variants
 .@{esf-class-prefix}-button-icon {
-    padding: @esf-button-icon-padding;
+    padding: 0;
+    .size(@esf-button-height);
+}
+
+.@{esf-class-prefix}-button-circular {
+    .esf-circular();
 }
 
 .@{esf-class-prefix}-button-fluid {
@@ -39,20 +40,15 @@
     &:hover {
         color: @esf-button-link-hover-color;
         text-decoration: @esf-button-link-hover-decoration;
-        background: none;
     }
-    background: none;
+    &:focus {
+        // adding outline for link element
+        outline: 1px dotted;
+    }
+    background: none !important;
 }
 
-.@{esf-class-prefix}-button-circular {
-    .border-radius(10em);
-    padding: @esf-button-icon-padding;
-}
-
-.@{esf-class-prefix}-button-fw-icon {
-    width: 1em;
-}
-
+// button group
 .@{esf-class-prefix}-button-group {
     display: inline-block;
     vertical-align: middle;
@@ -68,21 +64,23 @@
 }
 
 .@{esf-class-prefix}-button-primary {
-    .esf-button-variant(@white, @primary-color);
+    .esf-button-primary-theme();
 }
 
 .@{esf-class-prefix}-button-success {
-    .esf-button-variant(@white, @success-color);
+    .esf-button-success-theme();
 }
 
 .@{esf-class-prefix}-button-info {
-    .esf-button-variant(@white, @info-color);
+    .esf-button-info-theme();
 }
+
 .@{esf-class-prefix}-button-warning {
-    .esf-button-variant(@white, @warning-color);
+    .esf-button-warning-theme();
 }
+
 .@{esf-class-prefix}-button-danger {
-    .esf-button-variant(@white, @danger-color);
+    .esf-button-danger-theme();
 }
 
 .esf-button-group-border() when (@esf-button-radius > 0) {
@@ -97,39 +95,66 @@
     }
 }
 
-// placeholder 
 .esf-button-group-border() {}
 
+/*
+ * 1. Correct inability to style clickable `input` types in iOS.
+ * 2. Remove margins in Chrome, Safari and Opera.
+ * 3. Remove borders for `button`.
+ * 4. Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * 5. Correct `font` properties and `color` not being inherited for `button`.
+ * 6. Address inconsistent `text-transform` inheritance which is only inherit in Firefox and IE
+ * 7. Style
+ * 8. `line-height` is used to create a height
+ * 9. `min-height` is necessary for `input` elements in Firefox and Opera because `line-height` is not working.
+ * 10. Required for `a`.
+ */
 .esf-button() {
-    // for `a` elements
+    // 1
+    -webkit-appearance: none;
+    // 2
+    margin: 0;
+    // 3
+    border: none;
+    // 4
+    overflow: visible;
+    // 5
+    font: inherit;
+    // 6
+    text-transform: none;
+    // 7
     display: inline-block;
-    font-size: 100%;
     .box-sizing(border-box);
     text-align: center;
     vertical-align: middle;
-    .user-select(none);
-
-    // button height
-    line-height: @esf-button-line-height;
-    min-height: @esf-button-height;
-    height: @esf-button-height;
-
-    // button padding
-    padding: @esf-button-padding;
-
-    // border
-    border: none;
-    .border-radius(@esf-button-radius);
-
     font-family: @esf-button-font-family;
-
-    // remove line from `a` element
+    // 10
     text-decoration: none;
     &:hover, &:focus {
         text-decoration: none;
         outline: 0;
     }
+    .user-select(none);
+    // 8
+    line-height: @esf-button-height;
+    // 9
+    min-height: @esf-button-height;
+    height: @esf-button-height;
+    // button padding
+    padding: @esf-button-padding;
+    cursor: pointer;
+    font-weight: @esf-button-font-weight;
+    .esf-border-radius(
+        @esf-button-radius,
+        @esf-button-radius
+    );
 }
 
+// theme hooks
 .esf-button-theme {}
-.esf-button-group-theme {};
+.esf-button-primary-theme() {}
+.esf-button-success-theme() {}
+.esf-button-info-theme() {}
+.esf-button-warning-theme() {}
+.esf-button-danger-theme() {}
+.esf-button-group-theme {}

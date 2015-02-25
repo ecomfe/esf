@@ -1,16 +1,10 @@
 // est variables
-@default-text-color: @black-60;
-@default-font-size: 16;
-@default-base-font-family: 'Helvetica Neue', Arial, sans-serif;
-@default-code-font-family: Monaco, Consolas, monospace;
-
-// default visual settings
-@default-border-radius: 5px;
+@support-old-ie: false;
 
 // font-size
 @esf-x-small-font-size: @esf-medium-font-size * 0.75; // 12px
 @esf-small-font-size: @esf-medium-font-size * 0.875; // 14px
-@esf-medium-font-size: unit(@default-font-size, px); // 16px
+@esf-medium-font-size: 16px; // 16px
 @esf-large-font-size: @esf-medium-font-size * 1.125; // 18px
 @esf-x-large-font-size: @esf-medium-font-size * 1.25; // 20px
 @esf-xx-large-font-size: @esf-medium-font-size * 1.375; // 22px
@@ -19,7 +13,7 @@
 
 // prefix
 @esf-class-prefix: ui;
+@esf-state-prefix: state;
 
 // global transition switch
 @esf-enable-transition-effect: true;
-

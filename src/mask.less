@@ -1,8 +1,7 @@
-@esf-mask-background: rgba(255,255,255,.85);
-@esf-mask-dark-background: rgba(0,0,0,.85);
-@esf-mask-dark-content-color: @white;
-@esf-loader-color-for-dark-bg: @white;
-@esf-loader-color2-for-dark-bg: rgba(255,255,255,.5);
+@import "base.less";
+
+@esf-mask-background: fade(#FFFFFF, 50%);
+@esf-mask-zindex: 1040;
 
 .@{esf-class-prefix}-mask-section {
     position: relative;
@@ -36,49 +35,13 @@
     text-align: center;
 }
 
-.@{esf-class-prefix}-mask-dark {
-    background: @esf-mask-dark-background;
-    .@{esf-class-prefix}-mask-middle {
-        color: @esf-mask-dark-content-color;
-    }
-}
-
-.@{esf-class-prefix}-mask-dark {
-    .@{esf-class-prefix}-loader-bouncers > div {
-        background-color: @esf-loader-color-for-dark-bg;
-    }
-}
-
-.@{esf-class-prefix}-mask-dark {
-    .@{esf-class-prefix}-loader-icon {
-        color: @esf-loader-color-for-dark-bg;
-    }
-}
-
-.@{esf-class-prefix}-mask-dark {
-    .@{esf-class-prefix}-loader-border {
-        border-bottom: 6px solid @esf-loader-color2-for-dark-bg;
-        border-left: 6px solid @esf-loader-color2-for-dark-bg;
-        border-right: 6px solid @esf-loader-color2-for-dark-bg;
-        border-top: 6px solid @esf-loader-color-for-dark-bg;
-    }
-}
-
-.@{esf-class-prefix}-mask-dark {
-    .@{esf-class-prefix}-loader-borders:before,
-    .@{esf-class-prefix}-loader-borders {
-        border-top-color: @esf-loader-color-for-dark-bg;
-        border-bottom-color: @esf-loader-color-for-dark-bg;
-    }
-}
-
 .@{esf-class-prefix}-mask-page {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1040;
+    z-index: @esf-mask-zindex;
     display: none;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;

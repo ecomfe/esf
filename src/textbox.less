@@ -5,30 +5,28 @@
 
 // keep the same height as button
 @esf-input-height: 2.4em;
-@esf-input-font-family: @default-base-font-family;
-@esf-input-text-size: @esf-small-font-size;
 
 // padding
 @esf-input-padding: 0.65em;
 
 // normal
-@esf-input-border-color: #666;
+@esf-input-border-color: #ddd;
 @esf-input-background-color: #FFF;
-@esf-input-text-color: #333;
+@esf-input-text-color: #444;
 
 // active state
-@esf-input-active-border-color: @primary-color;
-@esf-input-active-background-color: @black-10;
-@esf-input-active-text-color: #333;
+@esf-input-active-border-color: #ddd;
+@esf-input-active-background-color: darken(#ddd, 10%);
+@esf-input-active-text-color: #444;
 
 // focus state
-@esf-input-focus-border-color: @primary-color;
+@esf-input-focus-border-color: #6CCDC0;
 @esf-input-focus-background-color: #FFF;
 @esf-input-focus-text-color: #333;
 
 // error state
-@esf-input-error-border-color: @danger-color;
-@esf-input-error-background-color: lighten(@danger-color, 30%);
+@esf-input-error-border-color: #D9534F;
+@esf-input-error-background-color: lighten(#D9534F, 30%);
 @esf-input-error-text-color: #333;
 
 // disabled state
@@ -42,12 +40,12 @@
 @esf-input-readonly-text-color: #CCC;
 
 // success state
-@esf-input-success-border-color: @success-color;
+@esf-input-success-border-color: #5CB85C;
 @esf-input-success-background-color: #FFF;
 @esf-input-success-text-color: #333;
 
 // warning state
-@esf-input-warning-border-color: @warning-color;
+@esf-input-warning-border-color: #F0AD4E;
 @esf-input-warning-background-color: #FFF;
 @esf-input-warning-text-color: #333;
 
@@ -55,12 +53,12 @@
 @esf-input-placeholder-color: #ccc;
 
 // radius
-@esf-input-radius: @default-border-radius;
+@esf-input-radius: 5px;
 
 .@{esf-class-prefix}-textbox {
     position: relative;
     display: inline-block;
-    font-family: @esf-input-font-family;
+    vertical-align: middle;
     color: @esf-input-text-color;
 
     // input height
@@ -74,7 +72,10 @@
         width: 100%;
         margin: 0;
         outline: 0;
-        .border-radius(@esf-input-radius);
+        .esf-border-radius(
+            @esf-input-radius,
+            @esf-input-radius
+        );
         @esf-input-transition:
             background-color 0.3s ease-out,
             box-shadow 0.2s ease,
@@ -83,7 +84,6 @@
         .box-sizing(border-box);
         font-size: 100%;
         resize: none;
-        vertical-align: middle;
         .esf-input-color-def(
             @esf-input-border-color,
             @esf-input-background-color,
@@ -94,7 +94,7 @@
 }
 
 // states
-.@{esf-class-prefix}-textbox-focus > input,
+.@{esf-state-prefix}-focus > input,
 .@{esf-class-prefix}-textbox > input:focus,
 .@{esf-class-prefix}-textbox > textarea:focus {
     .esf-input-color-def(
@@ -104,36 +104,25 @@
     );
 }
 
-.@{esf-class-prefix}-textbox-active > input,
-.@{esf-class-prefix}-textbox > input:active,
-.@{esf-class-prefix}-textbox > textarea:active {
-    .esf-input-color-def(
-        @esf-input-active-border-color,
-        @esf-input-active-background-color,
-        @esf-input-active-text-color
-    );
-}
-
-.@{esf-class-prefix}-textbox-disabled > input,
 .@{esf-class-prefix}-textbox > input[disabled],
 .@{esf-class-prefix}-textbox > textarea[disabled] {
-    .esf-input-color-def(
-        @esf-input-disabled-border-color,
-        @esf-input-disabled-background-color,
-        @esf-input-disabled-text-color
-    );
     .esf-disabled();
 }
 
-.@{esf-class-prefix}-textbox-error > input {
+// for esui error state
+.esf-textbox-error {
     .esf-input-color-def(
         @esf-input-error-border-color,
         @esf-input-error-background-color,
         @esf-input-error-text-color
     );
+    .placeholder(@esf-input-error-text-color);
 }
 
-.@{esf-class-prefix}-textbox-readonly > input,
+.@{esf-class-prefix}-textbox.@{esf-state-prefix}-error > input {
+    &:extend(.esf-textbox-error all);
+}
+
 .@{esf-class-prefix}-textbox > input[readonly],
 .@{esf-class-prefix}-textbox > textarea[readonly] {
     .esf-input-color-def(
@@ -143,27 +132,32 @@
     );
 }
 
-.@{esf-class-prefix}-textbox-success > input,
-.@{esf-class-prefix}-textbox-success > textarea {
+.esf-textbox-success {
     .esf-input-color-def(
         @esf-input-success-border-color,
         @esf-input-success-background-color,
         @esf-input-success-text-color
     );
+    .placeholder(@esf-input-success-text-color);
 }
 
-.@{esf-class-prefix}-textbox-warning > input,
-.@{esf-class-prefix}-textbox-warning > textarea {
+.@{esf-class-prefix}-textbox.@{esf-state-prefix}-success > input,
+.@{esf-class-prefix}-textbox.@{esf-state-prefix}-success > textarea {
+    &:extend(.esf-textbox-success all);
+}
+
+.esf-textbox-warning {
     .esf-input-color-def(
         @esf-input-warning-border-color,
         @esf-input-warning-background-color,
         @esf-input-warning-text-color
     );
+    .placeholder(@esf-input-warning-text-color);
 }
 
-// for IE 8-9 placeholder elements
-.@{esf-class-prefix}-textbox-placeholder {
-    color: @esf-input-placeholder-color;
+.@{esf-class-prefix}-textbox.@{esf-state-prefix}-warning > input,
+.@{esf-class-prefix}-textbox.@{esf-state-prefix}-warning > textarea {
+    &:extend(.esf-textbox-warning all);
 }
 
 // icon
@@ -176,19 +170,22 @@
     text-align: center;
 }
 
-.@{esf-class-prefix}-textbox-left {
-    left: 0;
-}
-.@{esf-class-prefix}-textbox-right {
-    right: 0;
-}
-
-.@{esf-class-prefix}-textbox-left ~ input {
-    padding-left: @esf-input-height + 0.2em;
+.@{esf-class-prefix}-textbox-icon-left {
+    .@{esf-class-prefix}-textbox-icon {
+        left: 0;
+    }
+    input {
+        padding-left: @esf-input-height + 0.2em;
+    }
 }
 
-.@{esf-class-prefix}-textbox-right ~ input {
-    padding-right: @esf-input-height + 0.2em;
+.@{esf-class-prefix}-textbox-icon-right {
+    .@{esf-class-prefix}-textbox-icon {
+        right: 0;
+    }
+    input {
+        padding-right: @esf-input-height + 0.2em;
+    }
 }
 
 .@{esf-class-prefix}-textbox-fluid {
@@ -197,6 +194,17 @@
 
 .@{esf-class-prefix}-textbox-wrapper {
     &:extend(.esf-clearfix all);
+    >.@{esf-class-prefix}-button,
+    >.@{esf-class-prefix}-button-group,
+    >.@{esf-class-prefix}-textbox {
+        float: left;
+    }
+    .esf-textbox-wrapper-border-radius();
+}
+
+.esf-textbox-wrapper-border-radius() {}
+
+.esf-textbox-wrapper-border-radius() when (@esf-input-radius > 0) {
     :first-child.@{esf-class-prefix}-button-group .@{esf-class-prefix}-button:last-child,
     :first-child.@{esf-class-prefix}-button,
     :first-child input {
@@ -209,50 +217,45 @@
         .border-left-radius(0);
         border-left: 0;
     }
-    >.@{esf-class-prefix}-button,
-    >.@{esf-class-prefix}-button-group,
-    >.@{esf-class-prefix}-textbox {
-        float: left;
-    }
 }
 
-//widths-sizes
-.@{esf-class-prefix}-textbox-width-size1 {
+// widths-sizes
+.@{esf-class-prefix}-textbox-size1 {
     input {
         width: 2em;
     }
 }
-.@{esf-class-prefix}-textbox-width-size2 {
+.@{esf-class-prefix}-textbox-size2 {
     input {
         width: 4em;
     }
 }
-.@{esf-class-prefix}-textbox-width-size3 {
+.@{esf-class-prefix}-textbox-size3 {
     input {
         width: 6em;
     }
 }
-.@{esf-class-prefix}-textbox-width-size4 {
+.@{esf-class-prefix}-textbox-size4 {
     input {
         width: 8em;
     }
 }
-.@{esf-class-prefix}-textbox-width-size5 {
+.@{esf-class-prefix}-textbox-size5 {
     input {
         width: 10em;
     }
 }
-.@{esf-class-prefix}-textbox-width-size6 {
+.@{esf-class-prefix}-textbox-size6 {
     input {
         width: 12em;
     }
 }
-.@{esf-class-prefix}-textbox-width-size7 {
+.@{esf-class-prefix}-textbox-size7 {
     input {
         width: 14em;
     }
 }
-.@{esf-class-prefix}-textbox-width-size8 {
+.@{esf-class-prefix}-textbox-size8 {
     input {
         width: 16em;
     }
@@ -268,4 +271,3 @@
     background-color: @background;
     color: @text;
 }
-

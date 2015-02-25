@@ -1,19 +1,14 @@
-// =========
-// Checkbox & Radio
-// =========
-@esf-checkbox-label-text-color: rgba(0, 0, 0, 0.6);
-@esf-checkbox-label-text-hover-color: rgba(0, 0, 0, 0.8);
-@esf-checkbox-label-text-focus-color: rgba(0, 0, 0, 0.8);
+@import "base.less";
 
 @esf-checkbox-radio-label-padding: 1.5em;
-@esf-checkbox-active-background-color: @black-10;
+@esf-checkbox-radio-box-size: 1em;
 
 .esf-checkbox-style-base {
     position: relative;
     display: inline-block;
-    min-width: 1em;
-    line-height: 1em;
-    height: 1em;
+    min-width: @esf-checkbox-radio-box-size;
+    line-height: @esf-checkbox-radio-box-size;
+    height: @esf-checkbox-radio-box-size;
     vertical-align: middle;
 
     // virtual checkbox
@@ -28,8 +23,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 1em;
-            height: 1em;
+            width: @esf-checkbox-radio-box-size;
+            height: @esf-checkbox-radio-box-size;
             content: '';
             .box-sizing(border-box);
             .esf-transition(~"background-color 0.3s ease, border-color 0.3s ease");
@@ -45,7 +40,7 @@
             display: none\9;
         }
         &:active:before {
-            background: @esf-checkbox-active-background-color;
+            .esf-checkbox-virtual-box-active-theme();
         }
     }
     input {
@@ -84,24 +79,20 @@
         }
     }
 
-    // if we put label after checkbox container
+    // ~ label: if we put label after checkbox container
     label,
     ~ label {
         .esf-transition(color 0.2s ease);
         cursor: pointer;
         vertical-align: middle;
-
-        // label text color
-        color: @esf-checkbox-label-text-color;
-        &:hover {
-            color: @esf-checkbox-label-text-hover-color;
-        }
+        .esf-checkbox-label-theme();
     }
 }
 
 .@{esf-class-prefix}-checkbox-custom,
 .@{esf-class-prefix}-radio-custom,
-.@{esf-class-prefix}-checkbox-switch {
+.@{esf-class-prefix}-checkbox-switch,
+.@{esf-class-prefix}-checkbox-switch-round {
     &:extend(.esf-checkbox-style-base all);
 }
 
@@ -109,7 +100,7 @@
     .@{esf-class-prefix}-checkbox-box,
     label {
         &:before {
-            .border-radius(500px);
+            .esf-circular();
         }
     }
     input:checked {
@@ -120,7 +111,8 @@
     }
 }
 
-.@{esf-class-prefix}-checkbox-switch {
+.@{esf-class-prefix}-checkbox-switch,
+.@{esf-class-prefix}-checkbox-switch-round {
     input {
         ~ .@{esf-class-prefix}-checkbox-box,
         ~ label {
@@ -152,6 +144,8 @@
     }
 }
 
+.esf-checkbox-label-theme() {}
+.esf-checkbox-virtual-box-active-theme() {}
 .esf-checkbox-virtual-box-focus-theme() {}
 .esf-checkbox-virtual-box-checked-theme() {}
 .esf-checkbox-virtual-box-indeterminate-theme() {}

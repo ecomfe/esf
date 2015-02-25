@@ -12,101 +12,78 @@
         <script src="assets/prism.js"></script>
         <script src="assets/jquery-1.11.1.min.js"></script>
         <script src="assets/demo.js"></script>
-        <style>
-            .black-label {
-                color: white;
-                background: black;
-            }
-            .yellow-label {
-                color: white;
-                background: #f2c61f;
-            }
-            .green-label {
-                color: white;
-                background: #5bbd72;
-            }
-            .teal-label {
-                color: white;
-                background: #00b5ad;
-            }
-            .red-label {
-                color: white;
-                background: #d95c5c;
-            }
-            .red-label:before {
-                border-top-color: #d95c5c;
-            }
-        </style>
     </head>
-    <body class="ui-m3">
+    <body>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
                 <ul id="navigator-features" class="ui-list-unstyled">
                     <li><a href="#label-basic">Label</a></li>
-                    <li><a href="#label-hover">Label Hover</a></li>
                     <li><a href="#label-pointer">Label Pointer</a></li>
                     <li><a href="#label-circular">Label Circular</a></li>
                     <li><a href="#label-colors">Label Colors</a></li>
-                    <li><a href="#label-sizes">label-sizes</a></li>
+                    <li><a href="#label-sizes">Label Sizes</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
-                <div id="main" class="content ui-p2 ui-pt0">
+                <div id="main" class="content">
                     <h2 id="icons" class="content-subhead">标签-Label</h2>
                     <div>
                         <h3 id="label-basic">Label</h3>
                         <div class="example">
                             <label class="ui-label-custom">鸿媒体DSP广告管家</label>
-                            <label class="ui-label-custom">鸿媒体DSP广告管家 <span class="ui-icon-remove ui-label-hover"></span></label>
-                            <label class="ui-label-custom"><i class="ui-icon-paw"></i> lisijin@baidu.com</label>
-                        </div>
-                        <h3 id="label-hover">Hoverable</h3>
-                        <div class="example">
-                            <label class="ui-label-custom ui-label-hover">鸿媒体DSP广告管家</label>
+                            <label class="ui-label-custom">
+                                鸿媒体DSP广告管家 <span class="ui-icon-remove ui-hover-fade-in"></span>
+                            </label>
+                            <label class="ui-label-custom ui-label-slim">
+                                <span class="ui-icon-paw"></span> lisijin@abc.com
+                            </label>
+                            <label class="ui-label-custom ui-label-transparent">
+                                <span class="ui-icon-paw"></span> lisijin@abc.com
+                            </label>
                         </div>
                         <h3 id="label-pointer">Pointer</h3>
                         <div class="example">
-                            <div>
-                                <label class="ui-label-pointer ui-label-hover">鸿媒体DSP广告管家</label>
+                            <div class="ui-demo-row">
+                                <label class="ui-label-custom ui-label-pointer ui-label-primary">鸿媒体DSP广告管家</label>
                             </div>
-                            <div class="ui-mt2">
-                                <label class="ui-label-pointer-bottom red-label">鸿媒体DSP广告管家</label>
+                            <div class="ui-demo-row">
+                                <label class="ui-label-custom ui-label-pointer-bottom ui-label-warning">鸿媒体DSP广告管家</label>
                             </div>
-                            <div class="ui-mt2">
-                                <label class="ui-label-pointer-left">鸿媒体DSP广告管家</label>
+                            <div class="ui-demo-row">
+                                <label class="ui-label-custom ui-label-pointer-left ui-label-danger">鸿媒体DSP广告管家</label>
                             </div>
-                            <div class="ui-mt2">
-                                <label class="ui-label-pointer-right">鸿媒体DSP广告管家</label>
+                            <div class="ui-demo-row">
+                                <label class="ui-label-custom ui-label-pointer-right ui-label-info">鸿媒体DSP广告管家</label>
                             </div>
                         </div>
                         <h3 id="label-circular">Circular</h3>
                         <div class="example">
                             <div>
-                                <label class="ui-label-circular teal-label ui-label-hover">1</label>
-                                <label class="ui-label-circular teal-label ui-label-hover">2</label>
-                                <label class="ui-label-circular teal-label ui-label-hover">200</label>
-                                <label class="ui-label-circular teal-label ui-label-hover"><span class="ui-icon-close"></span></label>
+                                <label class="ui-label-custom ui-label-circular ui-label-primary ui-hover-fade-in">1</label>
+                                <label class="ui-label-custom ui-label-circular ui-label-primary ui-hover-fade-in">2</label>
+                                <label class="ui-label-custom ui-label-circular ui-label-primary ui-hover-fade-in">200</label>
+                                <label class="ui-label-custom ui-label-circular ui-label-primary ui-hover-fade-in"><span class="ui-icon-close"></span></label>
                             </div>
                         </div>
                         <h3 id="label-colors">Colors</h3>
                         <div class="example">
                             <div>
-                                <label class="ui-label-custom black-label ui-label-hover">Black Label</label>
-                                <label class="ui-label-custom yellow-label ui-label-hover">Yellow Label</label>
-                                <label class="ui-label-custom green-label ui-label-hover">Green Label</label>
-                                <label class="ui-label-custom red-label ui-label-hover">Red Label</label>
-                                <label class="ui-label-custom teal-label ui-label-hover"><span class="ui-icon-close"></span></label>
+                                <label class="ui-label-custom ui-label-primary">Primary Label</label>
+                                <label class="ui-label-custom ui-label-success">Success Label</label>
+                                <label class="ui-label-custom ui-label-warning">Warning Label</label>
+                                <label class="ui-label-custom ui-label-danger">Danger Label</label>
+                                <label class="ui-label-custom ui-label-info"><span class="ui-icon-close"></span></label>
                             </div>
                         </div>
                         <h3 id="label-sizes">Sizes</h3>
                         <div class="example">
                             <div>
-                                <label class="ui-label-custom green-label ui-x-small">x-small</label>
-                                <label class="ui-label-custom green-label ui-small">small</label>
-                                <label class="ui-label-custom green-label ui-large">large</label>
-                                <label class="ui-label-custom green-label ui-x-large">x-large</label>
-                                <label class="ui-label-custom green-label ui-xx-large">xx-large</label>
-                                <label class="ui-label-custom green-label ui-xxx-large"> xxx-large</label>
+                                <label class="ui-label-custom ui-label-success ui-x-small">x-small</label>
+                                <label class="ui-label-custom ui-label-success ui-small">small</label>
+                                <label class="ui-label-custom ui-label-success ui-large">large</label>
+                                <label class="ui-label-custom ui-label-success ui-x-large">x-large</label>
+                                <label class="ui-label-custom ui-label-success ui-xx-large">xx-large</label>
+                                <label class="ui-label-custom ui-label-success ui-xxx-large"> xxx-large</label>
                             </div>
                         </div>
                     </div>

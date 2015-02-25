@@ -1,13 +1,15 @@
+@import "base.less";
+
 @esf-form-label-font-size: 1em;
 @esf-form-row-bottom-margin: 1em;
 
-@esf-form-message-font-size: 14px;
-@esf-form-message-font-color: #999;
-@esf-form-validity-font-size: 14px;
-@esf-form-validity-font-color: @danger-color;
+@esf-form-hint-font-size: 14px;
+@esf-form-hint-font-color: #999;
+
+@esf-form-validity-font-color: #D9534F;
 @esf-form-buttons-background: none;
 @esf-form-buttons-padding: 25px 0;
-@esf-form-buttons-border-top: 1px solid #eaeaea;
+@esf-form-buttons-border-top: 1px solid #ddd;
 
 @esf-form-fieldset-padding: 0.35em 0.625em 0.75em;
 @esf-form-fieldset-margin: 0 .2em;
@@ -55,7 +57,7 @@
         color: @esf-form-validity-font-color;
         display: block;
         right: 0;
-        top: .7em;
+        top: 50%;
         position: absolute;
     }
 }
@@ -67,22 +69,13 @@
 
 .@{esf-class-prefix}-form-hint {
     display: inline-block;
+    font-size: @esf-form-hint-font-size;
+    color: @esf-form-hint-font-color;
 }
 
 .@{esf-class-prefix}-form-wrap-hint .@{esf-class-prefix}-form-hint {
     display: block;
     margin-top: .5em;
-}
-
-.@{esf-class-prefix}-form-inline,
-.@{esf-class-prefix}-form-stack {
-    .@{esf-class-prefix}-form-message,
-    .@{esf-class-prefix}-form-validity {
-        display:inline-block;
-        span {
-            display:block;
-        }
-    }
 }
 
 .@{esf-class-prefix}-form-stack {
@@ -105,12 +98,8 @@
     }
 }
 
-.esf-form-buttons-theme() {
+.@{esf-class-prefix}-form-buttons {
     padding: @esf-form-buttons-padding;
     background: @esf-form-buttons-background;
     border-top: @esf-form-buttons-border-top;
-}
-
-.@{esf-class-prefix}-form-buttons {
-    .esf-form-buttons-theme();
 }
