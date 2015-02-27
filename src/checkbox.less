@@ -16,7 +16,7 @@
     label {
         display: block;
         padding-left: @esf-checkbox-radio-label-padding;
-        padding-left: 1em\9;
+
 
         // checkbox
         &:before {
@@ -30,14 +30,14 @@
             .esf-transition(~"background-color 0.3s ease, border-color 0.3s ease");
 
             .esf-checkbox-virtual-box-theme();
-            display: none\9;
+
         }
         &:after {
             .box-sizing(border-box);
             position: absolute;
             content: '';
             .esf-transition(~"background 0.3s ease 0s, left 0.3s ease 0s");
-            display: none\9;
+
         }
         &:active:before {
             .esf-checkbox-virtual-box-active-theme();
@@ -48,8 +48,7 @@
         top: 0;
         left: 0;
         .opacity(0);
-        filter: none\9;
-        top: 0.1em\9;
+
         outline: none;
         &:focus {
             & ~ label,
@@ -117,7 +116,6 @@
         ~ .@{esf-class-prefix}-checkbox-box,
         ~ label {
             padding-left: 4em;
-            padding-left: 1em\9;
             .esf-checkbox-virtual-box-switch-theme();
         }
         &:checked {

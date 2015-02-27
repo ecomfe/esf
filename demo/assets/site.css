@@ -551,7 +551,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-button:active,
 .ui-button.state-active {
-  background-color: #eeeeee EE;
+  background-color: #eeeeee;
 }
 .ui-button:disabled {
   opacity: 0.4;
@@ -743,7 +743,6 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch-round label {
   display: block;
   padding-left: 1.5em;
-  padding-left: 1em\9;
 }
 .esf-checkbox-style-base .ui-checkbox-box:before,
 .esf-checkbox-style-base label:before,
@@ -774,7 +773,6 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  display: none\9;
 }
 .esf-checkbox-style-base .ui-checkbox-box:after,
 .esf-checkbox-style-base label:after,
@@ -796,7 +794,6 @@ input[type="search"]::-webkit-search-decoration {
   -ms-transition: background 0.3s ease 0s, left 0.3s ease 0s;
   -o-transition: background 0.3s ease 0s, left 0.3s ease 0s;
   transition: background 0.3s ease 0s, left 0.3s ease 0s;
-  display: none\9;
 }
 .esf-checkbox-style-base .ui-checkbox-box:active:before,
 .esf-checkbox-style-base label:active:before,
@@ -808,7 +805,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch label:active:before,
 .ui-checkbox-switch-round .ui-checkbox-box:active:before,
 .ui-checkbox-switch-round label:active:before {
-  background: #eeeeee EE;
+  background: #eeeeee;
 }
 .esf-checkbox-style-base input,
 .ui-checkbox-custom input,
@@ -820,8 +817,6 @@ input[type="search"]::-webkit-search-decoration {
   left: 0;
   opacity: 0;
   filter: alpha(opacity=0);
-  filter: none\9;
-  top: 0.1em\9;
   outline: none;
 }
 .esf-checkbox-style-base input:focus ~ label,
@@ -981,7 +976,6 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch input ~ label,
 .ui-checkbox-switch-round input ~ label {
   padding-left: 4em;
-  padding-left: 1em\9;
 }
 .ui-checkbox-switch input ~ .ui-checkbox-box:before,
 .ui-checkbox-switch-round input ~ .ui-checkbox-box:before,
