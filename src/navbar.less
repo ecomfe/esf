@@ -13,28 +13,28 @@
 @esf-navbar-content-icon-font-size: 25px;
 
 // http://getuikit.com/docs/navbar.html
-.@{esf-class-prefix}-navbar {
+.@{ui-class-prefix}-navbar {
     padding: @esf-navbar-padding;
     margin: @esf-navbar-margin;
     font-family: @esf-navbar-font-family;
     .esf-navbar-theme();
 }
 
-.@{esf-class-prefix}-navbar {
+.@{ui-class-prefix}-navbar {
     &:extend(.esf-clearfix all);
 }
 
-.@{esf-class-prefix}-navbar-nav,
-.@{esf-class-prefix}-navbar-content {
+.@{ui-class-prefix}-navbar-nav,
+.@{ui-class-prefix}-navbar-content {
     float: left;
     height: @esf-navbar-nav-item-height;
 }
 
-.@{esf-class-prefix}-navbar-pull-right {
+.@{ui-class-prefix}-navbar-pull-right {
     float: right;
 }
 
-.@{esf-class-prefix}-navbar-content {
+.@{ui-class-prefix}-navbar-content {
     &:before {
         content: '';
         display: inline-block;
@@ -43,27 +43,27 @@
     }
 }
 
-.@{esf-class-prefix}-navbar-content-text,
-.@{esf-class-prefix}-navbar-content-link,
-.@{esf-class-prefix}-navbar-content-icon {
+.@{ui-class-prefix}-navbar-content-text,
+.@{ui-class-prefix}-navbar-content-link,
+.@{ui-class-prefix}-navbar-content-icon {
     vertical-align: middle;
     display: inline-block;
 }
 
-.@{esf-class-prefix}-navbar-content-text {
+.@{ui-class-prefix}-navbar-content-text {
     .esf-navbar-content-text-theme();
 }
 
-.@{esf-class-prefix}-navbar-content-link {
+.@{ui-class-prefix}-navbar-content-link {
     .esf-navbar-content-link-theme();
 }
 
-.@{esf-class-prefix}-navbar-content-icon {
+.@{ui-class-prefix}-navbar-content-icon {
     font-size: @esf-navbar-content-icon-font-size;
     .esf-navbar-content-icon-theme();
 }
 
-.@{esf-class-prefix}-navbar-nav {
+.@{ui-class-prefix}-navbar-nav {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -85,17 +85,17 @@
             > a {
                 .esf-navbar-nav-item-hover-theme();
             }
-            > .@{esf-class-prefix}-submenu {
+            > .@{ui-class-prefix}-submenu {
                 display: block;
             }
         }
         &:active,
-        &.@{esf-class-prefix}-active {
+        &.@{ui-class-prefix}-active {
             > a {
                 .esf-navbar-nav-item-active-theme();
             }
         }
-        > .@{esf-class-prefix}-submenu {
+        > .@{ui-class-prefix}-submenu {
             display: none;
         }
     }

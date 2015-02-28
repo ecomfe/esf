@@ -70,16 +70,16 @@
     color: @text-color;
     background-color: @background-color;
     &:hover,
-    &.@{esf-state-prefix}-hover {
+    &.@{ui-state-prefix}-hover {
         background-color: @hover-background-color;
         color: @text-color;
     }
     &:focus,
-    &.@{esf-state-prefix}-focus {
+    &.@{ui-state-prefix}-focus {
         background-color: @focus-background-color;
     }
     &:active,
-    &.@{esf-state-prefix}-active {
+    &.@{ui-state-prefix}-active {
         background-color: @active-background-color;
     }
 }
@@ -159,8 +159,8 @@
 }
 
 .esf-button-group-theme() {
-    &.@{esf-class-prefix}-button-group-separated {
-        .@{esf-class-prefix}-button {
+    &.@{ui-class-prefix}-button-group-separated {
+        .@{ui-class-prefix}-button {
             margin-left: 0;
             &:not(:last-child) {
                 border-right: 1px solid @esf-button-group-separator-color;

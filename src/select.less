@@ -3,7 +3,7 @@
 @esf-form-select-border-radius: 5px;
 
 // http://jsbin.com/yaruh
-.@{esf-class-prefix}-select-custom {
+.@{ui-class-prefix}-select-custom {
     position: relative;
     display: inline-block;
     .box-sizing(border-box);
@@ -26,7 +26,7 @@
     }
 }
 
-.@{esf-class-prefix}-select-custom select {
+.@{ui-class-prefix}-select-custom select {
     width:100%;
     width:120%\9;
     margin:0;
@@ -45,29 +45,29 @@
     }
 }
 
-x:-o-prefocus, .@{esf-class-prefix}-select-custom:after {
+x:-o-prefocus, .@{ui-class-prefix}-select-custom:after {
     display:none;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-    .@{esf-class-prefix}-select-custom select::-ms-expand {
+    .@{ui-class-prefix}-select-custom select::-ms-expand {
         display: none;
     }
-    .@{esf-class-prefix}-select-custom select:focus::-ms-value {
+    .@{ui-class-prefix}-select-custom select:focus::-ms-value {
         background: transparent;
     }
 }
 
 @-moz-document url-prefix() {
-    .@{esf-class-prefix}-select-custom {
+    .@{ui-class-prefix}-select-custom {
         overflow: hidden;
     }
-    .@{esf-class-prefix}-select-custom select {
+    .@{ui-class-prefix}-select-custom select {
         width: 120%;
     }
 }
 
-.@{esf-class-prefix}-select-custom select:-moz-focusring {
+.@{ui-class-prefix}-select-custom select:-moz-focusring {
     color: transparent;
 }
 

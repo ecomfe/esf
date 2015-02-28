@@ -11,19 +11,19 @@
 @esf-img-frame-background: #FFFFFF;
 @esf-img-frame-caption-background: #000000;
 
-.@{esf-class-prefix}-img-responsive {
+.@{ui-class-prefix}-img-responsive {
     .esf-img-responsive();
 }
 
-.@{esf-class-prefix}-img-rounded {
+.@{ui-class-prefix}-img-rounded {
     .border-radius(@esf-img-round-border-radius);
 }
 
-.@{esf-class-prefix}-img-circle {
+.@{ui-class-prefix}-img-circle {
     .esf-circular();
 }
 
-.@{esf-class-prefix}-img-frame {
+.@{ui-class-prefix}-img-frame {
     padding: @esf-img-frame-padding;
     border: @esf-img-frame-border;
     display: inline-block;
@@ -46,11 +46,11 @@
     }
 }
 
-.@{esf-class-prefix}-img-frame-hover:hover {
+.@{ui-class-prefix}-img-frame-hover:hover {
     border: @esf-img-frame-border-hover;
 }
 
-.@{esf-class-prefix}-caption-slide-in {
+.@{ui-class-prefix}-caption-slide-in {
     position: relative;
     overflow: hidden;
     figcaption {
@@ -73,15 +73,15 @@
     }
 }
 
-.@{esf-class-prefix}-img-shadow {
+.@{ui-class-prefix}-img-shadow {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border: none;
 }
 
-.@{esf-class-prefix}-img-stack {
+.@{ui-class-prefix}-img-stack {
     display: inline-block;
     position: relative;
-    .@{esf-class-prefix}-img-frame {
+    .@{ui-class-prefix}-img-frame {
         position: relative;
         z-index: 7;
     }
@@ -113,7 +113,7 @@
 }
 
 // Second stack example (rotated to the right from the bottom left)
-.@{esf-class-prefix}-img-stack-rotated {
+.@{ui-class-prefix}-img-stack-rotated {
     &:before { 
         .transform-origin(bottom left);
         .rotate(2deg);

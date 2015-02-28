@@ -16,7 +16,7 @@
 @esf-submenu-item-highlight-background: #FAFAFA;
 @esf-submenu-item-padding: 0.5em 1em;
 
-.@{esf-class-prefix}-submenu {
+.@{ui-class-prefix}-submenu {
     position: absolute;
     z-index: @esf-submenu-zIndex;
     overflow: visible;
@@ -45,45 +45,45 @@
                 color: @esf-submenu-item-hover-color;
                 background: @esf-submenu-item-highlight-background;
             }
-            > .@{esf-class-prefix}-submenu {
+            > .@{ui-class-prefix}-submenu {
                 display: block;
             }
         }
         // for sub menu.
         position: relative;
-        > .@{esf-class-prefix}-submenu {
+        > .@{ui-class-prefix}-submenu {
             display: none;
         }
     }
 }
 
-.@{esf-class-prefix}-submenu-fill-width {
+.@{ui-class-prefix}-submenu-fill-width {
     min-width: 100%;
 }
 
-.@{esf-class-prefix}-submenu-fly-out-top {
+.@{ui-class-prefix}-submenu-fly-out-top {
     bottom: 100%;
 }
 
-.@{esf-class-prefix}-submenu-align-right {
+.@{ui-class-prefix}-submenu-align-right {
     right: 0;
 }
 
-.@{esf-class-prefix}-submenu-fly-out-left {
+.@{ui-class-prefix}-submenu-fly-out-left {
     top: 0;
     left: -100%;
 }
 
-.@{esf-class-prefix}-submenu-fly-out-right {
+.@{ui-class-prefix}-submenu-fly-out-right {
     top: 0;
     left: 100%;
 }
 
-.@{esf-class-prefix}-submenu-separator-top {
+.@{ui-class-prefix}-submenu-separator-top {
     border-top: @esf-submenu-separator-border;
 }
 
-.@{esf-class-prefix}-submenu-separator-bottom {
+.@{ui-class-prefix}-submenu-separator-bottom {
     border-bottom: @esf-submenu-separator-border;
 }
 
@@ -109,10 +109,10 @@
         color: @text-hover-color;
         background: @hightlight-color;
     }
-    .@{esf-class-prefix}-submenu-separator-top {
+    .@{ui-class-prefix}-submenu-separator-top {
         border-top: @separator-border;
     }
-    .@{esf-class-prefix}-submenu-separator-bottom {
+    .@{ui-class-prefix}-submenu-separator-bottom {
         border-bottom: @separator-border;
     }
 }

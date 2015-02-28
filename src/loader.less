@@ -4,14 +4,14 @@
 @esf-loader-color2-for-light-bg: lighten(#6CCDC0, 25%);
 
 // TODO: also for fallback loader for IE8
-.@{esf-class-prefix}-loader {
+.@{ui-class-prefix}-loader {
     display: inline-block;
 }
 
 // bouncers effect
 // http://tobiasahlin.com/spinkit
 .esf-loader-bouncers(@dotSize:1.25em) {
-    .@{esf-class-prefix}-loader-bouncers {
+    .@{ui-class-prefix}-loader-bouncers {
         text-align: center;
         > div {
             .size(@dotSize);
@@ -49,7 +49,7 @@
 
 // border spin effect
 .esf-loader-border() {
-    .@{esf-class-prefix}-loader-border {
+    .@{ui-class-prefix}-loader-border {
         border-bottom: 6px solid @esf-loader-color2-for-light-bg;
         border-left: 6px solid @esf-loader-color2-for-light-bg;
         border-right: 6px solid @esf-loader-color2-for-light-bg;
@@ -80,11 +80,11 @@
 // 2 borders spin
 // http://codepen.io/varemenos/pen/IAzbo
 .esf-loader-borders() {
-    .@{esf-class-prefix}-loader-borders:before {
+    .@{ui-class-prefix}-loader-borders:before {
         content: '';
     }
-    .@{esf-class-prefix}-loader-borders:before,
-    .@{esf-class-prefix}-loader-borders {
+    .@{ui-class-prefix}-loader-borders:before,
+    .@{ui-class-prefix}-loader-borders {
         box-sizing: border-box;
         display: inline-block;
         padding: 0.5em;
@@ -116,7 +116,7 @@
 
 //spinner-wave
 .esf-loader-spinner-wave(@height: 4em) {
-    .@{esf-class-prefix}-loader-spinner-wave {
+    .@{ui-class-prefix}-loader-spinner-wave {
         height: @height;
         text-align: center;
         div {
@@ -163,7 +163,7 @@
 
 //ratating-plane
 .esf-loader-rotating-plane(@size:4em) {
-    .@{esf-class-prefix}-loader-rotating-plane {
+    .@{ui-class-prefix}-loader-rotating-plane {
         .size(@size);
         background-color: @esf-loader-color-for-light-bg;
         .animation(esf-loader-ratating-plane 1.2s infinite ease-in-out);
@@ -194,7 +194,7 @@
 
 //chasing dots
 .esf-loader-chasing-dots(@size:4em) {
-    .@{esf-class-prefix}-loader-chasing-dots {
+    .@{ui-class-prefix}-loader-chasing-dots {
         .size(@size);
         position: relative;
         text-align: center;
@@ -245,7 +245,7 @@
 
 //spinner circles
 .esf-loader-spinner-circles(@size:3em, @dotSize:.5em) {
-    .@{esf-class-prefix}-loader-spinner-circles {
+    .@{ui-class-prefix}-loader-spinner-circles {
         position: relative;
         .size(@size);
         > div {

@@ -55,7 +55,7 @@
 // radius
 @esf-input-radius: 5px;
 
-.@{esf-class-prefix}-textbox {
+.@{ui-class-prefix}-textbox {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -94,9 +94,9 @@
 }
 
 // states
-.@{esf-state-prefix}-focus > input,
-.@{esf-class-prefix}-textbox > input:focus,
-.@{esf-class-prefix}-textbox > textarea:focus {
+.@{ui-state-prefix}-focus > input,
+.@{ui-class-prefix}-textbox > input:focus,
+.@{ui-class-prefix}-textbox > textarea:focus {
     .esf-input-color-def(
         @esf-input-focus-border-color,
         @esf-input-focus-background-color,
@@ -104,8 +104,8 @@
     );
 }
 
-.@{esf-class-prefix}-textbox > input[disabled],
-.@{esf-class-prefix}-textbox > textarea[disabled] {
+.@{ui-class-prefix}-textbox > input[disabled],
+.@{ui-class-prefix}-textbox > textarea[disabled] {
     .esf-disabled();
 }
 
@@ -119,12 +119,12 @@
     .placeholder(@esf-input-error-text-color);
 }
 
-.@{esf-class-prefix}-textbox.@{esf-state-prefix}-error > input {
+.@{ui-class-prefix}-textbox.@{ui-state-prefix}-error > input {
     &:extend(.esf-textbox-error all);
 }
 
-.@{esf-class-prefix}-textbox > input[readonly],
-.@{esf-class-prefix}-textbox > textarea[readonly] {
+.@{ui-class-prefix}-textbox > input[readonly],
+.@{ui-class-prefix}-textbox > textarea[readonly] {
     .esf-input-color-def(
         @esf-input-readonly-border-color,
         @esf-input-readonly-background-color,
@@ -141,8 +141,8 @@
     .placeholder(@esf-input-success-text-color);
 }
 
-.@{esf-class-prefix}-textbox.@{esf-state-prefix}-success > input,
-.@{esf-class-prefix}-textbox.@{esf-state-prefix}-success > textarea {
+.@{ui-class-prefix}-textbox.@{ui-state-prefix}-success > input,
+.@{ui-class-prefix}-textbox.@{ui-state-prefix}-success > textarea {
     &:extend(.esf-textbox-success all);
 }
 
@@ -155,13 +155,13 @@
     .placeholder(@esf-input-warning-text-color);
 }
 
-.@{esf-class-prefix}-textbox.@{esf-state-prefix}-warning > input,
-.@{esf-class-prefix}-textbox.@{esf-state-prefix}-warning > textarea {
+.@{ui-class-prefix}-textbox.@{ui-state-prefix}-warning > input,
+.@{ui-class-prefix}-textbox.@{ui-state-prefix}-warning > textarea {
     &:extend(.esf-textbox-warning all);
 }
 
 // icon
-.@{esf-class-prefix}-textbox-icon {
+.@{ui-class-prefix}-textbox-icon {
     width: @esf-input-height + 0.2em;
     height: @esf-input-height;
     line-height: @esf-input-height !important;
@@ -170,8 +170,8 @@
     text-align: center;
 }
 
-.@{esf-class-prefix}-textbox-icon-left {
-    .@{esf-class-prefix}-textbox-icon {
+.@{ui-class-prefix}-textbox-icon-left {
+    .@{ui-class-prefix}-textbox-icon {
         left: 0;
     }
     input {
@@ -179,8 +179,8 @@
     }
 }
 
-.@{esf-class-prefix}-textbox-icon-right {
-    .@{esf-class-prefix}-textbox-icon {
+.@{ui-class-prefix}-textbox-icon-right {
+    .@{ui-class-prefix}-textbox-icon {
         right: 0;
     }
     input {
@@ -188,15 +188,15 @@
     }
 }
 
-.@{esf-class-prefix}-textbox-fluid {
+.@{ui-class-prefix}-textbox-fluid {
     display: block;
 }
 
-.@{esf-class-prefix}-textbox-wrapper {
+.@{ui-class-prefix}-textbox-wrapper {
     &:extend(.esf-clearfix all);
-    >.@{esf-class-prefix}-button,
-    >.@{esf-class-prefix}-button-group,
-    >.@{esf-class-prefix}-textbox {
+    >.@{ui-class-prefix}-button,
+    >.@{ui-class-prefix}-button-group,
+    >.@{ui-class-prefix}-textbox {
         float: left;
     }
     .esf-textbox-wrapper-border-radius();
@@ -205,14 +205,14 @@
 .esf-textbox-wrapper-border-radius() {}
 
 .esf-textbox-wrapper-border-radius() when (@esf-input-radius > 0) {
-    :first-child.@{esf-class-prefix}-button-group .@{esf-class-prefix}-button:last-child,
-    :first-child.@{esf-class-prefix}-button,
+    :first-child.@{ui-class-prefix}-button-group .@{ui-class-prefix}-button:last-child,
+    :first-child.@{ui-class-prefix}-button,
     :first-child input {
         .border-right-radius(0);
         border-right: 0;
     }
-    :last-child.@{esf-class-prefix}-button-group .@{esf-class-prefix}-button:first-child,
-    :last-child.@{esf-class-prefix}-button,
+    :last-child.@{ui-class-prefix}-button-group .@{ui-class-prefix}-button:first-child,
+    :last-child.@{ui-class-prefix}-button,
     :last-child input {
         .border-left-radius(0);
         border-left: 0;
@@ -220,42 +220,42 @@
 }
 
 // widths-sizes
-.@{esf-class-prefix}-textbox-size1 {
+.@{ui-class-prefix}-textbox-size1 {
     input {
         width: 2em;
     }
 }
-.@{esf-class-prefix}-textbox-size2 {
+.@{ui-class-prefix}-textbox-size2 {
     input {
         width: 4em;
     }
 }
-.@{esf-class-prefix}-textbox-size3 {
+.@{ui-class-prefix}-textbox-size3 {
     input {
         width: 6em;
     }
 }
-.@{esf-class-prefix}-textbox-size4 {
+.@{ui-class-prefix}-textbox-size4 {
     input {
         width: 8em;
     }
 }
-.@{esf-class-prefix}-textbox-size5 {
+.@{ui-class-prefix}-textbox-size5 {
     input {
         width: 10em;
     }
 }
-.@{esf-class-prefix}-textbox-size6 {
+.@{ui-class-prefix}-textbox-size6 {
     input {
         width: 12em;
     }
 }
-.@{esf-class-prefix}-textbox-size7 {
+.@{ui-class-prefix}-textbox-size7 {
     input {
         width: 14em;
     }
 }
-.@{esf-class-prefix}-textbox-size8 {
+.@{ui-class-prefix}-textbox-size8 {
     input {
         width: 16em;
     }

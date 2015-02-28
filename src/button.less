@@ -10,7 +10,7 @@
 @esf-button-link-hover-decoration: underline;
 @esf-button-radius: 5px;
 
-.@{esf-class-prefix}-button {
+.@{ui-class-prefix}-button {
     .esf-button();
     .esf-button-theme();
     &:disabled {
@@ -19,21 +19,21 @@
 }
 
 // variants
-.@{esf-class-prefix}-button-icon {
+.@{ui-class-prefix}-button-icon {
     padding: 0;
     .size(@esf-button-height);
 }
 
-.@{esf-class-prefix}-button-circular {
+.@{ui-class-prefix}-button-circular {
     .esf-circular();
 }
 
-.@{esf-class-prefix}-button-fluid {
+.@{ui-class-prefix}-button-fluid {
     width: 100%;
     display: block;
 }
 
-.@{esf-class-prefix}-button-link {
+.@{ui-class-prefix}-button-link {
     color: @esf-button-link-color;
     text-decoration: @esf-button-link-decoration;
 
@@ -49,10 +49,10 @@
 }
 
 // button group
-.@{esf-class-prefix}-button-group {
+.@{ui-class-prefix}-button-group {
     display: inline-block;
     vertical-align: middle;
-    .@{esf-class-prefix}-button {
+    .@{ui-class-prefix}-button {
         &:first-child {
             margin-left: 0px;
         }
@@ -63,34 +63,34 @@
     .esf-button-group-theme();
 }
 
-.@{esf-class-prefix}-button-primary {
+.@{ui-class-prefix}-button-primary {
     .esf-button-primary-theme();
 }
 
-.@{esf-class-prefix}-button-success {
+.@{ui-class-prefix}-button-success {
     .esf-button-success-theme();
 }
 
-.@{esf-class-prefix}-button-info {
+.@{ui-class-prefix}-button-info {
     .esf-button-info-theme();
 }
 
-.@{esf-class-prefix}-button-warning {
+.@{ui-class-prefix}-button-warning {
     .esf-button-warning-theme();
 }
 
-.@{esf-class-prefix}-button-danger {
+.@{ui-class-prefix}-button-danger {
     .esf-button-danger-theme();
 }
 
 .esf-button-group-border() when (@esf-button-radius > 0) {
-    .@{esf-class-prefix}-button:not(:first-child):not(:last-child) {
+    .@{ui-class-prefix}-button:not(:first-child):not(:last-child) {
         .border-radius(0);
     }
-    .@{esf-class-prefix}-button:first-child:not(:last-child) {
+    .@{ui-class-prefix}-button:first-child:not(:last-child) {
         .border-right-radius(0);
     }
-    .@{esf-class-prefix}-button:last-child:not(:first-child) {
+    .@{ui-class-prefix}-button:last-child:not(:first-child) {
         .border-left-radius(0);
     }
 }

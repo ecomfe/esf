@@ -2308,60 +2308,60 @@ hr {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-.ui-table {
+.ui-raw-table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
   border: 1px solid #dddddd;
 }
-.ui-table caption {
+.ui-raw-table caption {
   text-align: center;
   font-weight: bold;
 }
-.ui-table td,
-.ui-table th {
+.ui-raw-table td,
+.ui-raw-table th {
   border-width: 0 0 0 1px;
   margin: 0;
   overflow: visible;
 }
-.ui-table thead {
+.ui-raw-table thead {
   text-align: left;
 }
-.ui-table caption {
+.ui-raw-table caption {
   color: #444444;
 }
-.ui-table td,
-.ui-table th {
+.ui-raw-table td,
+.ui-raw-table th {
   border-left: 1px solid #dddddd;
 }
-.ui-table thead {
+.ui-raw-table thead {
   background: #ffffff;
   color: #444444;
 }
-.ui-table.ui-table-striped tr:nth-child(2n-1) td {
+.ui-raw-table.ui-raw-table-striped tr:nth-child(2n-1) td {
   background-color: #eff0f2;
   color: #444444;
 }
-.ui-table.ui-table-bordered td,
-.ui-table.ui-table-bordered th {
+.ui-raw-table.ui-raw-table-bordered td,
+.ui-raw-table.ui-raw-table-bordered th {
   border-bottom: 1px solid #dddddd;
 }
-.ui-table.ui-table-horizontal th,
-.ui-table.ui-table-horizontal td {
+.ui-raw-table.ui-raw-table-horizontal th,
+.ui-raw-table.ui-raw-table-horizontal td {
   border-width: 0 0 1px 0;
   border-bottom: 1px solid #dddddd;
 }
-.ui-table.ui-table-hoverable > tbody > tr:hover > td,
-.ui-table.ui-table-hoverable > tbody > tr:hover > th {
+.ui-raw-table.ui-raw-table-hoverable > tbody > tr:hover > td,
+.ui-raw-table.ui-raw-table-hoverable > tbody > tr:hover > th {
   background-color: #fafafa !important;
   color: #444444;
 }
-.ui-table caption {
+.ui-raw-table caption {
   padding: 1em 0;
   font-size: 16px;
 }
-.ui-table td,
-.ui-table th {
+.ui-raw-table td,
+.ui-raw-table th {
   padding: 0.5em 1em;
   font-size: 16px;
 }
