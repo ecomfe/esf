@@ -1640,6 +1640,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-panel-custom .ui-panel-header {
   padding: 10px 15px;
+  overflow: auto;
   -webkit-border-top-left-radius: 5px;
   -moz-border-radius-topleft: 5px;
   border-top-left-radius: 5px;
@@ -1650,8 +1651,15 @@ input[type="search"]::-webkit-search-decoration {
   background: #eff0f2;
   border-bottom: 1px solid #dddddd;
 }
+.ui-panel-custom .ui-panel-left {
+  float: left;
+}
+.ui-panel-custom .ui-panel-right {
+  float: right;
+}
 .ui-panel-custom .ui-panel-footer {
   padding: 10px 15px;
+  overflow: auto;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-bottomright: 5px;
   border-bottom-right-radius: 5px;
@@ -1665,9 +1673,6 @@ input[type="search"]::-webkit-search-decoration {
 .ui-panel-custom .ui-panel-body {
   padding: 10px 15px;
   color: #444444;
-}
-.ui-panel-custom .ui-panel-actions {
-  float: right;
 }
 .ui-progress {
   margin-bottom: 1em;
@@ -1996,21 +2001,26 @@ a.ui-text-info:hover {
   filter: alpha(opacity=40);
   cursor: not-allowed !important;
 }
-.ui-textbox.state-error > input {
+.ui-textbox.state-error > input,
+.ui-textbox.state-validity-invalid > input {
   border: 1px solid #d9534f;
   background: #fbebea;
   color: #c9302c;
 }
-.ui-textbox.state-error > input:-moz-placeholder {
+.ui-textbox.state-error > input:-moz-placeholder,
+.ui-textbox.state-validity-invalid > input:-moz-placeholder {
   color: #c9302c;
 }
-.ui-textbox.state-error > input::-moz-placeholder {
+.ui-textbox.state-error > input::-moz-placeholder,
+.ui-textbox.state-validity-invalid > input::-moz-placeholder {
   color: #c9302c;
 }
-.ui-textbox.state-error > input::-webkit-input-placeholder {
+.ui-textbox.state-error > input::-webkit-input-placeholder,
+.ui-textbox.state-validity-invalid > input::-webkit-input-placeholder {
   color: #c9302c;
 }
-.ui-textbox.state-error > input:-ms-input-placeholder {
+.ui-textbox.state-error > input:-ms-input-placeholder,
+.ui-textbox.state-validity-invalid > input:-ms-input-placeholder {
   color: #c9302c;
 }
 .ui-textbox > input[readonly],

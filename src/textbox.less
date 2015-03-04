@@ -12,10 +12,16 @@
 // radius
 @esf-textbox-radius: 5px;
 
+@esf-textbox-icon-width: @esf-textbox-height;
+
 .@{ui-class-prefix}-textbox {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    .esf-border-radius(
+        @esf-textbox-radius,
+        @esf-textbox-radius
+    );
 
     > input {
         height: @esf-textbox-height;
@@ -46,7 +52,7 @@
 
 // icon
 .@{ui-class-prefix}-textbox-icon {
-    width: @esf-textbox-height + 0.2em;
+    width: @esf-textbox-icon-width;
     height: @esf-textbox-height;
     line-height: @esf-textbox-height !important;
     position: absolute;
@@ -59,7 +65,7 @@
         left: 0;
     }
     input {
-        padding-left: @esf-textbox-height + 0.2em;
+        padding-left: @esf-textbox-icon-width;
     }
 }
 
@@ -68,7 +74,7 @@
         right: 0;
     }
     input {
-        padding-right: @esf-textbox-height + 0.2em;
+        padding-right: @esf-textbox-icon-width;
     }
 }
 
