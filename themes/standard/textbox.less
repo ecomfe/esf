@@ -1,44 +1,124 @@
 // textbox core
 @import "../../src/textbox.less";
 
-// keep the same height as button
-@esf-input-height: @esf-single-line-control-height;
+// core variables
+@esf-textbox-height: @esf-single-line-control-height;
+@esf-textbox-padding: 0.65em;
+@esf-textbox-radius: 5px;
 
-// padding
-@esf-input-padding: 0.65em;
-
+// theme variables
 // normal
-@esf-input-border-color: @esf-palette-border;
-@esf-input-background-color: @esf-palette-white;
-@esf-input-text-color: @esf-palette-color;
+@esf-textbox-border-color: @esf-palette-border;
+@esf-textbox-background: @esf-palette-white;
+@esf-textbox-text-color: @esf-palette-color;
 
 // focus state
-@esf-input-focus-border-color: @esf-palette-primary-color;
-@esf-input-focus-background-color: lighten(@esf-palette-primary-color, 37%);
-@esf-input-focus-text-color: @esf-palette-color;
+@esf-textbox-focus-border-color: @esf-palette-primary-color;
+@esf-textbox-focus-background: lighten(@esf-palette-primary-color, 37%);
+@esf-textbox-focus-text-color: @esf-palette-color;
 
 // error state
-@esf-input-error-border-color: @esf-palette-danger-color;
-@esf-input-error-background-color: lighten(@esf-palette-danger-color, 37%);
-@esf-input-error-text-color: @esf-palette-danger-shadow-color;
+@esf-textbox-error-border-color: @esf-palette-danger-color;
+@esf-textbox-error-background: lighten(@esf-palette-danger-color, 37%);
+@esf-textbox-error-text-color: @esf-palette-danger-shadow-color;
 
 // readonly state
-@esf-input-readonly-border-color: @esf-palette-border;
-@esf-input-readonly-background-color: @esf-palette-white;
-@esf-input-readonly-text-color: @esf-palette-muted-color;
+@esf-textbox-readonly-border-color: @esf-palette-border;
+@esf-textbox-readonly-background: @esf-palette-white;
+@esf-textbox-readonly-text-color: @esf-palette-muted-color;
 
 // success state
-@esf-input-success-border-color: @esf-palette-success-color;
-@esf-input-success-background-color: lighten(@esf-palette-success-color, 37%);
-@esf-input-success-text-color: @esf-palette-success-color;
+@esf-textbox-success-border-color: @esf-palette-success-color;
+@esf-textbox-success-background: lighten(@esf-palette-success-color, 37%);
+@esf-textbox-success-text-color: @esf-palette-success-color;
 
 // warning state
-@esf-input-warning-border-color: @esf-palette-warning-color;
-@esf-input-warning-background-color: lighten(@esf-palette-warning-color, 37%);
-@esf-input-warning-text-color: @esf-palette-warning-color;
+@esf-textbox-warning-border-color: @esf-palette-warning-color;
+@esf-textbox-warning-background: lighten(@esf-palette-warning-color, 37%);
+@esf-textbox-warning-text-color: @esf-palette-warning-color;
 
 // placeholder color
-@esf-input-placeholder-color: @esf-palette-muted-color;
+@esf-textbox-placeholder-color: @esf-palette-muted-color;
 
-// radius
-@esf-input-radius: 5px;
+.esf-textbox-input-theme() {
+    .esf-input-color-def(
+        @esf-textbox-border-color,
+        @esf-textbox-background,
+        @esf-textbox-text-color
+    );
+    .placeholder(@esf-textbox-placeholder-color);
+}
+
+.esf-textbox-theme() {
+
+    // focus
+    & > input:focus,
+    & > textarea:focus,
+    &.@{ui-state-prefix}-focus > input {
+        .esf-input-color-def(
+            @esf-textbox-focus-border-color,
+            @esf-textbox-focus-background,
+            @esf-textbox-focus-text-color
+        );
+    }
+
+    // disabled
+    & > input[disabled],
+    & > textarea[disabled] {
+        .esf-disabled();
+    }
+
+    // error
+    &.@{ui-state-prefix}-error > input,
+    &.@{ui-state-prefix}-validity-invalid > input {
+        .esf-input-color-def(
+            @esf-textbox-error-border-color,
+            @esf-textbox-error-background,
+            @esf-textbox-error-text-color
+        );
+        .placeholder(@esf-textbox-error-text-color);
+    }
+
+    // read only
+    & > input[readonly],
+    & > textarea[readonly] {
+        .esf-input-color-def(
+            @esf-textbox-readonly-border-color,
+            @esf-textbox-readonly-background,
+            @esf-textbox-readonly-text-color
+        );
+    }
+
+    // success
+    &.@{ui-state-prefix}-success > input,
+    &.@{ui-state-prefix}-success > textarea {
+        .esf-input-color-def(
+            @esf-textbox-success-border-color,
+            @esf-textbox-success-background,
+            @esf-textbox-success-text-color
+        );
+        .placeholder(@esf-textbox-success-text-color);
+    }
+
+    // warning
+    &.@{ui-state-prefix}-warning > input,
+    &.@{ui-state-prefix}-warning > textarea {
+        .esf-input-color-def(
+            @esf-textbox-warning-border-color,
+            @esf-textbox-warning-background,
+            @esf-textbox-warning-text-color
+        );
+        .placeholder(@esf-textbox-warning-text-color);
+    }
+}
+
+// mixins
+.esf-input-color-def(
+    @border,
+    @background,
+    @text,
+) {
+    border: 1px solid @border;
+    background: @background;
+    color: @text;
+}

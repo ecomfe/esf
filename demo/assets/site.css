@@ -1141,6 +1141,8 @@ input[type="search"]::-webkit-search-decoration {
   right: 0;
   top: 50%;
   position: absolute;
+  line-height: 1;
+  margin-top: -0.1em;
 }
 .ui-form-key,
 .ui-form-valign {
@@ -1938,7 +1940,6 @@ a.ui-text-info:hover {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #444444;
 }
 .ui-textbox > input {
   height: 2.4em;
@@ -1963,7 +1964,7 @@ a.ui-text-info:hover {
   font-size: 100%;
   resize: none;
   border: 1px solid #dddddd;
-  background-color: #ffffff;
+  background: #ffffff;
   color: #444444;
 }
 .ui-textbox > input:-moz-placeholder,
@@ -1982,11 +1983,11 @@ a.ui-text-info:hover {
 .ui-textbox > textarea:-ms-input-placeholder {
   color: #999999;
 }
-.state-focus > input,
 .ui-textbox > input:focus,
-.ui-textbox > textarea:focus {
+.ui-textbox > textarea:focus,
+.ui-textbox.state-focus > input {
   border: 1px solid #6ccdc0;
-  background-color: #f9fdfc;
+  background: #f9fdfc;
   color: #444444;
 }
 .ui-textbox > input[disabled],
@@ -1995,84 +1996,69 @@ a.ui-text-info:hover {
   filter: alpha(opacity=40);
   cursor: not-allowed !important;
 }
-.esf-textbox-error,
 .ui-textbox.state-error > input {
   border: 1px solid #d9534f;
-  background-color: #fbebea;
+  background: #fbebea;
   color: #c9302c;
 }
-.esf-textbox-error:-moz-placeholder,
 .ui-textbox.state-error > input:-moz-placeholder {
   color: #c9302c;
 }
-.esf-textbox-error::-moz-placeholder,
 .ui-textbox.state-error > input::-moz-placeholder {
   color: #c9302c;
 }
-.esf-textbox-error::-webkit-input-placeholder,
 .ui-textbox.state-error > input::-webkit-input-placeholder {
   color: #c9302c;
 }
-.esf-textbox-error:-ms-input-placeholder,
 .ui-textbox.state-error > input:-ms-input-placeholder {
   color: #c9302c;
 }
 .ui-textbox > input[readonly],
 .ui-textbox > textarea[readonly] {
   border: 1px solid #dddddd;
-  background-color: #ffffff;
+  background: #ffffff;
   color: #999999;
 }
-.esf-textbox-success,
 .ui-textbox.state-success > input,
 .ui-textbox.state-success > textarea {
   border: 1px solid #5cb85c;
-  background-color: #dff1df;
+  background: #dff1df;
   color: #5cb85c;
 }
-.esf-textbox-success:-moz-placeholder,
 .ui-textbox.state-success > input:-moz-placeholder,
 .ui-textbox.state-success > textarea:-moz-placeholder {
   color: #5cb85c;
 }
-.esf-textbox-success::-moz-placeholder,
 .ui-textbox.state-success > input::-moz-placeholder,
 .ui-textbox.state-success > textarea::-moz-placeholder {
   color: #5cb85c;
 }
-.esf-textbox-success::-webkit-input-placeholder,
 .ui-textbox.state-success > input::-webkit-input-placeholder,
 .ui-textbox.state-success > textarea::-webkit-input-placeholder {
   color: #5cb85c;
 }
-.esf-textbox-success:-ms-input-placeholder,
 .ui-textbox.state-success > input:-ms-input-placeholder,
 .ui-textbox.state-success > textarea:-ms-input-placeholder {
   color: #5cb85c;
 }
-.esf-textbox-warning,
 .ui-textbox.state-warning > input,
 .ui-textbox.state-warning > textarea {
   border: 1px solid #f0ad4e;
-  background-color: #fffefc;
+  background: #fffefc;
   color: #f0ad4e;
 }
-.esf-textbox-warning:-moz-placeholder,
 .ui-textbox.state-warning > input:-moz-placeholder,
 .ui-textbox.state-warning > textarea:-moz-placeholder {
   color: #f0ad4e;
 }
-.esf-textbox-warning::-moz-placeholder,
 .ui-textbox.state-warning > input::-moz-placeholder,
 .ui-textbox.state-warning > textarea::-moz-placeholder {
   color: #f0ad4e;
 }
-.esf-textbox-warning::-webkit-input-placeholder,
 .ui-textbox.state-warning > input::-webkit-input-placeholder,
 .ui-textbox.state-warning > textarea::-webkit-input-placeholder {
   color: #f0ad4e;
 }
-.esf-textbox-warning:-ms-input-placeholder,
 .ui-textbox.state-warning > input:-ms-input-placeholder,
 .ui-textbox.state-warning > textarea:-ms-input-placeholder {
   color: #f0ad4e;
