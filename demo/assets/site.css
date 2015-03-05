@@ -1945,6 +1945,9 @@ a.ui-text-info:hover {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .ui-textbox > input {
   height: 2.4em;
@@ -2074,7 +2077,7 @@ a.ui-text-info:hover {
   color: #f0ad4e;
 }
 .ui-textbox-icon {
-  width: 2.6em;
+  width: 2.4em;
   height: 2.4em;
   line-height: 2.4em !important;
   position: absolute;
@@ -2085,13 +2088,13 @@ a.ui-text-info:hover {
   left: 0;
 }
 .ui-textbox-icon-left input {
-  padding-left: 2.6em;
+  padding-left: 2.4em;
 }
 .ui-textbox-icon-right .ui-textbox-icon {
   right: 0;
 }
 .ui-textbox-icon-right input {
-  padding-right: 2.6em;
+  padding-right: 2.4em;
 }
 .ui-textbox-fluid {
   display: block;
