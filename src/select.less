@@ -1,31 +1,32 @@
-@esf-select-height: 2.4em;
-@esf-select-padding: .5em 1.9em .5em .5em;
-@esf-select-border-radius: @default-border-radius;
-@esf-select-color: #666;
+@esf-form-select-height: 2.4em;
+@esf-form-select-padding: .5em 1.9em .5em .5em;
+@esf-form-select-border-radius: 5px;
 
 // http://jsbin.com/yaruh
-.@{esf-class-prefix}-select-custom {
+.@{ui-class-prefix}-select-custom {
     position: relative;
     display: inline-block;
     .box-sizing(border-box);
-    height: @esf-select-height;
+    height: @esf-form-select-height;
+    .esf-border-radius(
+        @esf-form-select-border-radius,
+        @esf-form-select-border-radius
+    );
     option {
         font-weight:normal;
     }
     .esf-select-custom-theme();
-
     // Hover style
     &:hover {
         .esf-select-custom-hover-theme();
     }
-    
     // Focus style
     &:focus {
         .esf-select-custom-focus-theme();
     }
 }
 
-.@{esf-class-prefix}-select-custom select {
+.@{ui-class-prefix}-select-custom select {
     width:100%;
     width:120%\9;
     margin:0;
@@ -37,45 +38,45 @@
     -webkit-appearance: none;
     .box-sizing(border-box);
     // Prefixed box-sizing rules necessary for older browsers
-    padding: @esf-select-padding;
-    height: @esf-select-height;
+    padding: @esf-form-select-padding;
+    height: @esf-form-select-height;
     &[disabled] {
-        .esf-disabled();
+        cursor: not-allowed;
     }
 }
 
-.esf-select-custom-arrow-theme();
-
-.esf-select-custom-arrow-theme() {};
-
-x:-o-prefocus, .@{esf-class-prefix}-select-custom:after {
+x:-o-prefocus, .@{ui-class-prefix}-select-custom:after {
     display:none;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-    .@{esf-class-prefix}-select-custom select::-ms-expand {
+    .@{ui-class-prefix}-select-custom select::-ms-expand {
         display: none;
     }
-    .@{esf-class-prefix}-select-custom select:focus::-ms-value {
+    .@{ui-class-prefix}-select-custom select:focus::-ms-value {
         background: transparent;
     }
 }
 
-@-moz-document url-prefix() { 
-    .@{esf-class-prefix}-select-custom {
+@-moz-document url-prefix() {
+    .@{ui-class-prefix}-select-custom {
         overflow: hidden;
     }
-    .@{esf-class-prefix}-select-custom select {
+    .@{ui-class-prefix}-select-custom select {
         width: 120%;
     }
 }
 
-.@{esf-class-prefix}-select-custom select:-moz-focusring {
+.@{ui-class-prefix}-select-custom select:-moz-focusring {
     color: transparent;
 }
 
-.esf-select-custom-theme() {};
+.esf-select-custom-arrow-theme();
 
-.esf-select-custom-hover-theme() {};
+.esf-select-custom-theme() {}
 
-.esf-select-custom-focus-theme() {};
+.esf-select-custom-hover-theme() {}
+
+.esf-select-custom-focus-theme() {}
+
+.esf-select-custom-arrow-theme() {}

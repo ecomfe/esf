@@ -1,96 +1,73 @@
+@import "base.less";
+
 @esf-text-bold-weight: bold;
 @esf-text-muted-color: #999;
-@esf-text-primary-color: @primary-color;
-@esf-text-success-color: @success-color;
-@esf-text-warning-color: @warning-color;
-@esf-text-danger-color: @danger-color;
+@esf-text-primary-color: #6CCDC0;
+@esf-text-primary-hover-color: lighten(#6CCDC0, 5%);
+@esf-text-success-color: #5CB85C;
+@esf-text-success-hover-color: lighten(#5CB85C, 5%);
+@esf-text-warning-color: #F0AD4E;
+@esf-text-warning-hover-color: lighten(#F0AD4E, 5%);
+@esf-text-danger-color: #D9534F;
+@esf-text-danger-hover-color: lighten(#D9534F, 5%);
+@esf-text-info-color: #5BC0DE;
+@esf-text-info-hover-color: lighten(#5BC0DE, 5%);
 
 // text-alignments
-.@{esf-class-prefix}-text-left {
+.@{ui-class-prefix}-text-left {
     text-align: left;
 }
 
-.@{esf-class-prefix}-text-center {
+.@{ui-class-prefix}-text-center {
     text-align: center;
 }
 
-.@{esf-class-prefix}-text-right {
+.@{ui-class-prefix}-text-right {
     text-align: right;
 }
 
-.@{esf-class-prefix}-text-justify {
-    text-align: justify;
-}
-
-// vertical alignments
-// not using text-top, because we could align other inline elements.
-.@{esf-class-prefix}-align-top {
-    vertical-align: top !important;
-}
-
-.@{esf-class-prefix}-align-middle {
-    vertical-align: middle !important;
-}
-
-.@{esf-class-prefix}-align-bottom {
-    vertical-align: bottom !important;
-}
-
-// text wrap options
-.@{esf-class-prefix}-text-nowrap {
-    white-space: nowrap;
-}
-
-.@{esf-class-prefix}-text-break {
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
-}
-
-.@{esf-class-prefix}-text-truncate {
-    .ellipsis();
-}
-
-// text styles
-.@{esf-class-prefix}-text-bold {
-    font-weight: @esf-text-bold-weight;
-}
-
-.@{esf-class-prefix}-text-italic {
-    font-style: italic;
-}
-
-.@{esf-class-prefix}-text-caps {
-    text-transform: uppercase;
-}
-
 // text colors
-.@{esf-class-prefix}-text-muted {
+.@{ui-class-prefix}-text-muted {
     color: @esf-text-muted-color;
-    &a:hover {
-        color: lighten(@esf-text-muted-color, 10%);
-    }
 }
 
-.@{esf-class-prefix}-text-success {
+a.@{ui-class-prefix}-text-muted:hover {
+    color: @esf-text-muted-color;
+}
+
+.@{ui-class-prefix}-text-success {
     color: @esf-text-success-color;
-    &a:hover {
-        color: lighten(@esf-text-success-color, 10%);
-    }
 }
 
-.@{esf-class-prefix}-text-warning {
+a.@{ui-class-prefix}-text-success:hover {
+    color: @esf-text-success-hover-color;
+}
+
+.@{ui-class-prefix}-text-warning {
     color: @esf-text-warning-color;
-    &a:hover {
-        color: lighten(@esf-text-warning-color, 10%);
-    }
 }
 
-.@{esf-class-prefix}-text-danger {
+a.@{ui-class-prefix}-text-warning:hover {
+    color: @esf-text-warning-hover-color;
+}
+
+.@{ui-class-prefix}-text-danger {
     color: @esf-text-danger-color;
-    &a:hover {
-        color: lighten(@esf-text-danger-color, 10%);
-    }
+}
+
+a.@{ui-class-prefix}-text-danger:hover {
+    color: @esf-text-danger-hover-color;
+}
+
+.@{ui-class-prefix}-text-info {
+    color: @esf-text-info-color;
+}
+
+a.@{ui-class-prefix}-text-info:hover {
+    color: @esf-text-info-hover-color;
+}
+
+// 2 spaces
+.@{ui-class-prefix}-text-indent {
+    text-indent: 2em;
 }

@@ -1,35 +1,36 @@
 @import "../../dep/est/1.3.0-dev/src/all.less";
 .global-normalize();
 @import "../../themes/standard/main.less";
-@import "../../dep/eicons/1.0.0-alpha/src/main.less";
+
+@import "../../dep/eicons/1.0.0-alpha.4/src/main.less";
 
 @fa-font-path: "./fonts/font-awesome";
-@support-old-ie: false;
+
+// loaders are mixins now, output them manually
+.esf-loader-bouncers();
+
+.esf-loader-border();
+
+.esf-loader-borders();
+
+.esf-loader-spinner-wave();
+
+.esf-loader-rotating-plane();
+
+.esf-loader-chasing-dots();
+
+.esf-loader-spinner-circles();
 
 body {
-   .est-layout-fixed-header(4em);
+   .est-layout-fixed-header(60px);
 }
 
 .est-header {
-    background: @primary-color;
+    background: @esf-palette-primary-color;
 }
 
-.primary-bg-link {
-    color: @primary-bg-color;
-    &:hover {
-        color: @primary-bg-color;
-        text-decoration: none;
-    }
-}
-
-.brand-title {
-    a {
-        color: @white;
-        &:hover {
-            color: @white;
-            text-decoration: none;
-        }
-    }
+#branding {
+    margin: 0;
 }
 
 #container-frame { 
@@ -37,22 +38,27 @@ body {
     border: 0;
 }
 
-#main-menu {
-    margin-right: 40px;
+#main {
+    padding: 2em;
+    padding-top: 0;
 }
- 
+
+.ui-demo-row {
+    margin-bottom: 1em;
+}
+
 // child page
 #navigator-features {
     a {
         padding: 0.5em 1em;
         display: block; 
         &:hover {
-            background: @primary-color;
+            background: @esf-palette-primary-color;
             text-decoration: none;
-            color: @white;
+            color: @esf-palette-white;
         }
     }
-    border-right: 1px solid @black-10;
+    border-right: 1px solid @esf-palette-border;
 }
 
 .example {
@@ -70,7 +76,7 @@ body {
   font-size: 12px; 
   font-weight: bold;
   color: #959595;
-  content: "示例";
+  content: "Example";
 }
 
 /* Tweak display of the code snippets when following an example */

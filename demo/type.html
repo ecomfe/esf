@@ -12,7 +12,7 @@
         <script src="assets/jquery-1.11.1.min.js"></script>
         <script src="assets/demo.js"></script>
     </head>
-    <body class="ui-m3">
+    <body>
         <div id="layout" class="ui-g">
             <div class="ui-u-1-5">
                 <ul id="navigator-features" class="ui-list-unstyled">
@@ -25,14 +25,13 @@
                     <li><a href="#type-code-block">Code block - 代码</a></li>
                     <li><a href="#type-lists">Lists - 列表</a></li>
                     <li><a href="#type-dl">Description Lists - 定义</a></li>
-                    <li><a href="#type-address">Address - 地址</a></li>
                     <li><a href="#table-default">Table - 表格样式</a></li>
                 </ul>
             </div>
             <div class="ui-u-4-5">
-                <div id="main" class="content ui-p2 ui-pt0">
-                    <h2 id="icons" class="no-mt">基础字体样式</h2>
-                    <div class="ui-divider"></div>
+                <div id="main" class="content">
+                    <h2 id="icons">基础字体样式</h2>
+                    <hr />
                     <div>
                         <h3 id="type-headings">Headings - 标题</h3>
                         <div class="example">
@@ -58,14 +57,14 @@
                         <h3 id="type-p">Paragraphs - 段落</h3>
                         <div class="example">
                             <h2 class="ui-text-center">荷塘月色 <small>朱自清</small></h2>
-                            <p class="ui-indent">
+                            <p class="ui-text-indent">
                                 月光如流水一般，静静地泻在这一片叶子和花上。薄薄的青雾浮起在荷塘里。叶子和花仿佛在牛乳中洗过一样；又像笼着轻纱的梦。虽然是满月，天上却有一层淡淡的云，所以不能朗照；但我以为这恰是到了好处——酣眠固不可少，小睡也别有风味的。月光是隔了树照过来的，高处丛生的灌木，落下参差的斑驳的黑影，峭楞楞如鬼一般；弯弯的杨柳的稀疏的倩影，却又像是画在荷叶上。塘中的月色并不均匀；但光与影有着和谐的旋律，如梵婀玲上奏着的名曲。
                             </p>
                         </div>
 
                         <h3 id="type-inline-tags">Text-level semantics - 行内标签</h3>
                         <div class="example">
-                            <table class="ui-table ui-table-horizontal ui-table-hover" style="width: 100%;">
+                            <table class="ui-raw-table ui-raw-table-horizontal ui-raw-table-hoverable" style="width: 100%;">
                                 <thead>
                                     <tr>
                                         <th>Element</th>
@@ -132,8 +131,6 @@
                         <h3 id="type-hr">Horizontal rule - 分割线</h3>
                         <div class="example">
                             <hr />
-
-                            <div class="ui-divider ui-mt1"></div>
                         </div>
 
                         <h3 id="type-quote-block">Quote block - 引用文字</h3>
@@ -230,25 +227,10 @@ inline code
                             </dl>
                         </div>
 
-                        <h3 id="type-address">
-                            Address - 地址 
-                        </h3>
-                        <div class="example">
-                            <address>
-                                <strong>百度大厦</strong><br>
-                                上地十街<br>
-                                电话： (123) 456-7890
-                            </address>
-                            <address class="ui-mt1">
-                                <strong>姓名</strong><br />
-                                <a href="mailto:#">first.last@example.com</a>
-                            </address>
-                        </div>
-
                         <h3>Table样式</h3>
                         <h4 id="table-default">Table - 默认样式</h4>
                         <div class="example">
-                            <table class="ui-table">
+                            <table class="ui-raw-table">
                                 <caption>中文 Caption Text</caption>
                                 <thead>
                                     <tr>
@@ -285,7 +267,7 @@ inline code
 
                         <h4 id="table-bordered">Table - 边线样式</h4>
                         <div class="example">
-                            <table class="ui-table ui-table-bordered">
+                            <table class="ui-raw-table ui-raw-table-bordered">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -321,7 +303,7 @@ inline code
 
                         <h4 id="table-horizontal">Table - 横线样式</h4>
                         <div class="example">
-                            <table class="ui-table ui-table-horizontal">
+                            <table class="ui-raw-table ui-raw-table-horizontal">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -357,7 +339,7 @@ inline code
                         
                         <h4 id="table-striped">Table - 条纹样式</h4>
                         <div class="example">
-                            <table class="ui-table ui-table-striped">
+                            <table class="ui-raw-table ui-raw-table-striped">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -393,7 +375,7 @@ inline code
 
                         <h4 id="table-hover">Table - Hover行样式</h4>
                         <div class="example">
-                            <table class="ui-table ui-table-hover-line ui-table-striped">
+                            <table class="ui-raw-table ui-raw-table-hoverable">
                                 <thead>
                                     <tr>
                                         <th>#</th>

@@ -1,38 +1,29 @@
-@esf-img-round-border-radius: 0.5em;
+@esf-img-round-border-radius: 5px;
 
-@esf-img-frame-border: 1px solid #d5d5d2;
-@esf-img-frame-border-hover: 1px solid @primary-color;
+@esf-img-frame-border: 1px solid #ddd;
+@esf-img-frame-border-hover: 1px solid #6CCDC0;
 @esf-img-frame-padding: 0.3em;
 
-@esf-img-frame-figcaption-bgcolor: #fefdfa;
 @esf-img-frame-figcaption-padding: 0.5em;
-@esf-img-frame-figcaption-color: #655114;
-@esf-img-frame-font-size: @esf-small-font-size;
+@esf-img-frame-slide-in-figcaption-color: #FFFFFF;
+@esf-img-frame-font-size: 75%;
 
-@esf-img-frame-background: @white;
-@esf-img-frame-caption-background: @black;
+@esf-img-frame-background: #FFFFFF;
+@esf-img-frame-caption-background: #000000;
 
-// refers to bootstrap
-.esf-img-responsive(@display: block) {
-    display: @display;
-    width: 100% \9; // Force IE10 and below to size SVG images correctly
-    max-width: 100%; // Part 1: Set a maximum relative to the parent
-    height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
-}
-
-.@{esf-class-prefix}-img-responsive {
+.@{ui-class-prefix}-img-responsive {
     .esf-img-responsive();
 }
 
-.@{esf-class-prefix}-img-rounded {
+.@{ui-class-prefix}-img-rounded {
     .border-radius(@esf-img-round-border-radius);
 }
 
-.@{esf-class-prefix}-img-circle {
-    .border-radius(50%);
+.@{ui-class-prefix}-img-circle {
+    .esf-circular();
 }
 
-.@{esf-class-prefix}-img-frame {
+.@{ui-class-prefix}-img-frame {
     padding: @esf-img-frame-padding;
     border: @esf-img-frame-border;
     display: inline-block;
@@ -50,51 +41,52 @@
     }
     figcaption {
         padding: @esf-img-frame-figcaption-padding;
-        background-color: @esf-img-frame-figcaption-bgcolor;
-        color: @esf-img-frame-figcaption-color;
         font-size: @esf-img-frame-font-size;
         .box-sizing(border-box);
     }
-    &.@{esf-class-prefix}-img-frame-hover:hover {
-        border: @esf-img-frame-border-hover;
+}
+
+.@{ui-class-prefix}-img-frame-hover:hover {
+    border: @esf-img-frame-border-hover;
+}
+
+.@{ui-class-prefix}-caption-slide-in {
+    position: relative;
+    overflow: hidden;
+    figcaption {
+        min-height: 3em;
+        .transition(all .4s ease);
+        .translateY(100%);
+        color: @esf-img-frame-slide-in-figcaption-color;
+        background: @esf-img-frame-caption-background;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        .translateY(100%);
     }
-    &.@{esf-class-prefix}-caption-slide-in {
-        position: relative;
-        overflow: hidden;
+    &:hover {
         figcaption {
-            min-height: 3em;
-            .opacity(50);
-            .transition(all .4s ease);
-            .translateY(100%);
-            color: @white;
-            background:@esf-img-frame-caption-background;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            .translateY(100%);
+            .opacity(70);
+            .translateY(0);
         }
-        &:hover {
-            figcaption {
-                .opacity(70);
-                .translateY(0);
-            }
-        }
-    }
-    &.@{esf-class-prefix}-img-shadow {
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        border: none;
     }
 }
 
-.@{esf-class-prefix}-img-stack {
+.@{ui-class-prefix}-img-shadow {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.@{ui-class-prefix}-img-stack {
     display: inline-block;
     position: relative;
-    .@{esf-class-prefix}-img-frame {
+    .@{ui-class-prefix}-img-frame {
         position: relative;
         z-index: 7;
     }
-    &:before, &:after {
+    &:before,
+    &:after {
         position: absolute; 
         left: 0;
         width: 100%; 
@@ -121,7 +113,7 @@
 }
 
 // Second stack example (rotated to the right from the bottom left)
-.@{esf-class-prefix}-img-stack-rotated {
+.@{ui-class-prefix}-img-stack-rotated {
     &:before { 
         .transform-origin(bottom left);
         .rotate(2deg);
@@ -133,9 +125,22 @@
     }
 }
 
+// 1. Force IE10 and below to size SVG images correctly;
+// 2. Set a maximum relative to the parent;
+// 3. Scale the height according to the width,
+//    otherwise you get stretching.
+.esf-img-responsive(@display: block) {
+    display: @display;
+    // 1
+    width: 100% \9;
+    // 2
+    max-width: 100%;
+    // 3
+    height: auto;
+}
 
 // Third stack example (One stack element rotated in the opposite direction)
-.@{esf-class-prefix}-img-stack-twisted {
+.esf-img-stack-twisted() {
     &:before {
         .rotate(4deg);
     }
@@ -145,9 +150,8 @@
     }
 }
 
-
 // Fourth stack example (Similar to the second but rotated left)
-.@{esf-class-prefix}-img-stack-left-rotated {
+.esf-img-stack-left-rotated() {
     &:before {
         .transform-origin(bottom left);
         .rotate(-3deg);
@@ -156,12 +160,5 @@
     &:after {
         .transform-origin(bottom left);
         .rotate(-6deg);
-    }
-}
-
-// Reset all rotations on hover
-.@{esf-class-prefix}-img-stack.@{esf-class-prefix}-img-stack-hover:hover{
-    &:before, &:after{
-        .rotate(0);
     }
 }
