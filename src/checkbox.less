@@ -1,7 +1,7 @@
 @import "base.less";
 
 @esf-checkbox-radio-label-padding: 1.5em;
-@esf-checkbox-radio-box-size: 1em;
+@esf-checkbox-radio-box-size: 1.1em;
 
 .esf-checkbox-style-base {
     position: relative;
@@ -16,7 +16,6 @@
     label {
         display: block;
         padding-left: @esf-checkbox-radio-label-padding;
-
 
         // checkbox
         &:before {
@@ -93,6 +92,20 @@
 .@{ui-class-prefix}-checkbox-switch,
 .@{ui-class-prefix}-checkbox-switch-round {
     &:extend(.esf-checkbox-style-base all);
+}
+
+.@{ui-class-prefix}-checkbox-custom.@{ui-class-prefix}-checkbox-single,
+.@{ui-class-prefix}-radio-custom.@{ui-class-prefix}-checkbox-single {
+    label {
+        padding-left: @esf-checkbox-radio-box-size;
+    }
+}
+
+.@{ui-class-prefix}-checkbox-switch.@{ui-class-prefix}-checkbox-single,
+.@{ui-class-prefix}-checkbox-switch-round.@{ui-class-prefix}-checkbox-single {
+    label {
+        padding-left: 3em;
+    }
 }
 
 .@{ui-class-prefix}-radio-custom {
