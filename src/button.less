@@ -144,6 +144,11 @@
     padding: @esf-button-padding;
     cursor: pointer;
     font-weight: @esf-button-font-weight;
+    @esf-button-transition:
+        background-color 0.3s ease-out,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    .esf-transition(@esf-button-transition);
     .esf-border-radius(
         @esf-button-radius,
         @esf-button-radius

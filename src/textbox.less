@@ -7,7 +7,7 @@
 @esf-textbox-height: 2.4em;
 
 // padding
-@esf-textbox-padding: 0.65em;
+@esf-textbox-padding: 0.5em;
 
 // radius
 @esf-textbox-radius: 5px;
@@ -51,6 +51,7 @@
 }
 
 // icon
+// use textbox-icon to specify icon
 .@{ui-class-prefix}-textbox-icon {
     width: @esf-textbox-icon-width;
     height: @esf-textbox-height;
@@ -82,31 +83,51 @@
     display: block;
 }
 
+// TODO: 需要添加Last Child IE8的支持
 .@{ui-class-prefix}-textbox-wrapper {
-    &:extend(.esf-clearfix all);
-    >.@{ui-class-prefix}-button,
-    >.@{ui-class-prefix}-button-group,
+    display: table;
+    border-collapse: separate;
     >.@{ui-class-prefix}-textbox {
-        float: left;
+        display: table-cell;
+        width: 100%;
     }
-    .esf-textbox-wrapper-border-radius();
+    :first-child.@{ui-class-prefix}-textbox-addon {
+        right: -1px;
+        margin-left: -1px;
+    }
+    :first-child.@{ui-class-prefix}-textbox-addon .@{ui-class-prefix}-button:last-child,
+    :first-child.@{ui-class-prefix}-textbox-addon .@{ui-class-prefix}-select:last-child,
+    :first-child input {
+        .esf-border-right-radius(
+            0,
+            @esf-textbox-radius
+        );
+        border-right: 0 !important;
+    }
+    :last-child.@{ui-class-prefix}-textbox-addon .@{ui-class-prefix}-button:first-child,
+    :last-child.@{ui-class-prefix}-textbox-addon .@{ui-class-prefix}-select:last-child,
+    :last-child input {
+        .esf-border-left-radius(
+            0,
+            @esf-textbox-radius
+        );
+        border-left: 0 !important;
+    }
 }
 
-.esf-textbox-wrapper-border-radius() {}
+.@{ui-class-prefix}-textbox-addon {
+    white-space: nowrap;
+    position: relative;
+    .@{ui-class-prefix}-button-group {
+        .@{ui-class-prefix}-button {
+            float: none;
+        }
+    }
+}
 
-.esf-textbox-wrapper-border-radius() when (@esf-textbox-radius > 0) {
-    :first-child.@{ui-class-prefix}-button-group .@{ui-class-prefix}-button:last-child,
-    :first-child.@{ui-class-prefix}-button,
-    :first-child input {
-        .border-right-radius(0);
-        border-right: 0;
-    }
-    :last-child.@{ui-class-prefix}-button-group .@{ui-class-prefix}-button:first-child,
-    :last-child.@{ui-class-prefix}-button,
-    :last-child input {
-        .border-left-radius(0);
-        border-left: 0;
-    }
+// textbox border button
+.@{ui-class-prefix}-button.@{ui-class-prefix}-button-text-border {
+    .esf-textbox-button-text-border-theme();
 }
 
 // widths-sizes
@@ -150,4 +171,3 @@
         width: 16em;
     }
 }
-

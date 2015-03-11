@@ -26,6 +26,18 @@
     .border-bottom-radius(@radius);
 }
 
+.esf-border-left-radius(@radius, @ignore) when (@ignore = 0) {}
+
+.esf-border-left-radius(@radius, @ignore) {
+    .border-left-radius(@radius);
+}
+
+.esf-border-right-radius(@radius, @ignore) when (@ignore = 0) {}
+
+.esf-border-right-radius(@radius, @ignore) {
+    .border-right-radius(@radius);
+}
+
 // make a circle
 .esf-circular() {
     .border-radius(500em);

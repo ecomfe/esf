@@ -190,9 +190,11 @@
                         <div class="example">
                             <div class="ui-demo-row">
                                 <div class="ui-textbox-wrapper">
-                                    <button class="ui-button ui-button-icon ui-button-primary">
-                                        <span class="ui-icon-users"></span>
-                                    </button>
+                                    <div class="ui-textbox-addon">
+                                        <button class="ui-button ui-button-icon ui-button-primary">
+                                            <span class="ui-icon-users"></span>
+                                        </button>
+                                    </div>
                                     <div class="ui-textbox">
                                         <input placeholder="massive" />
                                     </div>
@@ -203,9 +205,11 @@
                                     <div class="ui-textbox">
                                         <input placeholder="massive" />
                                     </div>
-                                    <button class="ui-button ui-button-success">
-                                        <span class="ui-icon-search"></span> Search
-                                    </button>
+                                    <div class="ui-textbox-addon">
+                                        <button class="ui-button ui-button-success">
+                                            <span class="ui-icon-search"></span> Search
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -216,21 +220,25 @@
                                     <div class="ui-textbox">
                                         <input placeholder="massive" />
                                     </div>
-                                    <div class="ui-button-group">
-                                        <button type="button" class="ui-button ui-button-icon">
-                                            <span class="ui-icon-caret-down"></span>
-                                        </button>
-                                        <button type="button" class="ui-button">Right</button>
-                                    </div>
+                                    <div class="ui-textbox-addon">
+                                        <div class="ui-button-group">
+                                            <button type="button" class="ui-button ui-button-icon">
+                                                <span class="ui-icon-caret-down"></span>
+                                            </button><!--
+                                         --><button type="button" class="ui-button">Right</button>
+                                        </div>
+                                    </div> 
                                 </div>
                             </div>
                             <div class="ui-demo-row">
                                 <div class="ui-textbox-wrapper">
-                                    <div class="ui-button-group">
-                                        <button type="button" class="ui-button">Left</button>
-                                        <button type="button" class="ui-button ui-button-icon">
-                                            <span class="ui-icon-caret-down"></span>
-                                        </button>
+                                    <div class="ui-textbox-addon">
+                                        <div class="ui-button-group">
+                                            <button type="button" class="ui-button">Left</button><!--
+                                         --><button type="button" class="ui-button ui-button-icon">
+                                                <span class="ui-icon-caret-down"></span>
+                                            </button>
+                                        </div>
                                     </div>
                                     <div class="ui-textbox">
                                         <input placeholder="massive" />
@@ -239,15 +247,39 @@
                             </div>
                             <div class="ui-demo-row">
                                 <div class="ui-textbox-wrapper">
-                                    <div class="ui-button-group">
-                                        <button type="button" class="ui-button">Left</button>
-                                        <button type="button" class="ui-button">Middle</button>
-                                        <button type="button" class="ui-button ui-button-icon">
-                                            <span class="ui-icon-caret-down"></span>
-                                        </button>
+                                    <div class="ui-textbox-addon">
+                                        <div class="ui-button-group">
+                                            <button type="button" class="ui-button">Left</button><!--
+                                         --><button type="button" class="ui-button">Middle</button><!--
+                                         --><button type="button" class="ui-button ui-button-icon">
+                                                <span class="ui-icon-caret-down"></span>
+                                            </button>
+                                        </div>
                                     </div>
                                     <div class="ui-textbox">
                                         <input placeholder="massive" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-demo-row">
+                                <div id="border-button" class="ui-textbox-wrapper">
+                                    <div class="ui-textbox-addon">
+                                        <button  onclick="alert('button')" type="button" class="ui-button ui-button-icon ui-icon-search ui-button-text-border ui-textbox-addon"></button>
+                                    </div>
+                                    <div class="ui-textbox ui-textbox-icon-right">
+                                        <input onblur="document.getElementById('border-button').className='ui-textbox-wrapper'" onfocus="document.getElementById('border-button').className='ui-textbox-wrapper state-focus'" placeholder="TextBorder" />
+                                        <span class="ui-textbox-icon ui-icon-close"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-demo-row">
+                                <div id="border-button2" class="ui-textbox-wrapper">
+                                    <div  class="ui-textbox ui-textbox-icon-right">
+                                        <input onblur="document.getElementById('border-button2').className='ui-textbox-wrapper'" onfocus="document.getElementById('border-button2').className='ui-textbox-wrapper state-focus'" placeholder="TextBorder" />
+                                        <span class="ui-textbox-icon ui-icon-close"></span>
+                                    </div>
+                                    <div class="ui-textbox-addon">
+                                        <button onclick="alert('button')" type="button" class="ui-button ui-button-icon ui-icon-search ui-button-text-border ui-textbox-addon"></button>
                                     </div>
                                 </div>
                             </div>
