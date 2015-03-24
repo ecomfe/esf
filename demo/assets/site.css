@@ -520,9 +520,9 @@ input[type="search"]::-webkit-search-decoration {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  line-height: 2.4em;
-  min-height: 2.4em;
-  height: 2.4em;
+  line-height: 2.5em;
+  min-height: 2.5em;
+  height: 2.5em;
   padding: 0 1em;
   cursor: pointer;
   font-weight: normal;
@@ -562,8 +562,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-button-icon {
   padding: 0;
-  width: 2.4em;
-  height: 2.4em;
+  width: 2.5em;
+  height: 2.5em;
 }
 .ui-button-circular {
   -webkit-border-radius: 500em;
@@ -1768,7 +1768,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 2.4em;
+  height: 2.5em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1799,7 +1799,7 @@ input[type="search"]::-webkit-search-decoration {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0.5em 1.9em 0.5em 0.5em;
-  height: 2.4em;
+  height: 2.5em;
 }
 .ui-select-custom select[disabled] {
   cursor: not-allowed;
@@ -1960,7 +1960,7 @@ a.ui-text-info:hover {
   border-radius: 5px;
 }
 .ui-textbox > input {
-  height: 2.4em;
+  height: 2.5em;
 }
 .ui-textbox > input,
 .ui-textbox > textarea {
@@ -2087,9 +2087,9 @@ a.ui-text-info:hover {
   color: #f0ad4e;
 }
 .ui-textbox-icon {
-  width: 2.4em;
-  height: 2.4em;
-  line-height: 2.4em !important;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em !important;
   position: absolute;
   top: 0;
   text-align: center;
@@ -2098,13 +2098,13 @@ a.ui-text-info:hover {
   left: 0;
 }
 .ui-textbox-icon-left input {
-  padding-left: 2.4em;
+  padding-left: 2.5em;
 }
 .ui-textbox-icon-right .ui-textbox-icon {
   right: 0;
 }
 .ui-textbox-icon-right input {
-  padding-right: 2.4em;
+  padding-right: 2.5em;
 }
 .ui-textbox-fluid {
   display: block;
@@ -2146,6 +2146,7 @@ a.ui-text-info:hover {
 .ui-textbox-addon {
   white-space: nowrap;
   position: relative;
+  display: table-cell;
 }
 .ui-textbox-addon .ui-button-group .ui-button {
   float: none;

@@ -85,7 +85,7 @@
 
 // TODO: 需要添加Last Child IE8的支持
 .@{ui-class-prefix}-textbox-wrapper {
-    display: table;
+    display: table !important;
     border-collapse: separate;
     >.@{ui-class-prefix}-textbox {
         display: table-cell;
@@ -118,6 +118,7 @@
 .@{ui-class-prefix}-textbox-addon {
     white-space: nowrap;
     position: relative;
+    display: table-cell;
     .@{ui-class-prefix}-button-group {
         .@{ui-class-prefix}-button {
             float: none;
