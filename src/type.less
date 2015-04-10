@@ -7,14 +7,14 @@
 @esf-type-body-line-height: 1.3;
 @esf-type-body-font-weight: normal;
 
-@esf-type-selection-background: lighten(#6CCDC0, 5%);
-@esf-type-selection-color: #FFF;
-
 // link
 @esf-type-link-color: #6CCDC0;
 @esf-type-link-text-decoration: none;
 @esf-type-link-hover-color: lighten(#6CCDC0, 15%);
 @esf-type-link-hover-text-decoration: underline;
+
+@esf-type-link-contrast-color: #FFF;
+@esf-type-link-contrast-hover-color: #FFF;
 
 // code element
 @esf-type-code-font-family: Monaco, Consolas, monospace;
@@ -77,18 +77,6 @@ body {
     line-height: @esf-type-body-line-height;
     color: @esf-type-body-text-color;
     .esf-type-body-theme();
-}
-
-// selection color
-::selection {
-    background: @esf-type-selection-background;
-    color: @esf-type-selection-color;
-    text-shadow: none;
-}
-::-moz-selection {
-    background: @esf-type-selection-background;
-    color: @esf-type-selection-color;
-    text-shadow: none;
 }
 
 // links
