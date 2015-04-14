@@ -2124,13 +2124,13 @@ a.ui-text-info:hover {
   display: table-cell;
   width: 100%;
 }
-.ui-textbox-wrapper :first-child.ui-textbox-addon {
+.ui-textbox-wrapper .ui-textbox-addon:first-child {
   right: -1px;
   margin-left: -1px;
 }
-.ui-textbox-wrapper :first-child.ui-textbox-addon .ui-button:last-child,
-.ui-textbox-wrapper :first-child.ui-textbox-addon .ui-select:last-child,
-.ui-textbox-wrapper :first-child input {
+.ui-textbox-wrapper .ui-textbox-addon:first-child .ui-button,
+.ui-textbox-wrapper .ui-textbox-addon:first-child .ui-select-inner,
+.ui-textbox-wrapper .ui-textbox:first-child input {
   -webkit-border-top-right-radius: 0;
   -moz-border-radius-topright: 0;
   border-top-right-radius: 0;
@@ -2139,9 +2139,9 @@ a.ui-text-info:hover {
   border-bottom-right-radius: 0;
   border-right: 0 !important;
 }
-.ui-textbox-wrapper :last-child.ui-textbox-addon .ui-button:first-child,
-.ui-textbox-wrapper :last-child.ui-textbox-addon .ui-select:last-child,
-.ui-textbox-wrapper :last-child input {
+.ui-textbox-wrapper .ui-textbox-addon:last-child .ui-button,
+.ui-textbox-wrapper .ui-textbox-addon:last-child .ui-select-inner,
+.ui-textbox-wrapper .ui-textbox:last-child input {
   -webkit-border-top-left-radius: 0;
   -moz-border-radius-topleft: 0;
   border-top-left-radius: 0;
@@ -2224,16 +2224,6 @@ body {
   font-weight: normal;
   line-height: 1.3;
   color: #444444;
-}
-::selection {
-  background: #46c0b0;
-  color: #ffffff;
-  text-shadow: none;
-}
-::-moz-selection {
-  background: #46c0b0;
-  color: #ffffff;
-  text-shadow: none;
 }
 a {
   color: #6ccdc0;
