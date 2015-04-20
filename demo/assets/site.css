@@ -538,8 +538,8 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  color: #444444;
-  background-color: #ebebeb;
+  color: #666666;
+  background-color: #f6f6f6;
 }
 .ui-button:hover,
 .ui-button:focus {
@@ -548,16 +548,16 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-button:hover,
 .ui-button.state-hover {
-  background-color: #efefef;
-  color: #444444;
+  background-color: #fbfbfb;
+  color: #666666;
 }
 .ui-button:focus,
 .ui-button.state-focus {
-  background-color: #efefef;
+  background-color: #fbfbfb;
 }
 .ui-button:active,
 .ui-button.state-active {
-  background-color: #efefef;
+  background-color: #fbfbfb;
 }
 .ui-button:disabled {
   opacity: 0.4;
@@ -726,6 +726,7 @@ input[type="search"]::-webkit-search-decoration {
  * 9. `min-height` is necessary for `input` elements in Firefox and Opera because `line-height` is not working.
  * 10. Required for `a`.
  */
+/*@esf-palette-primary-light-color: #E3F6F3;*/
 .esf-checkbox-style-base,
 .ui-checkbox-custom,
 .ui-radio-custom,
@@ -775,7 +776,7 @@ input[type="search"]::-webkit-search-decoration {
   -ms-transition: background-color 0.3s ease, border-color 0.3s ease;
   -o-transition: background-color 0.3s ease, border-color 0.3s ease;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  background: #ebebeb;
+  background: #f6f6f6;
   border: 1px solid #dddddd;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -812,7 +813,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch label:active:before,
 .ui-checkbox-switch-round .ui-checkbox-box:active:before,
 .ui-checkbox-switch-round label:active:before {
-  background: #efefef;
+  background: #f6f6f6;
 }
 .esf-checkbox-style-base input,
 .ui-checkbox-custom input,
@@ -836,7 +837,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch input:focus ~ .ui-checkbox-box,
 .ui-checkbox-switch-round input:focus ~ label,
 .ui-checkbox-switch-round input:focus ~ .ui-checkbox-box {
-  color: #444444;
+  color: #666666;
 }
 .esf-checkbox-style-base input:focus ~ label:before,
 .esf-checkbox-style-base input:focus ~ .ui-checkbox-box:before,
@@ -906,9 +907,9 @@ input[type="search"]::-webkit-search-decoration {
   width: 1.1em;
   height: 1.1em;
   background: #70ccc0;
-  -webkit-box-shadow: inset 0px 0px 0px 0.2em #ebebeb;
-  -moz-box-shadow: inset 0px 0px 0px 0.2em #ebebeb;
-  box-shadow: inset 0px 0px 0px 0.2em #ebebeb;
+  -webkit-box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
+  -moz-box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
+  box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
   top: 0;
   left: 0;
 }
@@ -943,7 +944,7 @@ input[type="search"]::-webkit-search-decoration {
   transition: color 0.2s ease;
   cursor: pointer;
   vertical-align: middle;
-  color: rgba(68, 68, 68, 0.9);
+  color: rgba(102, 102, 102, 0.9);
 }
 .esf-checkbox-style-base label:hover,
 .esf-checkbox-style-base ~ label:hover,
@@ -955,7 +956,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch ~ label:hover,
 .ui-checkbox-switch-round label:hover,
 .ui-checkbox-switch-round ~ label:hover {
-  color: #444444;
+  color: #666666;
 }
 .ui-checkbox-custom.ui-checkbox-single label,
 .ui-radio-custom.ui-checkbox-single label {
@@ -996,12 +997,12 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch-round input ~ .ui-checkbox-box:before,
 .ui-checkbox-switch input ~ label:before,
 .ui-checkbox-switch-round input ~ label:before {
-  background-color: #999999;
+  background-color: #bbbbbb;
   width: 3em;
   height: 1.2em;
   top: -0.1em;
   left: 0;
-  border: #999999 1px solid;
+  border: #bbbbbb 1px solid;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -1010,7 +1011,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch-round input ~ .ui-checkbox-box:after,
 .ui-checkbox-switch input ~ label:after,
 .ui-checkbox-switch-round input ~ label:after {
-  border: #999999 1px solid;
+  border: #bbbbbb 1px solid;
   width: 1.5em;
   height: 1.2em;
   top: -0.1em;
@@ -1081,7 +1082,7 @@ input[type="search"]::-webkit-search-decoration {
   margin: 0;
   list-style: none;
   position: relative;
-  background: #ebebeb;
+  background: #f6f6f6;
   border: none;
   padding: 0.2em 0;
 }
@@ -1097,11 +1098,11 @@ input[type="search"]::-webkit-search-decoration {
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   padding: 0.5em 1em;
-  color: #444444;
+  color: #666666;
 }
 .ui-dropdown > li:hover > :first-child {
-  color: #444444;
-  background: #efefef;
+  color: #666666;
+  background: #fffaee;
 }
 .ui-dropdown-separator-top {
   border-top: 1px solid #dddddd;
@@ -1151,13 +1152,13 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-form-required:after {
   content: '*';
-  color: #f9ad42;
+  color: #f16c6c;
   display: block;
   right: 0;
   top: 50%;
   position: absolute;
   line-height: 1;
-  margin-top: -0.1em;
+  padding-right: .5em;
 }
 .ui-form-key,
 .ui-form-valign {
@@ -1340,8 +1341,8 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background: #ebebeb;
-  color: #444444;
+  background: #f6f6f6;
+  color: #666666;
 }
 .ui-label-primary {
   background: #70ccc0;
@@ -1432,7 +1433,7 @@ input[type="search"]::-webkit-search-decoration {
   width: 0;
   height: 0;
   border: 0.70710678em solid transparent;
-  border-bottom-color: #ebebeb;
+  border-bottom-color: #f6f6f6;
   margin-left: -0.70710678em;
   margin-top: -1.41421356em;
   border-width: 0.7em;
@@ -1451,7 +1452,7 @@ input[type="search"]::-webkit-search-decoration {
   width: 0;
   height: 0;
   border: 0.70710678em solid transparent;
-  border-top-color: #ebebeb;
+  border-top-color: #f6f6f6;
   margin-left: -0.70710678em;
   border-width: 0.7em;
   content: '';
@@ -1469,7 +1470,7 @@ input[type="search"]::-webkit-search-decoration {
   width: 0;
   height: 0;
   border: 0.70710678em solid transparent;
-  border-right-color: #ebebeb;
+  border-right-color: #f6f6f6;
   margin-left: -1.41421356em;
   margin-top: -0.70710678em;
   border-width: 0.7em;
@@ -1488,7 +1489,7 @@ input[type="search"]::-webkit-search-decoration {
   width: 0;
   height: 0;
   border: 0.70710678em solid transparent;
-  border-left-color: #ebebeb;
+  border-left-color: #f6f6f6;
   margin-top: -0.70710678em;
   border-width: 0.7em;
   content: '';
@@ -1627,7 +1628,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-navbar-nav > li:hover > a,
 .ui-navbar-nav > li:focus > a {
-  background: #83d3c8;
+  background: #79dacd;
   color: #ffffff;
 }
 .ui-navbar-nav > li:hover > .ui-submenu,
@@ -1636,7 +1637,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-navbar-nav > li:active > a,
 .ui-navbar-nav > li.ui-active > a {
-  background: #4abfaf;
+  background: #79dacd;
   color: #ffffff;
 }
 .ui-navbar-nav > li > .ui-submenu {
@@ -1662,8 +1663,8 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-border-top-right-radius: 5px;
   -moz-border-radius-topright: 5px;
   border-top-right-radius: 5px;
-  color: #444444;
-  background: #ebebeb;
+  color: #666666;
+  background: #f6f6f6;
   border-bottom: 1px solid #dddddd;
 }
 .ui-panel-custom .ui-panel-left {
@@ -1681,13 +1682,13 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-border-bottom-left-radius: 5px;
   -moz-border-radius-bottomleft: 5px;
   border-bottom-left-radius: 5px;
-  color: #444444;
-  background: #ebebeb;
+  color: #666666;
+  background: #f6f6f6;
   border-top: 1px solid #dddddd;
 }
 .ui-panel-custom .ui-panel-body {
   padding: 10px 15px;
-  color: #444444;
+  color: #666666;
 }
 .ui-progress {
   margin-bottom: 1em;
@@ -1696,7 +1697,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  background: #ebebeb;
+  background: #f6f6f6;
 }
 .ui-progress-bar {
   float: left;
@@ -1778,19 +1779,19 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background: #ebebeb;
+  background: #f6f6f6;
   border: 1px solid #dddddd;
-  color: #444444;
+  color: #666666;
 }
 .ui-select-custom option {
   font-weight: normal;
 }
 .ui-select-custom:hover {
   border: 1px solid #70ccc0;
-  background: #efefef;
+  background: #fbfbfb;
 }
 .ui-select-custom:focus {
-  color: #444444;
+  color: #666666;
 }
 .ui-select-custom select {
   width: 100%;
@@ -1841,7 +1842,7 @@ x:-o-prefocus,
   right: 10px;
   border: 5px solid;
   pointer-events: none;
-  border-color: #444444 transparent;
+  border-color: #666666 transparent;
   content: '';
   position: absolute;
 }
@@ -1861,7 +1862,7 @@ x:-o-prefocus,
   padding: 0;
   margin: 0;
   list-style: none;
-  background: #ebebeb;
+  background: #f6f6f6;
   border: none;
   padding: 0.2em 0;
   min-width: 12em;
@@ -1878,13 +1879,13 @@ x:-o-prefocus,
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   padding: 0.5em 1em;
-  color: #444444;
+  color: #666666;
   text-decoration: none !important;
   white-space: nowrap;
 }
 .ui-submenu > li:hover > :first-child {
-  color: #444444;
-  background: #efefef;
+  color: #666666;
+  background: #fbfbfb;
 }
 .ui-submenu > li:hover > .ui-submenu {
   display: block;
@@ -1990,7 +1991,7 @@ a.ui-text-info:hover {
   resize: none;
   border: 1px solid #dddddd;
   background: #ffffff;
-  color: #444444;
+  color: #666666;
 }
 .ui-textbox > input:-moz-placeholder,
 .ui-textbox > textarea:-moz-placeholder {
@@ -2012,8 +2013,8 @@ a.ui-text-info:hover {
 .ui-textbox > textarea:focus,
 .ui-textbox.state-focus > input {
   border: 1px solid #70ccc0;
-  background: #fbfefd;
-  color: #444444;
+  background: #ffffff;
+  color: #666666;
 }
 .ui-textbox > input[disabled],
 .ui-textbox > textarea[disabled] {
@@ -2074,7 +2075,7 @@ a.ui-text-info:hover {
 .ui-textbox.state-warning > input,
 .ui-textbox.state-warning > textarea {
   border: 1px solid #f9ad42;
-  background: #fffcf9;
+  background: #ffffff;
   color: #f9ad42;
 }
 .ui-textbox.state-warning > input:-moz-placeholder,
@@ -2161,12 +2162,12 @@ a.ui-text-info:hover {
 .ui-button.ui-button-text-border {
   border: 1px solid #dddddd;
   background: #ffffff;
-  color: #444444;
+  color: #666666;
 }
 .state-focus .ui-button.ui-button-text-border {
   border: 1px solid #70ccc0;
-  background: #fbfefd;
-  color: #444444;
+  background: #ffffff;
+  color: #666666;
 }
 .state-error .ui-button.ui-button-text-border,
 .state-validity-invalid .ui-button.ui-button-text-border {
@@ -2188,7 +2189,7 @@ a.ui-text-info:hover {
 .state-warning .ui-button.ui-button-text-border,
 .state-warning .ui-button.ui-button-text-border {
   border: 1px solid #f9ad42;
-  background: #fffcf9;
+  background: #ffffff;
   color: #f9ad42;
 }
 .ui-textbox-size1 input {
@@ -2223,7 +2224,7 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, '宋体', SimSun, sans-serif;
   font-weight: normal;
   line-height: 1.3;
-  color: #444444;
+  color: #666666;
 }
 a {
   color: #70ccc0;
@@ -2234,11 +2235,11 @@ a:hover {
   text-decoration: underline;
 }
 a.ui-link-static {
-  color: #444444;
+  color: #666666;
   text-decoration: none;
 }
 a.ui-link-static:hover {
-  color: #444444;
+  color: #666666;
   text-decoration: none;
 }
 abbr[title],
@@ -2251,13 +2252,13 @@ dfn[title] {
 }
 code,
 kbd {
-  color: #444444;
+  color: #666666;
   white-space: nowrap;
   border: 1px solid #dddddd;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background: #ebebeb;
+  background: #f6f6f6;
   font-family: Monaco, Consolas, monospace;
   padding: 0 0.3em;
 }
@@ -2276,7 +2277,7 @@ h5,
 h6 {
   font-family: 'Helvetica Neue', Helvetica, Arial, '微软雅黑', 'Microsoft YaHei', '黑体', SimHei, sans-serif;
   font-weight: bold;
-  color: #444444;
+  color: #666666;
   margin: 0.67em 0;
 }
 h1 small,
@@ -2382,7 +2383,7 @@ hr {
   text-align: left;
 }
 .ui-raw-table caption {
-  color: #444444;
+  color: #666666;
 }
 .ui-raw-table td,
 .ui-raw-table th {
@@ -2390,11 +2391,11 @@ hr {
 }
 .ui-raw-table thead {
   background: #ffffff;
-  color: #444444;
+  color: #666666;
 }
 .ui-raw-table.ui-raw-table-striped tr:nth-child(2n-1) td {
-  background-color: #ebebeb;
-  color: #444444;
+  background-color: #f6f6f6;
+  color: #666666;
 }
 .ui-raw-table.ui-raw-table-bordered td,
 .ui-raw-table.ui-raw-table-bordered th {
@@ -2407,8 +2408,8 @@ hr {
 }
 .ui-raw-table.ui-raw-table-hoverable > tbody > tr:hover > td,
 .ui-raw-table.ui-raw-table-hoverable > tbody > tr:hover > th {
-  background-color: #efefef !important;
-  color: #444444;
+  background-color: #fbfbfb !important;
+  color: #666666;
 }
 .ui-raw-table caption {
   padding: 1em 0;
@@ -2461,7 +2462,7 @@ hr {
   background: #f9ad42;
 }
 .ui-wizard-node-active .ui-wizard-node-text {
-  color: #444444;
+  color: #666666;
 }
 .ui-wizard-node:after {
   content: '';
