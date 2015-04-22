@@ -78,9 +78,12 @@
         width: @esf-checkbox-radio-box-size;
         height: @esf-checkbox-radio-box-size;
         background: @esf-checkbox-radio-checked-background-color;
+        // IE will apply radius to box-shadow which makes it looks like a dot
         .box-shadow(inset 0px 0px 0px 0.2em @esf-checkbox-background-color);
         top: 0;
         left: 0;
+        // IE has indeterminate and checked states at the same time.
+        .transform(none);
     }
 }
 
