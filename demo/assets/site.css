@@ -901,9 +901,6 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch-round input:indeterminate ~ label:after,
 .ui-checkbox-switch-round input:indeterminate ~ .ui-checkbox-box:after {
   border: 1px solid #70ccc0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   width: 1.1em;
   height: 1.1em;
   background: #70ccc0;
