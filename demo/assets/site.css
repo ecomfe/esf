@@ -890,31 +890,6 @@ input[type="search"]::-webkit-search-decoration {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.esf-checkbox-style-base input:indeterminate ~ label:after,
-.esf-checkbox-style-base input:indeterminate ~ .ui-checkbox-box:after,
-.ui-checkbox-custom input:indeterminate ~ label:after,
-.ui-checkbox-custom input:indeterminate ~ .ui-checkbox-box:after,
-.ui-radio-custom input:indeterminate ~ label:after,
-.ui-radio-custom input:indeterminate ~ .ui-checkbox-box:after,
-.ui-checkbox-switch input:indeterminate ~ label:after,
-.ui-checkbox-switch input:indeterminate ~ .ui-checkbox-box:after,
-.ui-checkbox-switch-round input:indeterminate ~ label:after,
-.ui-checkbox-switch-round input:indeterminate ~ .ui-checkbox-box:after {
-  border: 1px solid #70ccc0;
-  width: 1.1em;
-  height: 1.1em;
-  background: #70ccc0;
-  -webkit-box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
-  -moz-box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
-  box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
-  top: 0;
-  left: 0;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-}
 .esf-checkbox-style-base input[disabled] ~ label,
 .esf-checkbox-style-base input[disabled] ~ .ui-checkbox-box,
 .ui-checkbox-custom input[disabled] ~ label,
@@ -959,6 +934,23 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch-round label:hover,
 .ui-checkbox-switch-round ~ label:hover {
   color: #666666;
+}
+.ui-checkbox-custom input:indeterminate ~ label:after,
+.ui-checkbox-custom input:indeterminate ~ .ui-checkbox-box:after {
+  border: 1px solid #70ccc0;
+  width: 1.1em;
+  height: 1.1em;
+  background: #70ccc0;
+  -webkit-box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
+  -moz-box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
+  box-shadow: inset 0px 0px 0px 0.2em #f6f6f6;
+  top: 0;
+  left: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 .ui-checkbox-custom.ui-checkbox-single label,
 .ui-radio-custom.ui-checkbox-single label {

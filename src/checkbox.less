@@ -62,12 +62,6 @@
                 .esf-checkbox-virtual-box-checked-theme();
             }
         }
-        &:indeterminate {
-            & ~ label,
-            & ~ .@{ui-class-prefix}-checkbox-box {
-                .esf-checkbox-virtual-box-indeterminate-theme();
-            }
-        }
     }
     input[disabled] {
         & ~ label,
@@ -93,6 +87,16 @@
 .@{ui-class-prefix}-checkbox-switch-round {
     &:extend(.esf-checkbox-style-base all);
 }
+
+.@{ui-class-prefix}-checkbox-custom {
+    input:indeterminate {
+        & ~ label,
+        & ~ .@{ui-class-prefix}-checkbox-box {
+            .esf-checkbox-virtual-box-indeterminate-theme();
+        }
+    }
+}
+
 
 .@{ui-class-prefix}-checkbox-custom.@{ui-class-prefix}-checkbox-single,
 .@{ui-class-prefix}-radio-custom.@{ui-class-prefix}-checkbox-single {
