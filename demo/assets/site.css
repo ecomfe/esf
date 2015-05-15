@@ -2496,8 +2496,10 @@ hr {
   margin-top: -2px;
   border-top: 2px dotted #dddddd;
 }
-.ui-wizard-node:last-child:after,
-.ui-wizard-node-last:after {
+.ui-wizard-node:last-child:after {
+  display: none !important;
+}
+.ui-wizard-node.ui-wizard-node-last:after {
   display: none !important;
 }
 [class*='ui-icon'] {
