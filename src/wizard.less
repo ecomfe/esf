@@ -79,7 +79,10 @@
 
 .esf-wizard-connector-theme() {}
 
-.@{ui-class-prefix}-wizard-node:last-child:after,
-.@{ui-class-prefix}-wizard-node-last:after {
+.@{ui-class-prefix}-wizard-node:last-child:after {
+    display: none !important;
+}
+
+.@{ui-class-prefix}-wizard-node.@{ui-class-prefix}-wizard-node-last:after {
     display: none !important;
 }

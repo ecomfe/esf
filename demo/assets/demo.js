@@ -1,6 +1,6 @@
 $(function () {
     $('.example').each(function (index, item) {
-        var $sample = $('<div class="highlight"><pre><code class="language-markup"></code></pre></div>');
+        var $sample = $('<div class="highlight"><pre class="prettyprint"><code class="language-markup"></code></pre></div>');
         var $code = $sample.find('.language-markup');
         var $item = $(item);
         $sample.insertAfter($item);
@@ -15,5 +15,5 @@ $(function () {
         }
         $code.text(targetArr.join('\n'));
     });
-    Prism.highlightAll();
+    prettyPrint();
 });
