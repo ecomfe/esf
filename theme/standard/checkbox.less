@@ -8,6 +8,7 @@
 @esf-checkbox-label-text-color: fade(@esf-palette-color, 90%);
 @esf-checkbox-label-text-hover-color: @esf-palette-color;
 @esf-checkbox-label-text-focus-color: @esf-palette-color;
+@esf-checkbox-label-text-readonly-color: @esf-palette-muted-color;
 
 @esf-checkbox-border-color: @esf-palette-border;
 @esf-checkbox-border-radius: 3px;
@@ -173,4 +174,8 @@
         left: 1.8em;
          .esf-circular();
     }
+}
+
+.esf-checkbox-virtual-box-readonly-theme() {
+    color: @esf-checkbox-label-text-readonly-color;
 }

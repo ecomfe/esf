@@ -76,6 +76,17 @@
         vertical-align: middle;
         .esf-checkbox-label-theme();
     }
+    // fake readonly state, used with disabled state
+    &.@{ui-state-prefix}-readonly {
+        input {
+            & ~ label,
+            & ~ .@{ui-class-prefix}-checkbox-box {
+                .opacity(100);
+                cursor: default !important;
+                .esf-checkbox-virtual-box-readonly-theme();
+            }
+        }
+    }
 }
 
 .@{ui-class-prefix}-checkbox-custom,
@@ -158,6 +169,7 @@
 .esf-checkbox-virtual-box-checked-theme() {}
 .esf-checkbox-virtual-box-indeterminate-theme() {}
 .esf-checkbox-virtual-box-disabled-theme() {}
+.esf-checkbox-virtual-box-readonly-theme() {}
 .esf-checkbox-virtual-box-theme() {}
 .esf-checkbox-virtual-box-check-theme() {}
 .esf-checkbox-virtual-box-radio-checked-theme() {}
