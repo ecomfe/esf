@@ -1,36 +1,36 @@
 @import "base.less";
 
-@esf-img-round-border-radius: 5px;
+@esui-img-round-border-radius: 5px;
 
-@esf-img-frame-border: 1px solid #ddd;
-@esf-img-frame-border-hover: 1px solid #6CCDC0;
-@esf-img-frame-padding: .3em;
+@esui-img-frame-border: 1px solid #ddd;
+@esui-img-frame-border-hover: 1px solid #6CCDC0;
+@esui-img-frame-padding: .3em;
 
-@esf-img-frame-figcaption-padding: .5em;
-@esf-img-frame-slide-in-figcaption-color: #FFFFFF;
-@esf-img-frame-font-size: 75%;
+@esui-img-frame-figcaption-padding: .5em;
+@esui-img-frame-slide-in-figcaption-color: #FFFFFF;
+@esui-img-frame-font-size: 75%;
 
-@esf-img-frame-background: #FFFFFF;
-@esf-img-frame-caption-background: #000000;
+@esui-img-frame-background: #FFFFFF;
+@esui-img-frame-caption-background: #000000;
 
 .@{ui-class-prefix}-img-responsive {
-    .esf-img-responsive();
+    .esui-img-responsive();
 }
 
 .@{ui-class-prefix}-img-rounded {
-    .border-radius(@esf-img-round-border-radius);
+    .border-radius(@esui-img-round-border-radius);
 }
 
 .@{ui-class-prefix}-img-circle {
-    .esf-circular();
+    .esui-circular();
 }
 
 .@{ui-class-prefix}-img-frame {
-    padding: @esf-img-frame-padding;
-    border: @esf-img-frame-border;
+    padding: @esui-img-frame-padding;
+    border: @esui-img-frame-border;
     display: inline-block;
     .transition(all .2s ease-in-out);
-    background: @esf-img-frame-background;
+    background: @esui-img-frame-background;
     vertical-align: middle;
 
     &figure {
@@ -42,14 +42,14 @@
         vertical-align: bottom;
     }
     figcaption {
-        padding: @esf-img-frame-figcaption-padding;
-        font-size: @esf-img-frame-font-size;
+        padding: @esui-img-frame-figcaption-padding;
+        font-size: @esui-img-frame-font-size;
         .box-sizing(border-box);
     }
 }
 
 .@{ui-class-prefix}-img-frame-hover:hover {
-    border: @esf-img-frame-border-hover;
+    border: @esui-img-frame-border-hover;
 }
 
 .@{ui-class-prefix}-caption-slide-in {
@@ -59,8 +59,8 @@
         min-height: 3em;
         .transition(all .4s ease);
         .translateY(100%);
-        color: @esf-img-frame-slide-in-figcaption-color;
-        background: @esf-img-frame-caption-background;
+        color: @esui-img-frame-slide-in-figcaption-color;
+        background: @esui-img-frame-caption-background;
         width: 100%;
         position: absolute;
         left: 0;
@@ -94,11 +94,11 @@
         width: 100%; 
         height: 100%;
         content: ""; 
-        padding: @esf-img-frame-padding;
-        border: @esf-img-frame-border;
+        padding: @esui-img-frame-padding;
+        border: @esui-img-frame-border;
         .box-sizing(border-box);
         .transition(all .2s ease-in-out);
-        background: @esf-img-frame-background;
+        background: @esui-img-frame-background;
     }
 
     // 1st element in stack (behind image)
@@ -131,7 +131,7 @@
 // 2. Set a maximum relative to the parent;
 // 3. Scale the height according to the width,
 //    otherwise you get stretching.
-.esf-img-responsive(@display: block) {
+.esui-img-responsive(@display: block) {
     display: @display;
     // 1
     width: 100% \9;
@@ -142,7 +142,7 @@
 }
 
 // Third stack example (One stack element rotated in the opposite direction)
-.esf-img-stack-twisted() {
+.esui-img-stack-twisted() {
     &:before {
         .rotate(4deg);
     }
@@ -153,7 +153,7 @@
 }
 
 // Fourth stack example (Similar to the second but rotated left)
-.esf-img-stack-left-rotated() {
+.esui-img-stack-left-rotated() {
     &:before {
         .transform-origin(bottom left);
         .rotate(-3deg);

@@ -3,30 +3,30 @@
 // =========
 @import "base.less";
 
-@esf-submenu-min-width: 12em;
-@esf-submenu-padding: 0.2em 0;
-@esf-submenu-border: none;
-@esf-submenu-separator-border: 1px solid #ddd;
-@esf-submenu-background: #EFF0F2;
-@esf-submenu-zindex: 1000;
+@esui-submenu-min-width: 12em;
+@esui-submenu-padding: 0.2em 0;
+@esui-submenu-border: none;
+@esui-submenu-separator-border: 1px solid #ddd;
+@esui-submenu-background: #EFF0F2;
+@esui-submenu-zindex: 1000;
 
-@esf-submenu-item-color: #444;
-@esf-submenu-item-hover-color: #444;
-@esf-submenu-item-text-size: 1em;
-@esf-submenu-item-highlight-background: #FAFAFA;
-@esf-submenu-item-padding: 0.5em 1em;
+@esui-submenu-item-color: #444;
+@esui-submenu-item-hover-color: #444;
+@esui-submenu-item-text-size: 1em;
+@esui-submenu-item-highlight-background: #FAFAFA;
+@esui-submenu-item-padding: 0.5em 1em;
 
 .@{ui-class-prefix}-submenu {
     position: absolute;
-    z-index: @esf-submenu-zindex;
+    z-index: @esui-submenu-zindex;
     overflow: visible;
     padding: 0;
     margin: 0;
     list-style: none;
-    background: @esf-submenu-background;
-    border: @esf-submenu-border;
-    padding: @esf-submenu-padding;
-    min-width: @esf-submenu-min-width;
+    background: @esui-submenu-background;
+    border: @esui-submenu-border;
+    padding: @esui-submenu-padding;
+    min-width: @esui-submenu-min-width;
 
     > li {
         // IE8 doesn't show respect to li:hover
@@ -34,16 +34,16 @@
         > :first-child {
             cursor: pointer;
             display: block;
-            .esf-transition(background-color 0.3s ease);
-            padding: @esf-submenu-item-padding;
-            color: @esf-submenu-item-color;
+            .esui-transition(background-color 0.3s ease);
+            padding: @esui-submenu-item-padding;
+            color: @esui-submenu-item-color;
             text-decoration: none !important;
             white-space: nowrap;
         }
         &:hover {
             > :first-child {
-                color: @esf-submenu-item-hover-color;
-                background: @esf-submenu-item-highlight-background;
+                color: @esui-submenu-item-hover-color;
+                background: @esui-submenu-item-highlight-background;
             }
             > .@{ui-class-prefix}-submenu {
                 display: block;
@@ -80,22 +80,22 @@
 }
 
 .@{ui-class-prefix}-submenu-separator-top {
-    border-top: @esf-submenu-separator-border;
+    border-top: @esui-submenu-separator-border;
 }
 
 .@{ui-class-prefix}-submenu-separator-bottom {
-    border-bottom: @esf-submenu-separator-border;
+    border-bottom: @esui-submenu-separator-border;
 }
 
-.esf-submenu-variant(
+.esui-submenu-variant(
     @background,
     @border,
     @separator-border,
     @text-color,
     @text-hover-color,
     @hightlight-color,
-    @submenu-padding: @esf-submenu-padding,
-    @submenu-item-padding: @esf-submenu-item-padding
+    @submenu-padding: @esui-submenu-padding,
+    @submenu-item-padding: @esui-submenu-item-padding
 ) {
     padding: @submenu-padding;
     background: @background;

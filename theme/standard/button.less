@@ -5,56 +5,56 @@
 @import "variable.less";
 
 // core variables
-@esf-button-font-family: @esf-global-font-family;
-@esf-button-height: @esf-single-line-control-height;
-@esf-button-line-height: @esf-single-line-control-height;
-@esf-button-link-color: @esf-palette-link-color;
-@esf-button-link-hover-color: @esf-palette-link-hover-color;
+@esui-button-font-family: @esui-global-font-family;
+@esui-button-height: @esui-single-line-control-height;
+@esui-button-line-height: @esui-single-line-control-height;
+@esui-button-link-color: @esui-palette-link-color;
+@esui-button-link-hover-color: @esui-palette-link-hover-color;
 
 // theme variables
-@esf-button-text-color: @esf-palette-color;
-@esf-button-background-color: @esf-palette-neutral-color;
-@esf-button-hover-background-color: @esf-palette-neutral-highlight-color;
-@esf-button-active-background-color: @esf-palette-neutral-shadow-color;
-@esf-button-focus-background-color: @esf-palette-neutral-highlight-color;
+@esui-button-text-color: @esui-palette-color;
+@esui-button-background-color: @esui-palette-neutral-color;
+@esui-button-hover-background-color: @esui-palette-neutral-highlight-color;
+@esui-button-active-background-color: @esui-palette-neutral-shadow-color;
+@esui-button-focus-background-color: @esui-palette-neutral-highlight-color;
 
 // primary button
-@esf-button-primary-text-color: @esf-palette-contrast-color;
-@esf-button-primary-background-color: @esf-palette-primary-color;
-@esf-button-primary-hover-background-color: @esf-palette-primary-highlight-color;
-@esf-button-primary-active-background-color: @esf-palette-primary-shadow-color;
-@esf-button-primary-focus-background-color: @esf-palette-primary-highlight-color;
+@esui-button-primary-text-color: @esui-palette-contrast-color;
+@esui-button-primary-background-color: @esui-palette-primary-color;
+@esui-button-primary-hover-background-color: @esui-palette-primary-highlight-color;
+@esui-button-primary-active-background-color: @esui-palette-primary-shadow-color;
+@esui-button-primary-focus-background-color: @esui-palette-primary-highlight-color;
 
 // success button
-@esf-button-success-text-color: @esf-palette-contrast-color;
-@esf-button-success-background-color: @esf-palette-success-color;
-@esf-button-success-hover-background-color: @esf-palette-success-highlight-color;
-@esf-button-success-active-background-color: @esf-palette-success-shadow-color;
-@esf-button-success-focus-background-color: @esf-palette-success-highlight-color;
+@esui-button-success-text-color: @esui-palette-contrast-color;
+@esui-button-success-background-color: @esui-palette-success-color;
+@esui-button-success-hover-background-color: @esui-palette-success-highlight-color;
+@esui-button-success-active-background-color: @esui-palette-success-shadow-color;
+@esui-button-success-focus-background-color: @esui-palette-success-highlight-color;
 
 // info button
-@esf-button-info-text-color: @esf-palette-contrast-color;
-@esf-button-info-background-color: @esf-palette-info-color;
-@esf-button-info-hover-background-color: @esf-palette-info-highlight-color;
-@esf-button-info-active-background-color: @esf-palette-info-shadow-color;
-@esf-button-info-focus-background-color: @esf-palette-info-highlight-color;
+@esui-button-info-text-color: @esui-palette-contrast-color;
+@esui-button-info-background-color: @esui-palette-info-color;
+@esui-button-info-hover-background-color: @esui-palette-info-highlight-color;
+@esui-button-info-active-background-color: @esui-palette-info-shadow-color;
+@esui-button-info-focus-background-color: @esui-palette-info-highlight-color;
 
-@esf-button-warning-text-color: @esf-palette-contrast-color;
-@esf-button-warning-background-color: @esf-palette-warning-color;
-@esf-button-warning-hover-background-color: @esf-palette-warning-highlight-color;
-@esf-button-warning-active-background-color: @esf-palette-warning-shadow-color;
-@esf-button-warning-focus-background-color: @esf-palette-warning-highlight-color;
+@esui-button-warning-text-color: @esui-palette-contrast-color;
+@esui-button-warning-background-color: @esui-palette-warning-color;
+@esui-button-warning-hover-background-color: @esui-palette-warning-highlight-color;
+@esui-button-warning-active-background-color: @esui-palette-warning-shadow-color;
+@esui-button-warning-focus-background-color: @esui-palette-warning-highlight-color;
 
 // danger button
-@esf-button-danger-text-color: @esf-palette-contrast-color;
-@esf-button-danger-background-color: @esf-palette-danger-color;
-@esf-button-danger-hover-background-color: @esf-palette-danger-highlight-color;
-@esf-button-danger-active-background-color: @esf-palette-danger-shadow-color;
-@esf-button-danger-focus-background-color: @esf-palette-danger-highlight-color;
+@esui-button-danger-text-color: @esui-palette-contrast-color;
+@esui-button-danger-background-color: @esui-palette-danger-color;
+@esui-button-danger-hover-background-color: @esui-palette-danger-highlight-color;
+@esui-button-danger-active-background-color: @esui-palette-danger-shadow-color;
+@esui-button-danger-focus-background-color: @esui-palette-danger-highlight-color;
 
-@esf-button-group-separator-color: @esf-palette-contrast-color;
+@esui-button-group-separator-color: @esui-palette-contrast-color;
 
-.esf-button-variant(
+.esui-button-variant(
     @text-color,
     @background-color,
     @hover-background-color,
@@ -79,11 +79,11 @@
 }
 
 // only a shortcut for pure color buttons.
-.esf-button-variant(
+.esui-button-variant(
     @text-color,
     @background-color
 ) {
-    .esf-button-variant(
+    .esui-button-variant(
         @text-color,
         @background-color,
         lighten(@background-color, 5%),
@@ -92,72 +92,72 @@
     );
 }
 
-.esf-button-theme() {
-    .esf-button-variant(
-        @esf-button-text-color,
-        @esf-button-background-color,
-        @esf-button-hover-background-color,
-        @esf-button-active-background-color,
-        @esf-button-focus-background-color
+.esui-button-theme() {
+    .esui-button-variant(
+        @esui-button-text-color,
+        @esui-button-background-color,
+        @esui-button-hover-background-color,
+        @esui-button-active-background-color,
+        @esui-button-focus-background-color
     );
 }
 
-.esf-button-primary-theme() {
-    .esf-button-variant(
-        @esf-button-primary-text-color,
-        @esf-button-primary-background-color,
-        @esf-button-primary-hover-background-color,
-        @esf-button-primary-active-background-color,
-        @esf-button-primary-focus-background-color
+.esui-button-primary-theme() {
+    .esui-button-variant(
+        @esui-button-primary-text-color,
+        @esui-button-primary-background-color,
+        @esui-button-primary-hover-background-color,
+        @esui-button-primary-active-background-color,
+        @esui-button-primary-focus-background-color
     );
 }
 
-.esf-button-success-theme() {
-    .esf-button-variant(
-        @esf-button-success-text-color,
-        @esf-button-success-background-color,
-        @esf-button-success-hover-background-color,
-        @esf-button-success-active-background-color,
-        @esf-button-success-focus-background-color
+.esui-button-success-theme() {
+    .esui-button-variant(
+        @esui-button-success-text-color,
+        @esui-button-success-background-color,
+        @esui-button-success-hover-background-color,
+        @esui-button-success-active-background-color,
+        @esui-button-success-focus-background-color
     );
 }
 
-.esf-button-info-theme() {
-    .esf-button-variant(
-        @esf-button-info-text-color,
-        @esf-button-info-background-color,
-        @esf-button-info-hover-background-color,
-        @esf-button-info-active-background-color,
-        @esf-button-info-focus-background-color
+.esui-button-info-theme() {
+    .esui-button-variant(
+        @esui-button-info-text-color,
+        @esui-button-info-background-color,
+        @esui-button-info-hover-background-color,
+        @esui-button-info-active-background-color,
+        @esui-button-info-focus-background-color
     );
 }
 
-.esf-button-warning-theme() {
-    .esf-button-variant(
-        @esf-button-warning-text-color,
-        @esf-button-warning-background-color,
-        @esf-button-warning-hover-background-color,
-        @esf-button-warning-active-background-color,
-        @esf-button-warning-focus-background-color
+.esui-button-warning-theme() {
+    .esui-button-variant(
+        @esui-button-warning-text-color,
+        @esui-button-warning-background-color,
+        @esui-button-warning-hover-background-color,
+        @esui-button-warning-active-background-color,
+        @esui-button-warning-focus-background-color
     );
 }
 
-.esf-button-danger-theme() {
-    .esf-button-variant(
-        @esf-button-danger-text-color,
-        @esf-button-danger-background-color,
-        @esf-button-danger-hover-background-color,
-        @esf-button-danger-active-background-color,
-        @esf-button-danger-focus-background-color
+.esui-button-danger-theme() {
+    .esui-button-variant(
+        @esui-button-danger-text-color,
+        @esui-button-danger-background-color,
+        @esui-button-danger-hover-background-color,
+        @esui-button-danger-active-background-color,
+        @esui-button-danger-focus-background-color
     );
 }
 
-.esf-button-group-theme() {
+.esui-button-group-theme() {
     &.@{ui-class-prefix}-button-group-separated {
         .@{ui-class-prefix}-button {
             margin-left: 0;
             &:not(:last-child) {
-                border-right: 1px solid @esf-button-group-separator-color;
+                border-right: 1px solid @esui-button-group-separator-color;
             }
         }
     }

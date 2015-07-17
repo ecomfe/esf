@@ -1,35 +1,35 @@
 @import "base.less";
 
-@esf-panel-margin: 1.5em 0;
+@esui-panel-margin: 1.5em 0;
 
-@esf-panel-border-radius: 0;
-@esf-panel-header-padding: 10px 15px;
-@esf-panel-body-padding: 10px 15px;
-@esf-panel-footer-padding: 10px 15px;
+@esui-panel-border-radius: 0;
+@esui-panel-header-padding: 10px 15px;
+@esui-panel-body-padding: 10px 15px;
+@esui-panel-footer-padding: 10px 15px;
 
 .@{ui-class-prefix}-panel {
     display: block;
 }
 
 .@{ui-class-prefix}-panel-custom {
-    margin: @esf-panel-margin;
-    .esf-border-radius(
-        @esf-panel-border-radius,
-        @esf-panel-border-radius
+    margin: @esui-panel-margin;
+    .esui-border-radius(
+        @esui-panel-border-radius,
+        @esui-panel-border-radius
     );
 
-    .esf-panel-custom-theme();
+    .esui-panel-custom-theme();
 
     .@{ui-class-prefix}-panel-header {
-        padding: @esf-panel-header-padding;
+        padding: @esui-panel-header-padding;
         // for floating elements
         overflow: auto;
-        .esf-border-top-radius(
-            @esf-panel-border-radius,
-            @esf-panel-border-radius
+        .esui-border-top-radius(
+            @esui-panel-border-radius,
+            @esui-panel-border-radius
         );
 
-        .esf-panel-header-theme();
+        .esui-panel-header-theme();
     }
 
     .@{ui-class-prefix}-panel-left {
@@ -41,27 +41,27 @@
     }
 
     .@{ui-class-prefix}-panel-footer {
-        padding: @esf-panel-footer-padding;
+        padding: @esui-panel-footer-padding;
         // for floating elements
         overflow: auto;
-        .esf-border-bottom-radius(
-            @esf-panel-border-radius,
-            @esf-panel-border-radius
+        .esui-border-bottom-radius(
+            @esui-panel-border-radius,
+            @esui-panel-border-radius
         );
 
-        .esf-panel-footer-theme();
+        .esui-panel-footer-theme();
     }
 
     .@{ui-class-prefix}-panel-body {
-        padding: @esf-panel-body-padding;
-        .esf-panel-body-theme();
+        padding: @esui-panel-body-padding;
+        .esui-panel-body-theme();
     }
 }
 
-.esf-panel-custom-theme() {}
+.esui-panel-custom-theme() {}
 
-.esf-panel-header-theme() {}
+.esui-panel-header-theme() {}
 
-.esf-panel-body-theme() {}
+.esui-panel-body-theme() {}
 
-.esf-panel-footer-theme() {}
+.esui-panel-footer-theme() {}

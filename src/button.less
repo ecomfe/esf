@@ -1,32 +1,32 @@
 @import "base.less";
 
-@esf-button-font-family: 'Helvetica Neue', Helvetica, Arial, '宋体', SimSun, sans-serif;
-@esf-button-font-weight: bold;
-@esf-button-height: 2.4em;
-@esf-button-padding: 0 1em;
-@esf-button-link-color: #6CCDC0;
-@esf-button-link-decoration: none;
-@esf-button-link-hover-color: lighten(#6CCDC0, 15%);
-@esf-button-link-hover-decoration: underline;
-@esf-button-radius: 0;
+@esui-button-font-family: 'Helvetica Neue', Helvetica, Arial, '宋体', SimSun, sans-serif;
+@esui-button-font-weight: bold;
+@esui-button-height: 2.4em;
+@esui-button-padding: 0 1em;
+@esui-button-link-color: #6CCDC0;
+@esui-button-link-decoration: none;
+@esui-button-link-hover-color: lighten(#6CCDC0, 15%);
+@esui-button-link-hover-decoration: underline;
+@esui-button-radius: 0;
 
 .@{ui-class-prefix}-button {
-    .esf-button();
-    .esf-button-theme();
+    .esui-button();
+    .esui-button-theme();
     &:disabled {
-        .esf-disabled();
+        .esui-disabled();
     }
 }
 
 // variants
 .@{ui-class-prefix}-button.@{ui-class-prefix}-button-icon {
     padding: 0;
-    .size(@esf-button-height);
-    line-height: @esf-button-height;
+    .size(@esui-button-height);
+    line-height: @esui-button-height;
 }
 
 .@{ui-class-prefix}-button-circular {
-    .esf-circular();
+    .esui-circular();
 }
 
 .@{ui-class-prefix}-button-fluid {
@@ -35,12 +35,12 @@
 }
 
 .@{ui-class-prefix}-button-link {
-    color: @esf-button-link-color;
-    text-decoration: @esf-button-link-decoration;
+    color: @esui-button-link-color;
+    text-decoration: @esui-button-link-decoration;
 
     &:hover {
-        color: @esf-button-link-hover-color;
-        text-decoration: @esf-button-link-hover-decoration;
+        color: @esui-button-link-hover-color;
+        text-decoration: @esui-button-link-hover-decoration;
     }
     &:focus {
         // adding outline for link element
@@ -60,31 +60,31 @@
         margin-left: -1px;
         float: left;
     }
-    .esf-button-group-border();
-    .esf-button-group-theme();
+    .esui-button-group-border();
+    .esui-button-group-theme();
 }
 
 .@{ui-class-prefix}-button-primary {
-    .esf-button-primary-theme();
+    .esui-button-primary-theme();
 }
 
 .@{ui-class-prefix}-button-success {
-    .esf-button-success-theme();
+    .esui-button-success-theme();
 }
 
 .@{ui-class-prefix}-button-info {
-    .esf-button-info-theme();
+    .esui-button-info-theme();
 }
 
 .@{ui-class-prefix}-button-warning {
-    .esf-button-warning-theme();
+    .esui-button-warning-theme();
 }
 
 .@{ui-class-prefix}-button-danger {
-    .esf-button-danger-theme();
+    .esui-button-danger-theme();
 }
 
-.esf-button-group-border() when (@esf-button-radius > 0) {
+.esui-button-group-border() when (@esui-button-radius > 0) {
     .@{ui-class-prefix}-button:not(:first-child):not(:last-child) {
         .border-radius(0);
     }
@@ -96,7 +96,7 @@
     }
 }
 
-.esf-button-group-border() {}
+.esui-button-group-border() {}
 
 /*
  * 1. Correct inability to style clickable `input` types in iOS.
@@ -110,7 +110,7 @@
  * 9. `min-height` is necessary for `input` elements in Firefox and Opera because `line-height` is not working.
  * 10. Required for `a`.
  */
-.esf-button() {
+.esui-button() {
     // 1
     -webkit-appearance: none;
     // 2
@@ -128,7 +128,7 @@
     .box-sizing(border-box);
     text-align: center;
     vertical-align: middle;
-    font-family: @esf-button-font-family;
+    font-family: @esui-button-font-family;
     // 10
     text-decoration: none;
     &:hover,
@@ -138,30 +138,30 @@
     }
     .user-select(none);
     // 8
-    line-height: @esf-button-height;
+    line-height: @esui-button-height;
     // 9
-    min-height: @esf-button-height;
-    height: @esf-button-height;
+    min-height: @esui-button-height;
+    height: @esui-button-height;
     // button padding
-    padding: @esf-button-padding;
+    padding: @esui-button-padding;
     cursor: pointer;
-    font-weight: @esf-button-font-weight;
-    @esf-button-transition:
+    font-weight: @esui-button-font-weight;
+    @esui-button-transition:
         background-color 0.3s ease-out,
         box-shadow 0.2s ease,
         border-color 0.2s ease;
-    .esf-transition(@esf-button-transition);
-    .esf-border-radius(
-        @esf-button-radius,
-        @esf-button-radius
+    .esui-transition(@esui-button-transition);
+    .esui-border-radius(
+        @esui-button-radius,
+        @esui-button-radius
     );
 }
 
 // theme hooks
-.esf-button-theme {}
-.esf-button-primary-theme() {}
-.esf-button-success-theme() {}
-.esf-button-info-theme() {}
-.esf-button-warning-theme() {}
-.esf-button-danger-theme() {}
-.esf-button-group-theme {}
+.esui-button-theme {}
+.esui-button-primary-theme() {}
+.esui-button-success-theme() {}
+.esui-button-info-theme() {}
+.esui-button-warning-theme() {}
+.esui-button-danger-theme() {}
+.esui-button-group-theme {}

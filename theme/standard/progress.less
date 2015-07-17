@@ -5,35 +5,35 @@
 @import "variable.less";
 
 // theme
-@esf-progress-background: @esf-palette-neutral-color;
-@esf-progress-bar-background: @esf-palette-primary-color;
-@esf-progress-bar-font-color: @esf-palette-white;
-@esf-progress-bar-font-size: 1em;
-@esf-progress-bar-success-background: @esf-palette-success-color;
-@esf-progress-bar-info-background: @esf-palette-info-color;
-@esf-progress-bar-warning-background: @esf-palette-warning-color;
-@esf-progress-bar-danger-background: @esf-palette-danger-color;
+@esui-progress-background: @esui-palette-neutral-color;
+@esui-progress-bar-background: @esui-palette-primary-color;
+@esui-progress-bar-font-color: @esui-palette-white;
+@esui-progress-bar-font-size: 1em;
+@esui-progress-bar-success-background: @esui-palette-success-color;
+@esui-progress-bar-info-background: @esui-palette-info-color;
+@esui-progress-bar-warning-background: @esui-palette-warning-color;
+@esui-progress-bar-danger-background: @esui-palette-danger-color;
 
-.esf-progress-theme() {
+.esui-progress-theme() {
     .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
-    background: @esf-progress-background;
+    background: @esui-progress-background;
 }
 
-.esf-progress-bar-theme() {
-    color: @esf-progress-bar-font-color;
-    background: @esf-progress-bar-background;
+.esui-progress-bar-theme() {
+    color: @esui-progress-bar-font-color;
+    background: @esui-progress-bar-background;
     .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
     &.@{ui-class-prefix}-progress-bar-success {
-        background: @esf-progress-bar-success-background;
+        background: @esui-progress-bar-success-background;
     }
     &.@{ui-class-prefix}-progress-bar-info {
-        background: @esf-progress-bar-info-background;
+        background: @esui-progress-bar-info-background;
     }
     &.@{ui-class-prefix}-progress-bar-warning {
-        background: @esf-progress-bar-warning-background;
+        background: @esui-progress-bar-warning-background;
     }
     &.@{ui-class-prefix}-progress-bar-danger {
-        background: @esf-progress-bar-danger-background;
+        background: @esui-progress-bar-danger-background;
     }
     &.@{ui-class-prefix}-progress-bar-striped {
         .linear-gradient(
@@ -49,11 +49,11 @@
         background-size: 40px 40px;
     }
     &.@{ui-class-prefix}-progress-bar-animated {
-        .animation(esf-progress-bar-stripes 2s linear infinite);
+        .animation(esui-progress-bar-stripes 2s linear infinite);
     }
 }
 
-@-webkit-keyframes esf-progress-bar-stripes {
+@-webkit-keyframes esui-progress-bar-stripes {
     0% {
         background-position: 0 0;
     }
@@ -61,7 +61,7 @@
         background-position: 40px 0;
     }
 }
-@keyframes esf-progress-bar-stripes {
+@keyframes esui-progress-bar-stripes {
     0% {
         background-position: 0 0;
     }

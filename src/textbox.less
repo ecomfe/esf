@@ -5,63 +5,63 @@
 // =========
 
 // keep the same height as button
-@esf-textbox-height: 2.5em;
+@esui-textbox-height: 2.5em;
 
 // padding
-@esf-textbox-padding: 0.5em;
+@esui-textbox-padding: 0.5em;
 
 // radius
-@esf-textbox-radius: 0;
+@esui-textbox-radius: 0;
 
-@esf-textbox-icon-width: @esf-textbox-height;
+@esui-textbox-icon-width: @esui-textbox-height;
 
 .@{ui-class-prefix}-textbox {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    .esf-border-radius(
-        @esf-textbox-radius,
-        @esf-textbox-radius
+    .esui-border-radius(
+        @esui-textbox-radius,
+        @esui-textbox-radius
     );
 
     > input {
-        height: @esf-textbox-height;
+        height: @esui-textbox-height;
         vertical-align: top;
     }
     > input,
     > textarea {
-        padding: @esf-textbox-padding;
+        padding: @esui-textbox-padding;
         width: 100%;
         margin: 0;
         outline: 0;
-        .esf-border-radius(
-            @esf-textbox-radius,
-            @esf-textbox-radius
+        .esui-border-radius(
+            @esui-textbox-radius,
+            @esui-textbox-radius
         );
-        @esf-textbox-transition:
+        @esui-textbox-transition:
             background-color 0.3s ease-out,
             box-shadow 0.2s ease,
             border-color 0.2s ease;
-        .esf-transition(@esf-textbox-transition);
+        .esui-transition(@esui-textbox-transition);
         .box-sizing(border-box);
         font-size: 100%;
         resize: none;
 
-        .esf-textbox-input-theme();
+        .esui-textbox-input-theme();
     }
-    .esf-textbox-theme();
+    .esui-textbox-theme();
 }
 
 // icon
 // use textbox-icon to specify icon
 .@{ui-class-prefix}-textbox-icon {
-    width: @esf-textbox-icon-width;
-    height: @esf-textbox-height;
-    line-height: @esf-textbox-height !important;
+    width: @esui-textbox-icon-width;
+    height: @esui-textbox-height;
+    line-height: @esui-textbox-height !important;
     position: absolute;
     top: 0;
     text-align: center;
-    .esf-textbox-icon-theme();
+    .esui-textbox-icon-theme();
 }
 
 .@{ui-class-prefix}-textbox-icon-left {
@@ -69,7 +69,7 @@
         left: 0;
     }
     input {
-        padding-left: @esf-textbox-icon-width;
+        padding-left: @esui-textbox-icon-width;
     }
 }
 
@@ -78,7 +78,7 @@
         right: 0;
     }
     input {
-        padding-right: @esf-textbox-icon-width;
+        padding-right: @esui-textbox-icon-width;
     }
 }
 
@@ -101,18 +101,18 @@
     .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-button,
     .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-select-inner,
     .@{ui-class-prefix}-textbox:first-child input {
-        .esf-border-right-radius(
+        .esui-border-right-radius(
             0,
-            @esf-textbox-radius
+            @esui-textbox-radius
         );
         border-right: 0 !important;
     }
     .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-button,
     .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-select-inner,
     .@{ui-class-prefix}-textbox:last-child input {
-        .esf-border-left-radius(
+        .esui-border-left-radius(
             0,
-            @esf-textbox-radius
+            @esui-textbox-radius
         );
         border-left: 0 !important;
     }
@@ -131,7 +131,7 @@
 
 // textbox border button
 .@{ui-class-prefix}-button.@{ui-class-prefix}-button-text-border {
-    .esf-textbox-button-text-border-theme();
+    .esui-textbox-button-text-border-theme();
 }
 
 // widths-sizes
@@ -184,4 +184,4 @@
     }
 }
 
-.esf-textbox-icon-theme() {}
+.esui-textbox-icon-theme() {}

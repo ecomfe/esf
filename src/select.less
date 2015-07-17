@@ -1,31 +1,31 @@
 @import "base.less";
 
-@esf-form-select-height: 2.4em;
-@esf-form-select-padding: .5em 1.9em .5em .5em;
-@esf-form-select-border-radius: 0;
+@esui-form-select-height: 2.4em;
+@esui-form-select-padding: .5em 1.9em .5em .5em;
+@esui-form-select-border-radius: 0;
 
 // http://jsbin.com/yaruh
 .@{ui-class-prefix}-select-custom {
     position: relative;
     display: inline-block;
     .box-sizing(border-box);
-    height: @esf-form-select-height;
+    height: @esui-form-select-height;
     vertical-align: middle;
-    .esf-border-radius(
-        @esf-form-select-border-radius,
-        @esf-form-select-border-radius
+    .esui-border-radius(
+        @esui-form-select-border-radius,
+        @esui-form-select-border-radius
     );
     option {
         font-weight:normal;
     }
-    .esf-select-custom-theme();
+    .esui-select-custom-theme();
     // Hover style
     &:hover {
-        .esf-select-custom-hover-theme();
+        .esui-select-custom-hover-theme();
     }
     // Focus style
     &:focus {
-        .esf-select-custom-focus-theme();
+        .esui-select-custom-focus-theme();
     }
 }
 
@@ -41,8 +41,8 @@
     -webkit-appearance: none;
     .box-sizing(border-box);
     // Prefixed box-sizing rules necessary for older browsers
-    padding: @esf-form-select-padding;
-    height: @esf-form-select-height;
+    padding: @esui-form-select-padding;
+    height: @esui-form-select-height;
     &[disabled] {
         cursor: not-allowed;
     }
@@ -74,12 +74,12 @@ x:-o-prefocus, .@{ui-class-prefix}-select-custom:after {
     color: transparent;
 }
 
-.esf-select-custom-arrow-theme();
+.esui-select-custom-arrow-theme();
 
-.esf-select-custom-theme() {}
+.esui-select-custom-theme() {}
 
-.esf-select-custom-hover-theme() {}
+.esui-select-custom-hover-theme() {}
 
-.esf-select-custom-focus-theme() {}
+.esui-select-custom-focus-theme() {}
 
-.esf-select-custom-arrow-theme() {}
+.esui-select-custom-arrow-theme() {}

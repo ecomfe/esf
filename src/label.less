@@ -1,8 +1,8 @@
 @import "base.less";
 
-@esf-label-padding: .5em .8em;
-@esf-label-circular-padding: .5em;
-@esf-label-border-radius: 0;
+@esui-label-padding: .5em .8em;
+@esui-label-circular-padding: .5em;
+@esui-label-border-radius: 0;
 
 .@{ui-class-prefix}-label {
     display: inline-block;
@@ -11,40 +11,40 @@
 .@{ui-class-prefix}-label-custom {
     display: inline-block;
     vertical-align: middle;
-    padding: @esf-label-padding;
+    padding: @esui-label-padding;
 
-    .esf-border-radius(
-        @esf-label-border-radius,
-        @esf-label-border-radius
+    .esui-border-radius(
+        @esui-label-border-radius,
+        @esui-label-border-radius
     );
-    .esf-label-theme();
+    .esui-label-theme();
 }
 
 .@{ui-class-prefix}-label-primary {
-    .esf-label-primary-theme();
+    .esui-label-primary-theme();
 }
 
 .@{ui-class-prefix}-label-success {
-    .esf-label-success-theme();
+    .esui-label-success-theme();
 }
 
 .@{ui-class-prefix}-label-warning {
-    .esf-label-warning-theme();
+    .esui-label-warning-theme();
 }
 
 .@{ui-class-prefix}-label-danger {
-    .esf-label-danger-theme();
+    .esui-label-danger-theme();
 }
 
 .@{ui-class-prefix}-label-info {
-    .esf-label-info-theme();
+    .esui-label-info-theme();
 }
 
 .@{ui-class-prefix}-label-pointer {
     position: relative;
     margin-top: .8em;
     &:before {
-        .triangle(top, 1em, @esf-label-background, side);
+        .triangle(top, 1em, @esui-label-background, side);
         border-width: 0.7em;
         content: '';
         left: 50%;
@@ -58,7 +58,7 @@
     position: relative;
     margin-bottom: .8em;
     &:before {
-        .triangle(bottom, 1em, @esf-label-background, side);
+        .triangle(bottom, 1em, @esui-label-background, side);
         border-width: 0.7em;
         content: '';
         left: 50%;
@@ -72,7 +72,7 @@
     position: relative;
     margin-left: .8em;
     &:before {
-        .triangle(left, 1em, @esf-label-background, side);
+        .triangle(left, 1em, @esui-label-background, side);
         border-width: 0.7em;
         content: '';
         left: -0.5em;
@@ -86,7 +86,7 @@
     position: relative;
     margin-right: .8em;
     &:before {
-        .triangle(right, 1em, @esf-label-background, side);
+        .triangle(right, 1em, @esui-label-background, side);
         border-width: 0.7em;
         content: '';
         right: 0;
@@ -106,9 +106,9 @@
 
     line-height: 1;
     text-align: center;
-    padding: @esf-label-circular-padding;
+    padding: @esui-label-circular-padding;
 
-    .esf-circular();
+    .esui-circular();
 }
 
 .@{ui-class-prefix}-label-slim {
@@ -116,9 +116,9 @@
 }
 
 // themes
-.esf-label-theme() {}
-.esf-label-primary-theme() {}
-.esf-label-success-theme() {}
-.esf-label-warning-theme() {}
-.esf-label-danger-theme() {}
-.esf-label-info-theme() {}
+.esui-label-theme() {}
+.esui-label-primary-theme() {}
+.esui-label-success-theme() {}
+.esui-label-warning-theme() {}
+.esui-label-danger-theme() {}
+.esui-label-info-theme() {}

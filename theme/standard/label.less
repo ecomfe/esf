@@ -5,61 +5,61 @@
 @import "variable.less";
 
 // theme variables
-@esf-label-color: @esf-palette-color;
-@esf-label-background: @esf-palette-neutral-color;
+@esui-label-color: @esui-palette-color;
+@esui-label-background: @esui-palette-neutral-color;
 
-@esf-label-primary-color: @esf-palette-contrast-color;
-@esf-label-primary-background: @esf-palette-primary-color;
+@esui-label-primary-color: @esui-palette-contrast-color;
+@esui-label-primary-background: @esui-palette-primary-color;
 
-@esf-label-success-color: @esf-palette-contrast-color;
-@esf-label-success-background: @esf-palette-success-color;
+@esui-label-success-color: @esui-palette-contrast-color;
+@esui-label-success-background: @esui-palette-success-color;
 
-@esf-label-warning-color: @esf-palette-contrast-color;
-@esf-label-warning-background: @esf-palette-warning-color;
+@esui-label-warning-color: @esui-palette-contrast-color;
+@esui-label-warning-background: @esui-palette-warning-color;
 
-@esf-label-danger-color: @esf-palette-contrast-color;
-@esf-label-danger-background: @esf-palette-danger-color;
+@esui-label-danger-color: @esui-palette-contrast-color;
+@esui-label-danger-background: @esui-palette-danger-color;
 
-@esf-label-info-color: @esf-palette-contrast-color;
-@esf-label-info-background: @esf-palette-info-color;
+@esui-label-info-color: @esui-palette-contrast-color;
+@esui-label-info-background: @esui-palette-info-color;
 
-.esf-label-theme() {
-    background: @esf-label-background;
-    color: @esf-label-color;
+.esui-label-theme() {
+    background: @esui-label-background;
+    color: @esui-label-color;
 }
 
-.esf-label-primary-theme() {
-    background: @esf-label-primary-background;
-    color: @esf-label-primary-color;
-    .esf-label-pointer-variant-color(@esf-label-primary-background);
+.esui-label-primary-theme() {
+    background: @esui-label-primary-background;
+    color: @esui-label-primary-color;
+    .esui-label-pointer-variant-color(@esui-label-primary-background);
 }
 
-.esf-label-success-theme() {
-    background: @esf-label-success-background;
-    color: @esf-label-success-color;
-    .esf-label-pointer-variant-color(@esf-label-success-background);
+.esui-label-success-theme() {
+    background: @esui-label-success-background;
+    color: @esui-label-success-color;
+    .esui-label-pointer-variant-color(@esui-label-success-background);
 }
 
-.esf-label-warning-theme() {
-    background: @esf-label-warning-background;
-    color: @esf-label-warning-color;
-    .esf-label-pointer-variant-color(@esf-label-warning-background);
+.esui-label-warning-theme() {
+    background: @esui-label-warning-background;
+    color: @esui-label-warning-color;
+    .esui-label-pointer-variant-color(@esui-label-warning-background);
 }
 
-.esf-label-danger-theme() {
-    background: @esf-label-danger-background;
-    color: @esf-label-danger-color;
-    .esf-label-pointer-variant-color(@esf-label-danger-background);
+.esui-label-danger-theme() {
+    background: @esui-label-danger-background;
+    color: @esui-label-danger-color;
+    .esui-label-pointer-variant-color(@esui-label-danger-background);
 }
 
-.esf-label-info-theme() {
-    background: @esf-label-info-background;
-    color: @esf-label-info-color;
-    .esf-label-pointer-variant-color(@esf-label-info-background);
+.esui-label-info-theme() {
+    background: @esui-label-info-background;
+    color: @esui-label-info-color;
+    .esui-label-pointer-variant-color(@esui-label-info-background);
 }
 
 // theme used mixin
-.esf-label-pointer-variant-color(@bg-color) {
+.esui-label-pointer-variant-color(@bg-color) {
     &.@{ui-class-prefix}-label-pointer:before {
         border-bottom-color: @bg-color;
     }

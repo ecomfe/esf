@@ -1,7 +1,7 @@
 @import "base.less";
 
-@esf-loader-color-for-light-bg: #6CCDC0;
-@esf-loader-color2-for-light-bg: lighten(#6CCDC0, 25%);
+@esui-loader-color-for-light-bg: #6CCDC0;
+@esui-loader-color2-for-light-bg: lighten(#6CCDC0, 25%);
 
 // TODO: also for fallback loader for IE8
 .@{ui-class-prefix}-loader {
@@ -20,16 +20,16 @@
 
 // bouncers effect
 // http://tobiasahlin.com/spinkit
-.esf-loader-bouncers(@dotSize:1.25em) {
+.esui-loader-bouncers(@dotSize:1.25em) {
     .@{ui-class-prefix}-loader-bouncers {
         text-align: center;
         > div {
             .size(@dotSize);
-            background-color: @esf-loader-color-for-light-bg;
+            background-color: @esui-loader-color-for-light-bg;
 
-            .esf-circular();
+            .esui-circular();
             display: inline-block;
-            .animation(esf-loader-bounce 1.4s infinite ease-in-out);
+            .animation(esui-loader-bounce 1.4s infinite ease-in-out);
         }
         :nth-child(1) {
             .animation-delay(-.32s);
@@ -39,7 +39,7 @@
         }
     }
 
-    @-webkit-keyframes esf-loader-bounce {
+    @-webkit-keyframes esui-loader-bounce {
         0%, 80%, 100% {
             -webkit-transform: scale(0.0)
         }
@@ -48,7 +48,7 @@
         }
     }
 
-    @keyframes esf-loader-bounce {
+    @keyframes esui-loader-bounce {
         0%, 80%, 100% { 
             transform: scale(0.0);
         } 40% {
@@ -58,18 +58,18 @@
 }
 
 // border spin effect
-.esf-loader-border() {
+.esui-loader-border() {
     .@{ui-class-prefix}-loader-border {
-        border-bottom: 6px solid @esf-loader-color2-for-light-bg;
-        border-left: 6px solid @esf-loader-color2-for-light-bg;
-        border-right: 6px solid @esf-loader-color2-for-light-bg;
-        border-top: 6px solid @esf-loader-color-for-light-bg;
+        border-bottom: 6px solid @esui-loader-color2-for-light-bg;
+        border-left: 6px solid @esui-loader-color2-for-light-bg;
+        border-right: 6px solid @esui-loader-color2-for-light-bg;
+        border-top: 6px solid @esui-loader-color-for-light-bg;
         display: inline-block;
         border-radius: 100%;
         .size(2em);
-        .animation(esf-loader-border-spin .6s infinite linear);
+        .animation(esui-loader-border-spin .6s infinite linear);
     }
-    @-webkit-keyframes esf-loader-border-spin {
+    @-webkit-keyframes esui-loader-border-spin {
         0% {
             -webkit-transform: rotateZ(0deg);
         }
@@ -77,7 +77,7 @@
             -webkit-transform: rotateZ(360deg);
         }
     }
-    @keyframes esf-loader-border-spin {
+    @keyframes esui-loader-border-spin {
         from {
             transform: rotate(0deg);
         }
@@ -89,7 +89,7 @@
 
 // 2 borders spin
 // http://codepen.io/varemenos/pen/IAzbo
-.esf-loader-borders() {
+.esui-loader-borders() {
     .@{ui-class-prefix}-loader-borders:before {
         content: '';
     }
@@ -101,12 +101,12 @@
         vertical-align: middle;
         text-align: center;
         border: 5px solid transparent;
-        border-top-color: @esf-loader-color-for-light-bg;
-        border-bottom-color: @esf-loader-color-for-light-bg;
+        border-top-color: @esui-loader-color-for-light-bg;
+        border-bottom-color: @esui-loader-color-for-light-bg;
         border-radius: 50%;
-        .animation(esf-loader-borders-spin 1s infinite);
+        .animation(esui-loader-borders-spin 1s infinite);
     }
-    @-webkit-keyframes esf-loader-borders-spin {
+    @-webkit-keyframes esui-loader-borders-spin {
         0% {
             transform: rotateZ(0deg);
         }
@@ -114,7 +114,7 @@
             transform: rotateZ(360deg);
         }
     }
-    @keyframes esf-loader-borders-spin {
+    @keyframes esui-loader-borders-spin {
         0% {
             -webkit-transform: rotateZ(0deg);
         }
@@ -125,17 +125,17 @@
 }
 
 //spinner-wave
-.esf-loader-spinner-wave(@height: 4em) {
+.esui-loader-spinner-wave(@height: 4em) {
     .@{ui-class-prefix}-loader-spinner-wave {
         height: @height;
         text-align: center;
         div {
-            background-color: @esf-loader-color-for-light-bg;
+            background-color: @esui-loader-color-for-light-bg;
             height: 100%;
             width: 6px;
             margin: 0 1px;
             display: inline-block;
-            .animation(esf-loader-spinner-wave 1.2s infinite ease-in-out);
+            .animation(esui-loader-spinner-wave 1.2s infinite ease-in-out);
         }
         :nth-child(1) {
             .animation-delay(0s);
@@ -153,7 +153,7 @@
             .animation-delay(-0.8s);
         }
     }
-    @-webkit-keyframes esf-loader-spinner-wave {
+    @-webkit-keyframes esui-loader-spinner-wave {
         0%, 40%, 100% {
             .transform(scaleY(0.4)); 
         }
@@ -161,7 +161,7 @@
             .transform(scaleY(1));
         } 
     }
-    @keyframes esf-loader-spinner-wave {
+    @keyframes esui-loader-spinner-wave {
         0%, 40%, 100% {
             .transform(scaleY(0.4));
         }
@@ -172,13 +172,13 @@
 }
 
 //ratating-plane
-.esf-loader-rotating-plane(@size:4em) {
+.esui-loader-rotating-plane(@size:4em) {
     .@{ui-class-prefix}-loader-rotating-plane {
         .size(@size);
-        background-color: @esf-loader-color-for-light-bg;
-        .animation(esf-loader-ratating-plane 1.2s infinite ease-in-out);
+        background-color: @esui-loader-color-for-light-bg;
+        .animation(esui-loader-ratating-plane 1.2s infinite ease-in-out);
     }
-    @-webkit-keyframes esf-loader-ratating-plane {
+    @-webkit-keyframes esui-loader-ratating-plane {
         0% {
             .transform(perspective(120px)); 
         }
@@ -189,7 +189,7 @@
             .transform(perspective(120px) rotateY(180deg) rotateX(180deg)); 
         }
     }
-    @keyframes esf-loader-ratating-plane {
+    @keyframes esui-loader-ratating-plane {
         0% {
             .transform(perspective(120px)); 
         }
@@ -203,21 +203,21 @@
 }
 
 //chasing dots
-.esf-loader-chasing-dots(@size:4em) {
+.esui-loader-chasing-dots(@size:4em) {
     .@{ui-class-prefix}-loader-chasing-dots {
         .size(@size);
         position: relative;
         text-align: center;
-        .animation(esf-loader-chasing-dots-rotate 2.0s infinite linear);
+        .animation(esui-loader-chasing-dots-rotate 2.0s infinite linear);
         div {
             width: 60%;
             height: 60%;
             display: inline-block;
             position: absolute;
             top: 0;
-            background-color: @esf-loader-color-for-light-bg;
+            background-color: @esui-loader-color-for-light-bg;
             border-radius: 100%;
-            .animation(esf-loader-chasing-dots-bounce 2.0s infinite ease-in-out);
+            .animation(esui-loader-chasing-dots-bounce 2.0s infinite ease-in-out);
         }
         :nth-child(2) {
             top: auto;
@@ -225,17 +225,17 @@
             .animation-delay(-1.0s);
         }
     }
-    @-webkit-keyframes esf-loader-chasing-dots-rotate {
+    @-webkit-keyframes esui-loader-chasing-dots-rotate {
        100% {
            .transform(rotate(360deg));
        }
     }
-    @keyframes esf-loader-chasing-dots-rotate {
+    @keyframes esui-loader-chasing-dots-rotate {
        100% {
            .transform(rotate(360deg));
        }
     }
-    @-webkit-keyframes esf-loader-chasing-dots-bounce {
+    @-webkit-keyframes esui-loader-chasing-dots-bounce {
         0%, 100% {
             .transform(scale(0.0));
         }
@@ -243,7 +243,7 @@
             .transform(scale(1.0));
         }
     }
-    @keyframes esf-loader-chasing-dots-bounce {
+    @keyframes esui-loader-chasing-dots-bounce {
         0%, 100% {
             .transform(scale(0.0));
         }
@@ -254,7 +254,7 @@
 }
 
 //spinner circles
-.esf-loader-spinner-circles(@size:3em, @dotSize:.5em) {
+.esui-loader-spinner-circles(@size:3em, @dotSize:.5em) {
     .@{ui-class-prefix}-loader-spinner-circles {
         position: relative;
         .size(@size);
@@ -264,10 +264,10 @@
             height: 100%;
             div {
                 .size(@dotSize);
-                background-color: @esf-loader-color-for-light-bg;
+                background-color: @esui-loader-color-for-light-bg;
                 border-radius: 100%;
                 position: absolute;
-                .animation(esf-loader-spinner-circles 1.2s infinite ease-in-out);
+                .animation(esui-loader-spinner-circles 1.2s infinite ease-in-out);
                 // Prevent first frame from flickering when animation starts
                 .animation-fill-mode(both);
             }
@@ -321,7 +321,7 @@
             }
         }
     }
-    @-webkit-keyframes esf-loader-spinner-circles {
+    @-webkit-keyframes esui-loader-spinner-circles {
         0%, 80%, 100% {
             .transform(scale(0.0)); 
         }
