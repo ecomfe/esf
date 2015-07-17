@@ -1,29 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
         <title>Sub Menu - ESF Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/site.css" />
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="../legacy/ie8-compatible.css" />
-        <script src="http://xy3.baidu.com/js/html5.js"></script>
         <![endif]-->
         <link rel="stylesheet" href="assets/google-code-prettify/prettify.css" />
-        <script src="assets/google-code-prettify/prettify.js"></script>
-        <script src="assets/jquery-1.11.1.min.js"></script>
-        <script src="assets/demo.js"></script>
-        <style>
-            .ui-submenu-wrapper {
-                position: relative;
-                display: inline-block;
-            }
-            .ui-submenu-wrapper>.ui-submenu {
-                display: none;
-            }
-            .ui-submenu-wrapper:hover>.ui-submenu {
-                display: block;
-            }
-        </style>
     </head>
     <body>
         <div id="layout" class="ui-g">
@@ -33,14 +19,16 @@
                 </ul>
             </div>
             <div class="ui-u-4-5">
-                <div id="main" class="content">
-                    <h2>子菜单 <small>Sub Menu</small></h2>
+                <div id="main-header">
+                    <h1>子菜单 <small>Sub Menu</small></h1>
                     <hr />
-                    <h3 id="sub-menu">弹出位置 Flyout Position</h3>
-                    <div class="example" style="height: 400px;">
-                        <h4>ui-submenu-fly-out-bottom</h4>
+                </div>
+                <div id="main" class="content">
+                    <h2 id="sub-menu">弹出位置 Flyout Position</h2>
+                    <div class="example">
+                        <h3>ui-submenu-fly-out-bottom</h3>
                         <div class="ui-submenu-wrapper">
-                            <button class="ui-button ui-button-info">
+                            <button type="button" class="ui-button ui-button-info">
                                 Hover to Show Sub Menu
                                 <span class="ui-icon-caret-down"></span>
                             </button>
@@ -61,9 +49,9 @@
                                 <li class="ui-disabled"><span>Disabled</span></li>
                             </ul>
                         </div>
-                        <h4>ui-submenu-fly-out-top</h4>
+                        <h3>ui-submenu-fly-out-top</h3>
                         <div class="ui-submenu-wrapper">
-                            <button class="ui-button ui-button-info">
+                            <button  type="button" class="ui-button ui-button-info">
                                 Hover to Show Sub Menu
                                 <span class="ui-icon-caret-up"></span>
                             </button>
@@ -84,9 +72,9 @@
                                 <li class="ui-disabled"><span>Disabled</span></li>
                             </ul>
                         </div>
-                        <h4>ui-submenu-fly-out-left</h4>
+                        <h3>ui-submenu-fly-out-left</h3>
                         <div class="ui-submenu-wrapper">
-                            <button class="ui-button ui-button-info">
+                            <button type="button" class="ui-button ui-button-info">
                                 <span class="ui-icon-caret-left"></span>
                                 Hover to Show Sub Menu
                             </button>
@@ -107,9 +95,9 @@
                                 <li class="ui-disabled"><span>Disabled</span></li>
                             </ul>
                         </div>
-                        <h4>ui-submenu-fly-out-right</h4>
+                        <h3>ui-submenu-fly-out-right</h3>
                         <div class="ui-submenu-wrapper">
-                            <button class="ui-button ui-button-info">
+                            <button type="button" class="ui-button ui-button-info">
                                 Hover to Show Sub Menu
                                 <span class="ui-icon-caret-right"></span>
                             </button>
@@ -134,5 +122,8 @@
                 </div>
             </div>
         </div>
+        <script src="assets/google-code-prettify/prettify.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </body>
 </html>

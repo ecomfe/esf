@@ -55,7 +55,7 @@
     vertical-align: middle;
     .@{ui-class-prefix}-button {
         &:first-child {
-            margin-left: 0px;
+            margin-left: 0;
         }
         margin-left: -1px;
         float: left;
@@ -131,7 +131,8 @@
     font-family: @esf-button-font-family;
     // 10
     text-decoration: none;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         text-decoration: none;
         outline: 0;
     }

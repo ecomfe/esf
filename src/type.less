@@ -105,7 +105,8 @@ dfn[title] {
 }
 
 // code and keyboard key
-code, kbd {
+code,
+kbd {
     color: @esf-type-code-text-color;
     white-space: nowrap;
     border: 1px solid @esf-type-code-border-color;
@@ -127,7 +128,12 @@ pre code {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: @esf-type-headings-font-family;
     font-weight: @esf-type-headings-font-weight;
     color: @esf-type-headings-color;
@@ -151,32 +157,38 @@ h4, h5, h6 {
     }
 }
 
-h1, .@{ui-class-prefix}-h1 {
+h1,
+.@{ui-class-prefix}-h1 {
     font-size: @esf-type-h1-font-size;
     line-height: @esf-type-h1-line-height;
 }
 
-h2, .@{ui-class-prefix}-h2 {
+h2,
+.@{ui-class-prefix}-h2 {
     font-size: @esf-type-h2-font-size;
     line-height: @esf-type-h2-line-height;
 }
 
-h3, .@{ui-class-prefix}-h3 {
+h3,
+.@{ui-class-prefix}-h3 {
     font-size: @esf-type-h3-font-size;
     line-height: @esf-type-h3-line-height;
 }
 
-h4, .@{ui-class-prefix}-h4 {
+h4,
+.@{ui-class-prefix}-h4 {
     font-size: @esf-type-h4-font-size;
     line-height: @esf-type-h4-line-height;
 }
 
-h5, .@{ui-class-prefix}-h5 {
+h5,
+.@{ui-class-prefix}-h5 {
     font-size: @esf-type-h5-font-size;
     line-height: @esf-type-h5-line-height;
 }
 
-h6, .@{ui-class-prefix}-h6 {
+h6,
+.@{ui-class-prefix}-h6 {
     font-size: @esf-type-h6-font-size;
     line-height: @esf-type-h6-line-height;
 }
@@ -198,7 +210,8 @@ dd {
   margin-left: 0;
 }
 
-.@{ui-class-prefix}-divider, hr {
+.@{ui-class-prefix}-divider,
+hr {
     border: 0;
     border-top: 1px solid @esf-type-hr-color;
     height: 0;
@@ -232,7 +245,8 @@ dd {
         text-align: center;
         font-weight: bold;
     }
-    td, th {
+    td,
+    th {
         border-width: 0 0 0 1px;
         margin: 0;
         // to make ths where the title is really long work
@@ -274,7 +288,8 @@ dd {
     caption {
         color: @caption-text-color;
     }
-    td, th {
+    td,
+    th {
         border-left: 1px solid @border-color;
     }
     thead {
@@ -289,12 +304,14 @@ dd {
         }
     }
     &.@{ui-class-prefix}-raw-table-bordered {
-        td, th {
+        td,
+        th {
             border-bottom: 1px solid @border-color;
         }
     }
     &.@{ui-class-prefix}-raw-table-horizontal {
-        th, td {
+        th,
+        td {
             border-width: 0 0 1px 0;
             border-bottom: 1px solid @border-color;
         }
@@ -320,7 +337,8 @@ dd {
         padding: @esf-table-caption-padding;
         font-size: @esf-table-caption-font-size;
     }
-    td, th {
+    td,
+    th {
         padding: @esf-table-cell-padding;
         font-size: @esf-table-cell-font-size
     }

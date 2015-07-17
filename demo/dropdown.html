@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
         <title>Dropdown - ESF Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/site.css" />
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="../legacy/ie8-compatible.css" />
         <![endif]-->
         <link rel="stylesheet" href="assets/google-code-prettify/prettify.css" />
-        <script src="assets/google-code-prettify/prettify.js"></script>
-        <script src="assets/jquery-1.11.1.min.js"></script>
-        <script src="assets/demo.js"></script>
-        <style>
-            .ui-dropdown-item-icon {
-                position: absolute;
-                top: 50%;
-                right: 1em;
-                margin-top: -.5em;
-            }
-        </style>
     </head>
     <body>
         <div id="layout" class="ui-g">
@@ -28,15 +19,22 @@
                 </ul>
             </div>
             <div class="ui-u-4-5">
-                <div id="main" class="content">
-                    <h2 class="no-mt">下拉列表</h2>
+                <div id="main-header">
+                    <h2>下拉列表</h2>
                     <hr />
+                    <p>
+                        下拉列表。
+                    </p>
+                </div>
+
+                <div id="main" class="content">
+                    <h2>下拉列表和嵌套</h2>
                     <div class="example">
-                        <button class="ui-button primary">下拉按钮 <i class="ui-icon-caret-down"></i></button>
+                        <button type="button" class="ui-button primary">下拉按钮 <i class="ui-icon-caret-down"></i></button>
                         <ul class="ui-dropdown" style="width: 20%;">
                             <li class="ui-dropdown-heading ui-dropdown-separator-bottom">标题</li>
                             <li>
-                                <span>嵌套 <span class="ui-icon-caret-right ui-dropdown-item-icon"></span></span>
+                                <span>嵌套 <span style="position: absolute;top: 50%;right: 1em;margin-top: -.5em;" class="ui-icon-caret-right ui-dropdown-item-icon"></span></span>
                                 <ul class="ui-submenu ui-submenu-fill-width ui-submenu-fly-out-right">
                                     <li><span><span class="ui-icon-home"></span> Home</span></li>
                                     <li class="ui-submenu-separator-bottom">
@@ -63,5 +61,8 @@
                 </div>
             </div>
         </div>
+        <script src="assets/google-code-prettify/prettify.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </body>
 </html>

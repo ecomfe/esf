@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
         <title>Form - ESF Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/site.css" />
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="../legacy/ie8-compatible.css" />
         <![endif]-->
         <link rel="stylesheet" href="assets/google-code-prettify/prettify.css" />
-        <script src="assets/google-code-prettify/prettify.js"></script>
-        <script src="assets/jquery-1.11.1.min.js"></script>
-        <script src="assets/demo.js"></script>
     </head>
     <body>
         <div id="layout" class="ui-g">
@@ -23,10 +22,16 @@
                 </ul>
             </div>
             <div class="ui-u-4-5">
-                <div id="main" class="content">
-                    <h2>表单（Form）</h2>
+                <div id="main-header">
+                    <h1>表单（Form）</h1>
                     <hr />
-                    <h3 id="form-inline">单行表单（Inline Form）</h3>
+                    <p>
+                        表单布局。
+                    </p>
+                </div>
+
+                <div id="main" class="content">
+                    <h2 id="form-inline">单行表单（Inline Form）</h2>
                     <div class="example">
                         <h3>With Label</h3>
                         <form class="ui-form">
@@ -37,7 +42,7 @@
                                     </div>
                                     <div class="ui-form-value ui-form-wrap-hint">
                                         <div class="ui-textbox">
-                                            <input placeholder="邮箱" type="email" id="email1" />
+                                            <input placeholder="邮箱" type="email" id="email" />
                                         </div>
                                         <label class="ui-form-hint">输入邮箱</label>
                                     </div>
@@ -56,25 +61,26 @@
                                 <div class="ui-form-field">
                                     <div class="ui-form-value ui-form-valign">
                                         <div class="ui-checkbox-custom">
-                                            <input id="remember1" type="checkbox" />
-                                            <label for="remember1">记住账户</label>
+                                            <input id="remember" type="checkbox" />
+                                            <label for="remember">记住账户</label>
                                         </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="ui-button">登录</button>
                             </div>
                         </form>
+
                         <h3>Without Label</h3>
                         <form class="ui-form">
                             <div class="ui-form-row">
                                 <div class="ui-form-value">
                                     <div class="ui-textbox">
-                                        <input placeholder="邮箱" type="email" id="email1" />
+                                        <input placeholder="邮箱" type="email" id="email2" />
                                     </div>
                                 </div>
                                 <div class="ui-form-value">
                                     <div class="ui-textbox">
-                                        <input placeholder="密码" type="password" id="password1" />
+                                        <input placeholder="密码" type="password" id="password2" />
                                     </div>
                                 </div>
                                 <div class="ui-form-value ui-form-valign">
@@ -87,26 +93,27 @@
                             </div>
                         </form>
                     </div>
-                    <h3 id="form-horizontal">横向表单（Horizontal Form）</h3>
+
+                    <h2 id="form-horizontal">横向表单（Horizontal Form）</h2>
                     <div class="example">
-                        <h4>提示信息折行</h4>
+                        <h3>提示信息折行</h3>
                         <form class="ui-form ui-form-wrap-hint">
                             <div class="ui-form-row">
-                                <div class="ui-form-key ui-form-required"><label for="email2">邮箱：</label></div>
+                                <div class="ui-form-key ui-form-required"><label for="email3">邮箱：</label></div>
                                 <div class="ui-form-value">
                                     <div class="ui-textbox">
-                                        <input placeholder="邮箱" type="email" id="email2" />
+                                        <input placeholder="邮箱" type="email" id="email3" />
                                     </div>
                                     <label class="ui-form-hint">输入用户名，提示信息可以在第二行</label>
                                 </div>
                             </div>
                             <div class="ui-form-row">
                                 <div class="ui-form-key ui-form-required">
-                                    <label for="password2">密码：</label>
+                                    <label for="password3">密码：</label>
                                 </div>
                                 <div class="ui-form-value">
                                     <div class="ui-textbox">
-                                        <input placeholder="密码" type="password" id="password2" />
+                                        <input placeholder="密码" type="password" id="password3" />
                                     </div>
                                     <label class="ui-form-hint">输入密码</label>
                                 </div>
@@ -117,7 +124,7 @@
                                 </div>
                                 <div class="ui-form-value">
                                     <label class="ui-select-custom">
-                                        <select id="selectGender">
+                                        <select>
                                             <option value="male">男</option>
                                             <option value="female">女</option>
                                             <option value="none">不知道性别请登录www.baidu.com搜索：性别如何测试</option>
@@ -131,7 +138,7 @@
                                 </div>
                                 <div class="ui-form-value">
                                     <label class="ui-select-custom">
-                                        <select id="selectGender2">
+                                        <select>
                                             <option value="male">美帝</option>
                                             <option value="female">欧帝</option>
                                             <option value="none">天朝</option>
@@ -141,27 +148,28 @@
                             </div>
                             <div class="ui-form-buttons">
                                 <button type="submit" class="ui-button ui-button-primary">提交</button>
-                                <button type="submit" class="ui-button ui-button-link">返回</button>
+                                <button type="button" class="ui-button ui-button-link">返回</button>
                             </div>
                         </form>
-                        <h4>提示信息不折行</h4>
+
+                        <h2>提示信息不折行</h2>
                         <form class="ui-form">
                             <div class="ui-form-row">
-                                <div class="ui-form-key ui-form-required"><label for="email2">邮箱：</label></div>
+                                <div class="ui-form-key ui-form-required"><label for="email4">邮箱：</label></div>
                                 <div class="ui-form-value">
                                     <div class="ui-textbox">
-                                        <input placeholder="邮箱" type="email" id="email2" />
+                                        <input placeholder="邮箱" type="email" id="email4" />
                                     </div>
                                     <label class="ui-form-hint">输入用户名</label>
                                 </div>
                             </div>
                             <div class="ui-form-row">
                                 <div class="ui-form-key ui-form-required">
-                                    <label for="password2">密码：</label>
+                                    <label for="password4">密码：</label>
                                 </div>
                                 <div class="ui-form-value">
                                     <div class="ui-textbox">
-                                        <input placeholder="密码" type="password" id="password2" />
+                                        <input placeholder="密码" type="password" id="password4" />
                                     </div>
                                     <label class="ui-form-hint">输入密码</label>
                                 </div>
@@ -172,7 +180,7 @@
                                 </div>
                                 <div class="ui-form-value">
                                     <label class="ui-select-custom">
-                                        <select id="selectGender">
+                                        <select>
                                             <option value="male">男</option>
                                             <option value="female">女</option>
                                             <option value="none">不知道性别请登录www.baidu.com搜索：性别如何测试</option>
@@ -186,7 +194,7 @@
                                 </div>
                                 <div class="ui-form-value">
                                     <label class="ui-select-custom ui-disabled">
-                                        <select disabled="disabled" id="selectGender2">
+                                        <select disabled>
                                             <option value="male">美帝</option>
                                             <option value="female">欧帝</option>
                                             <option value="none">天朝</option>
@@ -202,21 +210,21 @@
                             </div>
                             <div class="ui-form-buttons">
                                 <button type="submit" class="ui-button ui-button-success">提交</button>
-                                <button type="submit" class="ui-button">返回</button>
+                                <button type="button" class="ui-button">返回</button>
                             </div>
                         </form>
                     </div>
 
-                    <h3 id="form-stacked">堆叠表单（Stacked Form）</h3>
+                    <h2 id="form-stacked">堆叠表单（Stacked Form）</h2>
                     <div class="example">
                         <form class="ui-form ui-form-stack ui-form-wrap-hint" style="width: 500px">
                             <div class="ui-form-row">
                                 <div class="ui-form-field">
-                                    <label class="ui-form-key ui-form-required">Name</label>
+                                    <label class="ui-form-key ui-form-required" for="firstName">Name</label>
                                     <div class="ui-form-field">
                                         <div class="ui-form-value">
                                             <div class="ui-textbox ui-textbox-width-size4">
-                                                <input placeholder="First Name" type="text" id="firstName" />
+                                                <input placeholder="First Name" type="text" id="first-name" />
                                             </div>
                                             <label class="ui-form-hint">Your first name</label>
                                         </div>
@@ -224,7 +232,7 @@
                                     <div class="ui-form-field">
                                         <div class="ui-form-value">
                                             <div class="ui-textbox ui-textbox-width-size4">
-                                                <input placeholder="Last Name" type="text" id="lastName" />
+                                                <input placeholder="Last Name" type="text" id="last-name" />
                                             </div>
                                             <label class="ui-form-hint">Your last name</label>
                                         </div>
@@ -232,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="ui-form-row">
-                                <label class="ui-form-key">Address</label>
+                                <label class="ui-form-key" for="address">Address</label>
                                 <div class="ui-form-value">
                                     <div class="ui-textbox ui-textbox-width-size8">
                                         <input placeholder="密码" type="text" id="address" />
@@ -245,7 +253,7 @@
                         </form>
                     </div>
 
-                    <h3 id="form-fieldset">Field Set</h3>
+                    <h2 id="form-fieldset">Field Set</h2>
                     <div class="example">
                         <form class="ui-form ui-form-stack ui-form-wrap-hint" style="width: 500px">
                             <fieldset>
@@ -256,7 +264,7 @@
                                         <div class="ui-form-field">
                                             <div class="ui-form-value">
                                                 <div class="ui-textbox ui-textbox-width-size4">
-                                                    <input placeholder="First Name" type="text" id="firstName" />
+                                                    <input placeholder="First Name" type="text" id="first-name2" />
                                                 </div>
                                                 <label class="ui-form-hint">Your first name</label>
                                             </div>
@@ -264,7 +272,7 @@
                                         <div class="ui-form-field">
                                             <div class="ui-form-value">
                                                 <div class="ui-textbox ui-textbox-width-size4">
-                                                    <input placeholder="Last Name" type="text" id="lastName" />
+                                                    <input placeholder="Last Name" type="text" id="last-name2" />
                                                 </div>
                                                 <label class="ui-form-hint">Your last name</label>
                                             </div>
@@ -275,7 +283,7 @@
                                     <label class="ui-form-key">Address</label>
                                     <div class="ui-form-value">
                                         <div class="ui-textbox ui-textbox-width-size8">
-                                            <input placeholder="密码" type="text" id="address" />
+                                            <input placeholder="密码" type="text" id="address2" />
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +296,7 @@
                                         <div class="ui-form-field">
                                             <div class="ui-form-value">
                                                 <div class="ui-textbox ui-textbox-width-size4">
-                                                    <input placeholder="First Name" type="text" id="firstName" />
+                                                    <input placeholder="First Name" type="text" id="first-name3" />
                                                 </div>
                                                 <label class="ui-form-hint">Your first name</label>
                                             </div>
@@ -296,7 +304,7 @@
                                         <div class="ui-form-field">
                                             <div class="ui-form-value">
                                                 <div class="ui-textbox ui-textbox-width-size4">
-                                                    <input placeholder="Last Name" type="text" id="lastName" />
+                                                    <input placeholder="Last Name" type="text" id="last-name3" />
                                                 </div>
                                                 <label class="ui-form-hint">Your last name</label>
                                             </div>
@@ -307,7 +315,7 @@
                                     <label class="ui-form-key">Address</label>
                                     <div class="ui-form-value">
                                         <div class="ui-textbox ui-textbox-width-size8">
-                                            <input placeholder="密码" type="text" id="address" />
+                                            <input placeholder="密码" type="text" id="address3" />
                                         </div>
                                     </div>
                                 </div>
@@ -320,5 +328,8 @@
                 </div>
             </div>
         </div>
+        <script src="assets/google-code-prettify/prettify.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </body>
 </html>

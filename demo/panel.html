@@ -1,22 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
-        <title>Panel - ESUI Demo</title>
+        <title>Panel - ESF Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/site.css" />
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="../legacy/ie8-compatible.css" />
-        <script src="http://xy3.baidu.com/js/html5.js"></script>
         <![endif]-->
         <link rel="stylesheet" href="assets/google-code-prettify/prettify.css" />
-        <script src="assets/google-code-prettify/prettify.js"></script>
-        <script src="assets/jquery-1.11.1.min.js"></script>
-        <script src="assets/demo.js"></script>
-        <style>
-            .ui-panel-custom {
-                width: 40%;
-            }
-        </style>
     </head>
     <body>
         <div id="layout" class="ui-g">
@@ -28,11 +21,12 @@
                 </ul>
             </div>
             <div class="ui-u-4-5">
-                <div id="main" class="content">
-                    <h2>Panel</h2>
+                <div id="main-header">
+                    <h1>Panel</h1>
                     <hr />
-
-                    <h3 id="basic">Basic panel</h3>
+                </div>
+                <div id="main" class="content">
+                    <h2 id="basic">Basic panel</h2>
                     <div class="example">
                         <div class="ui-panel-custom">
                             <div class="ui-panel-body">
@@ -41,7 +35,7 @@
                         </div>
                     </div>
 
-                    <h3 id="header">Panel with header</h3>
+                    <h2 id="header">Panel with header</h2>
                     <div class="example">
                         <div class="ui-panel-custom">
                             <div class="ui-panel-header">
@@ -72,7 +66,7 @@
                         </div>
                     </div>
 
-                    <h3 id="footer">Panel with footer</h3>
+                    <h2 id="footer">Panel with footer</h2>
                     <div class="example">
                         <div class="ui-panel-custom">
                             <div class="ui-panel-body">
@@ -86,5 +80,8 @@
                 </div>
             </div>
         </div>
+        <script src="assets/google-code-prettify/prettify.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </body>
 </html>

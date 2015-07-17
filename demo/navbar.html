@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
         <title>Navbar - ESF Demo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/site.css" />
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="../legacy/ie8-compatible.css" />
-        <script src="http://xy3.baidu.com/js/html5.js"></script>
         <![endif]-->
         <link rel="stylesheet" href="assets/google-code-prettify/prettify.css" />
-        <script src="assets/google-code-prettify/prettify.js"></script>
-        <script src="assets/jquery-1.11.1.min.js"></script>
-        <script src="assets/demo.js"></script>
     </head>
     <body>
         <div id="layout" class="ui-g">
@@ -23,13 +21,15 @@
                 </ul>
             </div>
             <div class="ui-u-4-5">
-                <div id="main" class="content">
-                    <h2>导航菜单 <small>Navbar</small></h2>
+                <div id="main-header">
+                    <h1>导航菜单 <small>Navbar</small></h1>
                     <hr />
                     <p>
                         站点横向导航菜单。
                     </p>
-                    <h3 id="navbar-nav">导航位置</h3>
+                </div>
+                <div id="main" class="content">
+                    <h2 id="navbar-nav">导航位置</h2>
                     <p>
                         添加<code>ui-navbar-pull-right</code>把导航子选项布局到右侧。
                     </p>
@@ -45,7 +45,8 @@
                             </ul>
                         </div>
                     </div>
-                    <h3 id="menu-hoverable">放置其他元素</h3>
+
+                    <h2 id="menu-hoverable">放置其他元素</h2>
                     <p>
                         添加<code>ui-navbar-content</code>放置其他元素。
                     </p>
@@ -75,7 +76,8 @@
                             </div>
                         </div>
                     </div>
-                    <h3 id="navbar-submenu">子菜单</h3>
+
+                    <h2 id="navbar-submenu">子菜单</h2>
                     <div class="example">
                         <div class="ui-navbar">
                             <div class="ui-navbar-content">
@@ -109,5 +111,8 @@
                 </div>
             </div>
         </div>
+        <script src="assets/google-code-prettify/prettify.js"></script>
+        <script src="assets/jquery-1.11.1.min.js"></script>
+        <script src="assets/demo.js"></script>
     </body>
 </html>

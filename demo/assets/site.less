@@ -38,12 +38,15 @@ body {
     border: 0;
 }
 
-#main {
-    padding: 2em;
-    padding-top: 0;
+#main-header {
+    padding: 0 2em;
 }
 
-.ui-demo-row {
+#main {
+    padding: 0 2em;
+}
+
+.row {
     margin-bottom: 1em;
 }
 
@@ -132,4 +135,17 @@ body {
 .ui-u-4-5 {
     width: 80%;
     margin-left: 20%;
+}
+
+.ui-submenu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.ui-submenu-wrapper>.ui-submenu {
+    display: none;
+}
+
+.ui-submenu-wrapper:hover>.ui-submenu {
+    display: block;
 }
