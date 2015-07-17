@@ -1,7 +1,7 @@
 @import "base.less";
 
 @esf-progress-height: 1.5em;
-@esf-progress-border-radius: 5px;
+@esf-progress-border-radius: 0;
 @esf-progress-small-height: 1em;
 @esf-progress-large-height: 2em;
 @esf-progress-margin-bottom: 1em;
@@ -9,7 +9,10 @@
 .@{ui-class-prefix}-progress {
     margin-bottom: @esf-progress-margin-bottom;
     overflow: hidden;
-    border-radius: @esf-progress-border-radius;
+    .esf-border-radius(
+        @esf-progress-border-radius,
+        @esf-progress-border-radius
+    );
     .esf-progress-theme();
 }
 

@@ -535,9 +535,9 @@ input[type="search"]::-webkit-search-decoration {
   -ms-transition: background-color 0.3s ease-out, -ms-box-shadow 0.2s ease, border-color 0.2s ease;
   -o-transition: background-color 0.3s ease-out, -o-box-shadow 0.2s ease, border-color 0.2s ease;
   transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   color: #666666;
   background-color: #f6f6f6;
 }
@@ -600,28 +600,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
 }
 .ui-button-group .ui-button:first-child {
-  margin-left: 0px;
-}
-.ui-button-group .ui-button:not(:first-child):not(:last-child) {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.ui-button-group .ui-button:first-child:not(:last-child) {
-  -webkit-border-top-right-radius: 0;
-  -moz-border-radius-topright: 0;
-  border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-radius-bottomright: 0;
-  border-bottom-right-radius: 0;
-}
-.ui-button-group .ui-button:last-child:not(:first-child) {
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topleft: 0;
-  border-top-left-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  border-bottom-left-radius: 0;
+  margin-left: 0;
 }
 .ui-button-group.ui-button-group-separated .ui-button {
   margin-left: 0;
@@ -778,9 +757,9 @@ input[type="search"]::-webkit-search-decoration {
   transition: background-color 0.3s ease, border-color 0.3s ease;
   background: #f6f6f6;
   border: 1px solid #dddddd;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .esf-checkbox-style-base .ui-checkbox-box:after,
 .esf-checkbox-style-base label:after,
@@ -1356,9 +1335,9 @@ input[type="search"]::-webkit-search-decoration {
   display: inline-block;
   vertical-align: middle;
   padding: 0.5em 0.8em;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   background: #f6f6f6;
   color: #666666;
 }
@@ -1674,9 +1653,9 @@ input[type="search"]::-webkit-search-decoration {
 }
 .ui-panel-custom {
   margin: 1.5em 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   background: #ffffff;
   border: 1px solid #dddddd;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -1686,12 +1665,12 @@ input[type="search"]::-webkit-search-decoration {
 .ui-panel-custom .ui-panel-header {
   padding: 10px 15px;
   overflow: auto;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  border-top-right-radius: 0;
   color: #666666;
   background: #f6f6f6;
   border-bottom: 1px solid #dddddd;
@@ -1705,12 +1684,12 @@ input[type="search"]::-webkit-search-decoration {
 .ui-panel-custom .ui-panel-footer {
   padding: 10px 15px;
   overflow: auto;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
   color: #666666;
   background: #f6f6f6;
   border-top: 1px solid #dddddd;
@@ -1722,7 +1701,9 @@ input[type="search"]::-webkit-search-decoration {
 .ui-progress {
   margin-bottom: 1em;
   overflow: hidden;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -1805,9 +1786,9 @@ input[type="search"]::-webkit-search-decoration {
   box-sizing: border-box;
   height: 2.5em;
   vertical-align: middle;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   background: #f6f6f6;
   border: 1px solid #dddddd;
   color: #666666;
@@ -1991,9 +1972,9 @@ a.ui-text-info:hover {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .ui-textbox > input {
   height: 2.5em;
@@ -2005,9 +1986,9 @@ a.ui-text-info:hover {
   width: 100%;
   margin: 0;
   outline: 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   -webkit-transition: background-color 0.3s ease-out, -webkit-box-shadow 0.2s ease, border-color 0.2s ease;
   -moz-transition: background-color 0.3s ease-out, -moz-box-shadow 0.2s ease, border-color 0.2s ease;
   -ms-transition: background-color 0.3s ease-out, -ms-box-shadow 0.2s ease, border-color 0.2s ease;
@@ -2293,9 +2274,9 @@ kbd {
   color: #666666;
   white-space: nowrap;
   border: 1px solid #dddddd;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   background: #f6f6f6;
   font-family: Monaco, Consolas, monospace;
   padding: 0 0.3em;
@@ -4655,19 +4636,18 @@ body > .est-body:after {
 }
 /* Tweak display of the code snippets when following an example */
 .example + .highlight {
-  margin-bottom: 15px;
-  margin-top: -15px;
   border-width: 0 0 1px;
   border-radius: 0;
   position: relative;
 }
 .highlight {
-  max-height: 300px;
-  overflow: auto;
+  margin-top: 2em;
 }
 .highlight pre.prettyprint {
   border: 1px #e5e5e5 solid;
   padding: 0 1em;
+  max-height: 300px;
+  overflow: auto;
 }
 .ui-g {
   letter-spacing: -0.31em;
