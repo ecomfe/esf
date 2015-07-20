@@ -112,6 +112,27 @@
     );
 }
 
+.esui-button-primary-inverted-theme() {
+    color: @esui-button-primary-background-color;
+    background: none;
+    border: 1px solid @esui-button-primary-background-color;
+    &:hover,
+    &.@{ui-state-prefix}-hover {
+        border-color: @esui-button-primary-hover-background-color;
+        color: @esui-button-primary-hover-background-color;
+    }
+    &:focus,
+    &.@{ui-state-prefix}-focus {
+        border-color: @esui-button-primary-hover-background-color;
+        color: @esui-button-primary-hover-background-color;
+    }
+    &:active,
+    &.@{ui-state-prefix}-active {
+        background: @esui-button-primary-active-background-color;
+        color: @esui-button-primary-text-color;
+    }
+}
+
 .esui-button-success-theme() {
     .esui-button-variant(
         @esui-button-success-text-color,

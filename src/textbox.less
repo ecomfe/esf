@@ -99,22 +99,24 @@
         margin-left: -1px;
     }
     .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-button,
-    .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-select-inner,
-    .@{ui-class-prefix}-textbox:first-child input {
+    .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-select-inner {
         .esui-border-right-radius(
             0,
             @esui-textbox-radius
         );
-        border-right: 0 !important;
+    }
+    .@{ui-class-prefix}-textbox:first-child input {
+        border-right: 0;
     }
     .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-button,
-    .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-select-inner,
-    .@{ui-class-prefix}-textbox:last-child input {
+    .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-select-inner {
         .esui-border-left-radius(
             0,
             @esui-textbox-radius
         );
-        border-left: 0 !important;
+    }
+    .@{ui-class-prefix}-textbox:last-child input {
+        border-left: 0;
     }
 }
 
