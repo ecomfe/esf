@@ -2155,10 +2155,6 @@ a.ui-text-info:hover {
   display: table-cell;
   width: 100%;
 }
-.ui-textbox-wrapper .ui-textbox-addon:first-child {
-  right: -1px;
-  margin-left: -1px;
-}
 .ui-textbox-wrapper .ui-textbox-addon:first-child .ui-button,
 .ui-textbox-wrapper .ui-textbox-addon:first-child .ui-select-inner {
   -webkit-border-top-right-radius: 0;
@@ -2167,9 +2163,7 @@ a.ui-text-info:hover {
   -webkit-border-bottom-right-radius: 0;
   -moz-border-radius-bottomright: 0;
   border-bottom-right-radius: 0;
-}
-.ui-textbox-wrapper .ui-textbox:first-child input {
-  border-right: 0;
+  margin-right: -1px;
 }
 .ui-textbox-wrapper .ui-textbox-addon:last-child .ui-button,
 .ui-textbox-wrapper .ui-textbox-addon:last-child .ui-select-inner {
@@ -2179,9 +2173,7 @@ a.ui-text-info:hover {
   -webkit-border-bottom-left-radius: 0;
   -moz-border-radius-bottomleft: 0;
   border-bottom-left-radius: 0;
-}
-.ui-textbox-wrapper .ui-textbox:last-child input {
-  border-left: 0;
+  margin-left: -1px;
 }
 .ui-textbox-addon {
   white-space: nowrap;
