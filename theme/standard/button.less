@@ -52,6 +52,15 @@
 @esui-button-danger-active-background-color: @esui-palette-danger-shadow-color;
 @esui-button-danger-focus-background-color: @esui-palette-danger-highlight-color;
 
+// bordered button variant
+@esui-button-bordered-border-color: @esui-palette-border;
+@esui-button-bordered-background: @esui-palette-white;
+@esui-button-bordered-color: @esui-palette-color;
+
+@esui-button-bordered-focus-border-color: @esui-palette-primary-color;
+@esui-button-bordered-focus-background: @esui-palette-white;
+@esui-button-bordered-focus-color: @esui-palette-color;
+
 @esui-button-group-separator-color: @esui-palette-contrast-color;
 
 .esui-button-variant(
@@ -171,6 +180,21 @@
         @esui-button-danger-active-background-color,
         @esui-button-danger-focus-background-color
     );
+}
+
+.esui-button-bordered-theme() {
+    .esui-input-color-def(
+        @esui-button-bordered-border-color,
+        @esui-button-bordered-background,
+        @esui-button-bordered-color
+    );
+    .@{ui-state-prefix}-focus & {
+        .esui-input-color-def(
+            @esui-button-bordered-focus-border-color,
+            @esui-button-bordered-focus-background,
+            @esui-button-bordered-focus-color
+        );
+    }
 }
 
 .esui-button-group-theme() {

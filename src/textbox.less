@@ -86,7 +86,6 @@
     display: block;
 }
 
-// TODO: 需要添加Last Child IE8的支持
 .@{ui-class-prefix}-textbox-wrapper {
     display: table !important;
     border-collapse: separate;
@@ -95,7 +94,7 @@
         width: 100%;
     }
     .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-button,
-    .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-select-inner {
+    .@{ui-class-prefix}-textbox-addon:first-child .@{ui-class-prefix}-select {
         .esui-border-right-radius(
             0,
             @esui-textbox-radius
@@ -103,7 +102,7 @@
         margin-right: -1px;
     }
     .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-button,
-    .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-select-inner {
+    .@{ui-class-prefix}-textbox-addon:last-child .@{ui-class-prefix}-select {
         .esui-border-left-radius(
             0,
             @esui-textbox-radius
@@ -121,11 +120,6 @@
             float: none;
         }
     }
-}
-
-// textbox border button
-.@{ui-class-prefix}-button.@{ui-class-prefix}-button-text-border {
-    .esui-textbox-button-text-border-theme();
 }
 
 // widths-sizes

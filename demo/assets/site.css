@@ -713,6 +713,16 @@ input[type="search"]::-webkit-search-decoration {
 .ui-button-danger.state-active {
   background-color: #f77c7c;
 }
+.ui-button-bordered {
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  color: #666666;
+}
+.state-focus .ui-button-bordered {
+  border: 1px solid #70ccc0;
+  background: #ffffff;
+  color: #666666;
+}
 /*
  * 1. Correct inability to style clickable `input` types in iOS.
  * 2. Remove margins in Chrome, Safari and Opera.
@@ -2156,7 +2166,7 @@ a.ui-text-info:hover {
   width: 100%;
 }
 .ui-textbox-wrapper .ui-textbox-addon:first-child .ui-button,
-.ui-textbox-wrapper .ui-textbox-addon:first-child .ui-select-inner {
+.ui-textbox-wrapper .ui-textbox-addon:first-child .ui-select {
   -webkit-border-top-right-radius: 0;
   -moz-border-radius-topright: 0;
   border-top-right-radius: 0;
@@ -2166,7 +2176,7 @@ a.ui-text-info:hover {
   margin-right: -1px;
 }
 .ui-textbox-wrapper .ui-textbox-addon:last-child .ui-button,
-.ui-textbox-wrapper .ui-textbox-addon:last-child .ui-select-inner {
+.ui-textbox-wrapper .ui-textbox-addon:last-child .ui-select {
   -webkit-border-top-left-radius: 0;
   -moz-border-radius-topleft: 0;
   border-top-left-radius: 0;
@@ -2182,39 +2192,6 @@ a.ui-text-info:hover {
 }
 .ui-textbox-addon .ui-button-group .ui-button {
   float: none;
-}
-.ui-button.ui-button-text-border {
-  border: 1px solid #dddddd;
-  background: #ffffff;
-  color: #666666;
-}
-.state-focus .ui-button.ui-button-text-border {
-  border: 1px solid #70ccc0;
-  background: #ffffff;
-  color: #666666;
-}
-.state-error .ui-button.ui-button-text-border,
-.state-validity-invalid .ui-button.ui-button-text-border {
-  border: 1px solid #f16c6c;
-  background: #ffffff;
-  color: #f77c7c;
-}
-.state-readon-only .ui-button.ui-button-text-border {
-  border: 1px solid #dddddd;
-  background: #ffffff;
-  color: #999999;
-}
-.state-success .ui-button.ui-button-text-border,
-.state-success .ui-button.ui-button-text-border {
-  border: 1px solid #80dda1;
-  background: #ffffff;
-  color: #80dda1;
-}
-.state-warning .ui-button.ui-button-text-border,
-.state-warning .ui-button.ui-button-text-border {
-  border: 1px solid #f9ad42;
-  background: #ffffff;
-  color: #f9ad42;
 }
 .ui-textbox-size1 input,
 .ui-textbox-size1 textarea {

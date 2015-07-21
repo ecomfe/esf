@@ -114,57 +114,6 @@
     }
 }
 
-.esui-textbox-button-text-border-theme() {
-    .esui-input-color-def(
-        @esui-textbox-border-color,
-        @esui-textbox-background,
-        @esui-textbox-text-color
-    );
-    .@{ui-state-prefix}-focus & {
-        .esui-input-color-def(
-            @esui-textbox-focus-border-color,
-            @esui-textbox-focus-background,
-            @esui-textbox-focus-text-color
-        );
-    }
-    .@{ui-state-prefix}-error &,
-    .@{ui-state-prefix}-validity-invalid & {
-        .esui-input-color-def(
-            @esui-textbox-error-border-color,
-            @esui-textbox-error-background,
-            @esui-textbox-error-text-color
-        );
-    }
-
-    .@{ui-state-prefix}-readon-only & {
-        .esui-input-color-def(
-            @esui-textbox-readonly-border-color,
-            @esui-textbox-readonly-background,
-            @esui-textbox-readonly-text-color
-        );
-    }
-
-    // success
-    .@{ui-state-prefix}-success &,
-    .@{ui-state-prefix}-success & {
-        .esui-input-color-def(
-            @esui-textbox-success-border-color,
-            @esui-textbox-success-background,
-            @esui-textbox-success-text-color
-        );
-    }
-
-    // warning
-    .@{ui-state-prefix}-warning &,
-    .@{ui-state-prefix}-warning & {
-        .esui-input-color-def(
-            @esui-textbox-warning-border-color,
-            @esui-textbox-warning-background,
-            @esui-textbox-warning-text-color
-        );
-    }
-}
-
 // mixins
 .esui-input-color-def(
     @border,
