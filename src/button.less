@@ -13,7 +13,8 @@
 .@{ui-class-prefix}-button {
     .esui-button();
     .esui-button-theme();
-    &:disabled {
+    &:disabled,
+    &.@{ui-state-prefix}-disabled {
         .esui-disabled();
     }
 }
