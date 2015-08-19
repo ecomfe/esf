@@ -95,14 +95,14 @@
 }
 
 .esui-button-group-border() when (@esui-button-radius > 0) {
-    .@{ui-class-prefix}-button:not(:first-child):not(:last-child) {
+    .@{ui-class-prefix}-button {
         .border-radius(0);
     }
-    .@{ui-class-prefix}-button:first-child:not(:last-child) {
-        .border-right-radius(0);
+    .@{ui-class-prefix}-button-group-first {
+        .border-left-radius(@esui-button-radius);
     }
-    .@{ui-class-prefix}-button:last-child:not(:first-child) {
-        .border-left-radius(0);
+    .@{ui-class-prefix}-button-group-last {
+        .border-right-radius(@esui-button-radius);
     }
 }
 
