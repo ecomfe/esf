@@ -718,7 +718,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-button-bordered:hover,
 .ui-button-bordered:active,
 .ui-button-bordered:focus {
-  background: none;
+  background: #ffffff;
 }
 .ui-button-wide {
   padding: 0 2em;
@@ -929,7 +929,7 @@ input[type="search"]::-webkit-search-decoration {
   -ms-transition: color 0.2s ease;
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
-  color: rgba(102, 102, 102, 0.9);
+  color: #666666;
 }
 .esui-checkbox-style-base label:hover,
 .esui-checkbox-style-base ~ label:hover,
