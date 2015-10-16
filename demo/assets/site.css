@@ -450,12 +450,15 @@ input[type="search"]::-webkit-search-decoration {
 .esui-clearfix:before,
 .esui-clearfix:after,
 .ui-navbar:before,
-.ui-navbar:after {
+.ui-navbar:after,
+.ui-progress:before,
+.ui-progress:after {
   display: table;
   content: "";
 }
 .esui-clearfix:after,
-.ui-navbar:after {
+.ui-navbar:after,
+.ui-progress:after {
   clear: both;
 }
 .ui-hover-fade-in {
@@ -1730,11 +1733,10 @@ input[type="search"]::-webkit-search-decoration {
   color: #666666;
 }
 .ui-progress {
-  margin-bottom: 1em;
-  overflow: hidden;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  position: relative;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -1743,7 +1745,6 @@ input[type="search"]::-webkit-search-decoration {
 .ui-progress-bar {
   float: left;
   width: 0;
-  font-size: 1em;
   line-height: 1.5em;
   height: 1.5em;
   text-align: center;
@@ -1785,11 +1786,26 @@ input[type="search"]::-webkit-search-decoration {
   -o-animation: esui-progress-bar-stripes 2s linear infinite;
   animation: esui-progress-bar-stripes 2s linear infinite;
 }
-.ui-progress-bar-small {
+.ui-progress-marker {
+  width: 0.2em;
+  margin-left: -0.1em;
+  height: 1.5em;
+  left: 0;
+  position: absolute;
+  background: #f9ad42;
+}
+.ui-progress-mini .ui-progress-bar,
+.ui-progress-mini .ui-progress-marker {
+  height: 0.5em;
+  line-height: 0.5em;
+}
+.ui-progress-small .ui-progress-bar,
+.ui-progress-small .ui-progress-marker {
   height: 1em;
   line-height: 1em;
 }
-.ui-progress-bar-large {
+.ui-progress-large .ui-progress-bar,
+.ui-progress-large .ui-progress-marker {
   height: 2em;
   line-height: 2em;
 }
