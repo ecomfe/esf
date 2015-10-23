@@ -14,6 +14,10 @@
 @esui-form-fieldset-margin: 0 .2em;
 @esui-form-fieldset-border-color: #ddd;
 
+@esui-form-field-delimiter: 1em;
+
+@esui-form-field-delimiter-color: #ddd;
+
 .@{ui-class-prefix}-form {
     margin-bottom: 1em;
     display: block;
@@ -44,6 +48,8 @@
 }
 
 .@{ui-class-prefix}-form-field,
+.@{ui-class-prefix}-form-field-delimiter,
+.@{ui-class-prefix}-form-field-delimiter-border,
 .@{ui-class-prefix}-form-key,
 .@{ui-class-prefix}-form-value {
     display: inline-block;
@@ -65,8 +71,20 @@
 }
 
 .@{ui-class-prefix}-form-key,
-.@{ui-class-prefix}-form-valign {
+.@{ui-class-prefix}-form-valign,
+.@{ui-class-prefix}-form-field-delimiter,
+.@{ui-class-prefix}-form-field-delimiter-border {
     padding-top: .5em;
+}
+
+.@{ui-class-prefix}-form-field-delimiter,
+.@{ui-class-prefix}-form-field-delimiter-border {
+    margin: 0 @esui-form-field-delimiter;
+}
+
+.@{ui-class-prefix}-form-field-delimiter-border:before {
+    content: '|';
+    color: @esui-form-field-delimiter-color;
 }
 
 .@{ui-class-prefix}-form-hint {
