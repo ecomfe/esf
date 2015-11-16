@@ -1,6 +1,8 @@
 @import "base.less";
 
 @esui-form-row-bottom-margin: 1em;
+@esui-form-row-height: 2.5em;
+@esui-form-row-height-mini: 1.3em;
 
 @esui-form-hint-font-size: 1em;
 @esui-form-hint-font-color: #999;
@@ -15,7 +17,6 @@
 @esui-form-fieldset-border-color: #ddd;
 
 @esui-form-field-delimiter: 1em;
-
 @esui-form-field-delimiter-color: #ddd;
 
 .@{ui-class-prefix}-form {
@@ -42,39 +43,10 @@
     margin-bottom: @esui-form-row-bottom-margin;
 }
 
-.@{ui-class-prefix}-form-key {
-    padding-right: 1em;
-    .box-sizing(border-box);
-}
-
-.@{ui-class-prefix}-form-field,
 .@{ui-class-prefix}-form-field-delimiter,
 .@{ui-class-prefix}-form-field-delimiter-border,
-.@{ui-class-prefix}-form-key,
-.@{ui-class-prefix}-form-value {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.@{ui-class-prefix}-form-required {
-    position: relative;
-    &:after {
-        content: '*';
-        color: @esui-form-validity-font-color;
-        display: block;
-        right: 0;
-        top: 50%;
-        position: absolute;
-        line-height: 1;
-        padding-right: .5em;
-    }
-}
-
-.@{ui-class-prefix}-form-key,
-.@{ui-class-prefix}-form-valign,
-.@{ui-class-prefix}-form-field-delimiter,
-.@{ui-class-prefix}-form-field-delimiter-border {
-    padding-top: .5em;
+.@{ui-class-prefix}-form-key {
+    line-height: @esui-form-row-height;
 }
 
 .@{ui-class-prefix}-form-field-delimiter,
@@ -85,6 +57,39 @@
 .@{ui-class-prefix}-form-field-delimiter-border:before {
     content: '|';
     color: @esui-form-field-delimiter-color;
+}
+
+.@{ui-class-prefix}-form-key {
+    padding-right: 1em;
+}
+
+.@{ui-class-prefix}-form-field,
+.@{ui-class-prefix}-form-field-delimiter,
+.@{ui-class-prefix}-form-field-delimiter-border,
+.@{ui-class-prefix}-form-key,
+.@{ui-class-prefix}-form-value {
+    display: inline-block;
+    vertical-align: top;
+    min-height: @esui-form-row-height;
+    .box-sizing(border-box);
+}
+
+.@{ui-class-prefix}-form-required {
+    position: relative;
+    &:after {
+        content: '*';
+        color: @esui-form-validity-font-color;
+        display: inline-block;
+        right: 0;
+        top: 0;
+        position: absolute;
+        line-height: @esui-form-row-height;
+        padding-right: .5em;
+    }
+}
+
+.@{ui-class-prefix}-form-valign {
+    line-height: @esui-form-row-height;
 }
 
 .@{ui-class-prefix}-form-hint {
