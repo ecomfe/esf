@@ -1629,12 +1629,6 @@ input[type="search"]::-webkit-search-decoration {
 .ui-navbar-pull-right {
   float: right;
 }
-.ui-navbar-content:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
 .ui-navbar-content-text,
 .ui-navbar-content-link,
 .ui-navbar-content-icon {
@@ -1690,7 +1684,7 @@ input[type="search"]::-webkit-search-decoration {
   display: block;
 }
 .ui-navbar-nav > li:active > a,
-.ui-navbar-nav > li.ui-active > a {
+.ui-navbar-nav > li.ui-navbar-item-active > a {
   background: #5fb3a8;
   color: #ffffff;
 }
