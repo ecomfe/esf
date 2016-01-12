@@ -762,6 +762,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch-round label {
   display: inline-block;
   padding-left: 1.5em;
+  vertical-align: baseline;
 }
 .esui-checkbox-style-base .ui-checkbox-box:before,
 .esui-checkbox-style-base label:before,
@@ -926,7 +927,7 @@ input[type="search"]::-webkit-search-decoration {
 .ui-checkbox-switch-round label,
 .ui-checkbox-switch-round ~ label {
   cursor: pointer;
-  vertical-align: middle;
+  vertical-align: baseline;
   -webkit-transition: color 0.2s ease;
   -moz-transition: color 0.2s ease;
   -ms-transition: color 0.2s ease;
@@ -2528,6 +2529,40 @@ hr {
 }
 .ui-wizard-node.ui-wizard-node-last:after {
   display: none !important;
+}
+.ui-bars {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+}
+.ui-bars span {
+  display: inline-block;
+  margin: 0 0 0 1px;
+  vertical-align: bottom;
+  width: 6px;
+  background: #70ccc0;
+}
+.ui-bars span:first-child {
+  margin: 0;
+}
+.ui-bars-label {
+  display: inline-block;
+  margin-left: .2em;
+}
+.ui-bars-title {
+  font-size: 1.5em;
+  color: #333333;
+}
+.ui-bars-sub-title {
+  color: #999999;
+}
+.ui-bars-wrapper {
+  display: inline-block;
+}
+.ui-bars-wrapper .ui-bars,
+.ui-bars-wrapper .ui-bars-label {
+  vertical-align: bottom;
 }
 [class*='ui-icon'] {
   font-family: FontAwesome;
