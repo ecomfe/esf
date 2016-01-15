@@ -1208,6 +1208,9 @@ input[type="search"]::-webkit-search-decoration {
 .ui-form-valign {
   line-height: 2.5em;
 }
+.ui-form-reset-line {
+  line-height: 1.3;
+}
 .ui-form-hint {
   display: inline-block;
   font-size: 1em;
@@ -2396,10 +2399,22 @@ dd {
 .ui-divider,
 hr {
   border: 0;
-  border-top: 1px solid #dddddd;
+  border-top: 0.1em solid #dddddd;
   height: 0;
   overflow: hidden;
   color: #dddddd;
+}
+.ui-divider.ui-divider-thick,
+hr.ui-divider-thick {
+  border-top-width: .3em;
+}
+.ui-divider.ui-divider-dotted,
+hr.ui-divider-dotted {
+  border-top-style: dotted;
+}
+.ui-divider.ui-divider-dashed,
+hr.ui-divider-dashed {
+  border-top-style: dashed;
 }
 .ui-list-unstyled,
 .ui-list-inline {
