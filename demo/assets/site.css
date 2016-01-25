@@ -1675,6 +1675,7 @@ input[type="search"]::-webkit-search-decoration {
   line-height: 60px;
   font-size: 20px;
   font-weight: bold;
+  outline: none;
   color: #ffffff;
   text-decoration: none;
 }
@@ -1994,6 +1995,18 @@ x:-o-prefocus,
 }
 .ui-text-right {
   text-align: right;
+}
+.ui-text {
+  color: #666666;
+}
+a.ui-text:hover {
+  color: #666666;
+}
+.ui-text-em {
+  color: #333333;
+}
+a.ui-text-em:hover {
+  color: #333333;
 }
 .ui-text-muted {
   color: #999999;
