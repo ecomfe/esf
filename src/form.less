@@ -74,6 +74,17 @@
     .box-sizing(border-box);
 }
 
+.@{ui-class-prefix}-form-normal-line-height {
+    .@{ui-class-prefix}-form-field,
+    .@{ui-class-prefix}-form-field-delimiter,
+    .@{ui-class-prefix}-form-field-delimiter-border,
+    .@{ui-class-prefix}-form-key,
+    .@{ui-class-prefix}-form-value {
+        line-height: @esui-form-row-default-line-height;
+        min-height: initial;
+    }
+}
+
 .@{ui-class-prefix}-form-required {
     position: relative;
     &:after {
@@ -92,8 +103,8 @@
     line-height: @esui-form-row-height;
 }
 
-.@{ui-class-prefix}-form-reset-line {
-    line-height: @esui-form-row-default-line-height;
+.@{ui-class-prefix}-form-reset-line-height {
+    line-height: @esui-form-row-default-line-height !important;
 }
 
 .@{ui-class-prefix}-form-hint {
