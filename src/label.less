@@ -1,8 +1,9 @@
 @import "base.less";
 
-@esui-label-padding: .5em .8em;
+@esui-label-padding: 0 .8em;
 @esui-label-circular-padding: .5em;
 @esui-label-border-radius: 0;
+@esui-label-custom-line-height: 2.5em;
 
 .@{ui-class-prefix}-label {
     display: inline-block;
@@ -12,6 +13,9 @@
     display: inline-block;
     vertical-align: middle;
     padding: @esui-label-padding;
+    line-height: @esui-label-custom-line-height;
+    height: @esui-label-custom-line-height;
+    .box-sizing(border-box);
 
     .esui-border-radius(
         @esui-label-border-radius,
@@ -38,6 +42,10 @@
 
 .@{ui-class-prefix}-label-info {
     .esui-label-info-theme();
+}
+
+.@{ui-class-prefix}-label-bordered {
+    .esui-label-bordered-theme();
 }
 
 .@{ui-class-prefix}-label-pointer {
@@ -111,10 +119,6 @@
     .esui-circular();
 }
 
-.@{ui-class-prefix}-label-slim {
-    padding: 0 .2em;
-}
-
 // themes
 .esui-label-theme() {}
 .esui-label-primary-theme() {}
@@ -122,3 +126,4 @@
 .esui-label-warning-theme() {}
 .esui-label-danger-theme() {}
 .esui-label-info-theme() {}
+.esui-label-bordered-theme() {}

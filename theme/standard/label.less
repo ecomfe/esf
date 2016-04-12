@@ -23,6 +23,9 @@
 @esui-label-info-color: @esui-palette-contrast-color;
 @esui-label-info-background: @esui-palette-info-color;
 
+@esui-label-bordered-border-color: @esui-palette-border;
+@esui-label-bordered-background: @esui-palette-white;
+
 .esui-label-theme() {
     background: @esui-label-background;
     color: @esui-label-color;
@@ -56,6 +59,17 @@
     background: @esui-label-info-background;
     color: @esui-label-info-color;
     .esui-label-pointer-variant-color(@esui-label-info-background);
+}
+
+.esui-label-bordered-theme() {
+    background: @esui-label-bordered-background;
+    border: 1px solid @esui-label-bordered-border-color;
+    &.@{ui-class-prefix}-label-bordered-left {
+        border-right: none;
+    }
+    &.@{ui-class-prefix}-label-bordered-right {
+        border-left: none;
+    }
 }
 
 // theme used mixin
