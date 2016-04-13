@@ -1398,9 +1398,6 @@ input[type="search"]::-webkit-search-decoration {
   padding: 0 0.8em;
   line-height: 2.5em;
   height: 2.5em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -1490,6 +1487,9 @@ input[type="search"]::-webkit-search-decoration {
 .ui-label-bordered {
   background: #ffffff;
   border: 1px solid #dddddd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .ui-label-bordered.ui-label-bordered-left {
   border-right: none;
@@ -1577,7 +1577,8 @@ input[type="search"]::-webkit-search-decoration {
 .ui-label-circular {
   min-width: 1em;
   min-height: 1em;
-  line-height: 1;
+  line-height: 1em;
+  height: auto;
   text-align: center;
   padding: 0.5em;
   -webkit-border-radius: 500em;

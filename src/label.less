@@ -15,7 +15,6 @@
     padding: @esui-label-padding;
     line-height: @esui-label-custom-line-height;
     height: @esui-label-custom-line-height;
-    .box-sizing(border-box);
 
     .esui-border-radius(
         @esui-label-border-radius,
@@ -46,6 +45,7 @@
 
 .@{ui-class-prefix}-label-bordered {
     .esui-label-bordered-theme();
+    .box-sizing(border-box);
 }
 
 .@{ui-class-prefix}-label-pointer {
@@ -112,7 +112,8 @@
     min-width: 1em;
     min-height: 1em;
 
-    line-height: 1;
+    line-height: 1em;
+    height: auto;
     text-align: center;
     padding: @esui-label-circular-padding;
 
